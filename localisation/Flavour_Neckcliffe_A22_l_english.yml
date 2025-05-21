@@ -13,10 +13,10 @@
   neckcliffe_stadthalter_monarchy_reform_desc:0 "PLACEHOLDER!§!\n\nAllows §YPlutocratic§! Idea Group.\nDisallows §YAristocratic§! Idea Group.\n"
   neckcliffe_stadthalter_monarchy_reform_enabled:0 "PLACEHOLDER!"
 
-  imperial_admirals_MECHANIC_TOOLTIP:0 "PLACEHOLDER"
-  neckliffer_monarchists_MECHANIC_TOOLTIP:0 "PLACEHOLDER""
-  admirals:0 "Imperial Admirals are in Power"
-  monarchists:0 "Neckcliffer Monarchists are in Power"
+  neckcliffer_admirals_MECHANIC_TOOLTIP:0 "PLACEHOLDER"
+  neckcliffer_monarchists_MECHANIC_TOOLTIP:0 "PLACEHOLDER""
+  neckcliffer_admirals:0 "Imperial Admirals are in Power"
+  neckcliffer_monarchists:0 "Neckcliffer Monarchists are in Power"
 
   elections.720.neckcliffe:0 "While the official ruler of [Root.GetName] is the Cliffman Dynasty, the Imperial Admirals hold significant sway within the country and oftentimes find themselves more influential than the Monarch themselves. During this time of transition, we must find who is most fit to rule our ranks."
   elections.721.neckcliffe:0 "While the official ruler of [Root.GetName] is the Cliffman Dynasty, the Imperial Admirals hold significant sway within the country and oftentimes find themselves more influential than the Monarch themselves. During this time of transition, we must find who is most fit to rule our ranks."

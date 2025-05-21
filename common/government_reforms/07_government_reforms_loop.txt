@@ -262,12 +262,12 @@ neckcliffe_stadthalter_monarchy_reform = {
 		duration = 4
 		has_term_election = yes
 		states_general_mechanic = {
-			admirals = {
+			neckcliffer_admirals = {
 				naval_forcelimit_modifier = 0.1
 				global_trade_power = 0.05
 				legitimacy = -0.5
 			}
-			monarchists = {
+			neckcliffer_monarchists = {
 				land_forcelimit_modifier = 0.25
 				stability_cost_modifier = -0.1
 				legitimacy = 0.5
