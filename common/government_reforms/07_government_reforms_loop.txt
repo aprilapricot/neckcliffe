@@ -1,5 +1,4 @@
 #Olavlund
-
 #T1 Republic
 olavish_clans = {
 	icon = "trading_city"
@@ -32,14 +31,18 @@ olavish_clans = {
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
 		}
 		can_use_trade_post = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
+			NOT = {
+				has_dlc = "Res Publica"
+			}
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
@@ -111,7 +114,6 @@ olavlund_logging_camps_reform = {
 }
 
 #Altorzamh
-
 altorzamh_reform = {
 	icon = "government_for_people_reform"
 	allow_normal_conversion = yes
@@ -121,7 +123,6 @@ altorzamh_reform = {
 		caravan_power = 0.1
 		trade_steering = 0.1
 		great_project_upgrade_cost = -0.1
-		
 	}
 	valid_for_nation_designer = yes
 	potential = {
@@ -149,7 +150,6 @@ altorzamh_reform = {
 }
 
 #Lejdazamh
-
 lejdazamh_reform = {
 	icon = "noble_muslim"
 	allow_normal_conversion = yes
@@ -159,7 +159,6 @@ lejdazamh_reform = {
 		max_absolutism_effect = 0.1
 		global_tax_modifier = 0.1
 		num_accepted_cultures = 2
-		
 	}
 	valid_for_nation_designer = yes
 	potential = {
@@ -187,8 +186,7 @@ lejdazamh_reform = {
 }
 
 #Taryeanzamh
-
-taryeanzamh_reform = 
+taryeanzamh_reform = {
 	icon = "trading_city"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
@@ -197,19 +195,18 @@ taryeanzamh_reform =
 		global_missionary_strength = 0.02
 		global_colonial_growth = 25
 		devotion = 1
-		
 	}
 	valid_for_nation_designer = yes
 	potential = {
 		OR = {
 			tag = J56
-			have_had_reform = taryeanzamh_reform 
+			have_had_reform = taryeanzamh_reform
 		}
 	}
 	trigger = {
 		OR = {
 			tag = J56
-			have_had_reform = taryeanzamh_reform 
+			have_had_reform = taryeanzamh_reform
 		}
 	}
 	effect = {
@@ -221,5 +218,72 @@ taryeanzamh_reform =
 		enables_horde_idea_group = yes
 		temples_modifier = yes
 		locked_government_type = yes
+	}
+}
+
+#April Neckcliffe
+neckcliffe_stadthalter_monarchy_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes	#might need to change
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			tag = A22
+			#AND COUNTRY MODIFIER
+		}
+	}
+	trigger = {
+		is_lesser_in_union = no
+	}
+	modifiers = {
+		heavy_ship_power = 0.1
+		trade_efficiency = 0.1
+		reduced_liberty_desire_on_other_continent = 10
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.2
+		no_stability_loss_on_monarch_death = yes
+	}
+	removed_effect = {
+		country_event = {
+			id = dutch_republic.33
+		}
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		has_dutch_election = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			admirals = {
+				naval_forcelimit_modifier = 0.1
+				global_trade_power = 0.05
+				legitimacy = -0.5
+			}
+			monarchists = {
+				land_forcelimit_modifier = 0.25
+				stability_cost_modifier = -0.1
+				legitimacy = 0.5
+			}
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
 	}
 }

@@ -668,3 +668,28 @@ estate_anb_special = {
 		}
 	}
 }
+
+#April Neckcliffe
+estate_imperial_admirals = {
+	modifier_definition = {
+		type = loyalty
+		key = imperial_admirals_loyalty_modifier
+		trigger = {
+			has_estate = estate_imperial_admirals
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = imperial_admirals_influence_modifier
+		trigger = {
+			has_estate = estate_imperial_admirals
+		}
+	}
+	modifier_definition = {
+		type = privileges
+		key = imperial_admirals_privilege_slots
+		trigger = {
+			has_estate = estate_imperial_admirals
+		}
+	}
+}

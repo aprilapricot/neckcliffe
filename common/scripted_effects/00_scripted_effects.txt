@@ -1,5 +1,4 @@
 #Unsorted Scripted effects:
-
 #General effect for extending or adding province modifier
 #Province Scope
 add_or_extend_province_modifier_effect = {
@@ -7,10 +6,16 @@ add_or_extend_province_modifier_effect = {
 		limit = {
 			has_province_modifier = $MODIFIER$
 		}
-		extend_province_modifier = { name = $MODIFIER$ duration = $DURATION$ }
+		extend_province_modifier = {
+			name = $MODIFIER$
+			duration = $DURATION$
+		}
 	}
 	else = {
-		add_province_modifier = { name = $MODIFIER$ duration = $DURATION$ }
+		add_province_modifier = {
+			name = $MODIFIER$
+			duration = $DURATION$
+		}
 	}
 }
 
@@ -25,7 +30,10 @@ add_or_extend_country_modifier = {
 		hidden_effect = {
 			remove_country_modifier = $name$
 		}
-		add_country_modifier = { name = $name$ duration = $duration$ }
+		add_country_modifier = {
+			name = $name$
+			duration = $duration$
+		}
 	}
 	else = {
 		add_country_modifier = {
@@ -34,6 +42,7 @@ add_or_extend_country_modifier = {
 		}
 	}
 }
+
 add_or_extend_country_modifier_indefinitely = {
 	# Will add a country modifier of duration X, or extend an existing modifier *by* duration X
 	# E.g. If the modifier exists with 1 year remaining, and this has duration of 5 years, takes to 6 years.
@@ -41,7 +50,10 @@ add_or_extend_country_modifier_indefinitely = {
 		limit = {
 			has_country_modifier = $name$
 		}
-		extend_country_modifier = { name = $name$ duration = $duration$ }
+		extend_country_modifier = {
+			name = $name$
+			duration = $duration$
+		}
 	}
 	else = {
 		add_country_modifier = {
@@ -51,8 +63,8 @@ add_or_extend_country_modifier_indefinitely = {
 	}
 }
 
-
-add_or_extend_ruler_modifier = { #Did you know? extend_country_modifier doesn't work with ruler mods
+add_or_extend_ruler_modifier = {
+	#Did you know? extend_country_modifier doesn't work with ruler mods
 	if = {
 		limit = {
 			has_ruler_modifier = $name$
@@ -60,7 +72,10 @@ add_or_extend_ruler_modifier = { #Did you know? extend_country_modifier doesn't 
 		hidden_effect = {
 			remove_country_modifier = $name$
 		}
-		add_ruler_modifier = { name = $name$ duration = $duration$ }
+		add_ruler_modifier = {
+			name = $name$
+			duration = $duration$
+		}
 	}
 	else = {
 		add_ruler_modifier = {
@@ -72,11 +87,13 @@ add_or_extend_ruler_modifier = { #Did you know? extend_country_modifier doesn't 
 
 #Used in army professionalism event:
 #used where FROM is a province and ROOT is a country, ie onaction for provinces fallen
-add_loot_from_province_effect = { 
+add_loot_from_province_effect = {
 	if = {
 		limit = {
 			FROM = {
-				NOT = { development = 18 }
+				NOT = {
+					development = 18
+				}
 			}
 		}
 		add_treasury = 115
@@ -86,7 +103,9 @@ add_loot_from_province_effect = {
 		limit = {
 			FROM = {
 				development = 18
-				NOT = { development = 21 }
+				NOT = {
+					development = 21
+				}
 			}
 		}
 		add_treasury = 135
@@ -96,7 +115,9 @@ add_loot_from_province_effect = {
 		limit = {
 			FROM = {
 				development = 21
-				NOT = { development = 24 }
+				NOT = {
+					development = 24
+				}
 			}
 		}
 		add_treasury = 155
@@ -106,7 +127,9 @@ add_loot_from_province_effect = {
 		limit = {
 			FROM = {
 				development = 24
-				NOT = { development = 27 }
+				NOT = {
+					development = 27
+				}
 			}
 		}
 		add_treasury = 180
@@ -116,7 +139,9 @@ add_loot_from_province_effect = {
 		limit = {
 			FROM = {
 				development = 27
-				NOT = { development = 30 }
+				NOT = {
+					development = 30
+				}
 			}
 		}
 		add_treasury = 210
@@ -126,7 +151,9 @@ add_loot_from_province_effect = {
 		limit = {
 			FROM = {
 				development = 30
-				NOT = { development = 33 }
+				NOT = {
+					development = 33
+				}
 			}
 		}
 		add_treasury = 230
@@ -146,7 +173,7 @@ add_loot_from_province_effect = {
 #Generalized version of the same effect, for use in province scope.
 #used where ROOT is a province, ie onaction for provinces fallen
 #$LOOTER$ is the scope of the tag performing the Looting (so for instance owner)
-add_loot_from_rich_province_general_effect = { 
+add_loot_from_rich_province_general_effect = {
 	add_devastation = 80
 	remove_loot = {
 		who = $LOOTER$
@@ -154,7 +181,9 @@ add_loot_from_rich_province_general_effect = {
 	}
 	if = {
 		limit = {
-			NOT = { development = 18 }
+			NOT = {
+				development = 18
+			}
 		}
 		$LOOTER$ = {
 			add_treasury = 400
@@ -164,7 +193,9 @@ add_loot_from_rich_province_general_effect = {
 	if = {
 		limit = {
 			development = 18
-			NOT = { development = 21 }
+			NOT = {
+				development = 21
+			}
 		}
 		$LOOTER$ = {
 			add_treasury = 435
@@ -174,7 +205,9 @@ add_loot_from_rich_province_general_effect = {
 	if = {
 		limit = {
 			development = 21
-			NOT = { development = 24 }
+			NOT = {
+				development = 24
+			}
 		}
 		$LOOTER$ = {
 			add_treasury = 455
@@ -184,7 +217,9 @@ add_loot_from_rich_province_general_effect = {
 	if = {
 		limit = {
 			development = 24
-			NOT = { development = 27 }
+			NOT = {
+				development = 27
+			}
 		}
 		$LOOTER$ = {
 			add_treasury = 480
@@ -194,7 +229,9 @@ add_loot_from_rich_province_general_effect = {
 	if = {
 		limit = {
 			development = 27
-			NOT = { development = 30 }
+			NOT = {
+				development = 30
+			}
 		}
 		$LOOTER$ = {
 			add_treasury = 510
@@ -204,7 +241,9 @@ add_loot_from_rich_province_general_effect = {
 	if = {
 		limit = {
 			development = 30
-			NOT = { development = 33 }
+			NOT = {
+				development = 33
+			}
 		}
 		$LOOTER$ = {
 			add_treasury = 530
@@ -232,7 +271,6 @@ clear_religious_scholar_modifiers_effect = {
 	remove_country_modifier = ismaili_scholar_modifier
 	remove_country_modifier = jafari_scholar_modifier
 	remove_country_modifier = zaidi_scholar_modifier
-
 	#Anbennar
 	remove_country_modifier = starry_eye_scholar_modifier
 	remove_country_modifier = radiant_sun_scholar_modifier
@@ -244,19 +282,16 @@ clear_religious_scholar_modifiers_effect = {
 	remove_country_modifier = synthetic_truth_scholar_modifier
 	remove_country_modifier = final_paradigm_scholar_modifier
 	remove_country_modifier = piercing_fang_scholar_modifier
-
 	remove_country_modifier = filustkhuga_scholar_modifier
 	remove_country_modifier = irdukhuga_scholar_modifier
 	remove_country_modifier = maslekhuga_scholar_modifier
 	remove_country_modifier = malukhuga_scholar_modifier
-
 	remove_country_modifier = fate_sculptors_scholar_modifier
 	remove_country_modifier = being_sculptors_scholar_modifier
 	remove_country_modifier = blade_and_needle_scholar_modifier
 	remove_country_modifier = great_cycle_scholar_modifier
 	remove_country_modifier = humble_zeal_scholar_modifier
 	remove_country_modifier = soul_song_scholar_modifier
-
 	remove_country_modifier = demons_of_the_sorrow_tradition_modifier
 	remove_country_modifier = monstrous_pedigrees_tradition_modifier
 	remove_country_modifier = children_of_goxma_tradition_modifier
@@ -287,7 +322,9 @@ move_capital_effect = {
 		add_imperial_influence = -1
 	}
 	if = {
-		limit = { is_capital = no }
+		limit = {
+			is_capital = no
+		}
 		ROOT = {
 			set_capital = PREV
 		}
@@ -316,7 +353,9 @@ prev_move_capital_effect = {
 		add_imperial_influence = -1
 	}
 	if = {
-		limit = { is_capital = no }
+		limit = {
+			is_capital = no
+		}
 		PREV = {
 			set_capital = PREV
 		}
@@ -355,7 +394,6 @@ abolish_slavery_effect = {
 	}
 }
 
-
 add_vassalise_cb_effect = {
 	add_casus_belli = {
 		type = cb_vassalize_mission
@@ -363,7 +401,6 @@ add_vassalise_cb_effect = {
 		target = ROOT
 	}
 }
-
 
 remove_vassalise_cb_effect = {
 	if = {
@@ -388,7 +425,6 @@ clear_standard_revolution_elements_effect = {
 		}
 		end_disaster = revolution
 	}
-
 	clr_country_flag = religious_revolution
 	clr_country_flag = serfdom
 	clr_country_flag = social_reform
@@ -416,7 +452,7 @@ enact_revolution_effect = {
 	disband_rebels = revolutionary_rebels
 	disband_rebels = anti_tax_rebels
 	hidden_effect = {
-		if = {	
+		if = {
 			limit = {
 				any_subject_country = {
 					has_country_modifier = colony_inspired_by_revolution
@@ -449,12 +485,18 @@ enact_revolution_effect = {
 		# }
 	}
 	if = {
-		limit = { is_emperor_of_china = yes }
+		limit = {
+			is_emperor_of_china = yes
+		}
 		dismantle_empire_of_china = yes
 		set_global_flag = empire_of_china_dismantled
 	}
 	if = {
-		limit = { NOT = { government = republic } }
+		limit = {
+			NOT = {
+				government = republic
+			}
+		}
 		change_government_to_republic = yes
 	}
 	if = {
@@ -468,16 +510,28 @@ enact_revolution_effect = {
 		set_revolution_target = ROOT
 	}
 	if = {
-		limit = { has_reform = parliamentary_reform }
+		limit = {
+			has_reform = parliamentary_reform
+		}
 		remove_government_reform = parliamentary_reform
 	}
 	if = {
-		limit = { has_reform = states_general_reform }
+		limit = {
+			has_reform = states_general_reform
+		}
 		remove_government_reform = states_general_reform
 	}
 	if = {
-		limit = { has_reform = merchant_matriarchs_reform }
+		limit = {
+			has_reform = merchant_matriarchs_reform
+		}
 		remove_government_reform = merchant_matriarchs_reform
+	}
+	if = {
+		limit = {
+			has_reform = neckcliffe_stadthalter_monarchy_reform
+		}
+		remove_government_reform = neckcliffe_stadthalter_monarchy_reform
 	}
 	# if = {
 	# 	limit = {
@@ -491,11 +545,9 @@ enact_revolution_effect = {
 	# 	}
 	# }
 	# else = {
-		kill_ruler = yes
+	kill_ruler = yes
 	# }
-
 	add_yearly_manpower = 5
-
 	if = {
 		limit = {
 			has_country_flag = revolution_disaster_reactionary
@@ -505,7 +557,6 @@ enact_revolution_effect = {
 			duration = 9125
 		}
 	}
-
 	if = {
 		limit = {
 			has_country_flag = revolution_disaster_immediate_revolution
@@ -513,7 +564,6 @@ enact_revolution_effect = {
 		clr_country_flag = revolution_disaster_immediate_revolution
 	}
 	set_country_flag = revolutionary_republic_flag
-	
 	# if = { 
 	# 	limit = { tag = FRA has_dlc = "Domination" } 
 	# 	swap_non_generic_missions = yes
@@ -525,7 +575,9 @@ add_half_industrialization_effect = {
 	if = {
 		limit = {
 			is_institution_enabled = industrialization
-			NOT = { industrialization = 100 }
+			NOT = {
+				industrialization = 100
+			}
 		}
 		add_institution_embracement = {
 			which = industrialization
@@ -539,7 +591,9 @@ add_quarter_industrialization_effect = {
 	if = {
 		limit = {
 			is_institution_enabled = industrialization
-			NOT = { industrialization = 100 }
+			NOT = {
+				industrialization = 100
+			}
 		}
 		add_institution_embracement = {
 			which = industrialization
@@ -551,18 +605,30 @@ add_quarter_industrialization_effect = {
 #province scope, chooses which random monarch point bonus to give for agendas
 choose_random_development_bonus_effect = {
 	random_list = {
-		1 = { set_province_flag = add_base_tax_flag }
-		1 = { set_province_flag = add_base_production_flag }
-		1 = { set_province_flag = add_base_manpower_flag }
+		1 = {
+			set_province_flag = add_base_tax_flag
+		}
+		1 = {
+			set_province_flag = add_base_production_flag
+		}
+		1 = {
+			set_province_flag = add_base_manpower_flag
+		}
 	}
 }
 
 apply_random_development_bonus_bonus_effect = {
 	trigger_switch = {
 		on_trigger = has_province_flag
-		add_base_tax_flag = { add_base_tax = 1 }
-		add_base_production_flag = { add_base_production = 1 }
-		add_base_manpower_flag = { add_base_manpower = 1 }
+		add_base_tax_flag = {
+			add_base_tax = 1
+		}
+		add_base_production_flag = {
+			add_base_production = 1
+		}
+		add_base_manpower_flag = {
+			add_base_manpower = 1
+		}
 	}
 	clear_random_development_bonus_flags_effect = yes
 }
@@ -572,9 +638,12 @@ clear_random_development_bonus_flags_effect = {
 	clr_province_flag = add_base_production_flag
 	clr_province_flag = add_base_manpower_flag
 }
+
 #province scope, should be used whenever the revolution is removed from a province
 remove_revolution_from_province_effect = {
-	hidden_effect = { set_revolution_in_province = no }
+	hidden_effect = {
+		set_revolution_in_province = no
+	}
 	custom_tooltip = no_spread_here_for_15_years_tt
 	add_province_modifier = {
 		name = no_revolution_here_dummy
@@ -582,7 +651,6 @@ remove_revolution_from_province_effect = {
 		hidden = yes
 	}
 }
-
 
 spawn_small_scaled_rebels = {
 	#always specify type
@@ -596,25 +664,25 @@ spawn_small_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 	else_if = {
@@ -624,25 +692,25 @@ spawn_small_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 2
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 2
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 2
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 	else_if = {
@@ -652,48 +720,48 @@ spawn_small_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 1.5
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 1.5
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 1.5
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 1.5
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 1.5
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 1.5
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 	else = {
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 1
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 1
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 1
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 1
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 1
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 1
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 }
@@ -710,37 +778,37 @@ spawn_large_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-			}
-			spawn_rebels = {
-				size = 2
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+		}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
-			spawn_rebels = {
-				size = 2
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $saved_name$
-			}
-			spawn_rebels = {
-				size = 2
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $saved_name$
+		}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+		}
 		]
 	}
 	else_if = {
@@ -750,37 +818,37 @@ spawn_large_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-			}
-			spawn_rebels = {
-				size = 1
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+		}
+		spawn_rebels = {
+			size = 1
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
-			spawn_rebels = {
-				size = 1
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
+		spawn_rebels = {
+			size = 1
+			type = $type$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $saved_name$
-			}
-			spawn_rebels = {
-				size = 1
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $saved_name$
+		}
+		spawn_rebels = {
+			size = 1
+			type = $type$
+		}
 		]
 	}
 	else_if = {
@@ -790,25 +858,25 @@ spawn_large_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 3
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 3
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 	else_if = {
@@ -818,52 +886,51 @@ spawn_large_scaled_rebels = {
 			}
 		}
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 2.5
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 2.5
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 2.5
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 2.5
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 2.5
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 2.5
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 	else = {
 		[[no_defined_leader]
-			spawn_rebels = {
-				size = 2
-				type = $type$
-			}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+		}
 		]
 		[[leader]
-			spawn_rebels = {
-				size = 2
-				type = $type$
-				leader = $leader$
-				leader_dynasty = $leader_dynasty$
-			}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+			leader = $leader$
+			leader_dynasty = $leader_dynasty$
+		}
 		]
 		[[saved_name]
-			spawn_rebels = {
-				size = 2
-				type = $type$
-				leader = $saved_name$
-			}
+		spawn_rebels = {
+			size = 2
+			type = $type$
+			leader = $saved_name$
+		}
 		]
 	}
 }
-
 
 #country scope. Currently just applies to the Hansa, if future ones are added, update the flags
 #Used in nation formation decisions
@@ -883,7 +950,9 @@ restore_country_name_effect = {
 restore_old_nation_on_formation_effect = {
 	if = {
 		limit = {
-			NOT = { is_former_colonial_nation = yes }
+			NOT = {
+				is_former_colonial_nation = yes
+			}
 		}
 		custom_tooltip = loses_old_world_provs_tt
 	}
@@ -905,12 +974,18 @@ restore_old_nation_on_formation_effect = {
 				remove_core = ROOT
 			}
 			release = event_target:old_tag_target
-			event_target:old_tag_target = { swap_non_generic_missions = yes }
-			ROOT = { set_country_flag = old_world_to_new_world_flag }
-			ROOT = { set_country_flag = no_colonial_nations }
+			event_target:old_tag_target = {
+				swap_non_generic_missions = yes
+			}
+			ROOT = {
+				set_country_flag = old_world_to_new_world_flag
+			}
+			ROOT = {
+				set_country_flag = no_colonial_nations
+			}
 			every_subject_country = {
 				limit = {
-					capital_scope = { 
+					capital_scope = {
 						OR = {
 							continent = europe
 							continent = asia
@@ -929,19 +1004,27 @@ restore_old_nation_on_formation_effect = {
 						is_subject_of_type = self_governing_colony
 					}
 				}
-				ROOT = { inherit = PREV }
+				ROOT = {
+					inherit = PREV
+				}
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
-				event_target:old_tag_target = { set_government_rank = 1 }
+				event_target:old_tag_target = {
+					set_government_rank = 1
+				}
 			}
 			else_if = {
 				limit = {
 					government_rank = 3
 				}
-				event_target:old_tag_target = { set_government_rank = 3 }
+				event_target:old_tag_target = {
+					set_government_rank = 3
+				}
 			}
 			# if = {
 			# 	limit = {
@@ -1328,7 +1411,9 @@ restore_old_nation_on_formation_effect = {
 change_government_to_republic = {
 	if = {
 		limit = {
-			NOT = { government = republic }
+			NOT = {
+				government = republic
+			}
 		}
 		change_government = republic
 		change_government_reform_progress = -200
@@ -1338,7 +1423,9 @@ change_government_to_republic = {
 change_government_to_monarchy = {
 	if = {
 		limit = {
-			NOT = { government = monarchy }
+			NOT = {
+				government = monarchy
+			}
 		}
 		if = {
 			limit = {
@@ -1357,7 +1444,9 @@ change_government_to_monarchy = {
 change_government_to_theocracy = {
 	if = {
 		limit = {
-			NOT = { government = theocracy }
+			NOT = {
+				government = theocracy
+			}
 		}
 		if = {
 			limit = {
@@ -1376,7 +1465,9 @@ change_government_to_theocracy = {
 change_government_to_tribal = {
 	if = {
 		limit = {
-			NOT = { government = tribal }
+			NOT = {
+				government = tribal
+			}
 		}
 		change_government = tribal
 		change_government_reform_progress = -800
@@ -1396,7 +1487,6 @@ change_government_to_tribal = {
 #		add_ruler_personality = $key$_personality
 #	}
 #}
-
 #add_heir_personality_ancestor = {
 #	# key = personality to test again
 #	if = {
@@ -1410,7 +1500,6 @@ change_government_to_tribal = {
 #		add_heir_personality = $key$_personality
 #	}
 #}
-
 #add_queen_personality_ancestor = {
 #	# key = personality to test again
 #	if = {
@@ -1424,7 +1513,6 @@ change_government_to_tribal = {
 #		add_queen_personality = $key$_personality
 #	}
 #}
-
 #remove_ruler_personality_ancestor = {
 #	# key = personality to test again
 #	if = {
@@ -1438,7 +1526,6 @@ change_government_to_tribal = {
 #		remove_ruler_personality = $key$_personality
 #	}
 #}
-
 #remove_heir_personality_ancestor = {
 #	# key = personality to test again
 #	if = {
@@ -1452,7 +1539,6 @@ change_government_to_tribal = {
 #		remove_heir_personality = $key$_personality
 #	}
 #}
-
 #remove_queen_personality_ancestor = {
 #	# key = personality to test again
 #	if = {
@@ -1466,7 +1552,6 @@ change_government_to_tribal = {
 #		remove_queen_personality = $key$_personality
 #	}
 #}
-
 #The three effects below are used for setting a great project to exact the tier
 #I tried to combine the three effects into one single scripted effect, but I couldn't figure a way out to do the effect without having to do a lot of custom tooltip
 #Sets monument tier 1 (has no effect if the monument is tier 1 or higher)
@@ -1478,7 +1563,8 @@ set_great_project_tier_1 = {
 		}
 		if = {
 			limit = {
-				has_great_project = {	#Asks the EXACT tier unlike other triggers
+				has_great_project = {
+					#Asks the EXACT tier unlike other triggers
 					type = $type$
 					tier = 0
 				}
@@ -1490,9 +1576,15 @@ set_great_project_tier_1 = {
 		}
 		else = {
 			random_list = {
-				1 = { add_base_tax = 2 }
-				1 = { add_base_production = 2 }
-				1 = { add_base_manpower = 2 }
+				1 = {
+					add_base_tax = 2
+				}
+				1 = {
+					add_base_production = 2
+				}
+				1 = {
+					add_base_manpower = 2
+				}
 			}
 		}
 	}
@@ -1518,9 +1610,15 @@ set_great_project_tier_2 = {
 				}
 			}
 			random_list = {
-				1 = { add_base_tax = 4 }
-				1 = { add_base_production = 4 }
-				1 = { add_base_manpower = 4 }
+				1 = {
+					add_base_tax = 4
+				}
+				1 = {
+					add_base_production = 4
+				}
+				1 = {
+					add_base_manpower = 4
+				}
 			}
 		}
 		if = {
@@ -1541,14 +1639,21 @@ set_great_project_tier_2 = {
 				tier = 1
 			}
 			random_list = {
-				1 = { add_base_tax = 2 }
-				1 = { add_base_production = 2 }
-				1 = { add_base_manpower = 2 }
+				1 = {
+					add_base_tax = 2
+				}
+				1 = {
+					add_base_production = 2
+				}
+				1 = {
+					add_base_manpower = 2
+				}
 			}
 		}
 		if = {
 			limit = {
-				has_great_project = {	#Asks the EXACT tier unlike other triggers
+				has_great_project = {
+					#Asks the EXACT tier unlike other triggers
 					type = $type$
 					tier = 0
 				}
@@ -1587,9 +1692,15 @@ set_great_project_tier_3 = {
 				}
 			}
 			random_list = {
-				1 = { add_base_tax = 6 }
-				1 = { add_base_production = 6 }
-				1 = { add_base_manpower = 6 }
+				1 = {
+					add_base_tax = 6
+				}
+				1 = {
+					add_base_production = 6
+				}
+				1 = {
+					add_base_manpower = 6
+				}
 			}
 		}
 		if = {
@@ -1610,9 +1721,15 @@ set_great_project_tier_3 = {
 				tier = 1
 			}
 			random_list = {
-				1 = { add_base_tax = 4 }
-				1 = { add_base_production = 4 }
-				1 = { add_base_manpower = 4 }
+				1 = {
+					add_base_tax = 4
+				}
+				1 = {
+					add_base_production = 4
+				}
+				1 = {
+					add_base_manpower = 4
+				}
 			}
 		}
 		if = {
@@ -1633,14 +1750,21 @@ set_great_project_tier_3 = {
 				tier = 2
 			}
 			random_list = {
-				1 = { add_base_tax = 2 }
-				1 = { add_base_production = 2 }
-				1 = { add_base_manpower = 2 }
+				1 = {
+					add_base_tax = 2
+				}
+				1 = {
+					add_base_production = 2
+				}
+				1 = {
+					add_base_manpower = 2
+				}
 			}
 		}
 		if = {
 			limit = {
-				has_great_project = {	#Asks the EXACT tier unlike other triggers
+				has_great_project = {
+					#Asks the EXACT tier unlike other triggers
 					type = $type$
 					tier = 0
 				}
@@ -1698,7 +1822,9 @@ create_colony_mission_reward = {
 	}
 	else_if = {
 		limit = {
-			NOT = { is_permanent_claim = $province$ }
+			NOT = {
+				is_permanent_claim = $province$
+			}
 		}
 		add_permanent_claim = $province$
 	}
@@ -1718,7 +1844,11 @@ seize_empty_province_effect = {
 		}
 	}
 	else_if = {
-		limit = { NOT = { owns_or_non_sovereign_subject_of = $province$ } }
+		limit = {
+			NOT = {
+				owns_or_non_sovereign_subject_of = $province$
+			}
+		}
 		add_core = $province$
 	}
 	else = {
@@ -1758,7 +1888,9 @@ create_colony_mission_reward_province = {
 	}
 	else_if = {
 		limit = {
-			NOT = { is_permanent_claim = $country$ }
+			NOT = {
+				is_permanent_claim = $country$
+			}
 		}
 		add_permanent_claim = $country$
 	}
@@ -1848,27 +1980,26 @@ remove_random_development = {
 
 #Country effect
 # mal_add_disaster_stability = {
-	# custom_tooltip = mal_add_disaster_stability_tt
-	# hidden_effect = {
-		# if = {
-			# limit = {
-				# has_disaster = decline_of_mali
-			# }
-			# if = {
-				# limit = { NOT = { stability = 3 } }
-				# add_stability = 1
-			# }
-			# else = {
-				# add_adm_power = 50
-			# }
-		# }
-	# }
+# custom_tooltip = mal_add_disaster_stability_tt
+# hidden_effect = {
+# if = {
+# limit = {
+# has_disaster = decline_of_mali
 # }
-
+# if = {
+# limit = { NOT = { stability = 3 } }
+# add_stability = 1
+# }
+# else = {
+# add_adm_power = 50
+# }
+# }
+# }
+# }
 #Country effect
 add_inflation_scaled_to_trade = {
-	[[custom_tooltip] 
-		custom_tooltip = $custom_tooltip$
+	[[custom_tooltip]
+	custom_tooltip = $custom_tooltip$
 	]
 	#custom_tooltip = add_inflation_scaled_to_trade_tt	#Make sure to define an own custom tooltip for telling how much inflation per trade percantage should be given
 	hidden_effect = {
@@ -1919,75 +2050,74 @@ add_inflation_scaled_to_trade = {
 
 #Country "effect"
 # mal_determine_offer_acceptance = {
-	# if = {
-		# limit = {
-			# mal_will_accept_offer = {
-				# province = $province$
-			# }
-		# }
-		# $province$ = {
-			# owner = {
-				# custom_tooltip = mal_will_accept_offer
-			# }
-		# }
-	# }
-	# else_if = {
-		# limit = {
-			# mal_very_highly_to_accept_offer = {
-				# province = $province$
-			# }
-		# }
-		# $province$ = {
-			# owner = {
-				# custom_tooltip = mal_will_probably_accept_offer
-			# }
-		# }
-	# }
-	# else_if = {
-		# limit = {
-			# mal_might_or_might_not_accept_offer = {
-				# province = $province$
-			# }
-		# }
-		# $province$ = {
-			# owner = {
-				# custom_tooltip = mal_could_accept_offer
-			# }
-		# }
-	# }
-	# else_if = {
-		# limit = {
-			# mal_very_likely_to_not_accept_offer = {
-				# province = $province$
-			# }
-		# }
-		# $province$ = {
-			# owner = {
-				# custom_tooltip = mal_will_probably_not_accept_offer
-			# }
-		# }
-	# }
-	# else_if = {
-		# limit = {
-			# mal_will_never_accept_offer = {
-				# province = $province$
-			# }
-		# }
-		# $province$ = {
-			# owner = {
-				# custom_tooltip = mal_will_naver_accept_offer
-			# }
-		# }
-	# }
-	# else = {
-		# $province$ = {
-			# owner = {
-				# custom_tooltip = mal_offer_outcome_unkonwn
-			# }
-		# }
-	# }
+# if = {
+# limit = {
+# mal_will_accept_offer = {
+# province = $province$
 # }
-
+# }
+# $province$ = {
+# owner = {
+# custom_tooltip = mal_will_accept_offer
+# }
+# }
+# }
+# else_if = {
+# limit = {
+# mal_very_highly_to_accept_offer = {
+# province = $province$
+# }
+# }
+# $province$ = {
+# owner = {
+# custom_tooltip = mal_will_probably_accept_offer
+# }
+# }
+# }
+# else_if = {
+# limit = {
+# mal_might_or_might_not_accept_offer = {
+# province = $province$
+# }
+# }
+# $province$ = {
+# owner = {
+# custom_tooltip = mal_could_accept_offer
+# }
+# }
+# }
+# else_if = {
+# limit = {
+# mal_very_likely_to_not_accept_offer = {
+# province = $province$
+# }
+# }
+# $province$ = {
+# owner = {
+# custom_tooltip = mal_will_probably_not_accept_offer
+# }
+# }
+# }
+# else_if = {
+# limit = {
+# mal_will_never_accept_offer = {
+# province = $province$
+# }
+# }
+# $province$ = {
+# owner = {
+# custom_tooltip = mal_will_naver_accept_offer
+# }
+# }
+# }
+# else = {
+# $province$ = {
+# owner = {
+# custom_tooltip = mal_offer_outcome_unkonwn
+# }
+# }
+# }
+# }
 #Country effect
 ##########################################################
 # Supports following privileges
@@ -2028,20 +2158,20 @@ unlock_estate_privilege = {
 		set_country_flag = unlocked_privilege_$estate_privilege$
 	}
 	[[modifier_tooltip]
-		custom_tooltip = unlock_estate_privilege_modifier_tooltip_tt
-		tooltip = {
-			add_country_modifier = {
-				name = $modifier_tooltip$
-				duration = -1
-				desc = UNTIL_PRIVILEGE_REVOKED
-			}
+	custom_tooltip = unlock_estate_privilege_modifier_tooltip_tt
+	tooltip = {
+		add_country_modifier = {
+			name = $modifier_tooltip$
+			duration = -1
+			desc = UNTIL_PRIVILEGE_REVOKED
 		}
+	}
 	]
 	[[effect_tooltip]
-		custom_tooltip = unlock_estate_privilege_effect_tooltip_tt
-		tooltip = {
-			$effect_tooltip$
-		}
+	custom_tooltip = unlock_estate_privilege_effect_tooltip_tt
+	tooltip = {
+		$effect_tooltip$
+	}
 	]
 }
 
@@ -2071,13 +2201,13 @@ unlock_merc_company = {
 		set_country_flag = unlocked_$merc_company$
 	}
 	[[free_merc]
-		custom_tooltip = costs_no_army_professionalism
+	custom_tooltip = costs_no_army_professionalism
 	]
 	[[global]
-		custom_tooltip = global_merc_company
-		hidden_effect = {
-			set_global_flag = global_unlocked_$merc_company$
-		}
+	custom_tooltip = global_merc_company
+	hidden_effect = {
+		set_global_flag = global_unlocked_$merc_company$
+	}
 	]
 }
 
@@ -2089,7 +2219,6 @@ unlock_merc_company = {
 #		clr_country_flag = unlocked_$merc_company$
 #	}
 #}
-
 #Country effect #1.35
 ##########################################################
 # Supports following church aspects
@@ -2158,10 +2287,10 @@ unlock_government_reform = {
 		set_country_flag = unlocked_$government_reform$
 	}
 	[[tooltip]
-		custom_tooltip = unlock_government_reform_tooltip
-		tooltip = {
-			add_government_reform = $government_reform$
-		}
+	custom_tooltip = unlock_government_reform_tooltip
+	tooltip = {
+		add_government_reform = $government_reform$
+	}
 	]
 }
 
@@ -2194,7 +2323,7 @@ unlock_estate = {
 		set_country_flag = unlocked_$estate$_flag
 	}
 	[[show_conditions]
-		custom_tooltip = is_unavailable_$estate$
+	custom_tooltip = is_unavailable_$estate$
 	]
 }
 
@@ -2252,17 +2381,20 @@ disable_estate_effect = {
 	}
 }
 
-enable_full_ducat_gain_from_selling_crownland = { #1.35
+enable_full_ducat_gain_from_selling_crownland = {
+	#1.35
 	custom_tooltip = enable_full_ducat_gain_from_selling_crownland_tt
 	set_country_flag = enable_full_ducat_gain_from_selling_crownland_flag
 }
 
-can_sell_crownland_to_estates_targeted = { #1.35
+can_sell_crownland_to_estates_targeted = {
+	#1.35
 	custom_tooltip = can_sell_crownland_to_estates_targeted_tt
 	set_country_flag = can_sell_crownland_to_estates_targeted_flag
 }
 
-can_seize_crownland_to_estates_targeted = { #1.35
+can_seize_crownland_to_estates_targeted = {
+	#1.35
 	custom_tooltip = can_seize_crownland_to_estates_targeted_tt
 	set_country_flag = can_seize_crownland_to_estates_targeted_flag
 }
@@ -2275,7 +2407,9 @@ add_increase_same_religion_opinion = {
 		every_known_country = {
 			limit = {
 				OR = {
-					ROOT = { has_harmonized_with = PREV }
+					ROOT = {
+						has_harmonized_with = PREV
+					}
 					religion = ROOT
 				}
 				NOT = {
@@ -2352,9 +2486,9 @@ remove_increase_same_religion_opinion = {
 #		}
 #	}
 #}
-
 #Country effect - make sure to add an own custom tooltip in form of: "Every §Y$religion$§! country will have their opinion of [Root.GetName] increased by §G+50§!."
-add_opinion_of_religion = { #1.35
+add_opinion_of_religion = {
+	#1.35
 	hidden_effect = {
 		set_country_flag = has_improve_opinion_flag
 		set_country_flag = has_increased_$religion$_opinion
@@ -2381,7 +2515,8 @@ add_opinion_of_religion = { #1.35
 }
 
 #Country effect - make sure to add a custom localization like: "Remove the opinion bonus of $religion$ countries for §Y[Root.GetName]§!."
-remove_religious_opinion_for_scope = { #1.35
+remove_religious_opinion_for_scope = {
+	#1.35
 	hidden_effect = {
 		clr_country_flag = has_improve_opinion_flag
 		clr_country_flag = has_increased_$religion$_opinion
@@ -2406,7 +2541,8 @@ remove_religious_opinion_for_scope = { #1.35
 }
 
 #Country effect
-add_temporary_colonist = { #1.35
+add_temporary_colonist = {
+	#1.35
 	add_country_modifier = {
 		name = temporary_colonist
 		duration = $duration$
@@ -2415,18 +2551,19 @@ add_temporary_colonist = { #1.35
 }
 
 #Country effect - Mission reward
-allow_baseline_invite_scholar = { #1.35
+allow_baseline_invite_scholar = {
+	#1.35
 	custom_tooltip = allows_every_time_invite_of_$religious_school$
 	hidden_effect = {
 		set_country_flag = can_always_invite_$religious_school$
 	}
 	[[religious_school_modifier]
-		tooltip = {
-			add_country_modifier = {
-				name = $religious_school_modifier$
-				duration = -1
-			}
+	tooltip = {
+		add_country_modifier = {
+			name = $religious_school_modifier$
+			duration = -1
 		}
+	}
 	]
 }
 
@@ -2475,7 +2612,7 @@ transfer_treasury = {
 		}
 	}
 	[[custom_tooltip]
-		custom_tooltip = $custom_tooltip$
+	custom_tooltip = $custom_tooltip$
 	]
 }
 
@@ -2520,7 +2657,7 @@ disable_propogate_religion_immunity = {
 }
 
 #Country effect
-enable_propagate_religion_in_abrahamic_provinces= {
+enable_propagate_religion_in_abrahamic_provinces = {
 	custom_tooltip = enable_propogate_religion_in_abrahamic_provinces_tt
 	hidden_effect = {
 		set_country_flag = can_propagate_religion_in_abrahamic_provinces
@@ -2549,6 +2686,7 @@ unlock_trading_policy = {
 		clr_country_flag = locked_trading_policy_$policy$
 	}
 }
+
 #Makes Trading Policy UNSELECTABLE
 lock_trading_policy = {
 	custom_tooltip = lock_trading_policy_$policy$_tt
@@ -2556,6 +2694,7 @@ lock_trading_policy = {
 		set_country_flag = locked_trading_policy_$policy$
 	}
 }
+
 #Makes Trading Policy VISIBLE
 enable_trading_policy = {
 	custom_tooltip = enable_trading_policy_$policy$_tt
@@ -2564,6 +2703,7 @@ enable_trading_policy = {
 		clr_country_flag = disabled_trading_policy_$policy$
 	}
 }
+
 #Makes Trading Policy INVISIBLE
 disable_trading_policy = {
 	custom_tooltip = disable_trading_policy_$policy$_tt
@@ -2603,7 +2743,9 @@ enable_cult_for_heirs_mission = {
 	custom_tooltip = enable_cult_for_heirs_tt
 	hidden_effect = {
 		if = {
-			limit = { has_estate_privilege = estate_church_heir_shrine }
+			limit = {
+				has_estate_privilege = estate_church_heir_shrine
+			}
 			remove_estate_privilege = estate_church_heir_shrine
 		}
 		set_country_flag = enabled_cult_for_heirs
@@ -2623,23 +2765,57 @@ enable_cult_for_heirs_mission = {
 remove_heir_cult = {
 	trigger_switch = {
 		on_trigger = has_country_modifier
-		junior_yemoja_cult =                   { remove_country_modifier = junior_yemoja_cult }
-		junior_roog_cult =                     { remove_country_modifier = junior_roog_cult }
-		junior_nyame_cult =                    { remove_country_modifier = junior_nyame_cult }
-		junior_cwezi_cult =                    { remove_country_modifier = junior_cwezi_cult }
-		junior_central_african_ancestor_cult = { remove_country_modifier = junior_central_african_ancestor_cult }
-		junior_mwari_cult =                    { remove_country_modifier = junior_mwari_cult }
-		junior_enkai_cult =                    { remove_country_modifier = junior_enkai_cult }
-		junior_waaq_cult =                     { remove_country_modifier = junior_waaq_cult }
-		junior_zanahary_cult =                 { remove_country_modifier = junior_zanahary_cult }
-		junior_christianity_cult =             { remove_country_modifier = junior_christianity_cult }
-		junior_islam_cult =                    { remove_country_modifier = junior_islam_cult }
-		junior_buddhism_cult =                 { remove_country_modifier = junior_buddhism_cult }
-		junior_dharmic_cult =                  { remove_country_modifier = junior_dharmic_cult }
-		junior_south_central_american_cult =   { remove_country_modifier = junior_south_central_american_cult }
-		junior_norse_cult =                    { remove_country_modifier = junior_norse_cult }
-		junior_jewish_cult =                   { remove_country_modifier = junior_jewish_cult }
-		junior_zoroastrian_cult =              { remove_country_modifier = junior_zoroastrian_cult }
+		junior_yemoja_cult = {
+			remove_country_modifier = junior_yemoja_cult
+		}
+		junior_roog_cult = {
+			remove_country_modifier = junior_roog_cult
+		}
+		junior_nyame_cult = {
+			remove_country_modifier = junior_nyame_cult
+		}
+		junior_cwezi_cult = {
+			remove_country_modifier = junior_cwezi_cult
+		}
+		junior_central_african_ancestor_cult = {
+			remove_country_modifier = junior_central_african_ancestor_cult
+		}
+		junior_mwari_cult = {
+			remove_country_modifier = junior_mwari_cult
+		}
+		junior_enkai_cult = {
+			remove_country_modifier = junior_enkai_cult
+		}
+		junior_waaq_cult = {
+			remove_country_modifier = junior_waaq_cult
+		}
+		junior_zanahary_cult = {
+			remove_country_modifier = junior_zanahary_cult
+		}
+		junior_christianity_cult = {
+			remove_country_modifier = junior_christianity_cult
+		}
+		junior_islam_cult = {
+			remove_country_modifier = junior_islam_cult
+		}
+		junior_buddhism_cult = {
+			remove_country_modifier = junior_buddhism_cult
+		}
+		junior_dharmic_cult = {
+			remove_country_modifier = junior_dharmic_cult
+		}
+		junior_south_central_american_cult = {
+			remove_country_modifier = junior_south_central_american_cult
+		}
+		junior_norse_cult = {
+			remove_country_modifier = junior_norse_cult
+		}
+		junior_jewish_cult = {
+			remove_country_modifier = junior_jewish_cult
+		}
+		junior_zoroastrian_cult = {
+			remove_country_modifier = junior_zoroastrian_cult
+		}
 	}
 }
 
@@ -2705,7 +2881,6 @@ half_estate_privilege_absolutism_loss = {
 #		}
 #	}
 #}
-
 #Province effect
 #spawn_province_religious_rebels = {
 #	trigger_switch = {
@@ -2740,7 +2915,6 @@ half_estate_privilege_absolutism_loss = {
 #		dreamtime =             { spawn_rebels = { type = dreamtime_rebels size = $size$ } }
 #	}
 #}
-
 #Country effect
 disable_annexation_penalty = {
 	custom_tooltip = disable_annexation_penalty_tt
@@ -2765,6 +2939,7 @@ enable_cult_switching = {
 		set_country_flag = enabled_cult_switching
 	}
 }
+
 enable_cult_switching_mission = {
 	custom_tooltip = enable_cult_switching_tt
 	hidden_effect = {
@@ -2792,8 +2967,14 @@ enable_development_on_buildings_built = {
 add_development_from_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
-			NOT = { gained_development_from_building = { building = $building$ } }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+			}
+			NOT = {
+				gained_development_from_building = {
+					building = $building$
+				}
+			}
 		}
 		add_base_$type$ = $value$
 		hidden_effect = {
@@ -2806,11 +2987,19 @@ add_development_from_building = {
 add_development_from_upgrading_or_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
-			NOT = { gained_development_from_building = { building = $building$ } }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+			}
+			NOT = {
+				gained_development_from_building = {
+					building = $building$
+				}
+			}
 		}
 		if = {
-			limit = { has_province_flag = built_dev_$obsolete_building$ }
+			limit = {
+				has_province_flag = built_dev_$obsolete_building$
+			}
 			add_base_$type$ = $upgrade_value$
 		}
 		else = {
@@ -2826,13 +3015,19 @@ add_development_from_upgrading_or_building = {
 remove_development_from_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
-			gained_development_from_building = { building = $building$ }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+			}
+			gained_development_from_building = {
+				building = $building$
+			}
 		}
 		add_base_$type$ = -$value$
 		if = {
 			limit = {
-				NOT = { base_$type$ = 1 }
+				NOT = {
+					base_$type$ = 1
+				}
 			}
 			set_base_$type$ = 1
 		}
@@ -2846,7 +3041,9 @@ remove_development_from_building = {
 update_improved_military_buildings_modifier = {
 	if = {
 		limit = {
-			owner = { has_government_attribute = improved_military_buildings }
+			owner = {
+				has_government_attribute = improved_military_buildings
+			}
 		}
 		tooltip = {
 			add_province_modifier = {
@@ -2861,35 +3058,45 @@ update_improved_military_buildings_modifier = {
 			remove_province_modifier = wei_suo_system_reform_conscription_center_modifier
 			remove_province_modifier = wei_suo_system_reform_soldier_households_modifier
 			if = {
-				limit = { has_building = barracks }
+				limit = {
+					has_building = barracks
+				}
 				add_province_modifier = {
 					name = wei_suo_system_reform_barracks_modifier
 					duration = -1
 				}
 			}
 			if = {
-				limit = { has_building = training_fields }
+				limit = {
+					has_building = training_fields
+				}
 				add_province_modifier = {
 					name = wei_suo_system_reform_training_fields_modifier
 					duration = -1
 				}
 			}
 			if = {
-				limit = { has_building = regimental_camp }
+				limit = {
+					has_building = regimental_camp
+				}
 				add_province_modifier = {
 					name = wei_suo_system_reform_regimental_camp_modifier
 					duration = -1
 				}
 			}
 			if = {
-				limit = { has_building = conscription_center }
+				limit = {
+					has_building = conscription_center
+				}
 				add_province_modifier = {
 					name = wei_suo_system_reform_conscription_center_modifier
 					duration = -1
 				}
 			}
 			if = {
-				limit = { has_building = soldier_households }
+				limit = {
+					has_building = soldier_households
+				}
 				add_province_modifier = {
 					name = wei_suo_system_reform_soldier_households_modifier
 					duration = -1
@@ -2902,380 +3109,509 @@ update_improved_military_buildings_modifier = {
 #Province effect #1.35
 add_latest_building = {
 	[[trade]
-		if = {
-			limit = { $builder$ = { dip_tech = 22 } }
-			add_building = stock_exchange
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 22
+			}
 		}
-		else_if = {
-			limit = { $builder$ = { dip_tech = 17 } }
-			add_building = trade_depot
+		add_building = stock_exchange
+	}
+	else_if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 17
+			}
 		}
-		else = {
-			add_building = marketplace
-		}
+		add_building = trade_depot
+	}
+	else = {
+		add_building = marketplace
+	}
 	]
 	[[government]
-		if = {
-			limit = { $builder$ = { adm_tech = 22 } }
-			add_building = town_hall
+	if = {
+		limit = {
+			$builder$ = {
+				adm_tech = 22
+			}
 		}
-		else = {
-			add_building = courthouse
-		}
+		add_building = town_hall
+	}
+	else = {
+		add_building = courthouse
+	}
 	]
 	[[production]
-		if = {
-			limit = { $builder$ = { adm_tech = 24 } }
-			add_building = counting_house
+	if = {
+		limit = {
+			$builder$ = {
+				adm_tech = 24
+			}
 		}
-		else = {
-			add_building = workshop
-		}
+		add_building = counting_house
+	}
+	else = {
+		add_building = workshop
+	}
 	]
 	[[tax]
-		if = {
-			limit = { $builder$ = { adm_tech = 19 } }
-			add_building = cathedral
+	if = {
+		limit = {
+			$builder$ = {
+				adm_tech = 19
+			}
 		}
-		else = {
-			add_building = temple
-		}
+		add_building = cathedral
+	}
+	else = {
+		add_building = temple
+	}
 	]
 	[[manpower]
-		if = {
-			limit = { $builder$ = { mil_tech = 16 } }
-			add_building = training_fields
+	if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 16
+			}
 		}
-		else = {
-			add_building = barracks
-		}
+		add_building = training_fields
+	}
+	else = {
+		add_building = barracks
+	}
 	]
 	[[sailors]
-		if = {
-			limit = { $builder$ = { dip_tech = 19 } }
-			add_building = drydock
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 19
+			}
 		}
-		else = {
-			add_building = dock
-		}
+		add_building = drydock
+	}
+	else = {
+		add_building = dock
+	}
 	]
 	[[army_forcelimit]
-		if = {
-			limit = { $builder$ = { mil_tech = 22 } }
-			add_building = conscription_center
+	if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 22
+			}
 		}
-		else = {
-			add_building = regimental_camp
-		}
+		add_building = conscription_center
+	}
+	else = {
+		add_building = regimental_camp
+	}
 	]
 	[[navy_forcelimit]
-		if = {
-			limit = { $builder$ = { dip_tech = 24 } }
-			add_building = grand_shipyard
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 24
+			}
 		}
-		else = {
-			add_building = shipyard
-		}
+		add_building = grand_shipyard
+	}
+	else = {
+		add_building = shipyard
+	}
 	]
 	[[coastal]
-		if = {
-			limit = { $builder$ = { dip_tech = 12 } }
-			add_building = naval_battery
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 12
+			}
 		}
-		else = {
-			add_building = coastal_defence
-		}
+		add_building = naval_battery
+	}
+	else = {
+		add_building = coastal_defence
+	}
 	]
 	[[fort]
-		if = {
-			limit = { $builder$ = { mil_tech = 24 } }
-			add_building = fort_18th
+	if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 24
+			}
 		}
-		else_if = {
-			limit = { $builder$ = { mil_tech = 19 } }
-			add_building = fort_17th
+		add_building = fort_18th
+	}
+	else_if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 19
+			}
 		}
-		else_if = {
-			limit = { $builder$ = { mil_tech = 14 } }
-			add_building = fort_16th
+		add_building = fort_17th
+	}
+	else_if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 14
+			}
 		}
-		else = {
-			add_building = fort_15th
-		}
+		add_building = fort_16th
+	}
+	else = {
+		add_building = fort_15th
+	}
 	]
 }
 
 add_latest_building_construction = {
 	[[trade]
-		if = {
-			limit = { $builder$ = { dip_tech = 22 } }
-			add_building_construction = {
-				building = stock_exchange
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 22
 			}
 		}
-		else_if = {
-			limit = { $builder$ = { dip_tech = 17 } }
-			add_building_construction = {
-				building = trade_depot
-				speed = $speed$
-				cost = $cost$
+		add_building_construction = {
+			building = stock_exchange
+			speed = $speed$
+			cost = $cost$
+		}
+	}
+	else_if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 17
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = marketplace
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = trade_depot
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = marketplace
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[government]
-		if = {
-			limit = { $builder$ = { adm_tech = 22 } }
-			add_building_construction = {
-				building = town_hall
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				adm_tech = 22
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = courthouse
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = town_hall
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = courthouse
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[production]
-		if = {
-			limit = { $builder$ = { adm_tech = 24 } }
-			add_building_construction = {
-				building = counting_house
-				speed = $speed$
-				cost = $cost$
-			}
-		
-		}
-		else = {
-			add_building_construction = {
-				building = workshop
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				adm_tech = 24
 			}
 		}
+		add_building_construction = {
+			building = counting_house
+			speed = $speed$
+			cost = $cost$
+		}
+	}
+	else = {
+		add_building_construction = {
+			building = workshop
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[tax]
-		if = {
-			limit = { $builder$ = { adm_tech = 19 } }
-			add_building_construction = {
-				building = cathedral
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				adm_tech = 19
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = temple
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = cathedral
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = temple
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[manpower]
-		if = {
-			limit = { $builder$ = { mil_tech = 16 } }
-			add_building_construction = {
-				building = training_fields
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 16
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = barracks
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = training_fields
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = barracks
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[sailors]
-		if = {
-			limit = { $builder$ = { dip_tech = 19 } }
-			add_building_construction = {
-				building = drydock
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 19
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = dock
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = drydock
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = dock
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[army_forcelimit]
-		if = {
-			limit = { $builder$ = { mil_tech = 22 } }
-			add_building_construction = {
-				building = conscription_center
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 22
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = regimental_camp
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = conscription_center
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = regimental_camp
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[navy_forcelimit]
-		if = {
-			limit = { $builder$ = { dip_tech = 24 } }
-			add_building_construction = {
-				building = grand_shipyard
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 24
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = shipyard
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = grand_shipyard
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = shipyard
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[coastal]
-		if = {
-			limit = { $builder$ = { dip_tech = 12 } }
-			add_building_construction = {
-				building = naval_battery
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				dip_tech = 12
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = coastal_defence
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = naval_battery
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = coastal_defence
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 	[[fort]
-		if = {
-			limit = { $builder$ = { mil_tech = 24 } }
-			add_building_construction = {
-				building = fort_18th
-				speed = $speed$
-				cost = $cost$
+	if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 24
 			}
 		}
-		else_if = {
-			limit = { $builder$ = { mil_tech = 19 } }
-			add_building_construction = {
-				building = fort_17th
-				speed = $speed$
-				cost = $cost$
+		add_building_construction = {
+			building = fort_18th
+			speed = $speed$
+			cost = $cost$
+		}
+	}
+	else_if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 19
 			}
 		}
-		else_if = {
-			limit = { $builder$ = { mil_tech = 14 } }
-			add_building_construction = {
-				building = fort_16th
-				speed = $speed$
-				cost = $cost$
+		add_building_construction = {
+			building = fort_17th
+			speed = $speed$
+			cost = $cost$
+		}
+	}
+	else_if = {
+		limit = {
+			$builder$ = {
+				mil_tech = 14
 			}
 		}
-		else = {
-			add_building_construction = {
-				building = fort_15th
-				speed = $speed$
-				cost = $cost$
-			}
+		add_building_construction = {
+			building = fort_16th
+			speed = $speed$
+			cost = $cost$
 		}
+	}
+	else = {
+		add_building_construction = {
+			building = fort_15th
+			speed = $speed$
+			cost = $cost$
+		}
+	}
 	]
 }
 
 #Province effect
 upgrade_building = {
 	[[trade]
-		if = {
-			limit = { has_building = trade_depot }
-			add_building = stock_exchange
+	if = {
+		limit = {
+			has_building = trade_depot
 		}
-		else_if = {
-			limit = { has_building = marketplace }
-			add_building = trade_depot
+		add_building = stock_exchange
+	}
+	else_if = {
+		limit = {
+			has_building = marketplace
 		}
+		add_building = trade_depot
+	}
 	]
 	[[government]
-		if = {
-			limit = { has_building = courthouse }
-			add_building = town_hall
+	if = {
+		limit = {
+			has_building = courthouse
 		}
+		add_building = town_hall
+	}
 	]
 	[[production]
-		if = {
-			limit = { has_building = workshop }
-			add_building = counting_house
+	if = {
+		limit = {
+			has_building = workshop
 		}
+		add_building = counting_house
+	}
 	]
 	[[tax]
-		if = {
-			limit = { has_building = temple }
-			add_building = cathedral
+	if = {
+		limit = {
+			has_building = temple
 		}
+		add_building = cathedral
+	}
 	]
 	[[manpower]
-		if = {
-			limit = { has_building = barracks }
-			add_building = training_fields
+	if = {
+		limit = {
+			has_building = barracks
 		}
+		add_building = training_fields
+	}
 	]
 	[[sailors]
-		if = {
-			limit = { has_building = dock }
-			add_building = drydock
+	if = {
+		limit = {
+			has_building = dock
 		}
+		add_building = drydock
+	}
 	]
 	[[army_forcelimit]
-		if = {
-			limit = { has_building = regimental_camp }
-			add_building = conscription_center
+	if = {
+		limit = {
+			has_building = regimental_camp
 		}
+		add_building = conscription_center
+	}
 	]
 	[[navy_forcelimit]
-		if = {
-			limit = { has_building = shipyard }
-			add_building = grand_shipyard
+	if = {
+		limit = {
+			has_building = shipyard
 		}
+		add_building = grand_shipyard
+	}
 	]
 	[[coastal]
-		if = {
-			limit = { has_building = coastal_defence }
-			add_building = naval_battery
+	if = {
+		limit = {
+			has_building = coastal_defence
 		}
+		add_building = naval_battery
+	}
 	]
 	[[fort]
-		if = {
-			limit = { has_building = fort_17th }
-			add_building = fort_18th
+	if = {
+		limit = {
+			has_building = fort_17th
 		}
-		else_if = {
-			limit = { has_building = fort_16th }
-			add_building = fort_17th
+		add_building = fort_18th
+	}
+	else_if = {
+		limit = {
+			has_building = fort_16th
 		}
-		else_if = {
-			limit = { has_building = fort_15th }
-			add_building = fort_16th
+		add_building = fort_17th
+	}
+	else_if = {
+		limit = {
+			has_building = fort_15th
 		}
+		add_building = fort_16th
+	}
 	]
 }
 
@@ -3350,7 +3686,7 @@ add_years_of_trade_income = {
 		}
 	}
 	[[custom_tooltip]
-		custom_tooltip = $custom_tooltip$
+	custom_tooltip = $custom_tooltip$
 	]
 }
 
@@ -3366,7 +3702,9 @@ select_primary_cult = {
 			duration = -1
 		}
 		if = {
-			limit = { has_country_flag = enabled_cult_for_heirs }
+			limit = {
+				has_country_flag = enabled_cult_for_heirs
+			}
 			add_country_modifier = {
 				name = junior_$cult$
 				duration = -1
@@ -3713,7 +4051,7 @@ enable_baseline_invite_scholar = {
 	custom_tooltip = enable_baseline_invite_scholar_tt
 	hidden_effect = {
 		# country_event = {
-			# id = muslim_school_events.24
+		# id = muslim_school_events.24
 		# }
 		set_country_flag = enabled_baseline_invite_scholar
 	}
@@ -3723,7 +4061,7 @@ enable_baseline_invite_scholar_no_privilege = {
 	custom_tooltip = enable_baseline_invite_scholar_tt
 	hidden_effect = {
 		# country_event = {
-			# id = muslim_school_events.24
+		# id = muslim_school_events.24
 		# }
 		set_country_flag = enabled_baseline_invite_scholar_no_priv
 	}
@@ -3755,7 +4093,11 @@ disable_baseline_invite_scholar = {
 	hidden_effect = {
 		clr_country_flag = enabled_baseline_invite_scholar
 		if = {
-			limit = { NOT = { has_country_flag = enabled_baseline_invite_scholar_no_priv } }
+			limit = {
+				NOT = {
+					has_country_flag = enabled_baseline_invite_scholar_no_priv
+				}
+			}
 			clr_country_flag = privilege_can_always_invite_hanafi_school
 			clr_country_flag = privilege_can_always_invite_hanbali_school
 			clr_country_flag = privilege_can_always_invite_maliki_school
@@ -3774,7 +4116,9 @@ enable_capital_slave_raid = {
 		set_country_flag = enabled_capital_slave_raid
 	}
 	if = {
-		limit = { has_dlc = "Leviathan" }
+		limit = {
+			has_dlc = "Leviathan"
+		}
 		custom_tooltip = enable_slave_raid_pillage_tt
 	}
 }
@@ -3785,7 +4129,9 @@ disable_capital_slave_raid = {
 		clr_country_flag = enabled_capital_slave_raid
 	}
 	if = {
-		limit = { has_dlc = "Leviathan" }
+		limit = {
+			has_dlc = "Leviathan"
+		}
 		custom_tooltip = disable_slave_raid_pillage_tt
 	}
 }
@@ -3804,7 +4150,9 @@ grant_manpower_from_besieging_fort = {
 				owner = {
 					war_with = ROOT
 				}
-				NOT = { has_province_modifier = estate_nobles_neighbor_raids_fort }
+				NOT = {
+					has_province_modifier = estate_nobles_neighbor_raids_fort
+				}
 			}
 		}
 		FROM = {
@@ -3814,44 +4162,104 @@ grant_manpower_from_besieging_fort = {
 			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 1 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 1
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 2 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 2
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 3 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 3
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 4 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 4
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 5 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 5
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 6 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 6
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 7 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 7
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 8 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 8
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 9 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 9
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 		if = {
-			limit = { FROM = { fort_level = 10 } }
-			ROOT = { add_yearly_manpower = 0.1 }
+			limit = {
+				FROM = {
+					fort_level = 10
+				}
+			}
+			ROOT = {
+				add_yearly_manpower = 0.1
+			}
 		}
 	}
 }
@@ -3864,7 +4272,9 @@ slave_raid_pillage_capital_effect = {
 			}
 			add_yearly_manpower = 1
 			random_owned_province = {
-				limit = { trade_goods = slaves }
+				limit = {
+					trade_goods = slaves
+				}
 				add_base_production = 1
 			}
 		}
@@ -3942,81 +4352,217 @@ disable_tributary_state_use_estate = {
 #Country effect, event target
 select_biggest_country_of_region = {
 	if = {
-		limit = { any_country = { capital_scope = { region = $region$ } } }
+		limit = {
+			any_country = {
+				capital_scope = {
+					region = $region$
+				}
+			}
+		}
 		if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 1000 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 1000
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 1000 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 1000
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 900 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 900
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 900 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 900
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 800 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 800
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 800 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 800
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 700 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 700
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 700 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 700
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 600 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 600
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 600 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 600
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 500 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 500
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 500 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 500
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 400 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 400
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 400 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 400
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 300 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 300
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 300 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 300
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 200 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 200
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 200 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 200
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } total_development = 100 } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 100
+				}
+			}
 			random_country = {
-				limit = { capital_scope = { region = $region$ } total_development = 100 }
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+					total_development = 100
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
 		else_if = {
-			limit = { any_country = { capital_scope = { region = $region$ } } }
-			random_country = { 
-				limit = { capital_scope = { region = $region$ } }
+			limit = {
+				any_country = {
+					capital_scope = {
+						region = $region$
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					capital_scope = {
+						region = $region$
+					}
+				}
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
@@ -4026,164 +4572,164 @@ select_biggest_country_of_region = {
 
 select_biggest_country_of_scope_type = {
 	if = {
-		limit = { 
+		limit = {
 			$trigger_scope$ = {
-				$limit$ 
-			} 
+				$limit$
+			}
 		}
 		if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 1000
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 1000 
+					total_development = 1000
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 900
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 900 
+					total_development = 900
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 800
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 800 
+					total_development = 800
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 700
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 700 
+					total_development = 700
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 600
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 600 
+					total_development = 600
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 500
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 500 
+					total_development = 500
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 400
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 400 
+					total_development = 400
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 300
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 300 
+					total_development = 300
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 200
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 200 
+					total_development = 200
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else_if = {
-			limit = { 
-				$trigger_scope$ = { 
+			limit = {
+				$trigger_scope$ = {
 					$limit$
 					total_development = 100
 				}
 			}
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
-					total_development = 100 
+					total_development = 100
 				}
 				save_event_target_as = selected_biggest_country
 			}
 		}
 		else = {
 			$effect_scope$ = {
-				limit = { 
+				limit = {
 					$limit$
 				}
 				save_event_target_as = selected_biggest_country
@@ -4209,7 +4755,6 @@ select_biggest_country_of_scope_type = {
 # 		mal_journey_to_horn_of_africa = { 	every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = horn_of_africa_region } }	add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
 # 	}
 # }
-
 # #Country effect
 # mal_invest_in_own_provinces_effect = {
 # 	trigger_switch = {
@@ -4227,7 +4772,6 @@ select_biggest_country_of_scope_type = {
 # 		mal_journey_to_horn_of_africa = { 	custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = horn_of_africa_region } }	add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
 # 	}
 # }
-
 # #Country effect
 # mal_travel_to_next_area = {
 # 	if = {
@@ -4288,7 +4832,6 @@ select_biggest_country_of_scope_type = {
 # 	clr_country_flag = mal_has_just_arrived
 # 	clr_country_flag = mal_visit_foreign_capital
 # }
-
 # #Country effect
 # mal_select_country_for_region = {
 # 	trigger_switch = {
@@ -4306,14 +4849,11 @@ select_biggest_country_of_scope_type = {
 # 		mal_journey_to_horn_of_africa = { 	horn_of_africa_region = {	discover_country = ROOT } select_biggest_country_of_region = { region = horn_of_africa_region } }
 # 	}
 # }
-
-
-
 #Country effect
 on_culture_demoted_effect = {
 	#Anbennar
-
-	if = { #Lake Fed citizens MT
+	if = {
+		#Lake Fed citizens MT
 		limit = {
 			has_country_modifier = federation_come_to_accept_1
 			OR = {
@@ -4330,7 +4870,8 @@ on_culture_demoted_effect = {
 		}
 		remove_country_modifier = federation_come_to_accept_1
 	}
-	if = { #Lake Fed citizens MT
+	if = {
+		#Lake Fed citizens MT
 		limit = {
 			has_country_modifier = federation_come_to_accept_2
 			OR = {
@@ -4344,7 +4885,8 @@ on_culture_demoted_effect = {
 		}
 		remove_country_modifier = federation_come_to_accept_2
 	}
-	if = { #Lake Fed citizens MT
+	if = {
+		#Lake Fed citizens MT
 		limit = {
 			has_country_modifier = federation_come_to_accept_3
 			OR = {
@@ -4435,7 +4977,6 @@ on_culture_demoted_effect = {
 #		remove_country_modifier = anglican_aspect_aspect_modifier
 #	}
 #}
-
 #Credits for that script goes to Stiopa
 for = {
 	[[custom_tooltip]custom_tooltip = $custom_tooltip$]
@@ -4443,7 +4984,7 @@ for = {
 		set_variable = {
 			which = ForLoopCounter
 			value = $amount$
-		}	
+		}
 		while = {
 			limit = {
 				check_variable = {
@@ -4461,26 +5002,24 @@ for = {
 }
 
 for_variable_amount = {
-    set_variable = {
-        which = ForLoopCounter
-        which = $variable$
-    }
-
-    while = {
-        limit = {
-            check_variable = {
-                which = ForLoopCounter
-                value = 1
-            }
-        }
-        $effect$
-        subtract_variable = {
-            which = ForLoopCounter
-            value = 1
-        }
-    }
+	set_variable = {
+		which = ForLoopCounter
+		which = $variable$
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = ForLoopCounter
+				value = 1
+			}
+		}
+		$effect$
+		subtract_variable = {
+			which = ForLoopCounter
+			value = 1
+		}
+	}
 }
-
 
 ##########################################################
 # Supports following types of units
@@ -4499,13 +5038,12 @@ for_variable_amount = {
 # For tooltip use the following scheme: "§Y<amount>§! of §Y<unit_type>§! will be created in §Y[<province>.GetName]§! for §Y[This.GetName]§!."
 create_units_of_type = {
 	[[custom_tooltip]
-		custom_tooltip = $custom_tooltip$
+	custom_tooltip = $custom_tooltip$
 	]
 	hidden_effect = {
 		for = {
 			amount = $amount$
-			effect = "
-				$province$ = { $unit_type$ = PREV }
+			effect = "$province$ = { $unit_type$ = PREV }
 			"
 		}
 	}
@@ -4515,14 +5053,13 @@ create_units_of_type = {
 # For tooltip use the following scheme: "§Y<amount>§! of §Y<unit_type>§! will be created in §Y[This.GetName]§! for §Y[<who>.GetName]§!."
 create_units_of_type_in_province = {
 	[[custom_tooltip]
-		custom_tooltip = $custom_tooltip$
+	custom_tooltip = $custom_tooltip$
 	]
 	hidden_effect = {
 		$who$ = {
 			for = {
 				amount = $amount$
-				effect = "
-					PREV = { $unit_type$ = $who$ }
+				effect = "PREV = { $unit_type$ = $who$ }
 				"
 			}
 		}
@@ -4547,9 +5084,13 @@ create_units_of_type_in_province = {
 ##########################################################
 faction_in_power_effect = {
 	if = {
-		limit = { has_faction = $faction$ }
+		limit = {
+			has_faction = $faction$
+		}
 		if = {
-			limit = { faction_in_power = $faction$ }
+			limit = {
+				faction_in_power = $faction$
+			}
 			custom_tooltip = $faction$_are_currently_in_power_tt
 			$effect$
 		}
@@ -4579,18 +5120,18 @@ add_accepted_culture_or_dip_power_stated = {
 		add_accepted_culture = $culture$
 	}
 	[[free]
-		custom_tooltip = CULTURE_WILL_NOT_TAKE_SLOT_UNTIL_DEMOTED_TT
-		custom_tooltip = ADD_ACCEPTED_CULTURE_TT
-		hidden_effect = {
-			add_country_modifier = {
-				name = free_slot_for_$culture$
-				duration = -1
-				hidden = yes
-			}
+	custom_tooltip = CULTURE_WILL_NOT_TAKE_SLOT_UNTIL_DEMOTED_TT
+	custom_tooltip = ADD_ACCEPTED_CULTURE_TT
+	hidden_effect = {
+		add_country_modifier = {
+			name = free_slot_for_$culture$
+			duration = -1
+			hidden = yes
 		}
+	}
 	]
 	[[dip_reward]
-		custom_tooltip = ADD_ACCEPTED_CULTURE_SLOT_LIMITATION_TT # "If the §YCulture§! is already an §YAccepted Culture§!, or if there are not enough §YSlots§!, gain §G100§! Diplomatic Power instead."
+	custom_tooltip = ADD_ACCEPTED_CULTURE_SLOT_LIMITATION_TT	# "If the §YCulture§! is already an §YAccepted Culture§!, or if there are not enough §YSlots§!, gain §G100§! Diplomatic Power instead."
 	]
 	hidden_effect = {
 		if = {
@@ -4777,7 +5318,9 @@ add_accepted_culture_or_dip_power_stated = {
 		}
 		else_if = {
 			limit = {
-				NOT = { num_accepted_cultures = 1 }
+				NOT = {
+					num_accepted_cultures = 1
+				}
 			}
 			if = {
 				limit = {
@@ -4797,7 +5340,7 @@ add_accepted_culture_or_dip_power_stated = {
 		}
 	}
 	[[new_line]
-		custom_tooltip = " "
+	custom_tooltip = ""
 	]
 }
 
@@ -4806,7 +5349,7 @@ count_won_battles_and_reward_at_end = {
 	if = {
 		limit = {
 			ROOT = {
-				has_country_flag = $counting_flag$	#Using country flags because we don't want a country to stack a variable out of control and cause performance issue because of large variables.
+				has_country_flag = $counting_flag$				#Using country flags because we don't want a country to stack a variable out of control and cause performance issue because of large variables.
 			}
 		}
 		ROOT = {
@@ -4828,7 +5371,7 @@ count_won_battles_and_reward_at_end = {
 		}
 		ROOT = {
 			clr_country_flag = $counting_flag$
-            $effect$
+			$effect$
 		}
 	}
 }
@@ -4845,16 +5388,24 @@ set_center_level_3_center_of_trade = {
 	custom_tooltip = set_center_level_3_center_of_trade_tt
 	hidden_effect = {
 		if = {
-			limit = { NOT = { province_has_center_of_trade_of_level = 1 } }
+			limit = {
+				NOT = {
+					province_has_center_of_trade_of_level = 1
+				}
+			}
 			center_of_trade = 3
 		}
 		else = {
 			if = {
-				limit = { province_has_center_of_trade_of_level = 3 }
+				limit = {
+					province_has_center_of_trade_of_level = 3
+				}
 				add_base_production = 4
 			}
 			else_if = {
-				limit = { province_has_center_of_trade_of_level = 2 }
+				limit = {
+					province_has_center_of_trade_of_level = 2
+				}
 				add_base_production = 2
 				add_center_of_trade_level = 1
 			}
@@ -4865,17 +5416,22 @@ set_center_level_3_center_of_trade = {
 	}
 }
 
-
 set_center_level_2_center_of_trade = {
 	custom_tooltip = set_center_level_2_center_of_trade_tt
 	hidden_effect = {
 		if = {
-			limit = { NOT = { province_has_center_of_trade_of_level = 1 } }
+			limit = {
+				NOT = {
+					province_has_center_of_trade_of_level = 1
+				}
+			}
 			center_of_trade = 2
 		}
 		else = {
 			if = {
-				limit = { province_has_center_of_trade_of_level = 2 }
+				limit = {
+					province_has_center_of_trade_of_level = 2
+				}
 				add_base_production = 2
 			}
 			else = {
@@ -4887,7 +5443,9 @@ set_center_level_2_center_of_trade = {
 
 enable_admirals_army_professionalism = {
 	if = {
-		limit = { has_dlc = "Cradle of Civilization" }
+		limit = {
+			has_dlc = "Cradle of Civilization"
+		}
 		custom_tooltip = admirals_give_army_professionalism_tt
 	}
 	hidden_effect = {
@@ -4899,7 +5457,11 @@ make_ruler_to_legendary_pirate = {
 	if = {
 		limit = {
 			has_dlc = "Rights of Man"
-			NOT = { num_of_ruler_traits = { amount = 3 } }
+			NOT = {
+				num_of_ruler_traits = {
+					amount = 3
+				}
+			}
 		}
 		add_ruler_personality = legendary_pirate_personality
 		custom_tooltip = legendary_pirate_personality_at
@@ -4909,9 +5471,30 @@ make_ruler_to_legendary_pirate = {
 	}
 	set_ruler_flag = historical_pirate
 	random_list = {
-		1 = { trigger = { NOT = { ADM = 6 } } change_adm = 1 }
-		1 = { trigger = { NOT = { DIP = 6 } } change_dip = 1 }
-		1 = { trigger = { NOT = { MIL = 6 } } change_mil = 1 }
+		1 = {
+			trigger = {
+				NOT = {
+					ADM = 6
+				}
+			}
+			change_adm = 1
+		}
+		1 = {
+			trigger = {
+				NOT = {
+					DIP = 6
+				}
+			}
+			change_dip = 1
+		}
+		1 = {
+			trigger = {
+				NOT = {
+					MIL = 6
+				}
+			}
+			change_mil = 1
+		}
 	}
 }
 
@@ -5030,203 +5613,336 @@ add_influence_to_random_faction = {
 
 add_influence_to_adm_faction = {
 	if = {
-		limit = { 
-			has_faction = mr_guilds 
+		limit = {
+			has_faction = mr_guilds
 		}
 		add_faction_influence = {
 			faction = mr_guilds
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
-			has_faction = pr_buccaneers 
+		limit = {
+			has_faction = pr_buccaneers
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
-			has_faction = rr_jacobins 
+		limit = {
+			has_faction = rr_jacobins
 		}
 		add_faction_influence = {
 			faction = rr_jacobins
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_faction = bureaucrats
 		}
 		add_faction_influence = {
 			faction = bureaucrats
 			influence = $influence$
-		}				
+		}
 	}
 }
 
 add_influence_to_dip_faction = {
 	if = {
-		limit = { 
-			has_faction = mr_traders 
+		limit = {
+			has_faction = mr_traders
 		}
 		add_faction_influence = {
 			faction = mr_traders
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
-			has_faction = pr_smugglers 
+		limit = {
+			has_faction = pr_smugglers
 		}
 		add_faction_influence = {
 			faction = pr_smugglers
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
-			has_faction = rr_royalists 
+		limit = {
+			has_faction = rr_royalists
 		}
 		add_faction_influence = {
 			faction = rr_royalists
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_faction = enuchs
 		}
 		add_faction_influence = {
 			faction = enuchs
 			influence = $influence$
-		}				
+		}
 	}
 }
 
 add_influence_to_mil_faction = {
 	if = {
-		limit = { 
-			has_faction = mr_aristocrats 
+		limit = {
+			has_faction = mr_aristocrats
 		}
 		add_faction_influence = {
 			faction = mr_aristocrats
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
-			has_faction = pr_captains 
+		limit = {
+			has_faction = pr_captains
 		}
 		add_faction_influence = {
 			faction = pr_captains
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
-			has_faction = rr_girondists 
+		limit = {
+			has_faction = rr_girondists
 		}
 		add_faction_influence = {
 			faction = rr_girondists
 			influence = $influence$
-		}				
+		}
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_faction = temples
 		}
 		add_faction_influence = {
 			faction = temples
 			influence = $influence$
-		}				
+		}
 	}
 }
 
 show_points_needed_for_livionian_government_of_category = {
 	[[adm]
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 5 } } }
-			custom_tooltip = livonian_administrative_monarchy_points_needed_tt
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_adm
+					value = 5
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 4 } } }
-			custom_tooltip = livonian_absolute_monarchy_points_needed_tt
+		custom_tooltip = livonian_administrative_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_adm
+					value = 4
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
-			custom_tooltip = livonian_trade_monarchy_points_needed_tt
+		custom_tooltip = livonian_absolute_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_adm
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
-			custom_tooltip = livonian_constitutional_monarchy_points_needed_tt
+		custom_tooltip = livonian_trade_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_adm
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
-			custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
+		custom_tooltip = livonian_constitutional_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_adm
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 2 } } }
-			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+		custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_adm
+					value = 2
+				}
+			}
 		}
+		custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+	}
 	]
 	[[dip]
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 5 } } }
-			custom_tooltip = livonian_naval_monarchy_points_needed_tt
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 5
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 4 } } }
-			custom_tooltip = livonian_diplomatic_monarchy_points_needed_tt
+		custom_tooltip = livonian_naval_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 4
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 4 } } }
-			custom_tooltip = livonian_admiral_monarchy_points_needed_tt
+		custom_tooltip = livonian_diplomatic_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 4
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
-			custom_tooltip = livonian_trade_monarchy_points_needed_tt
+		custom_tooltip = livonian_admiral_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
-			custom_tooltip = livonian_elective_monarchy_points_needed_tt
+		custom_tooltip = livonian_trade_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
-			custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
+		custom_tooltip = livonian_elective_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 2 } } }
-			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+		custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_dip
+					value = 2
+				}
+			}
 		}
+		custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+	}
 	]
 	[[mil]
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 5 } } }
-			custom_tooltip = livonian_military_monarchy_points_needed_tt
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_mil
+					value = 5
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 4 } } }
-			custom_tooltip = livonian_general_controlled_monarchy_points_needed_tt
+		custom_tooltip = livonian_military_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_mil
+					value = 4
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
-			custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
+		custom_tooltip = livonian_general_controlled_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_mil
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
-			custom_tooltip = livonian_mercenary_monarchy_points_needed_tt
+		custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_mil
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
-			custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
+		custom_tooltip = livonian_mercenary_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_mil
+					value = 3
+				}
+			}
 		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 2 } } }
-			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+		custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = liv_mil
+					value = 2
+				}
+			}
 		}
+		custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+	}
 	]
 }
 
@@ -5256,10 +5972,11 @@ add_revolutionary_zeal_or_absolutism = {
 #	}
 #}
 #enable_grand_crusade_tt: "Enables the §YGrand Crusade§! casus belli against all §YHeathen§! nations which have at least §Y300§! total development.\nThis casus belli enables a decision for every independent §YCatholic§! nation to join the Grand Crusade.\n\nTo join the Grand Crusade the Catholic nation must fulfil the following conditions:\nHas at least §Y100§! opinion of us or vice versa\nIs NOT allied with the §YGrand Crusade Target§! target\nHas NOT a truce with the §YGrand Crusade Target§!\nIs not at war\nDid NOT complete the §YHumanist§! idea group\n\n§RNations of the religion group of the §YGrand Crusade Target§! can join the defender's side.§!"
-
 add_humiliation_reward = {
 	if = {
-		limit = { has_dlc = "Mandate of Heaven" }
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
 		custom_tooltip = add_humiliation_reward_tt
 	}
 	add_power_projection = {
@@ -5617,13 +6334,19 @@ enable_improved_consecration = {
 remove_dev_from_building = {
 	if = {
 		limit = {
-			FROM = { full_idea_group = economic_ideas }
-			gained_dev_from_eco_building = { building = $building$ }
+			FROM = {
+				full_idea_group = economic_ideas
+			}
+			gained_dev_from_eco_building = {
+				building = $building$
+			}
 		}
 		add_base_$type$ = -$value$
 		if = {
 			limit = {
-				NOT = { base_$type$ = 1 }
+				NOT = {
+					base_$type$ = 1
+				}
 			}
 			set_base_$type$ = 1
 		}
@@ -5636,14 +6359,18 @@ remove_dev_from_building = {
 add_dev_from_building = {
 	if = {
 		limit = {
-			FROM = { 
+			FROM = {
 				OR = {
 					full_idea_group = economic_ideas
 					has_country_modifier = G58_coastal_utopia_modifier
 					has_government_attribute = add_dev_from_manufactories
 				}
 			}
-			NOT = { gained_dev_from_eco_building = { building = $building$ } }
+			NOT = {
+				gained_dev_from_eco_building = {
+					building = $building$
+				}
+			}
 		}
 		add_base_$type$ = $value$
 		hidden_effect = {
@@ -5712,7 +6439,7 @@ create_leader_scaling_with_tradition = {
 }
 
 #type = heavy_ship/light_ship/galley/transport
-add_ship_construction_scaled_to_ports = {	
+add_ship_construction_scaled_to_ports = {
 	random_owned_province = {
 		limit = {
 			has_port = yes
@@ -5823,7 +6550,7 @@ update_entire_culture = {
 		}
 		set_global_flag = updated_$culture$_flag
 		[[clear_previous_accepted_culture]
-			remove_accepted_culture = $culture$
+		remove_accepted_culture = $culture$
 		]
 	}
 }
@@ -5858,7 +6585,7 @@ update_entire_culture_foreign = {
 		}
 		set_global_flag = updated_$culture$_flag
 		[[clear_previous_accepted_culture]
-			remove_accepted_culture = $culture$
+		remove_accepted_culture = $culture$
 		]
 	}
 }
@@ -6067,27 +6794,89 @@ create_new_culture_group = {
 			}
 			trigger_switch = {
 				on_trigger = culture
-				$culture$ = { change_culture = $culture$_new }
-				[[culture2]$culture2$ = { change_culture = $culture2$_new }]
-				[[culture3]$culture3$ = { change_culture = $culture3$_new }]
-				[[culture4]$culture4$ = { change_culture = $culture4$_new }]
-				[[culture5]$culture5$ = { change_culture = $culture5$_new }]
-				[[culture6]$culture6$ = { change_culture = $culture6$_new }]
-				[[culture7]$culture7$ = { change_culture = $culture7$_new }]
-				[[culture8]$culture8$ = { change_culture = $culture8$_new }]
-				[[culture9]$culture9$ = { change_culture = $culture9$_new }]
-				[[culture10]$culture10$ = { change_culture = $culture10$_new }]
-				[[culture11]$culture11$ = { change_culture = $culture11$_new }]
-				[[culture11]$culture11$ = { change_culture = $culture11$_new }]
-				[[culture12]$culture12$ = { change_culture = $culture12$_new }]
-				[[culture13]$culture13$ = { change_culture = $culture13$_new }]
-				[[culture14]$culture14$ = { change_culture = $culture14$_new }]
-				[[culture15]$culture15$ = { change_culture = $culture15$_new }]
-				[[culture16]$culture16$ = { change_culture = $culture16$_new }]
-				[[culture17]$culture17$ = { change_culture = $culture17$_new }]
-				[[culture18]$culture18$ = { change_culture = $culture18$_new }]
-				[[culture19]$culture19$ = { change_culture = $culture19$_new }]
-				[[culture20]$culture20$ = { change_culture = $culture20$_new }]
+				$culture$ = {
+					change_culture = $culture$_new
+				}
+				[[culture2]$culture2$ = {
+					change_culture = $culture2$_new
+				}
+				]
+				[[culture3]$culture3$ = {
+					change_culture = $culture3$_new
+				}
+				]
+				[[culture4]$culture4$ = {
+					change_culture = $culture4$_new
+				}
+				]
+				[[culture5]$culture5$ = {
+					change_culture = $culture5$_new
+				}
+				]
+				[[culture6]$culture6$ = {
+					change_culture = $culture6$_new
+				}
+				]
+				[[culture7]$culture7$ = {
+					change_culture = $culture7$_new
+				}
+				]
+				[[culture8]$culture8$ = {
+					change_culture = $culture8$_new
+				}
+				]
+				[[culture9]$culture9$ = {
+					change_culture = $culture9$_new
+				}
+				]
+				[[culture10]$culture10$ = {
+					change_culture = $culture10$_new
+				}
+				]
+				[[culture11]$culture11$ = {
+					change_culture = $culture11$_new
+				}
+				]
+				[[culture11]$culture11$ = {
+					change_culture = $culture11$_new
+				}
+				]
+				[[culture12]$culture12$ = {
+					change_culture = $culture12$_new
+				}
+				]
+				[[culture13]$culture13$ = {
+					change_culture = $culture13$_new
+				}
+				]
+				[[culture14]$culture14$ = {
+					change_culture = $culture14$_new
+				}
+				]
+				[[culture15]$culture15$ = {
+					change_culture = $culture15$_new
+				}
+				]
+				[[culture16]$culture16$ = {
+					change_culture = $culture16$_new
+				}
+				]
+				[[culture17]$culture17$ = {
+					change_culture = $culture17$_new
+				}
+				]
+				[[culture18]$culture18$ = {
+					change_culture = $culture18$_new
+				}
+				]
+				[[culture19]$culture19$ = {
+					change_culture = $culture19$_new
+				}
+				]
+				[[culture20]$culture20$ = {
+					change_culture = $culture20$_new
+				}
+				]
 			}
 		}
 		every_country = {
@@ -6121,134 +6910,365 @@ create_new_culture_group = {
 				$culture$ = {
 					change_primary_culture = $culture$_new
 					set_ruler_culture = $culture$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture$_new }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture$_new }
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture$_new
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture$_new
+					}
 				}
 				[[culture2]$culture2$ = {
 					change_primary_culture = $culture2$_new
 					set_ruler_culture = $culture2$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture2$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture2$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture2$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture2$_new
+					}
+				}
+				]
 				[[culture3]$culture3$ = {
 					change_primary_culture = $culture3$_new
 					set_ruler_culture = $culture3$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture3$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture3$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture3$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture3$_new
+					}
+				}
+				]
 				[[culture4]$culture4$ = {
 					change_primary_culture = $culture4$_new
 					set_ruler_culture = $culture4$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture4$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture4$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture4$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture4$_new
+					}
+				}
+				]
 				[[culture5]$culture5$ = {
 					change_primary_culture = $culture5$_new
 					set_ruler_culture = $culture5$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture5$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture5$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture5$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture5$_new
+					}
+				}
+				]
 				[[culture6]$culture6$ = {
 					change_primary_culture = $culture6$_new
 					set_ruler_culture = $culture6$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture6$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture6$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture6$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture6$_new
+					}
+				}
+				]
 				[[culture7]$culture7$ = {
 					change_primary_culture = $culture7$_new
 					set_ruler_culture = $culture7$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture7$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture7$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture7$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture7$_new
+					}
+				}
+				]
 				[[culture8]$culture8$ = {
 					change_primary_culture = $culture8$_new
 					set_ruler_culture = $culture8$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture8$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture8$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture8$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture8$_new
+					}
+				}
+				]
 				[[culture9]$culture9$ = {
 					change_primary_culture = $culture9$_new
 					set_ruler_culture = $culture9$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture9$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture9$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture9$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture9$_new
+					}
+				}
+				]
 				[[culture10]$culture10$ = {
 					change_primary_culture = $culture10$_new
 					set_ruler_culture = $culture10$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture10$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture10$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture10$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture10$_new
+					}
+				}
+				]
 				[[culture11]$culture11$ = {
 					change_primary_culture = $culture11$_new
 					set_ruler_culture = $culture11$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture11$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture11$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture11$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture11$_new
+					}
+				}
+				]
 				[[culture11]$culture11$ = {
 					change_primary_culture = $culture11$_new
 					set_ruler_culture = $culture11$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture11$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture11$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture11$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture11$_new
+					}
+				}
+				]
 				[[culture12]$culture12$ = {
 					change_primary_culture = $culture12$_new
 					set_ruler_culture = $culture12$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture12$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture12$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture12$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture12$_new
+					}
+				}
+				]
 				[[culture13]$culture13$ = {
 					change_primary_culture = $culture13$_new
 					set_ruler_culture = $culture13$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture13$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture13$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture13$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture13$_new
+					}
+				}
+				]
 				[[culture14]$culture14$ = {
 					change_primary_culture = $culture14$_new
 					set_ruler_culture = $culture14$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture14$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture14$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture14$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture14$_new
+					}
+				}
+				]
 				[[culture15]$culture15$ = {
 					change_primary_culture = $culture15$_new
 					set_ruler_culture = $culture15$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture15$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture15$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture15$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture15$_new
+					}
+				}
+				]
 				[[culture16]$culture16$ = {
 					change_primary_culture = $culture16$_new
 					set_ruler_culture = $culture16$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture16$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture16$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture16$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture16$_new
+					}
+				}
+				]
 				[[culture17]$culture17$ = {
 					change_primary_culture = $culture17$_new
 					set_ruler_culture = $culture17$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture17$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture17$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture17$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture17$_new
+					}
+				}
+				]
 				[[culture18]$culture18$ = {
 					change_primary_culture = $culture18$_new
 					set_ruler_culture = $culture18$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture18$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture18$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture18$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture18$_new
+					}
+				}
+				]
 				[[culture19]$culture19$ = {
 					change_primary_culture = $culture19$_new
 					set_ruler_culture = $culture19$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture19$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture19$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture19$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture19$_new
+					}
+				}
+				]
 				[[culture20]$culture20$ = {
 					change_primary_culture = $culture20$_new
 					set_ruler_culture = $culture20$_new
-					if = { limit = { has_heir = yes } set_heir_culture = $culture20$ }
-					if = { limit = { has_consort = yes } set_consort_culture = $culture20$_new }
-				}]
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture = $culture20$
+					}
+					if = {
+						limit = {
+							has_consort = yes
+						}
+						set_consort_culture = $culture20$_new
+					}
+				}
+				]
 			}
 		}
 		set_global_flag = updated_$culture_group$_flag
 	}
 }
+
 #Supports the following trade goods		Base prices
 # grain									2.5
 # wine									2.5
@@ -6282,7 +7302,6 @@ create_new_culture_group = {
 # coal									10
 # cloves								8
 # unknown								0	#Special and should not count
-
 determine_value_of_trade_goods_grain = {
 	set_variable = {
 		which = base_value_grain
@@ -6407,8 +7426,14 @@ determine_value_of_trade_goods_grain = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = grain }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = grain } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = grain
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = grain
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6432,6 +7457,7 @@ determine_value_of_trade_goods_grain = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_wine = {
 	set_variable = {
 		which = base_value_wine
@@ -6512,8 +7538,14 @@ determine_value_of_trade_goods_wine = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = wine }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = wine } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = wine
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = wine
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6537,6 +7569,7 @@ determine_value_of_trade_goods_wine = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_wool = {
 	set_variable = {
 		which = base_value_wool
@@ -6608,8 +7641,14 @@ determine_value_of_trade_goods_wool = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = wool }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = wool } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = wool
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = wool
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6633,6 +7672,7 @@ determine_value_of_trade_goods_wool = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_cloth = {
 	set_variable = {
 		which = base_value_cloth
@@ -6660,8 +7700,14 @@ determine_value_of_trade_goods_cloth = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = cloth }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = cloth } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = cloth
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = cloth
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6685,6 +7731,7 @@ determine_value_of_trade_goods_cloth = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_fish = {
 	set_variable = {
 		which = base_value_fish
@@ -6753,8 +7800,14 @@ determine_value_of_trade_goods_fish = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = fish }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = fish } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = fish
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = fish
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6778,6 +7831,7 @@ determine_value_of_trade_goods_fish = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_fur = {
 	set_variable = {
 		which = base_value_fur
@@ -6810,7 +7864,9 @@ determine_value_of_trade_goods_fur = {
 		if = {
 			limit = {
 				ROOT = {
-					NOT = { native_size = 1 }
+					NOT = {
+						native_size = 1
+					}
 				}
 			}
 			multiply_variable = {
@@ -6855,7 +7911,9 @@ determine_value_of_trade_goods_fur = {
 			limit = {
 				ROOT = {
 					has_winter = severe_winter
-					NOT = { has_terrain = glacier }
+					NOT = {
+						has_terrain = glacier
+					}
 				}
 			}
 			multiply_variable = {
@@ -6875,8 +7933,14 @@ determine_value_of_trade_goods_fur = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = fur }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = fur } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = fur
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = fur
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6900,6 +7964,7 @@ determine_value_of_trade_goods_fur = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_salt = {
 	set_variable = {
 		which = base_value_salt
@@ -6920,7 +7985,9 @@ determine_value_of_trade_goods_salt = {
 						has_terrain = desert
 						AND = {
 							has_terrain = marsh
-							NOT = { has_climate = arctic } #Hudson Bay
+							NOT = {
+								has_climate = arctic
+							}							#Hudson Bay
 						}
 					}
 				}
@@ -6955,8 +8022,14 @@ determine_value_of_trade_goods_salt = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = salt }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = salt } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = salt
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = salt
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -6980,6 +8053,7 @@ determine_value_of_trade_goods_salt = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_naval_supplies = {
 	set_variable = {
 		which = base_value_naval_supplies
@@ -7021,7 +8095,9 @@ determine_value_of_trade_goods_naval_supplies = {
 		}
 		if = {
 			limit = {
-				NOT = { num_of_ports = 1 }
+				NOT = {
+					num_of_ports = 1
+				}
 			}
 			multiply_variable = {
 				which = chance_modifier_naval_supplies
@@ -7061,8 +8137,14 @@ determine_value_of_trade_goods_naval_supplies = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = naval_supplies }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = naval_supplies } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = naval_supplies
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = naval_supplies
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7086,6 +8168,7 @@ determine_value_of_trade_goods_naval_supplies = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_copper = {
 	set_variable = {
 		which = base_value_copper
@@ -7151,8 +8234,14 @@ determine_value_of_trade_goods_copper = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = copper }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = copper } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = copper
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = copper
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7176,6 +8265,7 @@ determine_value_of_trade_goods_copper = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_gold = {
 	set_variable = {
 		which = base_value_gold
@@ -7195,7 +8285,7 @@ determine_value_of_trade_goods_gold = {
 				ROOT = {
 					is_random_new_world = yes
 					has_terrain = mountain
-					continent = new_world #Always in RNW
+					continent = new_world					#Always in RNW
 				}
 			}
 			multiply_variable = {
@@ -7229,15 +8319,15 @@ determine_value_of_trade_goods_gold = {
 			limit = {
 				ROOT = {
 					OR = {
-						province_id = 852		# Mexico
-						province_id = 853		# Huastec
-						province_id = 854		# Sayultecas
-						province_id = 2617		# Huichol
-						province_id = 856		# Zacatecas
-						province_id = 857		# Guichichil
-						province_id = 858		# Tamaulipas
-						province_id = 2615		# Guamares
-						province_id = 4781		# Transvaal (Johannesburg mines)
+						province_id = 852						# Mexico
+						province_id = 853						# Huastec
+						province_id = 854						# Sayultecas
+						province_id = 2617						# Huichol
+						province_id = 856						# Zacatecas
+						province_id = 857						# Guichichil
+						province_id = 858						# Tamaulipas
+						province_id = 2615						# Guamares
+						province_id = 4781						# Transvaal (Johannesburg mines)
 					}
 				}
 			}
@@ -7268,7 +8358,9 @@ determine_value_of_trade_goods_gold = {
 			limit = {
 				OR = {
 					has_country_flag = por_bandeirantes_flag
-					colonial_parent = { has_country_flag = por_bandeirantes_flag }
+					colonial_parent = {
+						has_country_flag = por_bandeirantes_flag
+					}
 				}
 			}
 			multiply_variable = {
@@ -7279,8 +8371,14 @@ determine_value_of_trade_goods_gold = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = gold }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = gold } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = gold
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = gold
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7315,6 +8413,7 @@ determine_value_of_trade_goods_gold = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_iron = {
 	set_variable = {
 		which = base_value_iron
@@ -7372,6 +8471,7 @@ determine_value_of_trade_goods_iron = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_slaves = {
 	set_variable = {
 		which = base_value_slaves
@@ -7425,8 +8525,14 @@ determine_value_of_trade_goods_slaves = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = slaves }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = slaves } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = slaves
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = slaves
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7450,6 +8556,7 @@ determine_value_of_trade_goods_slaves = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_ivory = {
 	set_variable = {
 		which = base_value_ivory
@@ -7504,8 +8611,14 @@ determine_value_of_trade_goods_ivory = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = ivory }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = ivory } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = ivory
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = ivory
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7529,6 +8642,7 @@ determine_value_of_trade_goods_ivory = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_tea = {
 	set_variable = {
 		which = base_value_tea
@@ -7574,15 +8688,15 @@ determine_value_of_trade_goods_tea = {
 			limit = {
 				ROOT = {
 					OR = {
-						area = banda_oriental_area #Yerba Mate
-						area = rio_grande_do_sol_area #Yerba Mate
-						area = buenos_aires_area #Yerba Mate
-						area = misiones_area #Yerba Mate
-						area = beni_area #Yerba Mate
-						area = moxos_area #Yerba Mate
-						area = paraguay_area #Yerba Mate
-						area = sao_paolo_area  #Yerba Mate
-						area = west_sao_paolo_area  #Yerba Mate
+						area = banda_oriental_area						#Yerba Mate
+						area = rio_grande_do_sol_area						#Yerba Mate
+						area = buenos_aires_area						#Yerba Mate
+						area = misiones_area						#Yerba Mate
+						area = beni_area						#Yerba Mate
+						area = moxos_area						#Yerba Mate
+						area = paraguay_area						#Yerba Mate
+						area = sao_paolo_area						#Yerba Mate
+						area = west_sao_paolo_area						#Yerba Mate
 					}
 				}
 			}
@@ -7594,8 +8708,14 @@ determine_value_of_trade_goods_tea = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = tea }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = tea } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = tea
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = tea
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7628,6 +8748,7 @@ determine_value_of_trade_goods_tea = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_chinaware = {
 	set_variable = {
 		which = base_value_chinaware
@@ -7653,8 +8774,14 @@ determine_value_of_trade_goods_chinaware = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = chinaware }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = chinaware } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = chinaware
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = chinaware
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7678,6 +8805,7 @@ determine_value_of_trade_goods_chinaware = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_spices = {
 	set_variable = {
 		which = base_value_spices
@@ -7743,8 +8871,14 @@ determine_value_of_trade_goods_spices = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = spices }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = spices } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = spices
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = spices
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7768,6 +8902,7 @@ determine_value_of_trade_goods_spices = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_coffee = {
 	set_variable = {
 		which = base_value_coffee
@@ -7804,8 +8939,14 @@ determine_value_of_trade_goods_coffee = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = coffee }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = coffee } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = coffee
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = coffee
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7829,6 +8970,7 @@ determine_value_of_trade_goods_coffee = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_cotton = {
 	set_variable = {
 		which = base_value_cotton
@@ -7869,8 +9011,14 @@ determine_value_of_trade_goods_cotton = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = cotton }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = cotton } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = cotton
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = cotton
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7894,6 +9042,7 @@ determine_value_of_trade_goods_cotton = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_sugar = {
 	set_variable = {
 		which = base_value_sugar
@@ -7911,7 +9060,9 @@ determine_value_of_trade_goods_sugar = {
 			limit = {
 				ROOT = {
 					is_random_new_world = no
-					NOT = { province_id = 481 }
+					NOT = {
+						province_id = 481
+					}
 					OR = {
 						region = carribeans_region
 						area = ceara_area
@@ -7939,8 +9090,14 @@ determine_value_of_trade_goods_sugar = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = sugar }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = sugar } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = sugar
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = sugar
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -7964,6 +9121,7 @@ determine_value_of_trade_goods_sugar = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_tobacco = {
 	set_variable = {
 		which = base_value_tobacco
@@ -8014,8 +9172,14 @@ determine_value_of_trade_goods_tobacco = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = tobacco }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = tobacco } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = tobacco
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = tobacco
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8039,6 +9203,7 @@ determine_value_of_trade_goods_tobacco = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_cocoa = {
 	set_variable = {
 		which = base_value_cocoa
@@ -8055,8 +9220,14 @@ determine_value_of_trade_goods_cocoa = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = cocoa }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = cocoa } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = cocoa
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = cocoa
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8080,6 +9251,7 @@ determine_value_of_trade_goods_cocoa = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_silk = {
 	set_variable = {
 		which = base_value_silk
@@ -8139,8 +9311,14 @@ determine_value_of_trade_goods_silk = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = silk }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = silk } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = silk
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = silk
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8164,6 +9342,7 @@ determine_value_of_trade_goods_silk = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_dyes = {
 	set_variable = {
 		which = base_value_dyes
@@ -8189,8 +9368,14 @@ determine_value_of_trade_goods_dyes = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = dyes }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = dyes } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = dyes
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = dyes
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8214,6 +9399,7 @@ determine_value_of_trade_goods_dyes = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_tropical_wood = {
 	set_variable = {
 		which = base_value_tropical_wood
@@ -8265,8 +9451,14 @@ determine_value_of_trade_goods_tropical_wood = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = tropical_wood }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = tropical_wood } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = tropical_wood
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = tropical_wood
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8290,6 +9482,7 @@ determine_value_of_trade_goods_tropical_wood = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_livestock = {
 	set_variable = {
 		which = base_value_livestock
@@ -8400,8 +9593,14 @@ determine_value_of_trade_goods_livestock = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = livestock }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = livestock } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = livestock
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = livestock
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8425,6 +9624,7 @@ determine_value_of_trade_goods_livestock = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_incense = {
 	set_variable = {
 		which = base_value_incense
@@ -8472,8 +9672,14 @@ determine_value_of_trade_goods_incense = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = incense }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = incense } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = incense
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = incense
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8497,6 +9703,7 @@ determine_value_of_trade_goods_incense = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_glass = {
 	set_variable = {
 		which = base_value_glass
@@ -8524,8 +9731,14 @@ determine_value_of_trade_goods_glass = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = glass }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = glass } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = glass
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = glass
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8549,6 +9762,7 @@ determine_value_of_trade_goods_glass = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_paper = {
 	set_variable = {
 		which = base_value_paper
@@ -8576,8 +9790,14 @@ determine_value_of_trade_goods_paper = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = paper }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = paper } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = paper
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = paper
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8601,6 +9821,7 @@ determine_value_of_trade_goods_paper = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_gems = {
 	set_variable = {
 		which = base_value_gems
@@ -8667,7 +9888,7 @@ determine_value_of_trade_goods_gems = {
 					OR = {
 						area = diamantina_area
 						area = bogota_area
-						area = murray_river_area #Opal
+						area = murray_river_area						#Opal
 					}
 				}
 			}
@@ -8680,9 +9901,9 @@ determine_value_of_trade_goods_gems = {
 			limit = {
 				ROOT = {
 					OR = {
-						province_id = 1093 #Opal
-						province_id = 2736 #Opal
-						province_id = 4862 #Opal
+						province_id = 1093						#Opal
+						province_id = 2736						#Opal
+						province_id = 4862						#Opal
 					}
 				}
 			}
@@ -8710,7 +9931,7 @@ determine_value_of_trade_goods_gems = {
 						has_terrain = jungle
 						has_terrain = hills
 						has_terrain = highlands
-						has_terrain = coastline #Pearls
+						has_terrain = coastline						#Pearls
 					}
 				}
 			}
@@ -8724,7 +9945,7 @@ determine_value_of_trade_goods_gems = {
 				ROOT = {
 					is_random_new_world = yes
 					has_terrain = mountain
-					continent = new_world #Always in RNW
+					continent = new_world					#Always in RNW
 				}
 			}
 			multiply_variable = {
@@ -8755,8 +9976,14 @@ determine_value_of_trade_goods_gems = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = gems }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = gems } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = gems
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = gems
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8780,6 +10007,7 @@ determine_value_of_trade_goods_gems = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_coal = {
 	set_variable = {
 		which = base_value_coal
@@ -8810,6 +10038,7 @@ determine_value_of_trade_goods_coal = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_cloves = {
 	set_variable = {
 		which = base_value_cloves
@@ -8835,8 +10064,14 @@ determine_value_of_trade_goods_cloves = {
 		if = {
 			limit = {
 				OR = {
-					has_increased_trade_goods_discovery = { trade_goods = cloves }
-					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = cloves } }
+					has_increased_trade_goods_discovery = {
+						trade_goods = cloves
+					}
+					colonial_parent = {
+						has_increased_trade_goods_discovery = {
+							trade_goods = cloves
+						}
+					}
 				}
 			}
 			multiply_variable = {
@@ -8860,6 +10095,7 @@ determine_value_of_trade_goods_cloves = {
 		}
 	}
 }
+
 determine_value_of_trade_goods_unknown = {
 	set_variable = {
 		which = base_value_unknown
@@ -8876,7 +10112,6 @@ determine_value_of_trade_goods_unknown = {
 # 6. The new price is calculated with this formula: (1 + (times you upgraded it)) * 5 (base trade good price)
 # 7. ADM costs are calculated as follows: (base trade good pirce - 2.5) * 25 * (times YOU upgraded it) as long (base trade good pirce - 2.5) => 0
 # 7. Gold will be counted as having a trade value of 10 Ducats so not all of the whole new world becomes one huge gold cluster
-
 calculate_trade_goods_price = {
 	owner = {
 		determine_value_of_trade_goods_$trade_goods$ = yes
@@ -8898,7 +10133,9 @@ calculate_trade_goods_price = {
 		}
 		#Determine price increase on your own
 		if = {
-			limit = { has_country_flag = ever_selected_$trade_goods$ }
+			limit = {
+				has_country_flag = ever_selected_$trade_goods$
+			}
 			change_variable = {
 				which = final_ducat_price_$trade_goods$
 				which = ducat_cost_$trade_goods$_own_counter
@@ -8943,7 +10180,11 @@ purchase_trade_goods = {
 	hidden_effect = {
 		owner = {
 			if = {
-				limit = { NOT = { has_country_flag = ever_selected_$trade_goods$ } }
+				limit = {
+					NOT = {
+						has_country_flag = ever_selected_$trade_goods$
+					}
+				}
 				set_country_flag = ever_selected_$trade_goods$
 				set_variable = {
 					which = ducat_cost_$trade_goods$_own_counter
@@ -8996,87 +10237,159 @@ purchase_trade_goods = {
 }
 
 change_japan_formable_color = {
-	if = { 
-		limit = { was_tag = ASK }
-		change_country_color = { 
-			color = { 162  32  65 }
+	if = {
+		limit = {
+			was_tag = ASK
+		}
+		change_country_color = {
+			color = {
+				162
+				32
+				65
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = UES }
-		change_country_color = { 
-			color = { 200 200 200 }
+	if = {
+		limit = {
+			was_tag = UES
+		}
+		change_country_color = {
+			color = {
+				200
+				200
+				200
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = TKI }
-		change_country_color = { 
-			color = { 86 84 162 }
+	if = {
+		limit = {
+			was_tag = TKI
+		}
+		change_country_color = {
+			color = {
+				86
+				84
+				162
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = SMZ }
-		change_country_color = { 
-			color = { 101 49 142 }
+	if = {
+		limit = {
+			was_tag = SMZ
+		}
+		change_country_color = {
+			color = {
+				101
+				49
+				142
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = TKD }
-		change_country_color = { 
-			color = { 234 85 6 }
+	if = {
+		limit = {
+			was_tag = TKD
+		}
+		change_country_color = {
+			color = {
+				234
+				85
+				6
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = SOO }
-		change_country_color = { 
-			color = { 231 96 158 }
+	if = {
+		limit = {
+			was_tag = SOO
+		}
+		change_country_color = {
+			color = {
+				231
+				96
+				158
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = OUC }
-		change_country_color = { 
-			color = { 216 145 145 }
+	if = {
+		limit = {
+			was_tag = OUC
+		}
+		change_country_color = {
+			color = {
+				216
+				145
+				145
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = TKG }
-		change_country_color = { 
-			color = { 47 93 80 }
+	if = {
+		limit = {
+			was_tag = TKG
+		}
+		change_country_color = {
+			color = {
+				47
+				93
+				80
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = YMN }
-		change_country_color = { 
-			color = { 140 72 128 }
+	if = {
+		limit = {
+			was_tag = YMN
+		}
+		change_country_color = {
+			color = {
+				140
+				72
+				128
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = HSK }
-		change_country_color = { 
-			color = { 49 103 69 }
+	if = {
+		limit = {
+			was_tag = HSK
+		}
+		change_country_color = {
+			color = {
+				49
+				103
+				69
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = ODA }
-		change_country_color = { 
-			color = { 224 4 27 }
+	if = {
+		limit = {
+			was_tag = ODA
+		}
+		change_country_color = {
+			color = {
+				224
+				4
+				27
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
-	if = { 
-		limit = { was_tag = SBA }
-		change_country_color = { 
-			color = { 0 163 175 }
+	if = {
+		limit = {
+			was_tag = SBA
+		}
+		change_country_color = {
+			color = {
+				0
+				163
+				175
+			}
 		}
 		set_country_flag = has_overriden_color_flag
 	}
@@ -9085,27 +10398,42 @@ change_japan_formable_color = {
 for_every_level_of_advisor_do = {
 	if = {
 		limit = {
-			has_advisor_of_type_and_level = { type = $type$ level = 1 }
+			has_advisor_of_type_and_level = {
+				type = $type$
+				level = 1
+			}
 		}
 		$effect$
 		if = {
 			limit = {
-				has_advisor_of_type_and_level = { type = $type$ level = 2 }
+				has_advisor_of_type_and_level = {
+					type = $type$
+					level = 2
+				}
 			}
 			$effect$
 			if = {
 				limit = {
-					has_advisor_of_type_and_level = { type = $type$ level = 3 }
+					has_advisor_of_type_and_level = {
+						type = $type$
+						level = 3
+					}
 				}
 				$effect$
 				if = {
 					limit = {
-						has_advisor_of_type_and_level = { type = $type$ level = 4 }
+						has_advisor_of_type_and_level = {
+							type = $type$
+							level = 4
+						}
 					}
 					$effect$
 					if = {
 						limit = {
-							has_advisor_of_type_and_level = { type = $type$ level = 5 }
+							has_advisor_of_type_and_level = {
+								type = $type$
+								level = 5
+							}
 						}
 						$effect$
 					}
@@ -9122,19 +10450,27 @@ add_or_upgrade_trade_building = {
 	custom_tooltip = add_or_upgrade_trade_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = marketplace }
+			limit = {
+				has_building = marketplace
+			}
 			add_building = trade_depot
 		}
 		else_if = {
-			limit = { has_building = trade_depot }
+			limit = {
+				has_building = trade_depot
+			}
 			add_building = stock_exchange
 		}
 		else_if = {
-			limit = { has_building = stock_exchange }
+			limit = {
+				has_building = stock_exchange
+			}
 			add_base_tax = 1
 			add_base_production = 1
 		}
-		else = { add_building = marketplace }
+		else = {
+			add_building = marketplace
+		}
 	}
 }
 
@@ -9142,14 +10478,20 @@ add_or_upgrade_tax_building = {
 	custom_tooltip = add_or_upgrade_tax_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = temple }
+			limit = {
+				has_building = temple
+			}
 			add_building = cathedral
 		}
 		else_if = {
-			limit = { has_building = cathedral }
+			limit = {
+				has_building = cathedral
+			}
 			add_base_tax = 2
 		}
-		else = { add_building = temple }
+		else = {
+			add_building = temple
+		}
 	}
 }
 
@@ -9157,14 +10499,20 @@ add_or_upgrade_production_building = {
 	custom_tooltip = add_or_upgrade_production_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = workshop }
+			limit = {
+				has_building = workshop
+			}
 			add_building = counting_house
 		}
 		else_if = {
-			limit = { has_building = counting_house }
+			limit = {
+				has_building = counting_house
+			}
 			add_base_production = 2
 		}
-		else = { add_building = workshop }
+		else = {
+			add_building = workshop
+		}
 	}
 }
 
@@ -9172,14 +10520,22 @@ add_or_upgrade_dock_building = {
 	custom_tooltip = add_or_upgrade_dock_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = dock }
+			limit = {
+				has_building = dock
+			}
 			add_building = drydock
 		}
 		else_if = {
-			limit = { has_building = drydock }
-			ROOT = { add_sailors = 0.5 }
+			limit = {
+				has_building = drydock
+			}
+			ROOT = {
+				add_sailors = 0.5
+			}
 		}
-		else = { add_building = dock }
+		else = {
+			add_building = dock
+		}
 	}
 }
 
@@ -9187,14 +10543,22 @@ add_or_upgrade_shipyard_building = {
 	custom_tooltip = add_or_upgrade_shipyard_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = shipyard }
-			add_building = grand_shipyard 
+			limit = {
+				has_building = shipyard
+			}
+			add_building = grand_shipyard
 		}
 		else_if = {
-			limit = { has_building = grand_shipyard }
-			ROOT = { add_sailors = 0.5 }
+			limit = {
+				has_building = grand_shipyard
+			}
+			ROOT = {
+				add_sailors = 0.5
+			}
 		}
-		else = { add_building = shipyard }
+		else = {
+			add_building = shipyard
+		}
 	}
 }
 
@@ -9202,15 +10566,21 @@ add_or_upgrade_manpower_building = {
 	custom_tooltip = add_or_upgrade_manpower_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = barracks }
-			add_building = training_fields  
+			limit = {
+				has_building = barracks
+			}
+			add_building = training_fields
 		}
 		else_if = {
-			limit = { has_building = training_fields }
+			limit = {
+				has_building = training_fields
+			}
 			add_base_tax = 1
 			add_base_manpower = 1
 		}
-		else = { add_building = barracks }
+		else = {
+			add_building = barracks
+		}
 	}
 }
 
@@ -9218,14 +10588,20 @@ add_or_upgrade_forcelimit_building = {
 	custom_tooltip = add_or_upgrade_forcelimit_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = regimental_camp }
-			add_building = conscription_center   
+			limit = {
+				has_building = regimental_camp
+			}
+			add_building = conscription_center
 		}
 		else_if = {
-			limit = { has_building = conscription_center }
+			limit = {
+				has_building = conscription_center
+			}
 			add_base_manpower = 2
 		}
-		else = { add_building = regimental_camp }
+		else = {
+			add_building = regimental_camp
+		}
 	}
 }
 
@@ -9233,12 +10609,16 @@ add_or_upgrade_university_building = {
 	custom_tooltip = add_or_upgrade_university_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = university }
+			limit = {
+				has_building = university
+			}
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
 		}
-		else = { add_building = university }
+		else = {
+			add_building = university
+		}
 	}
 }
 
@@ -9246,16 +10626,22 @@ add_or_upgrade_courthouse_building = {
 	custom_tooltip = add_or_upgrade_courthouse_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = courthouse }
-			add_building = town_hall   
+			limit = {
+				has_building = courthouse
+			}
+			add_building = town_hall
 		}
 		else_if = {
-			limit = { has_building = town_hall }
+			limit = {
+				has_building = town_hall
+			}
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
 		}
-		else = { add_building = courthouse }
+		else = {
+			add_building = courthouse
+		}
 	}
 }
 
@@ -9263,22 +10649,32 @@ add_or_upgrade_fort_building = {
 	custom_tooltip = add_or_upgrade_fort_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = fort_15th }
+			limit = {
+				has_building = fort_15th
+			}
 			add_building = fort_16th
 		}
 		else_if = {
-			limit = { has_building = fort_16th }
+			limit = {
+				has_building = fort_16th
+			}
 			add_building = fort_17th
 		}
 		else_if = {
-			limit = { has_building = fort_17th }
+			limit = {
+				has_building = fort_17th
+			}
 			add_building = fort_18th
 		}
 		else_if = {
-			limit = { has_building = fort_18th }
+			limit = {
+				has_building = fort_18th
+			}
 			add_base_manpower = 3
 		}
-		else = { add_building = fort_15th }
+		else = {
+			add_building = fort_15th
+		}
 	}
 }
 
@@ -9286,14 +10682,20 @@ add_or_upgrade_naval_defense_building = {
 	custom_tooltip = add_or_upgrade_naval_defense_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = coastal_defence }
+			limit = {
+				has_building = coastal_defence
+			}
 			add_building = naval_battery
 		}
 		else_if = {
-			limit = { has_building = naval_battery }
+			limit = {
+				has_building = naval_battery
+			}
 			add_base_production = 2
 		}
-		else = { add_building = coastal_defence }
+		else = {
+			add_building = coastal_defence
+		}
 	}
 }
 
@@ -9301,15 +10703,21 @@ upgrade_trade_building = {
 	custom_tooltip = upgrade_trade_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = marketplace }
+			limit = {
+				has_building = marketplace
+			}
 			add_building = trade_depot
 		}
 		else_if = {
-			limit = { has_building = trade_depot }
+			limit = {
+				has_building = trade_depot
+			}
 			add_building = stock_exchange
 		}
 		else_if = {
-			limit = { has_building = stock_exchange }
+			limit = {
+				has_building = stock_exchange
+			}
 			add_base_tax = 1
 			add_base_production = 1
 		}
@@ -9320,11 +10728,15 @@ upgrade_tax_building = {
 	custom_tooltip = upgrade_tax_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = temple }
+			limit = {
+				has_building = temple
+			}
 			add_building = cathedral
 		}
 		else_if = {
-			limit = { has_building = cathedral }
+			limit = {
+				has_building = cathedral
+			}
 			add_base_tax = 2
 		}
 	}
@@ -9334,11 +10746,15 @@ upgrade_production_building = {
 	custom_tooltip = upgrade_production_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = workshop }
+			limit = {
+				has_building = workshop
+			}
 			add_building = counting_house
 		}
 		else_if = {
-			limit = { has_building = counting_house }
+			limit = {
+				has_building = counting_house
+			}
 			add_base_production = 2
 		}
 	}
@@ -9348,12 +10764,18 @@ upgrade_dock_building = {
 	custom_tooltip = upgrade_dock_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = dock }
+			limit = {
+				has_building = dock
+			}
 			add_building = drydock
 		}
 		else_if = {
-			limit = { has_building = drydock }
-			ROOT = { add_sailors = 0.5 }
+			limit = {
+				has_building = drydock
+			}
+			ROOT = {
+				add_sailors = 0.5
+			}
 		}
 	}
 }
@@ -9362,12 +10784,18 @@ upgrade_shipyard_building = {
 	custom_tooltip = upgrade_shipyard_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = shipyard }
-			add_building = grand_shipyard 
+			limit = {
+				has_building = shipyard
+			}
+			add_building = grand_shipyard
 		}
 		else_if = {
-			limit = { has_building = grand_shipyard }
-			ROOT = { add_sailors = 0.5 }
+			limit = {
+				has_building = grand_shipyard
+			}
+			ROOT = {
+				add_sailors = 0.5
+			}
 		}
 	}
 }
@@ -9376,11 +10804,15 @@ upgrade_manpower_building = {
 	custom_tooltip = upgrade_manpower_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = barracks }
-			add_building = training_fields  
+			limit = {
+				has_building = barracks
+			}
+			add_building = training_fields
 		}
 		else_if = {
-			limit = { has_building = training_fields }
+			limit = {
+				has_building = training_fields
+			}
 			add_base_tax = 1
 			add_base_manpower = 1
 		}
@@ -9391,11 +10823,15 @@ upgrade_forcelimit_building = {
 	custom_tooltip = upgrade_forcelimit_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = regimental_camp }
-			add_building = conscription_center   
+			limit = {
+				has_building = regimental_camp
+			}
+			add_building = conscription_center
 		}
 		else_if = {
-			limit = { has_building = conscription_center }
+			limit = {
+				has_building = conscription_center
+			}
 			add_base_manpower = 2
 		}
 	}
@@ -9405,11 +10841,15 @@ upgrade_courthouse_building = {
 	custom_tooltip = upgrade_courthouse_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = courthouse }
-			add_building = town_hall   
+			limit = {
+				has_building = courthouse
+			}
+			add_building = town_hall
 		}
 		else_if = {
-			limit = { has_building = town_hall }
+			limit = {
+				has_building = town_hall
+			}
 			add_base_tax = 1
 			add_base_production = 1
 			add_base_manpower = 1
@@ -9421,19 +10861,27 @@ upgrade_fort_building = {
 	custom_tooltip = upgrade_fort_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = fort_15th }
+			limit = {
+				has_building = fort_15th
+			}
 			add_building = fort_16th
 		}
 		else_if = {
-			limit = { has_building = fort_16th }
+			limit = {
+				has_building = fort_16th
+			}
 			add_building = fort_17th
 		}
 		else_if = {
-			limit = { has_building = fort_17th }
+			limit = {
+				has_building = fort_17th
+			}
 			add_building = fort_18th
 		}
 		else_if = {
-			limit = { has_building = fort_18th }
+			limit = {
+				has_building = fort_18th
+			}
 			add_base_manpower = 3
 		}
 	}
@@ -9443,11 +10891,15 @@ upgrade_naval_defense_building = {
 	custom_tooltip = upgrade_naval_defense_building_tt
 	hidden_effect = {
 		if = {
-			limit = { has_building = coastal_defence }
+			limit = {
+				has_building = coastal_defence
+			}
 			add_building = naval_battery
 		}
 		else_if = {
-			limit = { has_building = naval_battery }
+			limit = {
+				has_building = naval_battery
+			}
 			add_base_production = 2
 		}
 	}
@@ -9459,35 +10911,47 @@ remove_temporary_colonist = {
 	}
 }
 
-
 primary_and_ruler_culture_change = {
 	if = {
-		limit = { ruler_culture = ROOT ruler_is_$race$ = yes }
+		limit = {
+			ruler_culture = ROOT
+			ruler_is_$race$ = yes
+		}
 		set_ruler_culture = $new_culture$
 	}
 	if = {
-		limit = { has_heir = yes heir_culture = ROOT heir_is_$race$ = yes }
+		limit = {
+			has_heir = yes
+			heir_culture = ROOT
+			heir_is_$race$ = yes
+		}
 		set_heir_culture = $new_culture$
 	}
 	if = {
-		limit = { has_consort = yes consort_culture = ROOT consort_is_$race$ = yes }
+		limit = {
+			has_consort = yes
+			consort_culture = ROOT
+			consort_is_$race$ = yes
+		}
 		set_consort_culture = $new_culture$
 	}
 	change_primary_culture = $new_culture$
 }
 
-add_innovativeness_or_monarch_power_anb = {	#The vanilla effect is too strong and also awkwardly coded
-    if = {
-        limit = { has_dlc = "Rule Britannia" }
-        tooltip = {
-            change_innovativeness = $amount$
-        }
-        custom_tooltip = ADD_INNOVATIVENESS_OR_MONARCHPOWER_ANB
-        hidden_effect = {
-            for = {
-                amount = $amount$
-                effect = "
-                    if = {
+add_innovativeness_or_monarch_power_anb = {
+	#The vanilla effect is too strong and also awkwardly coded
+	if = {
+		limit = {
+			has_dlc = "Rule Britannia"
+		}
+		tooltip = {
+			change_innovativeness = $amount$
+		}
+		custom_tooltip = ADD_INNOVATIVENESS_OR_MONARCHPOWER_ANB
+		hidden_effect = {
+			for = {
+				amount = $amount$
+				effect = "if = {
                         limit = {
                             NOT = { innovativeness = 100 }
                         }
@@ -9498,15 +10962,16 @@ add_innovativeness_or_monarch_power_anb = {	#The vanilla effect is too strong an
                         add_dip_power = 5
                         add_mil_power = 5
                     }
-                "	#The vanilla effect gives 10 of each point instead
-            }
-        }
-    }
-    else = {
-        add_adm_power = 5
-        add_dip_power = 5
-        add_mil_power = 5	#The vanilla effect gives 10 of each point instead
-    }
+                "
+				#The vanilla effect gives 10 of each point instead
+			}
+		}
+	}
+	else = {
+		add_adm_power = 5
+		add_dip_power = 5
+		add_mil_power = 5		#The vanilla effect gives 10 of each point instead
+	}
 }
 
 #1.37
@@ -9531,26 +10996,27 @@ add_innovativeness_or_monarch_power_anb = {	#The vanilla effect is too strong an
 #		default is every_country
 #	}
 #####################
-
 pick_best_tags = {
 	[[scope]
-		pick_best_tags_2 = {
-			scope = $scope$
-			scale = $scale$
-			event_target_name = $event_target_name$
-			global_trigger = "$global_trigger$"
-			1 = "$1$"
-			2 = "$2$"
-			3 = "$3$"
-			4 = "$4$"
-			5 = "$5$"
-			10 = "$10$"
-		}
-		set_global_flag = PICK_BEST_TAG_FLAG
-	] #curses for not having an [ELSE ] or something.
+	pick_best_tags_2 = {
+		scope = $scope$
+		scale = $scale$
+		event_target_name = $event_target_name$
+		global_trigger = "$global_trigger$"
+		1 = "$1$"
+		2 = "$2$"
+		3 = "$3$"
+		4 = "$4$"
+		5 = "$5$"
+		10 = "$10$"
+	}
+	set_global_flag = PICK_BEST_TAG_FLAG
+	]	#curses for not having an [ELSE ] or something.
 	if = {
 		limit = {
-			NOT = { has_global_flag = PICK_BEST_TAG_FLAG } #This check is here to prevent the algorithm from being run again after the scoped version was executed
+			NOT = {
+				has_global_flag = PICK_BEST_TAG_FLAG
+			}			#This check is here to prevent the algorithm from being run again after the scoped version was executed
 		}
 		pick_best_tags_2 = {
 			scope = every_country
@@ -9565,214 +11031,229 @@ pick_best_tags = {
 			10 = "$10$"
 		}
 	}
-	else = { clr_global_flag = PICK_BEST_TAG_FLAG }
+	else = {
+		clr_global_flag = PICK_BEST_TAG_FLAG
+	}
 }
+
 pick_best_tags_2 = {
 	hidden_effect = {
 		[[1]
-			if = {
-				limit = { always = $1$ }
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
+		if = {
+			limit = {
+				always = $1$
 			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+		}
 		]
 		[[2]
-			if = {
-				limit = { always = $2$ }
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
+		if = {
+			limit = {
+				always = $2$
 			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+		}
 		]
 		[[3]
-			if = {
-				limit = { always = $3$ }
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
+		if = {
+			limit = {
+				always = $3$
 			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+		}
 		]
 		[[4]
-			if = {
-				limit = { always = $4$ }
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 4
-				}
+		if = {
+			limit = {
+				always = $4$
 			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 4
+			}
+		}
 		]
 		[[5]
-			if = {
-				limit = { always = $5$ }
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 4
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 5
-				}
+		if = {
+			limit = {
+				always = $5$
 			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 4
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 5
+			}
+		}
 		]
 		[[10]
-			if = {
-				limit = { always = $10$ }
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 4
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 5
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 6
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 7
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 8
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 9
-				}
-				pick_best_tag = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 10
-				}
+		if = {
+			limit = {
+				always = $10$
 			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 4
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 5
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 6
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 7
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 8
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 9
+			}
+			pick_best_tag = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 10
+			}
+		}
 		]
 		$scope$ = {
 			limit = {
@@ -9784,12 +11265,18 @@ pick_best_tags_2 = {
 }
 
 pick_best_tag = {
-	1 = { save_event_target_as = $event_target_name$_$number$ }
+	1 = {
+		save_event_target_as = $event_target_name$_$number$
+	}
 	$scope$ = {
 		limit = {
-			[[global_trigger] $global_trigger$ ]
+			[[global_trigger]
+			$global_trigger$
+			]
 			$scale$ = event_target:$event_target_name$_$number$
-			NOT = { has_country_flag = $event_target_name$_exclude }
+			NOT = {
+				has_country_flag = $event_target_name$_exclude
+			}
 		}
 		save_event_target_as = $event_target_name$_$number$
 	}
@@ -9820,9 +11307,9 @@ distribute_development = {
 			}
 			random_owned_province = {
 				[[limit]
-					limit = {
-						$limit$
-					} 
+				limit = {
+					$limit$
+				}
 				]
 				add_base_$type$ = 1
 			}
@@ -9833,10 +11320,10 @@ distribute_development = {
 		}
 	}
 	custom_tooltip = $type$_$amount$
-	custom_tooltip = " "
+	custom_tooltip = ""
 	[[tooltip]
-		custom_tooltip = $tooltip$
-		custom_tooltip = " "
+	custom_tooltip = $tooltip$
+	custom_tooltip = ""
 	]
 }
 
@@ -9846,19 +11333,25 @@ distribute_development = {
 country_event_with_insight = {
 	country_event = {
 		id = $id$
-		[[days] days = $days$]
-		[[random] random = $random$]
-		[[tooltip] tooltip = $tooltip$]
+		[[days]
+		days = $days$]
+		[[random]
+		random = $random$]
+		[[tooltip]
+		tooltip = $tooltip$]
 	}
 	custom_tooltip = EVENT_INSIGHT_INTRO
 	custom_tooltip = $insight_tooltip$
-	[[effect_tooltip] tooltip = { $effect_tooltip$ }]
+	[[effect_tooltip]
+	tooltip = {
+		$effect_tooltip$
+	}
+	]
 }
 
 # "Simple" as in "Do not put too many characters in the input argument or else it will not work"
 # This serves as both an useful effect for small dynamic mission rewards
 # And as a reminder how the template for the dynamic mission rewards should look like
-
 # Use this if you want the rewards / triggers to be exclusive
 # This means if a AND b are fulfilled then the player gets only reward from a
 # IMPORTANT: you can't fire an event in the 'else' section of an if-else statement inside a scripted effect
@@ -9870,25 +11363,33 @@ simple_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$first_effect$
 	}
 	custom_tooltip = mission_alternatively_tt
-	[[second_custom_tooltip] custom_tooltip = $second_custom_tooltip$ ]
+	[[second_custom_tooltip]
+	custom_tooltip = $second_custom_tooltip$
+	]
 	if = {
 		limit = {
 			$second_limit$
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$second_effect$
 	}
 	hidden_effect = {
 		if = {
-			limit = { $first_limit$ }
+			limit = {
+				$first_limit$
+			}
 			$first_effect$
 		}
 		else = {
@@ -9907,28 +11408,38 @@ simple_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$first_effect$
 	}
-	[[second_custom_tooltip] custom_tooltip = $second_custom_tooltip$ ]
+	[[second_custom_tooltip]
+	custom_tooltip = $second_custom_tooltip$
+	]
 	if = {
 		limit = {
 			$second_limit$
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$second_effect$
 	}
 	hidden_effect = {
 		if = {
-			limit = { $first_limit$ }
+			limit = {
+				$first_limit$
+			}
 			$first_effect$
 		}
 		if = {
-			limit = { $second_limit$ }
+			limit = {
+				$second_limit$
+			}
 			$second_effect$
 		}
 	}
@@ -9945,12 +11456,13 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$first_effect$
 	}
-
-	[[second_custom_tooltip] 
+	[[second_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $second_custom_tooltip$
 	if = {
@@ -9959,13 +11471,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$second_effect$
 	}
 	]
-
-	[[third_custom_tooltip] 
+	[[third_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $third_custom_tooltip$
 	if = {
@@ -9974,13 +11487,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$third_effect$
 	}
 	]
-
-	[[fourth_custom_tooltip] 
+	[[fourth_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $fourth_custom_tooltip$
 	if = {
@@ -9989,13 +11503,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$fourth_effect$
 	}
 	]
-
-	[[fifth_custom_tooltip] 
+	[[fifth_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $fifth_custom_tooltip$
 	if = {
@@ -10004,13 +11519,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$fifth_effect$
 	}
 	]
-
-	[[sixth_custom_tooltip] 
+	[[sixth_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $sixth_custom_tooltip$
 	if = {
@@ -10019,13 +11535,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$sixth_effect$
 	}
 	]
-
-	[[seventh_custom_tooltip] 
+	[[seventh_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $seventh_custom_tooltip$
 	if = {
@@ -10034,13 +11551,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$seventh_effect$
 	}
 	]
-
-	[[eighth_custom_tooltip] 
+	[[eighth_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $eighth_custom_tooltip$
 	if = {
@@ -10049,13 +11567,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$eighth_effect$
 	}
 	]
-
-	[[nineth_custom_tooltip] 
+	[[nineth_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $nineth_custom_tooltip$
 	if = {
@@ -10064,13 +11583,14 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$nineth_effect$
 	}
 	]
-
-	[[tenth_custom_tooltip] 
+	[[tenth_custom_tooltip]
 	custom_tooltip = mission_alternatively_tt
 	custom_tooltip = $tenth_custom_tooltip$
 	if = {
@@ -10079,68 +11599,89 @@ complex_dynamic_effect = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$tenth_effect$
 	}
 	]
-
 	hidden_effect = {
 		if = {
-			limit = { $first_limit$ }
+			limit = {
+				$first_limit$
+			}
 			$first_effect$
 		}
-		[[second_custom_tooltip] 
+		[[second_custom_tooltip]
 		else_if = {
-			limit = { $second_limit$ }
+			limit = {
+				$second_limit$
+			}
 			$second_effect$
 		}
 		]
-		[[third_custom_tooltip] 
+		[[third_custom_tooltip]
 		else_if = {
-			limit = { $third_limit$ }
+			limit = {
+				$third_limit$
+			}
 			$third_effect$
 		}
 		]
-		[[fourth_custom_tooltip] 
+		[[fourth_custom_tooltip]
 		else_if = {
-			limit = { $fourth_limit$ }
+			limit = {
+				$fourth_limit$
+			}
 			$fourth_effect$
 		}
 		]
-		[[fifth_custom_tooltip] 
+		[[fifth_custom_tooltip]
 		else_if = {
-			limit = { $fifth_limit$ }
+			limit = {
+				$fifth_limit$
+			}
 			$fifth_effect$
 		}
 		]
-		[[sixth_custom_tooltip] 
+		[[sixth_custom_tooltip]
 		else_if = {
-			limit = { $sixth_limit$ }
+			limit = {
+				$sixth_limit$
+			}
 			$sixth_effect$
 		}
 		]
-		[[seventh_custom_tooltip] 
+		[[seventh_custom_tooltip]
 		else_if = {
-			limit = { $seventh_limit$ }
+			limit = {
+				$seventh_limit$
+			}
 			$seventh_effect$
 		}
 		]
-		[[eigth_custom_tooltip] 
+		[[eigth_custom_tooltip]
 		else_if = {
-			limit = { $eigth_limit$ }
+			limit = {
+				$eigth_limit$
+			}
 			$eigth_effect$
 		}
 		]
-		[[nineth_custom_tooltip] 
+		[[nineth_custom_tooltip]
 		else_if = {
-			limit = { $nineth_limit$ }
+			limit = {
+				$nineth_limit$
+			}
 			$nineth_effect$
 		}
 		]
-		[[tenth_custom_tooltip] 
+		[[tenth_custom_tooltip]
 		else_if = {
-			limit = { $tenth_limit$ }
+			limit = {
+				$tenth_limit$
+			}
 			$tenth_effect$
 		}
 		]
@@ -10157,12 +11698,13 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$first_effect$
 	}
-
-	[[second_custom_tooltip] 
+	[[second_custom_tooltip]
 	custom_tooltip = $second_custom_tooltip$
 	if = {
 		limit = {
@@ -10170,13 +11712,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$second_effect$
 	}
 	]
-
-	[[third_custom_tooltip] 
+	[[third_custom_tooltip]
 	custom_tooltip = $third_custom_tooltip$
 	if = {
 		limit = {
@@ -10184,13 +11727,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$third_effect$
 	}
 	]
-
-	[[fourth_custom_tooltip] 
+	[[fourth_custom_tooltip]
 	custom_tooltip = $fourth_custom_tooltip$
 	if = {
 		limit = {
@@ -10198,13 +11742,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$fourth_effect$
 	}
 	]
-
-	[[fifth_custom_tooltip] 
+	[[fifth_custom_tooltip]
 	custom_tooltip = $fifth_custom_tooltip$
 	if = {
 		limit = {
@@ -10212,13 +11757,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$fifth_effect$
 	}
 	]
-
-	[[sixth_custom_tooltip] 
+	[[sixth_custom_tooltip]
 	custom_tooltip = $sixth_custom_tooltip$
 	if = {
 		limit = {
@@ -10226,13 +11772,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$sixth_effect$
 	}
 	]
-
-	[[seventh_custom_tooltip] 
+	[[seventh_custom_tooltip]
 	custom_tooltip = $seventh_custom_tooltip$
 	if = {
 		limit = {
@@ -10240,13 +11787,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$seventh_effect$
 	}
 	]
-
-	[[eighth_custom_tooltip] 
+	[[eighth_custom_tooltip]
 	custom_tooltip = $eighth_custom_tooltip$
 	if = {
 		limit = {
@@ -10254,13 +11802,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$eighth_effect$
 	}
 	]
-
-	[[nineth_custom_tooltip] 
+	[[nineth_custom_tooltip]
 	custom_tooltip = $nineth_custom_tooltip$
 	if = {
 		limit = {
@@ -10268,13 +11817,14 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$nineth_effect$
 	}
 	]
-
-	[[tenth_custom_tooltip] 
+	[[tenth_custom_tooltip]
 	custom_tooltip = $tenth_custom_tooltip$
 	if = {
 		limit = {
@@ -10282,12 +11832,13 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = BONUS_REWARD_NO
+	}
 	tooltip = {
 		$tenth_effect$
 	}
 	]
-
 	[[combined_effect]
 	if = {
 		limit = {
@@ -10304,72 +11855,93 @@ complex_dynamic_effect_without_alternative = {
 		}
 		custom_tooltip = COMBINED_BONUS_REWARD_YES
 	}
-	else = { custom_tooltip = COMBINED_BONUS_REWARD_NO }
+	else = {
+		custom_tooltip = COMBINED_BONUS_REWARD_NO
+	}
 	tooltip = {
 		$combined_effect$
 	}
 	]
-
 	hidden_effect = {
 		if = {
-			limit = { $first_limit$ }
+			limit = {
+				$first_limit$
+			}
 			$first_effect$
 		}
-		[[second_custom_tooltip] 
+		[[second_custom_tooltip]
 		if = {
-			limit = { $second_limit$ }
+			limit = {
+				$second_limit$
+			}
 			$second_effect$
 		}
 		]
-		[[third_custom_tooltip] 
+		[[third_custom_tooltip]
 		if = {
-			limit = { $third_limit$ }
+			limit = {
+				$third_limit$
+			}
 			$third_effect$
 		}
 		]
-		[[fourth_custom_tooltip] 
+		[[fourth_custom_tooltip]
 		if = {
-			limit = { $fourth_limit$ }
+			limit = {
+				$fourth_limit$
+			}
 			$fourth_effect$
 		}
 		]
-		[[fifth_custom_tooltip] 
+		[[fifth_custom_tooltip]
 		if = {
-			limit = { $fifth_limit$ }
+			limit = {
+				$fifth_limit$
+			}
 			$fifth_effect$
 		}
 		]
-		[[sixth_custom_tooltip] 
+		[[sixth_custom_tooltip]
 		if = {
-			limit = { $sixth_limit$ }
+			limit = {
+				$sixth_limit$
+			}
 			$sixth_effect$
 		}
 		]
-		[[seventh_custom_tooltip] 
+		[[seventh_custom_tooltip]
 		if = {
-			limit = { $seventh_limit$ }
+			limit = {
+				$seventh_limit$
+			}
 			$seventh_effect$
 		}
 		]
-		[[eigth_custom_tooltip] 
+		[[eigth_custom_tooltip]
 		if = {
-			limit = { $eigth_limit$ }
+			limit = {
+				$eigth_limit$
+			}
 			$eigth_effect$
 		}
 		]
-		[[nineth_custom_tooltip] 
+		[[nineth_custom_tooltip]
 		if = {
-			limit = { $nineth_limit$ }
+			limit = {
+				$nineth_limit$
+			}
 			$nineth_effect$
 		}
 		]
-		[[tenth_custom_tooltip] 
+		[[tenth_custom_tooltip]
 		if = {
-			limit = { $tenth_limit$ }
+			limit = {
+				$tenth_limit$
+			}
 			$tenth_effect$
 		}
 		]
-		[[combined_effect] 
+		[[combined_effect]
 		if = {
 			limit = {
 				$first_limit$
@@ -10391,26 +11963,28 @@ complex_dynamic_effect_without_alternative = {
 
 pick_best_provinces = {
 	[[scope]
-		pick_best_provinces_2 = {
-			scope = "$scope$"
-			scale = "$scale$"
-			event_target_name = "$event_target_name$"
-			global_trigger = "$global_trigger$"
-			1 = "$1$"
-			2 = "$2$"
-			3 = "$3$"
-			4 = "$4$"
-			5 = "$5$"
-			10 = "$10$"
-		}
-		set_global_flag = PICK_BEST_PROVINCES_FLAG
-	] #curses for not having an [ELSE ] or something.
+	pick_best_provinces_2 = {
+		scope = "$scope$"
+		scale = "$scale$"
+		event_target_name = "$event_target_name$"
+		global_trigger = "$global_trigger$"
+		1 = "$1$"
+		2 = "$2$"
+		3 = "$3$"
+		4 = "$4$"
+		5 = "$5$"
+		10 = "$10$"
+	}
+	set_global_flag = PICK_BEST_PROVINCES_FLAG
+	]	#curses for not having an [ELSE ] or something.
 	if = {
 		limit = {
-			NOT = { has_global_flag = PICK_BEST_PROVINCES_FLAG } #This check is here to prevent the algorithm from being run again after the scoped version was executed
+			NOT = {
+				has_global_flag = PICK_BEST_PROVINCES_FLAG
+			}			#This check is here to prevent the algorithm from being run again after the scoped version was executed
 		}
 		pick_best_provinces_2 = {
-			scope = " every_province "
+			scope = "every_province "
 			scale = "$scale$"
 			event_target_name = "$event_target_name$"
 			global_trigger = "$global_trigger$"
@@ -10422,215 +11996,229 @@ pick_best_provinces = {
 			10 = "$10$"
 		}
 	}
-	else = { clr_global_flag = PICK_BEST_PROVINCES_FLAG }
+	else = {
+		clr_global_flag = PICK_BEST_PROVINCES_FLAG
+	}
 }
 
 pick_best_provinces_2 = {
 	hidden_effect = {
 		[[1]
-			if = {
-				limit = { always = $1$ }
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
+		if = {
+			limit = {
+				always = $1$
 			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+		}
 		]
 		[[2]
-			if = {
-				limit = { always = $2$ }
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
+		if = {
+			limit = {
+				always = $2$
 			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+		}
 		]
 		[[3]
-			if = {
-				limit = { always = $3$ }
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
+		if = {
+			limit = {
+				always = $3$
 			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+		}
 		]
 		[[4]
-			if = {
-				limit = { always = $4$ }
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 4
-				}
+		if = {
+			limit = {
+				always = $4$
 			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 4
+			}
+		}
 		]
 		[[5]
-			if = {
-				limit = { always = $5$ }
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 4
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 5
-				}
+		if = {
+			limit = {
+				always = $5$
 			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 4
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 5
+			}
+		}
 		]
 		[[10]
-			if = {
-				limit = { always = $10$ }
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 1
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 2
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 3
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 4
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 5
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 6
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 7
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 8
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 9
-				}
-				pick_best_province = {
-					scale = "$scale$"
-					scope = $scope$
-					global_trigger = "$global_trigger$"
-					event_target_name = "$event_target_name$"
-					number = 10
-				}
+		if = {
+			limit = {
+				always = $10$
 			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 1
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 2
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 3
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 4
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 5
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 6
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 7
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 8
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 9
+			}
+			pick_best_province = {
+				scale = "$scale$"
+				scope = $scope$
+				global_trigger = "$global_trigger$"
+				event_target_name = "$event_target_name$"
+				number = 10
+			}
+		}
 		]
 		$scope$ = {
 			limit = {
@@ -10644,16 +12232,24 @@ pick_best_provinces_2 = {
 pick_best_province = {
 	$scope$ = {
 		limit = {
-			[[global_trigger] $global_trigger$ ]
-			NOT = { has_province_flag = $event_target_name$_exclude }
+			[[global_trigger]
+			$global_trigger$
+			]
+			NOT = {
+				has_province_flag = $event_target_name$_exclude
+			}
 		}
 		save_event_target_as = $event_target_name$_$number$
 	}
 	$scope$ = {
 		limit = {
-			[[global_trigger] $global_trigger$ ]
+			[[global_trigger]
+			$global_trigger$
+			]
 			$scale$ = event_target:$event_target_name$_$number$
-			NOT = { has_province_flag = $event_target_name$_exclude }
+			NOT = {
+				has_province_flag = $event_target_name$_exclude
+			}
 		}
 		save_event_target_as = $event_target_name$_$number$
 	}
@@ -10665,12 +12261,24 @@ pick_best_province = {
 create_general_with_pips = {
 	create_general = {
 		tradition = $tradition$
-		[[add_fire] add_fire = $add_fire$ ]
-		[[add_shock] add_shock = $add_shock$ ]
-		[[add_manuever] add_manuever = $add_manuever$ ]
-		[[add_siege] add_siege = $add_siege$ ]
-		[[name] name = "$name$" ]
-		[[culture] culture = $culture$ ]
+		[[add_fire]
+		add_fire = $add_fire$
+		]
+		[[add_shock]
+		add_shock = $add_shock$
+		]
+		[[add_manuever]
+		add_manuever = $add_manuever$
+		]
+		[[add_siege]
+		add_siege = $add_siege$
+		]
+		[[name]
+		name = "$name$"
+		]
+		[[culture]
+		culture = $culture$
+		]
 	}
 	custom_tooltip = ME_GENERAL_$add_fire$_$add_shock$_$add_manuever$_$add_siege$
 }
@@ -10679,8 +12287,12 @@ give_province_claims = {
 	$id$ = {
 		if = {
 			limit = {
-				NOT = { is_core = $tag$ }
-				NOT = { is_permanent_claim = $tag$ }
+				NOT = {
+					is_core = $tag$
+				}
+				NOT = {
+					is_permanent_claim = $tag$
+				}
 			}
 			add_permanent_claim = $tag$
 		}
@@ -10690,8 +12302,12 @@ give_province_claims = {
 give_area_claims = {
 	$group$ = {
 		limit = {
-			NOT = { is_core = $tag$ }
-			NOT = { is_permanent_claim = $tag$ }
+			NOT = {
+				is_core = $tag$
+			}
+			NOT = {
+				is_permanent_claim = $tag$
+			}
 		}
 		add_permanent_claim = $tag$
 	}
@@ -10699,18 +12315,29 @@ give_area_claims = {
 
 give_claims = {
 	[[province]
-		give_province_claims = { id = $province$ tag = ROOT }
+	give_province_claims = {
+		id = $province$
+		tag = ROOT
+	}
 	]
 	[[id]
-		give_province_claims = { id = $id$ tag = ROOT }
+	give_province_claims = {
+		id = $id$
+		tag = ROOT
+	}
 	]
 	[[area]
-		give_area_claims = { group = $area$ tag = ROOT }
+	give_area_claims = {
+		group = $area$
+		tag = ROOT
+	}
 	]
 	[[region]
-		give_area_claims = { group = $region$ tag = ROOT }
+	give_area_claims = {
+		group = $region$
+		tag = ROOT
+	}
 	]
-
 }
 
 add_power_projection_mission = {
@@ -10723,9 +12350,12 @@ add_power_projection_mission = {
 country_event_with_effect_insight = {
 	country_event = {
 		id = $id$
-		[[days] days = $days$]
-		[[random] random = $random$]
-		[[tooltip] tooltip = $tooltip$]
+		[[days]
+		days = $days$]
+		[[random]
+		random = $random$]
+		[[tooltip]
+		tooltip = $tooltip$]
 	}
 	custom_tooltip = EVENT_INSIGHT_INTRO
 	tooltip = {
@@ -10736,9 +12366,12 @@ country_event_with_effect_insight = {
 country_event_with_option_insight = {
 	country_event = {
 		id = $id$
-		[[days] days = $days$]
-		[[random] random = $random$]
-		[[tooltip] tooltip = $tooltip$]
+		[[days]
+		days = $days$]
+		[[random]
+		random = $random$]
+		[[tooltip]
+		tooltip = $tooltip$]
 	}
 	custom_tooltip = EVENT_INSIGHT_INTRO
 	custom_tooltip = EVENT_INSIGHT_OPT_1
@@ -10746,39 +12379,88 @@ country_event_with_option_insight = {
 		$option_1$
 	}
 	[[option_2]
-		custom_tooltip = EVENT_INSIGHT_OPT_2
-		tooltip = {
-			$option_2$
-		}
+	custom_tooltip = EVENT_INSIGHT_OPT_2
+	tooltip = {
+		$option_2$
+	}
 	]
 	[[option_3]
-		custom_tooltip = EVENT_INSIGHT_OPT_3
-		tooltip = {
-			$option_3$
-		}
+	custom_tooltip = EVENT_INSIGHT_OPT_3
+	tooltip = {
+		$option_3$
+	}
 	]
 	[[option_4]
-		custom_tooltip = EVENT_INSIGHT_OPT_4
-		tooltip = {
-			$option_4$
-		}
+	custom_tooltip = EVENT_INSIGHT_OPT_4
+	tooltip = {
+		$option_4$
+	}
 	]
 	[[option_5]
-		custom_tooltip = EVENT_INSIGHT_OPT_5
-		tooltip = {
-			$option_5$
-		}
+	custom_tooltip = EVENT_INSIGHT_OPT_5
+	tooltip = {
+		$option_5$
+	}
 	]
 }
 
 themarenn_ryala_prosperity = {
-	if = { limit = { consort_dip = 1 } add_country_modifier = { name = a95_consort_pros_1 duration = -1 } }
-	else_if = { limit = { consort_dip = 2 } add_country_modifier = { name = a95_consort_pros_2 duration = -1 } }
-	else_if = { limit = { consort_dip = 3 } add_country_modifier = { name = a95_consort_pros_3 duration = -1 } }
-	else_if = { limit = { consort_dip = 4 } add_country_modifier = { name = a95_consort_pros_4 duration = -1 } }
-	else_if = { limit = { consort_dip = 5 } add_country_modifier = { name = a95_consort_pros_5 duration = -1 } }
-	else_if = { limit = { consort_dip = 6 } add_country_modifier = { name = a95_consort_pros_6 duration = -1 } }
+	if = {
+		limit = {
+			consort_dip = 1
+		}
+		add_country_modifier = {
+			name = a95_consort_pros_1
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			consort_dip = 2
+		}
+		add_country_modifier = {
+			name = a95_consort_pros_2
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			consort_dip = 3
+		}
+		add_country_modifier = {
+			name = a95_consort_pros_3
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			consort_dip = 4
+		}
+		add_country_modifier = {
+			name = a95_consort_pros_4
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			consort_dip = 5
+		}
+		add_country_modifier = {
+			name = a95_consort_pros_5
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			consort_dip = 6
+		}
+		add_country_modifier = {
+			name = a95_consort_pros_6
+			duration = -1
+		}
+	}
 }
+
 themarenn_refresh_prosperity = {
 	remove_country_modifier = a95_consort_pros_1
 	remove_country_modifier = a95_consort_pros_2
@@ -10791,46 +12473,66 @@ themarenn_refresh_prosperity = {
 themarenn_admin_burden = {
 	if = {
 		limit = {
-			NOT = { has_country_modifier = a95_admin_burden }
+			NOT = {
+				has_country_modifier = a95_admin_burden
+			}
 		}
-		add_country_modifier = { name = a95_admin_burden duration = -1 }
+		add_country_modifier = {
+			name = a95_admin_burden
+			duration = -1
+		}
 	}
 	else_if = {
 		limit = {
 			has_country_modifier = a95_admin_burden
 		}
 		remove_country_modifier = a95_admin_burden
-		add_country_modifier = { name = a95_admin2_burden duration = -1 }
+		add_country_modifier = {
+			name = a95_admin2_burden
+			duration = -1
+		}
 	}
 	else_if = {
 		limit = {
 			has_country_modifier = a95_admin2_burden
 		}
 		remove_country_modifier = a95_admin2_burden
-		add_country_modifier = { name = a95_admin3_burden duration = -1 }
+		add_country_modifier = {
+			name = a95_admin3_burden
+			duration = -1
+		}
 	}
 	else_if = {
 		limit = {
 			has_country_modifier = a95_admin3_burden
 		}
 		remove_country_modifier = a95_admin3_burden
-		add_country_modifier = { name = a95_admin4_burden duration = -1 }
+		add_country_modifier = {
+			name = a95_admin4_burden
+			duration = -1
+		}
 	}
 	else_if = {
 		limit = {
 			has_country_modifier = a95_admin4_burden
 		}
 		remove_country_modifier = a95_admin4_burden
-		add_country_modifier = { name = a95_admin4_burden duration = -1 }
+		add_country_modifier = {
+			name = a95_admin4_burden
+			duration = -1
+		}
 	}
 	else_if = {
 		limit = {
 			has_country_modifier = a95_admin4_burden
 		}
 		remove_country_modifier = a95_admin4_burden
-		add_country_modifier = { name = a95_admin5_burden duration = -1 }
+		add_country_modifier = {
+			name = a95_admin5_burden
+			duration = -1
+		}
 	}
-	else = { 
+	else = {
 		add_adm_power = -100
 	}
 }

@@ -2198,7 +2198,7 @@ estate_nobles_decentralized_tribe = {
 			tooltip = estate_nobles_decentralized_tribe_tt
 			has_country_flag = centralized_tribes_level_2
 		}
-	}
+		}
 	modifier_by_land_ownership = {
 		nobles_loyalty_modifier = 0.2
 		land_forcelimit_modifier = 0.2

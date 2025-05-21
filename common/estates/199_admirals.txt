@@ -1,0 +1,73 @@
+#Imperial Admirals
+#April Neckcliffe
+estate_imperial_admirals = {
+	icon = 2
+	# If true, country will get estate
+	trigger = {
+		tag = A22
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		global_ship_cost = -0.1
+		naval_maintenance_modifier = -0.1
+		navy_tradition = 1
+	}
+	country_modifier_neutral = {
+		naval_maintenance_modifier = -0.05
+		global_ship_cost = -0.05
+		navy_tradition = 0.5
+	}
+	country_modifier_angry = {
+		naval_morale = -0.05
+		global_ship_cost = +0.1
+		global_ship_cost = +0.1
+		navy_tradition = -1
+	}
+	land_ownership_modifier = {
+		imperial_admirals_loyalty_modifier = 0.2
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				is_state_core = owner
+			}
+		}
+	}
+	# Influence modifiers
+	base_influence = 20
+	# Custom Names
+	custom_name = {
+		desc = estate_imperial_admirals
+		trigger = {
+			always = yes
+		}
+	}
+	color = {
+		1
+		1
+		1
+	}
+	privileges = {
+		estate_admirals_land_rights
+		estate_admirals_advisor
+		estate_admirals_admiralty_board
+	}
+	agendas = {
+	}
+	influence_from_dev_modifier = 0.5
+}

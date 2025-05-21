@@ -1,9 +1,8 @@
-
 monarchy_mechanic = {
 	monarchy = yes
 	heir = yes
 	queen = yes
-	basic_reform = yes # = invisible/does not take up a slot
+	basic_reform = yes	# = invisible/does not take up a slot
 	is_eligible_for_hre_emperor = yes
 	valid_for_nation_designer = no
 	custom_attributes = {
@@ -12,7 +11,6 @@ monarchy_mechanic = {
 	modifiers = {
 		nobles_influence_modifier = 0.05
 		max_absolutism = 40
-
 		# Anbennar
 		uppercastes_influence_modifier = 0.05
 	}
@@ -23,7 +21,6 @@ monarchy_mechanic = {
 }
 
 #Feudalism vs Autocracy:
-
 feudalism_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
@@ -35,15 +32,14 @@ feudalism_reform = {
 		nobles_influence_modifier = 0.05
 		#maratha_exclusive_influence_modifier = 0.05
 		#rajput_exclusive_influence_modifier = 0.05
-
 		# ANBENNAR
 		uppercastes_influence_modifier = 0.05
 	}
 	custom_attributes = {
-		buffed_strong_duchies = yes #+5% Loyalty
+		buffed_strong_duchies = yes		#+5% Loyalty
 	}
 	ai = {
-		factor = 0.5 #generic
+		factor = 0.5		#generic
 	}
 }
 
@@ -59,7 +55,7 @@ autocracy_reform = {
 		global_rebel_suppression_efficiency = 0.1
 	}
 	ai = {
-		factor = 0.5 #generic
+		factor = 0.5		#generic
 	}
 }
 
@@ -93,7 +89,6 @@ plutocratic_reform = {
 			# technology_group = muslim
 			# technology_group = chinese
 			# technology_group = east_african
-
 			technology_group = tech_gnomish
 			technology_group = tech_bulwari
 			technology_group = tech_west_harimari
@@ -116,7 +111,6 @@ plutocratic_reform = {
 		nobles_influence_modifier = -0.05
 		burghers_influence_modifier = 0.05
 		#vaisyas_influence_modifier = 0.05
-
 		# Anbennar
 		uppercastes_influence_modifier = -0.05
 		middlecastes_influence_modifier = 0.05
@@ -135,14 +129,18 @@ plutocratic_reform = {
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
 		}
 		can_use_trade_post = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
+			NOT = {
+				has_dlc = "Res Publica"
+			}
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
@@ -157,7 +155,7 @@ plutocratic_reform = {
 		trade_city_reform = trading_city
 	}
 	ai = {
-		factor = 0.75 #generic
+		factor = 0.75		#generic
 	}
 }
 
@@ -186,7 +184,6 @@ plutocratic_reform = {
 # 		buffed_strong_duchies = yes #+5% Loyalty
 # 	}
 # }
-
 # grand_duchy_reform = {
 # 	icon = "peasants"
 # 	allow_normal_conversion = yes
@@ -210,7 +207,6 @@ plutocratic_reform = {
 # 		governing_capacity = 200
 # 	}
 # }
-
 # indian_sultanate_reform = {
 # 	icon = "indian_sultanate"
 # 	allow_normal_conversion = yes
@@ -232,11 +228,9 @@ plutocratic_reform = {
 # 		}
 # 	}
 # 	legacy_equivalent = indian_sultanate_legacy
-
 # 	modifiers = {
 # 		tolerance_heathen = 3
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Cradle of Civilization" }
 # 		government_abilities = {
@@ -244,7 +238,6 @@ plutocratic_reform = {
 # 		}
 # 	}
 # }
-
 # shogunate = {
 # 	icon = "shogunate"
 # 	allow_normal_conversion = yes
@@ -279,14 +272,12 @@ plutocratic_reform = {
 # 	allow_vassal_alliance = yes
 # 	lock_level_when_selected = yes
 # 	can_change_primary_culture = no
-
 # 	conditional = {
 # 		allow = { has_dlc = "Mandate of Heaven" }
 # 		government_abilities = {
 # 			shogunate_mechanic
 # 		}
 # 	}
-
 # 	modifiers = {
 # 		diplomats = 1
 # 		envoy_travel_time = -0.25
@@ -294,12 +285,10 @@ plutocratic_reform = {
 # 		amount_of_samurai = 10
 # 		has_samurai = yes
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 	}
 # }
-
 # daimyo = {
 # 	icon = "daimyo"
 # 	allow_normal_conversion = no
@@ -328,7 +317,6 @@ plutocratic_reform = {
 # 		locked_government_type = yes
 # 	}
 # }
-
 # feudal_france_reform = {
 # 	icon = "feudal_france_reform"
 # 	allow_normal_conversion = no
@@ -344,13 +332,11 @@ plutocratic_reform = {
 # 	}
 # 	fixed_rank = 2
 # 	lock_level_when_selected = yes
-
 # 	modifiers = {
 # 		nobles_influence_modifier = 0.1
 # 		vassal_income = 0.2
 # 		max_absolutism = -50
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 		has_appanages = yes
@@ -358,7 +344,6 @@ plutocratic_reform = {
 # 		nobility_loyalty_hit_on_integration = yes
 # 	}
 # }
-
 # appanage_reform = {
 # 	icon = "nobleman"
 # 	allow_normal_conversion = no
@@ -379,7 +364,6 @@ plutocratic_reform = {
 # 		locked_government_type = yes
 # 	}
 # }
-
 # absolutist_france_reform = {
 # 	icon = "absolutist_france_reform"
 # 	allow_normal_conversion = no
@@ -424,18 +408,14 @@ plutocratic_reform = {
 # 		capital_scope = { region = france_region }
 # 	}
 # 	lock_level_when_selected = yes
-
 # 	modifiers = {
 # 		all_estate_influence_modifier = -0.1
 # 		max_absolutism = 10
-		
 # 	}
-
 # 	custom_attributes = {
 # 		centralize_state_development = yes 
 # 	}
 # }
-
 # indep_daimyo = {
 # 	icon = "samurai"
 # 	allow_normal_conversion = no
@@ -466,7 +446,6 @@ plutocratic_reform = {
 # 	}
 # 	legacy_equivalent = indep_daimyo_legacy
 # 	maintain_dynasty = yes
-
 # 	modifiers = {
 # 		land_morale = 0.1
 # 		infantry_power = 0.1
@@ -476,7 +455,6 @@ plutocratic_reform = {
 # 		locked_government_type = yes
 # 	}
 # }
-
 celestial_empire = {
 	icon = "celestial_empire"
 	allow_normal_conversion = no
@@ -496,7 +474,9 @@ celestial_empire = {
 				}
 			}
 		}
-		NOT = { has_global_flag = empire_of_china_dismantled }
+		NOT = {
+			has_global_flag = empire_of_china_dismantled
+		}
 	}
 	legacy_equivalent = celestial_empire_legacy
 	maintain_dynasty = yes
@@ -520,32 +500,30 @@ celestial_empire = {
 		enuchs
 		bureaucrats
 	}
-
 	fixed_rank = 3
 	start_territory_to_estates = 0.9
-
 	modifiers = {
 		prestige = 0.5
 		church_influence_modifier = -0.1
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
-		artificers_influence_modifier = -0.1	#Anbennar
+		artificers_influence_modifier = -0.1		#Anbennar
 		governing_capacity = 500
 	}
-	
 	ai = {
-		factor = 1000 # should always be picked if available
+		factor = 1000		# should always be picked if available
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 		has_unify_china_cb = yes
 	}
-
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
 		has_meritocracy = yes
-		factions = {}
+		factions = {
+		}
 	}
 }
 
@@ -655,22 +633,18 @@ celestial_empire = {
 # 		}
 # 	}
 # 	fixed_rank = 2
-
 # 	modifiers = {
 # 		manpower_recovery_speed = 0.25
 # 		governing_capacity = 500
 # 		liberty_desire = 50
 # 	}
-	
 # 	ai = {
 # 		factor = 1000
 # 	}
-
 # 	custom_attributes = {
 # 		has_unify_china_cb = yes
 # 	}
 # }
-
 # kalmar_union = {
 # 	icon = "kalmar_union"
 # 	allow_normal_conversion = no
@@ -701,7 +675,6 @@ celestial_empire = {
 # 			}
 # 		}
 # 	}
-	
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 		kalmar_union_succession = yes
@@ -712,7 +685,6 @@ celestial_empire = {
 # 		factor = 1
 # 	}
 # }
-
 # danish_archkingdom = {
 # 	icon = "danish_archkingdom"
 # 	allow_normal_conversion = no
@@ -737,7 +709,6 @@ celestial_empire = {
 # 		factor = 1
 # 	}
 # }
-
 elective_monarchy = {
 	icon = "elective_monarchy"
 	allow_normal_conversion = yes
@@ -763,18 +734,22 @@ elective_monarchy = {
 		max_absolutism = -30
 		governing_capacity = 100
 	}
-
 	conditional = {
-		allow = { has_dlc = "Res Publica" }
+		allow = {
+			has_dlc = "Res Publica"
+		}
 		is_elective = yes
 		custom_attributes = {
 			has_polish_election = yes
 			locked_government_type = yes
 		}
 	}
-
 	conditional = {
-		allow = { NOT = { has_dlc = "Res Publica" } }
+		allow = {
+			NOT = {
+				has_dlc = "Res Publica"
+			}
+		}
 		custom_attributes = {
 			locked_government_type = yes
 		}
@@ -810,7 +785,6 @@ elective_monarchy = {
 #		factor = 1
 #	}
 #}
-
 # english_monarchy = {
 # 	icon = "british_queen"
 # 	allow_normal_conversion = no
@@ -835,7 +809,6 @@ elective_monarchy = {
 # 		max_absolutism = -30
 # 		nobles_influence_modifier = -0.1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Common Sense"
@@ -853,7 +826,6 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # british_monarchy = {
 # 	icon = "british_monarchy"
 # 	allow_normal_conversion = no
@@ -877,7 +849,6 @@ elective_monarchy = {
 # 		annexation_relations_impact = -0.25
 # 		diplomats = 1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Common Sense"
@@ -898,7 +869,6 @@ elective_monarchy = {
 # 		factor = 100
 # 	}
 # }
-
 # angevin_monarchy = {
 # 	icon = "queen"
 # 	allow_normal_conversion = no
@@ -931,7 +901,6 @@ elective_monarchy = {
 # 			}
 # 		}
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Common Sense"
@@ -952,7 +921,6 @@ elective_monarchy = {
 # 		factor = 100
 # 	}
 # }
-
 # absolute_british_monarchy = {
 # 	icon = "british_absolutism"
 # 	allow_normal_conversion = no
@@ -975,7 +943,6 @@ elective_monarchy = {
 # 		can_revoke_parliament_seats = yes
 # 		num_of_parliament_issues = -2
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Common Sense"
@@ -994,7 +961,6 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # ottoman_government = {
 # 	lock_level_when_selected = yes
 # 	allow_normal_conversion = yes
@@ -1025,11 +991,9 @@ elective_monarchy = {
 # 		max_absolutism = 5
 # 		governing_capacity = 150
 # 	}
-
 # 	removed_effect = {
 # 		remove_country_modifier = tur_weakened_the_harem
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 	}
@@ -1066,7 +1030,6 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # byzantine_autocracy_reform = {
 # 	icon = "king"
 # 	allow_normal_conversion = yes
@@ -1082,12 +1045,10 @@ elective_monarchy = {
 # 		max_absolutism = -25
 # 		prestige = 0.5
 # 	}
-	
 # 	#custom_attributes = {
 # 	#	civil_war_on_every_new_ruler = yes
 # 	#}
 # }
-
 # reformed_byzantine_monarchy_reform = {
 # 	icon = "byzantine_rule"
 # 	allow_normal_conversion = yes
@@ -1106,7 +1067,6 @@ elective_monarchy = {
 # 		years_of_nationalism = -5
 # 		max_possible_parliament_seats = 8
 # 	}
-	
 # 	conditional = {
 # 		allow = { 
 # 			OR = {
@@ -1117,7 +1077,6 @@ elective_monarchy = {
 # 		has_parliament = yes
 # 	}
 # }
-
 # margraviate_reform = {
 # 	icon = "soldiers_2"
 # 	allow_normal_conversion = yes
@@ -1141,7 +1100,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # serbian_despotate_reform = {
 # 	icon = "king"
 # 	allow_normal_conversion = yes
@@ -1165,7 +1123,6 @@ elective_monarchy = {
 # 	}
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 15
-
 # 	modifiers = {
 # 		global_autonomy = -0.05
 # 		warscore_cost_vs_other_religion = -0.1
@@ -1175,7 +1132,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # bulgarian_tsardom_reform = {
 # 	icon = "king"
 # 	allow_normal_conversion = yes
@@ -1213,7 +1169,6 @@ elective_monarchy = {
 # 		factor = 100
 # 	}
 # }
-
 # tanistry_reform = {
 # 	icon = "tanistry"
 # 	allow_normal_conversion = yes
@@ -1241,7 +1196,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # irish_highkingdom_reform = {
 # 	icon = "irish_highkingdom"
 # 	allow_normal_conversion = yes
@@ -1289,7 +1243,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # scottish_monarchy_reform = {
 # 	icon = "scottish_kingdom"
 # 	allow_normal_conversion = yes
@@ -1312,7 +1265,6 @@ elective_monarchy = {
 # 		diplomatic_reputation = 1 
 # 		defensiveness = 0.1
 # 	}
-	
 # 	conditional = {
 # 		allow = { 
 # 			OR = {
@@ -1326,7 +1278,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # sharifate_reform = {
 # 	icon = "caliphate"
 # 	allow_normal_conversion = yes
@@ -1360,7 +1311,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # caliphate_reform = {
 # 	icon = "caliphate"
 # 	allow_normal_conversion = yes
@@ -1404,7 +1354,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # league_of_lezhe_reform = {
 # 	icon = "giga_chad"
 # 	allow_normal_conversion = yes
@@ -1428,7 +1377,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # barbary_sultanate_reform = {
 # 	icon = "barbary_eyalet_government"
 # 	allow_normal_conversion = yes
@@ -1457,7 +1405,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # roman_empire_reform = {
 # 	icon = "roman_empire"
 # 	allow_normal_conversion = yes
@@ -1490,7 +1437,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # persian_government_reform = {
 # 	icon = "persian_sultanate"
 # 	allow_normal_conversion = yes
@@ -1536,7 +1482,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # portuguese_monarchy_reform = {
 # 	icon = "portuguese_king"
 # 	allow_normal_conversion = yes
@@ -1557,7 +1502,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # holy_imperial_monarchy_reform = {
 # 	icon = "holy_roman_emperor"
 # 	allow_normal_conversion = yes
@@ -1588,7 +1532,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # burgundian_state_reform = {
 # 	icon = "burgundian_state"
 # 	allow_normal_conversion = yes
@@ -1610,7 +1553,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # bohemian_elective_kingdom_reform = {
 # 	icon = "bohemian_monarchy"
 # 	allow_normal_conversion = yes
@@ -1645,7 +1587,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # stadthalter_monarchy_reform = {
 # 	icon = "dutch_republic"
 # 	allow_normal_conversion = yes
@@ -1670,7 +1611,6 @@ elective_monarchy = {
 # 	}
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 40
-
 # 	modifiers = {
 # 		heavy_ship_power = 0.1
 # 		trade_efficiency = 0.1
@@ -1679,11 +1619,9 @@ elective_monarchy = {
 # 		allowed_voc_indiamen_fraction = 0.2
 # 		no_stability_loss_on_monarch_death = yes
 # 	}
-
 # 	removed_effect = {
 # 		country_event = { id = dutch_republic.33 }
 # 	}
-
 # 	custom_attributes = {
 # 		enables_plutocratic_idea_group = yes
 # 		enables_aristocratic_idea_group = no
@@ -1703,7 +1641,6 @@ elective_monarchy = {
 # 				global_trade_power = 0.05
 # 				legitimacy = -0.5
 # 			}
-
 # 			orangists = {
 # 				land_forcelimit_modifier = 0.25
 # 				stability_cost_modifier = -0.10
@@ -1724,7 +1661,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # janissary_autocracy_reform = {
 # 	icon = "janissary_government"
 # 	allow_normal_conversion = yes
@@ -1756,7 +1692,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # admiralty_regime_reform = {
 # 	icon = "admiralty_reform"
 # 	allow_normal_conversion = yes
@@ -1824,7 +1759,6 @@ elective_monarchy = {
 # 		factor = 1
 # 	}
 # }
-
 # modernized_ottoman_government = {
 # 	lock_level_when_selected = yes
 # 	allow_normal_conversion = yes
@@ -1855,7 +1789,6 @@ elective_monarchy = {
 # 		max_absolutism = 10
 # 		governing_capacity = 200
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 	}
@@ -1889,7 +1822,6 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # reorganized_ottoman_government = {
 # 	lock_level_when_selected = yes
 # 	allow_normal_conversion = yes
@@ -1920,11 +1852,9 @@ elective_monarchy = {
 # 		max_absolutism = 10
 # 		governing_capacity = 200
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 	}
-
 # 	conditional = {
 # 		allow = { 
 # 			has_dlc = "Cradle of Civilization"
@@ -1943,7 +1873,6 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # sultanate_of_rum_reform = {
 # 	allow_normal_conversion = yes
 # 	icon = "rum_sultanate"
@@ -1973,7 +1902,6 @@ elective_monarchy = {
 # 		max_absolutism = 5
 # 		governing_capacity = 150
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 	}
@@ -2014,7 +1942,6 @@ elective_monarchy = {
 # 	#	}
 # 	#}
 # }
-
 # eyalet_government = {
 # 	lock_level_when_selected = yes
 # 	allow_normal_conversion = yes
@@ -2032,7 +1959,6 @@ elective_monarchy = {
 # 		no_religion_penalty = yes
 # 		governing_capacity = 100
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 	}
@@ -2047,7 +1973,6 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # barbary_eyalet_government = {
 # 	lock_level_when_selected = yes
 # 	allow_normal_conversion = yes
@@ -2071,7 +1996,6 @@ elective_monarchy = {
 # 		naval_forcelimit_modifier = 0.1
 # 		governing_capacity = 100
 # 	}
-
 # 	custom_attributes = {
 # 		locked_government_type = yes
 # 		force_admiral_leader = yes
@@ -2080,8 +2004,6 @@ elective_monarchy = {
 # 		factor = 100
 # 	}
 # }
-
-
 # beylik_government = {
 # 	icon = "noble_muslim"
 # 	allow_normal_conversion = yes
@@ -2105,7 +2027,6 @@ elective_monarchy = {
 # 		winning_battles_increases_legitimacy = yes
 # 	}
 # }
-
 # al_andalusia_government = {
 # 	icon = "noble_muslim"
 # 	allow_normal_conversion = yes
@@ -2142,27 +2063,27 @@ elective_monarchy = {
 # 		}
 # 	}
 # }
-
-ottoman_government = { #Anbennar
+ottoman_government = {
+	#Anbennar
 	lock_level_when_selected = yes
 	allow_normal_conversion = yes
 	icon = "ottoman_government"
 	potential = {
-		always = no #Anbennar
+		always = no		#Anbennar
 		# religion_group = muslim
 		# OR = {
-			# AND = {
-				# tag = TUR
-				# NOT = { map_setup = map_setup_random }
-			# }
-			# AND = {
-				# tag = RUM
-				# NOT = { map_setup = map_setup_random }
-			# }
-			# AND = {
-				# is_playing_custom_nation = yes
-				# have_had_reform = ottoman_government
-			# }
+		# AND = {
+		# tag = TUR
+		# NOT = { map_setup = map_setup_random }
+		# }
+		# AND = {
+		# tag = RUM
+		# NOT = { map_setup = map_setup_random }
+		# }
+		# AND = {
+		# is_playing_custom_nation = yes
+		# have_had_reform = ottoman_government
+		# }
 		# }
 	}
 	valid_for_nation_designer = no	#Anbennar
@@ -2179,21 +2100,22 @@ ottoman_government = { #Anbennar
 		max_absolutism = 5
 		governing_capacity = 150
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
-
 	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		has_pashas = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
-
 
 # prussian_monarchy = {
 # 	icon = "prussian_monarchy"
@@ -2229,7 +2151,6 @@ ottoman_government = { #Anbennar
 # 		}
 # 	}
 # 	legacy_equivalent = prussian_monarchy_legacy
-
 # 	modifiers = {
 # 		war_exhaustion = -0.02
 # 		global_unrest = -2
@@ -2239,7 +2160,6 @@ ottoman_government = { #Anbennar
 # 		nobles_loyalty_modifier = 0.1
 # 		governing_capacity_modifier = -0.5
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Domination" }
 # 		government_abilities = {
@@ -2259,7 +2179,6 @@ ottoman_government = { #Anbennar
 # 		}
 # 	}
 # }
-
 # prussian_monarchy_base = {
 # 	icon = "prussian_monarchy"
 # 	allow_normal_conversion = yes
@@ -2331,7 +2250,6 @@ ottoman_government = { #Anbennar
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 100
 # 	legacy_equivalent = prussian_monarchy_legacy
-
 # 	modifiers = {
 # 		war_exhaustion = -0.02
 # 		global_unrest = -2
@@ -2341,7 +2259,6 @@ ottoman_government = { #Anbennar
 # 		nobles_loyalty_modifier = 0.1
 # 		governing_capacity_modifier = -0.5
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Rights of Man" }
 # 		government_abilities = {
@@ -2349,7 +2266,6 @@ ottoman_government = { #Anbennar
 # 		}
 # 	}
 # }
-
 # austrian_dual_monarchy = {
 # 	icon = "austrian_dual_monarchy_reform"
 # 	allow_normal_conversion = yes
@@ -2366,7 +2282,6 @@ ottoman_government = { #Anbennar
 # 	nation_designer_trigger = {
 # 		has_dlc = "Emperor"
 # 	}
-
 # 	modifiers = {
 # 		num_accepted_cultures = 2
 # 		global_unrest = -2
@@ -2374,7 +2289,6 @@ ottoman_government = { #Anbennar
 # 		promote_culture_cost = -0.33
 # 	}
 # }
-
 # principality = {
 # 	icon = "russian_principality"
 # 	allow_normal_conversion = yes
@@ -2423,7 +2337,6 @@ ottoman_government = { #Anbennar
 # 		}
 # 	}
 # }
-
 # tsardom = {
 # 	icon = "tsardom"
 # 	allow_normal_conversion = yes
@@ -2454,7 +2367,6 @@ ottoman_government = { #Anbennar
 # 	legacy_equivalent = tsardom_legacy
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 40
-
 # 	nation_designer_trigger = {
 # 		OR = {
 # 			culture_group = east_slavic
@@ -2464,7 +2376,6 @@ ottoman_government = { #Anbennar
 # 		NOT = { primary_culture = byelorussian }
 # 		religion = orthodox
 # 	}
-
 # 	modifiers = {
 # 		global_manpower_modifier = 0.20
 # 		yearly_absolutism = 0.5
@@ -2473,7 +2384,6 @@ ottoman_government = { #Anbennar
 # 		has_streltsy = yes
 # 		allowed_streltsy_fraction = 0.2
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Third Rome" }
 # 		claim_states = yes
@@ -2495,7 +2405,6 @@ ottoman_government = { #Anbennar
 # 		}
 # 	}
 # }
-
 # ruthenian_tsardom = {
 # 	icon = "ruthenia_tsardom"
 # 	allow_normal_conversion = yes
@@ -2530,7 +2439,6 @@ ottoman_government = { #Anbennar
 # 	}
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 40
-
 # 	nation_designer_trigger = {
 # 		OR = {
 # 			primary_culture = ruthenian
@@ -2540,7 +2448,6 @@ ottoman_government = { #Anbennar
 # 		}
 # 		religion = orthodox
 # 	}
-
 # 	modifiers = {
 # 		manpower_in_true_faith_provinces = 0.2
 # 		max_absolutism = 5
@@ -2549,7 +2456,6 @@ ottoman_government = { #Anbennar
 # 		has_streltsy = yes
 # 		allowed_streltsy_fraction = 0.2
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Third Rome" }
 # 		government_abilities = {
@@ -2558,7 +2464,6 @@ ottoman_government = { #Anbennar
 # 		claim_states = yes
 # 	}
 # }
-
 # russian_empire_reform = {
 # 	icon = "russian_queen"
 # 	allow_normal_conversion = yes
@@ -2575,7 +2480,6 @@ ottoman_government = { #Anbennar
 # 	fixed_rank = 3
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 40
-
 # 	modifiers = {
 # 		max_absolutism = 10
 # 		yearly_absolutism = 0.05
@@ -2584,7 +2488,6 @@ ottoman_government = { #Anbennar
 # 		embracement_cost = -0.5
 # 		governing_capacity = 350
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Third Rome" }
 # 		claim_states = yes
@@ -2596,32 +2499,28 @@ ottoman_government = { #Anbennar
 # 		}
 # 	}
 # }
-
 mamluk_government = {
 	icon = "mamluk_government"
 	allow_normal_conversion = yes
 	potential = {
-		always = no #Anbennar
+		always = no		#Anbennar
 		# religion_group = muslim
 		# OR = {
-			# AND = {
-				# tag = MAM
-				# NOT = { map_setup = map_setup_random }
-			# }
-			# have_had_reform = mamluk_government
+		# AND = {
+		# tag = MAM
+		# NOT = { map_setup = map_setup_random }
+		# }
+		# have_had_reform = mamluk_government
 		# }
 	}
 	legacy_equivalent = mamluk_government_legacy
 	queen = no
-
 	valid_for_nation_designer = no	#Anbennar
 	nation_designer_cost = 60
-
 	nation_designer_trigger = {
 		always = no
 		#religion_group = muslim
 	}
-
 	modifiers = {
 		num_accepted_cultures = 3
 		#-50% cost to promote cultures
@@ -2632,9 +2531,10 @@ mamluk_government = {
 		governing_capacity = 50
 		nobles_influence_modifier = 0.1
 	}
-
 	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			mamluk_mechanic
 		}
@@ -2681,7 +2581,6 @@ mamluk_government = {
 # 		#brahmins_hindu_loyalty_modifier = 0.05
 # 		church_loyalty_modifier = 0.05
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Cradle of Civilization" }
 # 		government_abilities = {
@@ -2693,7 +2592,6 @@ mamluk_government = {
 # 		enables_aristocratic_idea_group = no
 # 	}
 # }
-
 # mughal_government = {
 # 	icon = "peacock_throne"
 # 	allow_normal_conversion = yes
@@ -2706,12 +2604,10 @@ mamluk_government = {
 # 	}
 # 	lock_level_when_selected = yes
 # 	legacy_equivalent = feudal_monarchy
-
 # 	modifiers = {
 # 		tolerance_own = 1
 # 		governing_capacity = 150
 # 	}
-
 # 	assimilation_cultures = {
 # 		altaic = {
 # 			artillery_cost = -0.1
@@ -2856,7 +2752,6 @@ mamluk_government = {
 # 		}
 # 	}
 # }
-
 revolutionary_empire_reform = {
 	lock_level_when_selected = yes
 	icon = "rioting_burning_2"
@@ -2872,18 +2767,16 @@ revolutionary_empire_reform = {
 	fixed_rank = 3
 	modifiers = {
 		global_manpower_modifier = 0.25
-		land_morale = 0.10
+		land_morale = 0.1
 		global_autonomy = -0.2
 		governing_capacity = 150
 		max_revolutionary_zeal = 50
 		papal_influence = -100
 		allowed_rev_guard_fraction = 0.2
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
-
 	conditional = {
 		allow = {
 			has_dlc = "Rights of Man"
@@ -2971,7 +2864,6 @@ revolutionary_empire_reform = {
 # 	}
 # 	free_concentrate_development = yes
 # }
-
 # nayankara_reform = {
 # 	icon = "nayankara_system"
 # 	allow_normal_conversion = yes
@@ -3000,7 +2892,6 @@ revolutionary_empire_reform = {
 # 			religion = buddhism
 # 			religion = vajrayana
 # 			religion = mahayana
-
 # 		}
 # 		OR = {
 # 			culture_group = dravidian
@@ -3013,7 +2904,6 @@ revolutionary_empire_reform = {
 # 		global_manpower_modifier = 0.15
 # 	}
 # }
-
 # misl_confederacy_reform = {
 # 	allow_normal_conversion = yes
 # 	icon = "misl_confederacy"
@@ -3033,7 +2923,6 @@ revolutionary_empire_reform = {
 # 		land_maintenance_modifier = -0.1
 # 	}
 # }
-
 # rajput_kingdom = {
 # 	icon = "rajput_kingdom"
 # 	allow_normal_conversion = yes
@@ -3062,7 +2951,6 @@ revolutionary_empire_reform = {
 # 		army_tradition = 0.25
 # 	}
 # }
-
 # siamese_absolutism = {
 # 	icon = "indian_crown"
 # 	allow_normal_conversion = yes
@@ -3079,7 +2967,6 @@ revolutionary_empire_reform = {
 # 	}
 # 	free_concentrate_development = yes
 # }
-
 # confucian_bureaucracy = {
 # 	icon = "warrior_monks_reform"
 # 	allow_normal_conversion = yes
@@ -3106,7 +2993,6 @@ revolutionary_empire_reform = {
 # 		factor = 100
 # 	}
 # }
-
 # korean_monarchy = {
 # 	icon = "korean_monarchy"
 # 	allow_normal_conversion = yes
@@ -3166,7 +3052,6 @@ revolutionary_empire_reform = {
 # 		factor = 100
 # 	}
 # }
-
 # sakdina_system_reform = {
 # 	icon = "sakdina_system_reform"
 # 	allow_normal_conversion = yes
@@ -3192,7 +3077,6 @@ revolutionary_empire_reform = {
 # 		factor = 100
 # 	}
 # }
-
 # uparaja_reform = {
 # 	icon = "uparaja_reform"
 # 	allow_normal_conversion = yes
@@ -3223,7 +3107,6 @@ revolutionary_empire_reform = {
 # 		}
 # 	}
 # }
-
 # negusa_nagast = {
 # 	icon = "negusa_nagast"
 # 	allow_normal_conversion = yes
@@ -3242,13 +3125,11 @@ revolutionary_empire_reform = {
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 40
 # 	legacy_equivalent = negusa_nagast_legacy
-
 # 	modifiers = {
 # 		move_capital_cost_modifier = -0.75
 # 		global_unrest = -1
 # 		stability_cost_modifier = -0.1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Origins"
@@ -3257,7 +3138,6 @@ revolutionary_empire_reform = {
 # 			has_itinerant_capital = yes
 # 		}
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Origins"
@@ -3265,7 +3145,6 @@ revolutionary_empire_reform = {
 # 		allow_cawa = yes
 # 	}
 # }
-
 # solomonic_empire = {
 # 	icon = "solomonic_empire"
 # 	allow_normal_conversion = yes
@@ -3285,14 +3164,12 @@ revolutionary_empire_reform = {
 # 	nation_designer_cost = 50
 # 	legacy_equivalent = solomonic_empire_legacy
 # 	fixed_rank = 3
-
 # 	modifiers = {
 # 		tolerance_own = 2
 # 		max_absolutism = 20
 # 		global_unrest = -2
 # 		amount_of_cawa = 1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Origins"
@@ -3300,14 +3177,12 @@ revolutionary_empire_reform = {
 # 		allow_cawa = yes
 # 	}
 # }
-
 # mossi_federal_kingdom = {
 # 	icon = "native_war_band_reform"
 # 	allow_normal_conversion = yes
 # 	valid_for_nation_designer = yes
 # 	nation_designer_cost = 30
 # 	legacy_equivalent = tribal_confederacy_legacy
-
 # 	potential = {
 # 		OR = {
 # 			AND = {
@@ -3320,14 +3195,12 @@ revolutionary_empire_reform = {
 # 			}
 # 		}
 # 	}
-
 # 	modifiers = {
 # 		nobles_influence_modifier = 0.15
 # 		nobles_loyalty_modifier = 0.1
 # 		global_unrest = -1
 # 		max_absolutism = -20
 # 	}
-
 # 	effect = {
 # 		if = {
 # 			limit = {
@@ -3341,7 +3214,6 @@ revolutionary_empire_reform = {
 # 			}
 # 		}
 # 	}
-
 # 	removed_effect = {
 # 		if = {
 # 			limit = {
@@ -3355,7 +3227,6 @@ revolutionary_empire_reform = {
 # 			}
 # 		}
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			OR = {
@@ -3367,7 +3238,6 @@ revolutionary_empire_reform = {
 # 			has_federal_kingdoms = yes
 # 		}
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Cradle of Civilization"
@@ -3376,12 +3246,10 @@ revolutionary_empire_reform = {
 # 			tribal_federation_mechanic
 # 		}
 # 	}
-
 # 	ai = {
 # 		factor = 1
 # 	}
 # }
-
 # musa_rule = {
 # 	icon = "musa_rule"
 # 	allow_normal_conversion = yes
@@ -3405,12 +3273,10 @@ revolutionary_empire_reform = {
 # 		stability_cost_modifier = -0.05
 # 		legitimacy = 0.5
 # 	}
-
 # 	ai = {
 # 		factor = 1
 # 	}
 # }
-
 # polish_great_sejm = {
 # 	icon = "parliament_hall"
 # 	allow_normal_conversion = no
@@ -3429,9 +3295,7 @@ revolutionary_empire_reform = {
 # 		max_absolutism = -20
 # 		global_unrest = -1 
 # 		reform_progress_growth = -0.2
-		
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			OR = {
@@ -3442,13 +3306,12 @@ revolutionary_empire_reform = {
 # 		has_parliament = yes
 # 	}
 # }
-
 polish_elective_monarchy = {
 	icon = "elective_monarchy"
-	allow_normal_conversion = no 
+	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		always = no	#anbennar
+		always = no		#anbennar
 		OR = {
 			has_reform = polish_elective_monarchy
 			AND = {
@@ -3470,18 +3333,22 @@ polish_elective_monarchy = {
 		nobles_influence_modifier = 0.05
 		reform_progress_growth = -0.2
 	}
-
 	conditional = {
-		allow = { has_dlc = "Res Publica" }
+		allow = {
+			has_dlc = "Res Publica"
+		}
 		is_elective = yes
 		custom_attributes = {
 			has_polish_election = yes
 			locked_government_type = yes
 		}
 	}
-
 	conditional = {
-		allow = { NOT = { has_dlc = "Res Publica" } }
+		allow = {
+			NOT = {
+				has_dlc = "Res Publica"
+			}
+		}
 		custom_attributes = {
 			locked_government_type = yes
 		}
@@ -3523,7 +3390,6 @@ polish_elective_monarchy = {
 # 		reform_progress_growth = 0.1
 # 	}
 # }
-
 # lithuanian_grand_kingdom = {
 # 	icon = "peasants"
 # 	allow_normal_conversion = yes
@@ -3546,7 +3412,6 @@ polish_elective_monarchy = {
 # 		governing_capacity = 250 
 # 	}
 # }
-
 # lithuanian_grand_empire = {
 # 	icon = "peasants"
 # 	allow_normal_conversion = yes
@@ -3573,7 +3438,6 @@ polish_elective_monarchy = {
 # 		governing_capacity = 300 
 # 	}
 # }
-
 # ###Livonian Government Reforms - custom creations basically
 # # If you put everything into military	(Tall)
 # livonian_military_monarchy = {
@@ -3606,7 +3470,6 @@ polish_elective_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 100
-
 # 	modifiers = {
 # 		war_exhaustion = -0.05
 # 		development_cost = -0.05
@@ -3614,7 +3477,6 @@ polish_elective_monarchy = {
 # 		nobles_loyalty_modifier = 0.1
 # 		governing_capacity_modifier = -0.5
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Rights of Man" }
 # 		government_abilities = {
@@ -3622,13 +3484,12 @@ polish_elective_monarchy = {
 # 		}
 # 	}
 # }
-
 # If you put everything into naval and colonialization	(Tall)
 livonian_naval_monarchy = {
 	icon = "livonian_monarchy"
 	allow_normal_conversion = no
 	potential = {
-		always = no #anbennar
+		always = no		#anbennar
 		OR = {
 			AND = {
 				is_playing_custom_nation = yes
@@ -3640,7 +3501,7 @@ livonian_naval_monarchy = {
 		}
 	}
 	trigger = {
-		always = no #anbennar
+		always = no		#anbennar
 		OR = {
 			AND = {
 				is_playing_custom_nation = yes
@@ -3656,20 +3517,21 @@ livonian_naval_monarchy = {
 		has_dlc = "Lions of the North"
 	}
 	nation_designer_cost = 60
-
 	modifiers = {
 		development_cost = -0.1
 		allowed_marine_fraction = 0.5
 		monarch_diplomatic_power = 2
-		burghers_loyalty_modifier = 0.1		
+		burghers_loyalty_modifier = 0.1
 	}
-	
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		country_event = {
+			id = dutch_republic.33
+		}
 	}
-
 	conditional = {
-		allow = { has_dlc = "Res Publica" }
+		allow = {
+			has_dlc = "Res Publica"
+		}
 		queen = no
 		heir = no
 		duration = 4
@@ -3681,7 +3543,6 @@ livonian_naval_monarchy = {
 				trade_efficiency = 0.1
 				legitimacy = -1
 			}
-
 			monarchists = {
 				navy_tradition = 1
 				naval_morale = 0.1
@@ -3722,7 +3583,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 60
-
 # 	modifiers = {
 # 		merchants = 1
 # 		global_ship_trade_power = 0.25
@@ -3765,7 +3625,6 @@ livonian_naval_monarchy = {
 # 		trade_city_reform = trading_city
 # 	}
 # }
-
 # # If you want to focus on religion
 # livonian_theocratic_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -3797,7 +3656,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 50
-
 # 	modifiers = {
 # 		tolerance_own = 2
 # 		papal_influence = 0.5
@@ -3843,7 +3701,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 50
-
 # 	modifiers = {
 # 		all_estate_loyalty_equilibrium = 0.15
 # 		stability_cost_modifier = -0.2
@@ -3853,7 +3710,6 @@ livonian_naval_monarchy = {
 # 		burghers_influence_modifier = 0.05
 # 		no_stability_loss_on_monarch_death = yes
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Res Publica" }
 # 		is_elective = yes
@@ -3862,7 +3718,6 @@ livonian_naval_monarchy = {
 # 		diet_increases_not_influence = yes
 # 	}
 # }
-
 # # If you just want one good allrounder monarchy
 # livonian_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -3894,7 +3749,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 20
-
 # 	modifiers = {
 # 		governing_capacity = 50
 # 		global_unrest = -1
@@ -3902,7 +3756,6 @@ livonian_naval_monarchy = {
 # 		global_manpower_modifier = 0.05
 # 	}
 # }
-
 # # If you want to meme
 # livonian_mercenary_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -3934,15 +3787,12 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 25
-
 # 	modifiers = {
 # 		mercenary_manpower = 0.33
 # 		mercenary_discipline = 0.05
 # 		mercenary_cost = -0.25
 # 		merc_maintenance_modifier = -0.1
-
 # 	}
-
 # 	custom_attributes = {
 # 		mercs_do_not_cost_army_professionalism = yes
 # 		generals_become_rulers = yes
@@ -3952,7 +3802,6 @@ livonian_naval_monarchy = {
 # 	royal_marriage = yes
 # 	heir = no
 # }
-
 # # If you want to focus heavily on Diplomacy	(Wide)
 # livonian_diplomatic_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -3984,7 +3833,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 40
-
 # 	modifiers = {
 # 		diplomatic_upkeep = 2
 # 		diplomatic_reputation = 2
@@ -3993,7 +3841,6 @@ livonian_naval_monarchy = {
 # 		global_manpower_modifier = -0.33
 # 		land_forcelimit_modifier = -0.33
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			OR = {
@@ -4004,7 +3851,6 @@ livonian_naval_monarchy = {
 # 		has_parliament = yes
 # 	}
 # }
-
 # # If you want to keep security and stability	(Wide)
 # livonian_constitutional_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -4036,7 +3882,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 50
-
 # 	modifiers = {
 # 		global_unrest = -2
 # 		years_of_nationalism = -5
@@ -4044,7 +3889,6 @@ livonian_naval_monarchy = {
 # 		improve_relation_modifier = 0.15
 # 		no_stability_loss_on_monarch_death = yes
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			OR = {
@@ -4060,7 +3904,6 @@ livonian_naval_monarchy = {
 # 		}
 # 	}
 # }
-
 # # If you want to blob like crazy basically	(Wide)
 # livonian_administrative_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -4092,7 +3935,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 60
-
 # 	modifiers = {
 # 		core_creation = -0.15
 # 		governing_capacity = 200
@@ -4100,7 +3942,6 @@ livonian_naval_monarchy = {
 # 		diplomatic_reputation = -2
 # 	}
 # }
-
 # # If you want to play naval campaigns (tall-ish)
 # livonian_admiral_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -4132,7 +3973,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 25
-
 # 	modifiers = {
 # 		allowed_marine_fraction = 0.25
 # 		governing_capacity_modifier = -0.25
@@ -4140,7 +3980,6 @@ livonian_naval_monarchy = {
 # 		global_sailors_modifier = 0.25
 # 		ship_durability = 0.05
 # 	}
-
 # 	custom_attributes = {
 # 		admirals_become_rulers = yes
 # 	}
@@ -4155,7 +3994,6 @@ livonian_naval_monarchy = {
 # 		allow_draft_transport_ships = yes
 # 	}
 # }
-
 # # If you want to play naval campaigns (wide-ish)
 # livonian_naval_controlled_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -4187,7 +4025,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 40
-
 # 	modifiers = {
 # 		range = 0.25
 # 		colonist_placement_chance = 0.05
@@ -4198,7 +4035,6 @@ livonian_naval_monarchy = {
 # 		force_admiral_leader = yes
 # 	}
 # }
-
 # # If you want to be a military powerhouse but wide
 # livonian_general_controlled_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -4263,7 +4099,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 40
-
 # 	modifiers = {
 # 		max_absolutism = 30
 # 		yearly_absolutism = 3
@@ -4272,12 +4107,10 @@ livonian_naval_monarchy = {
 # 		church_influence_modifier = -0.1
 # 		burghers_influence_modifier = -0.1
 # 	}
-
 # 	custom_attributes = {
 # 		absolutism_reduction_on_ruler_death = yes
 # 	}
 # }
-
 # # If you want to be a monarchy way ahead of time (tall)
 # livonian_enlightened_monarchy = {
 # 	icon = "livonian_monarchy"
@@ -4303,7 +4136,6 @@ livonian_naval_monarchy = {
 # 		has_dlc = "Lions of the North"
 # 	}
 # 	nation_designer_cost = 75
-
 # 	modifiers = {
 # 		monarch_admin_power = 1
 # 		monarch_diplomatic_power = 1
@@ -4311,7 +4143,6 @@ livonian_naval_monarchy = {
 # 		legitimacy = 1
 # 	}
 # }
-
 # norwegian_parliamentary_monarchy = {
 # 	icon = "queen"
 # 	allow_normal_conversion = no
@@ -4333,7 +4164,6 @@ livonian_naval_monarchy = {
 # 		max_absolutism = -30
 # 		nobles_influence_modifier = -0.1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			OR = {
@@ -4354,9 +4184,8 @@ mengi_kingdom_reform = {
 		manpower_recovery_speed = 0.1
 		harsh_treatment_cost = -0.1
 		nobles_influence_modifier = 0.1
-
 		#diplomatic_upkeep = -2 #this is terrible to play with
-		diplomatic_reputation = -1 
+		diplomatic_reputation = -1
 	}
 	potential = {
 		OR = {
@@ -4365,9 +4194,8 @@ mengi_kingdom_reform = {
 			has_reform = mengi_kingdom_reform
 		}
 	}
-	
 	ai = {
-		factor = 0.5 #generic
+		factor = 0.5		#generic
 	}
 }
 
@@ -4417,7 +4245,9 @@ wine_lord_reform = {
 		hidden_effect = {
 			every_owned_province = {
 				if = {
-					limit = { trade_goods = wine }
+					limit = {
+						trade_goods = wine
+					}
 					add_province_modifier = {
 						name = wine_lord_wine
 						duration = -1
@@ -4430,7 +4260,9 @@ wine_lord_reform = {
 	removed_effect = {
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = wine_lord_wine }
+				limit = {
+					has_province_modifier = wine_lord_wine
+				}
 				remove_province_modifier = wine_lord_wine
 			}
 		}
@@ -4441,14 +4273,12 @@ urviksten_autocracy_reform = {
 	icon = "crown"
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = no
-	
 	potential = {
 		tag = Z15
 	}
 	maintain_dynasty = yes
 	allow_convert = no
 	allow_normal_conversion = no
-	
 	modifiers = {
 		unjustified_demands = -0.1
 		harsh_treatment_cost = -0.1
@@ -4479,7 +4309,6 @@ blademarches_kingdom_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 50
 	nation_designer_trigger = {
-
 	}
 	legacy_equivalent = feudal_monarchy
 	lock_level_when_selected = yes
@@ -4493,7 +4322,8 @@ blademarches_kingdom_reform = {
 	}
 }
 
-adventurer_kingdom_reform = {	#Adventurer Kingdom
+adventurer_kingdom_reform = {
+	#Adventurer Kingdom
 	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	potential = {
@@ -4509,19 +4339,18 @@ adventurer_kingdom_reform = {	#Adventurer Kingdom
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	nation_designer_trigger = {
-
 	}
 	modifiers = {
 		army_tradition_decay = -0.01
 		unjustified_demands = -0.1
 		improve_relation_modifier = -0.1
 		colonists = 1
-
 		adventurers_influence_modifier = 0.1
 	}
 }
 
-enlightened_empire_reform = {  #Aelnar government
+enlightened_empire_reform = {
+	#Aelnar government
 	icon = "soldiers_2"
 	allow_normal_conversion = no
 	potential = {
@@ -4545,13 +4374,11 @@ enlightened_empire_reform = {  #Aelnar government
 	lock_level_when_selected = yes
 	fixed_rank = 3
 	queen = yes
-
 	factions = {
 		aelnar_blaiddtar
 		aelnar_cymscal
 		aelnar_suir
 	}
-
 	modifiers = {
 		promote_culture_cost = 2
 		governing_capacity_modifier = 0.1
@@ -4581,13 +4408,13 @@ orcish_kingdom_reform = {
 	nation_designer_trigger = {
 		culture_group = orcish
 	}
-
 	modifiers = {
 		war_exhaustion = -0.03
 		global_regiment_cost = -0.1
 		colonists = 1
 	}
 }
+
 ogre_kingdom = {
 	icon = "misl_confederacy"
 	allow_normal_conversion = no
@@ -4599,11 +4426,12 @@ ogre_kingdom = {
 	nation_designer_cost = 10
 	nation_designer_trigger = {
 		culture_group = ogre
-		NOT = { primary_culture = horned_ogre }
+		NOT = {
+			primary_culture = horned_ogre
+		}
 	}
 	lock_level_when_selected = yes
 	maintain_dynasty = yes
-
 	modifiers = {
 		defensiveness = 0.15
 		land_morale = 0.05
@@ -4625,13 +4453,13 @@ mengotsa = {
 	nation_designer_cost = 50
 	nation_designer_trigger = {
 		culture_group = ogre
-		NOT = { primary_culture = horned_ogre }
+		NOT = {
+			primary_culture = horned_ogre
+		}
 	}
-
 	lock_level_when_selected = yes
 	maintain_dynasty = yes
 	allow_force_tributary = yes
-
 	modifiers = {
 		defensiveness = 0.2
 		vassal_income = 0.2
@@ -4657,12 +4485,12 @@ ogre_empire = {
 	nation_designer_cost = 75
 	nation_designer_trigger = {
 		culture_group = ogre
-		NOT = { primary_culture = horned_ogre }
+		NOT = {
+			primary_culture = horned_ogre
+		}
 	}
-
 	lock_level_when_selected = yes
 	maintain_dynasty = yes
-
 	modifiers = {
 		defensiveness = 0.2
 		build_cost = -0.1
@@ -4684,24 +4512,21 @@ great_ogre_horde = {
 	nation_designer_cost = 100
 	nation_designer_trigger = {
 		culture_group = ogre
-		NOT = { primary_culture = horned_ogre }
+		NOT = {
+			primary_culture = horned_ogre
+		}
 	}
-
 	lock_level_when_selected = yes
-
 	maintain_dynasty = yes
-
 	modifiers = {
 		colonists = 1
-		global_manpower_modifier = 0.20
+		global_manpower_modifier = 0.2
 		land_forcelimit_modifier = 0.25
 		reinforce_cost_modifier = -0.15
 		global_institution_spread = -0.75
 		diplomatic_upkeep = -4
 		diplomatic_reputation = -3
-
 		reform_progress_growth = -0.75
-
 		hostile_attrition = 2
 	}
 	custom_attributes = {
@@ -4752,7 +4577,6 @@ jadd_empire = {
 		disabled_purging = yes
 		disabled_expelling = yes
 	}
-
 	assimilation_cultures = {
 		anbennarian = {
 			all_power_cost = -0.025
@@ -4848,7 +4672,7 @@ jadd_empire = {
 			yearly_absolutism = 1
 		}
 		yan = {
-			fire_damage = 0.10
+			fire_damage = 0.1
 		}
 		khantaar = {
 			cavalry_cost = -0.15
@@ -4857,10 +4681,10 @@ jadd_empire = {
 			infantry_fire = 0.15
 		}
 		besholgi = {
-			global_foreign_trade_power = 0.10
+			global_foreign_trade_power = 0.1
 		}
 		akasi = {
-			trade_steering = 0.20
+			trade_steering = 0.2
 		}
 		mengi = {
 			tolerance_own = 2
@@ -4881,16 +4705,16 @@ jadd_empire = {
 			global_supply_limit_modifier = 0.25
 		}
 		lizardfolk = {
-			production_efficiency = 0.10
+			production_efficiency = 0.1
 		}
 		wuhyun = {
-			infantry_power = 0.10
+			infantry_power = 0.1
 		}
 		reachman = {
 			merchants = 1
 		}
 		khudi = {
-			reinforce_speed = 0.10
+			reinforce_speed = 0.1
 		}
 		tyvorkan = {
 			global_tariffs = 0.15
@@ -4910,12 +4734,10 @@ invasion_forces = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
-
 	heir = no
 	queen = no
 	royal_marriage = no
 	fixed_rank = 1
-
 	modifiers = {
 		core_creation = -0.1
 		unjustified_demands = -0.1
@@ -4948,7 +4770,6 @@ oak_monarchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 	nation_designer_trigger = {
-
 	}
 	modifiers = {
 		diplomatic_reputation = 1
@@ -4970,26 +4791,37 @@ cyranvar_parliament_reform = {
 	}
 	trigger = {
 		OR = {
-			NOT = { has_estate = estate_nobles }
-			crown_stronger_than_estate = { estate = estate_nobles }
+			NOT = {
+				has_estate = estate_nobles
+			}
+			crown_stronger_than_estate = {
+				estate = estate_nobles
+			}
 			has_reform = cyranvar_parliament_reform
 		}
 		if = {
-			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
-			NOT = { is_emperor_of_china = yes }
-			NOT = { is_revolutionary_republic_trigger = yes }
+			limit = {
+				NOT = {
+					has_dlc = "Mandate of Heaven"
+				}
+			}
+			NOT = {
+				is_emperor_of_china = yes
+			}
+			NOT = {
+				is_revolutionary_republic_trigger = yes
+			}
 		}
 	}
 	modifiers = {
 		global_unrest = -1
 	}
-
 	conditional = {
-		allow = { 
+		allow = {
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
-			} 
+			}
 		}
 		has_parliament = yes
 		custom_attributes = {
@@ -4998,21 +4830,24 @@ cyranvar_parliament_reform = {
 		}
 	}
 	post_removed_effect = {
-		give_estate_land_share_init = { estate = estate_nobles }
+		give_estate_land_share_init = {
+			estate = estate_nobles
+		}
 	}
 }
 
 dwarovar_dwarven_clan_reform = {
 	icon = "peacock_throne"
 	allow_normal_conversion = yes
-	potential = { culture_group = dwarven }
+	potential = {
+		culture_group = dwarven
+	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	nation_designer_trigger = {
 		culture_group = dwarven
 	}
-
 	modifiers = {
 		global_manpower_modifier = 0.1
 		war_exhaustion_cost = -0.25
@@ -5020,7 +4855,8 @@ dwarovar_dwarven_clan_reform = {
 	}
 }
 
-verkal_ozovar_monarchy = { #verkal ozovar unreformed monarchy
+verkal_ozovar_monarchy = {
+	#verkal ozovar unreformed monarchy
 	icon = "peacock_throne"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -5032,9 +4868,8 @@ verkal_ozovar_monarchy = { #verkal ozovar unreformed monarchy
 	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = no
-
 	modifiers = {
-		governing_capacity_modifier = -0.80
+		governing_capacity_modifier = -0.8
 		min_autonomy = 90
 		core_creation = 0.75
 		diplomatic_upkeep = 2
@@ -5042,21 +4877,19 @@ verkal_ozovar_monarchy = { #verkal ozovar unreformed monarchy
 		spy_offence = 0.1
 		diplomatic_reputation = 1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 		maintain_dynasty = yes
 	}
-	
 	rulers_can_be_generals = no
 	heirs_can_be_generals = no
-
 	effect = {
 		custom_tooltip = Y63_annex_tt
 	}
 }
 
-krak_monarchy = { #krakdhumvror reformed monarchy
+krak_monarchy = {
+	#krakdhumvror reformed monarchy
 	icon = "regionally_elected_commanders"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -5068,20 +4901,19 @@ krak_monarchy = { #krakdhumvror reformed monarchy
 	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = no
-
 	modifiers = {
 		monarch_admin_power = 1
 		yearly_absolutism = 0.5
 		max_absolutism = 10
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 		maintain_dynasty = yes
 	}
 }
 
-drakonshani_dominion = { #skewered drake
+drakonshani_dominion = {
+	#skewered drake
 	icon = "shogunate"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -5092,17 +4924,14 @@ drakonshani_dominion = { #skewered drake
 		}
 	}
 	valid_for_nation_designer = no
-
 	modifiers = {
-		cav_to_inf_ratio = 0.30
+		cav_to_inf_ratio = 0.3
 		special_unit_forcelimit = 0.15
 		max_absolutism = 10
 	}
-
 	government_abilities = {
 		drakonshan_authority_mechanic
 	}
-
 	custom_attributes = {
 		disabled_expelling = yes
 		disabled_purging = yes
@@ -5111,9 +4940,8 @@ drakonshani_dominion = { #skewered drake
 	}
 }
 
-
-
-arverynnic_feudalism_reform =  {	 #Arverynn
+arverynnic_feudalism_reform = {
+	#Arverynn
 	icon = "peasants"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -5131,7 +4959,6 @@ arverynnic_feudalism_reform =  {	 #Arverynn
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -5161,28 +4988,29 @@ ynnic_feudalism = {
 		vassal_forcelimit_bonus = 0.5
 	}
 }
+
 kyrrachean_dynasties = {
 	icon = "royal_court"
 	potential = {
 		OR = {
 			AND = {
-				tag = G35 #Arverynn
+				tag = G35				#Arverynn
 				dynasty = "Vyrekynn"
 			}
 			AND = {
-				tag = G84 #Vels Bacar
+				tag = G84				#Vels Bacar
 				dynasty = "yen Bacar"
 			}
 			AND = {
-				tag = H25 #Stenurynn
+				tag = H25				#Stenurynn
 				dynasty = "yen Stenur"
-			} 
+			}
 			AND = {
-				tag = G86 #Stanyrhrada
+				tag = G86				#Stanyrhrada
 				dynasty = "yen Stantir"
 			}
 			AND = {
-				tag = U69 #Sarda
+				tag = U69				#Sarda
 				OR = {
 					dynasty = "yen Stantir"
 					dynasty = "yen Stenur"
@@ -5204,42 +5032,48 @@ kyrrachean_dynasties = {
 		sarda_subjects_liberty_desire_kyrracheans = yes
 	}
 }
+
 ranger_lordship = {
 	icon = "new_order_regiments"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	potential = {
-		tag = U32 #Lesnikpansvo
-		NOT = { has_country_flag = no_ranger_lordship_discount }
+		tag = U32		#Lesnikpansvo
+		NOT = {
+			has_country_flag = no_ranger_lordship_discount
+		}
 	}
 	modifiers = {
 		infantry_cost = -0.2
-		infantry_shock = 0.25 #Rangers
-		diplomatic_reputation = -1 #bandit lord
-		improve_relation_modifier = -0.25 #bandit lord
-		nobles_influence_modifier = -0.1 #ousted nobility
-		nobles_loyalty_modifier = -0.1 #ousted nobility
-		province_warscore_cost = -4 #To compensate for Ynnic diplomacy
+		infantry_shock = 0.25		#Rangers
+		diplomatic_reputation = -1		#bandit lord
+		improve_relation_modifier = -0.25		#bandit lord
+		nobles_influence_modifier = -0.1		#ousted nobility
+		nobles_loyalty_modifier = -0.1		#ousted nobility
+		province_warscore_cost = -4		#To compensate for Ynnic diplomacy
 	}
 	custom_attributes = {
 		lesnikpansvo_forests_bonus = yes
 	}
 }
+
 ranger_lordship_2 = {
 	icon = "new_order_regiments"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	potential = {
-		tag = U32 #Lesnikpansvo
-		NOT = { has_country_modifier = ynn_diplo }
+		tag = U32		#Lesnikpansvo
+		NOT = {
+			has_country_modifier = ynn_diplo
+		}
 	}
 	modifiers = {
 		infantry_cost = -0.2
-		infantry_shock = 0.25 #Rangers
-		diplomatic_reputation = -1 #bandit lord
-		improve_relation_modifier = -0.25 #bandit lord
-		nobles_influence_modifier = -0.1 #ousted nobility
-		nobles_loyalty_modifier = -0.1 #ousted nobility
+		infantry_shock = 0.25		#Rangers
+		diplomatic_reputation = -1		#bandit lord
+		improve_relation_modifier = -0.25		#bandit lord
+		nobles_influence_modifier = -0.1		#ousted nobility
+		nobles_loyalty_modifier = -0.1		#ousted nobility
 	}
 	custom_attributes = {
 		lesnikpansvo_forests_bonus = yes
@@ -5252,7 +5086,9 @@ hobgoblin_stratocracy_reform = {
 	lock_level_when_selected = yes
 	potential = {
 		culture_group = hobgoblin
-		NOT = { religion = eagle_worship }
+		NOT = {
+			religion = eagle_worship
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -5264,10 +5100,9 @@ hobgoblin_stratocracy_reform = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
-
 	modifiers = {
 		legitimacy = -0.5
 		global_manpower_modifier = 0.1
@@ -5283,7 +5118,6 @@ hobgoblin_stratocracy_reform = {
 		royal_marriage = no
 		disables_regular_estates = yes
 	}
-
 	government_abilities = {
 		command_korashi_mechanic
 	}
@@ -5296,12 +5130,14 @@ prabhi_reform = {
 	maintain_dynasty = yes
 	potential = {
 		# OR = {
-			# technology_group = tech_raheni
-			# technology_group = tech_west_harimari
+		# technology_group = tech_raheni
+		# technology_group = tech_west_harimari
 		# }
 		has_reform = prabhi_reform
 		OR = {
-			overlord = { has_government_attribute = is_raja }
+			overlord = {
+				has_government_attribute = is_raja
+			}
 			any_known_country = {
 				war_with = ROOT
 				has_government_attribute = is_raja
@@ -5317,7 +5153,6 @@ prabhi_reform = {
 		}
 	}
 	replacement_on_independence_war = indep_prabhi_reform
-
 	legacy_equivalent = daimyo_legacy
 	modifiers = {
 		development_cost = -0.05
@@ -5337,7 +5172,9 @@ indep_prabhi_reform = {
 			tag = R70
 			tag = R71
 		}
-		capital_scope = { superregion = rahen_superregion }
+		capital_scope = {
+			superregion = rahen_superregion
+		}
 		OR = {
 			culture_group = south_raheni
 			culture_group = upper_raheni
@@ -5350,7 +5187,9 @@ indep_prabhi_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	nation_designer_trigger = {
-		capital_scope = { superregion = rahen_superregion }
+		capital_scope = {
+			superregion = rahen_superregion
+		}
 	}
 	legacy_equivalent = indep_daimyo_legacy
 	modifiers = {
@@ -5368,12 +5207,14 @@ senapti_reform = {
 	maintain_dynasty = yes
 	potential = {
 		# OR = {
-			# technology_group = tech_raheni
-			# technology_group = tech_west_harimari
+		# technology_group = tech_raheni
+		# technology_group = tech_west_harimari
 		# }
 		has_reform = senapti_reform
 		OR = {
-			overlord = { has_government_attribute = is_raja }
+			overlord = {
+				has_government_attribute = is_raja
+			}
 			any_known_country = {
 				war_with = ROOT
 				has_government_attribute = is_raja
@@ -5389,7 +5230,6 @@ senapti_reform = {
 		}
 	}
 	replacement_on_independence_war = indep_prabhi_reform
-
 	legacy_equivalent = daimyo_legacy
 	modifiers = {
 		diplomatic_upkeep = -1
@@ -5426,7 +5266,9 @@ raja_reform = {
 			technology_group = tech_raheni
 			technology_group = tech_west_harimari
 		}
-		capital_scope = { province_id = 4411 }
+		capital_scope = {
+			province_id = 4411
+		}
 	}
 	legacy_equivalent = shogunate_legacy
 	fixed_rank = 3
@@ -5434,14 +5276,12 @@ raja_reform = {
 	# allow_vassal_war = yes  # RAJ REVAMP
 	# allow_vassal_alliance = yes # RAJ REVAMP
 	lock_level_when_selected = yes
-
 	modifiers = {
 		monarch_admin_power = 1
 		governing_capacity_modifier = -0.5
 		max_absolutism = -20
 		accept_vassalization_reasons = -75
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 		is_raja = yes
@@ -5452,20 +5292,17 @@ tiltaghar_grand_vizier_reform = {
 	icon = "shogunate"
 	allow_normal_conversion = yes
 	potential = {
-		tag = R08 #Tiltaghar
+		tag = R08		#Tiltaghar
 	}
 	valid_for_nation_designer = no
-
 	fixed_rank = 3
 	maintain_dynasty = yes
 	lock_level_when_selected = yes
-
 	modifiers = {
 		max_absolutism = 10
 		reduced_liberty_desire = 10
 		legitimacy = 1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -5499,7 +5336,9 @@ phoenix_akalate = {
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			phoenix_estate_mechanic
 		}
@@ -5538,23 +5377,24 @@ damerian_monarchy = {
 		max_absolutism = -10
 		nobles_influence_modifier = -0.1
 	}
-
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
-			NOT = { has_dlc = "Domination" }
+			NOT = {
+				has_dlc = "Domination"
+			}
 		}
 		has_parliament = yes
 	}
 	conditional = {
-		allow = { 			
+		allow = {
 			has_dlc = "Domination"
 		}
- 		has_parliament = yes
- 		custom_attributes = {
- 			estates_influenced_parliament = yes
- 		}
- 	}
+		has_parliament = yes
+		custom_attributes = {
+			estates_influenced_parliament = yes
+		}
+	}
 }
 
 phoenix_empire = {
@@ -5569,7 +5409,6 @@ phoenix_empire = {
 	nation_designer_trigger = {
 		religion = bulwari_sun_cult
 	}
-
 	modifiers = {
 		max_absolutism = 15
 		global_autonomy = -0.1
@@ -5583,7 +5422,9 @@ phoenix_empire = {
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Third Rome" }
+		allow = {
+			has_dlc = "Third Rome"
+		}
 		claim_states = yes
 	}
 }
@@ -5597,7 +5438,9 @@ phoenix_empire_mandate = {
 	}
 	trigger = {
 		if = {
-			limit = { has_dlc = "Mandate of Heaven" }
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
 			is_emperor_of_china = yes
 		}
 	}
@@ -5606,7 +5449,6 @@ phoenix_empire_mandate = {
 	nation_designer_trigger = {
 		religion = bulwari_sun_cult
 	}
-
 	modifiers = {
 		max_absolutism = 15
 		global_autonomy = -0.1
@@ -5620,12 +5462,15 @@ phoenix_empire_mandate = {
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Third Rome" }
+		allow = {
+			has_dlc = "Third Rome"
+		}
 		claim_states = yes
 	}
-
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
 		has_meritocracy = yes
 	}
 }
@@ -5653,13 +5498,12 @@ kharunyana_monarchy = {
 		global_trade_power = 0.2
 		num_accepted_cultures = 2
 	}
-
 	conditional = {
-		allow = { 
+		allow = {
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
-			} 
+			}
 		}
 		has_parliament = yes
 		custom_attributes = {
@@ -5700,10 +5544,9 @@ dynastic_castanor_trials_reform = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
-
 	modifiers = {
 		max_absolutism = 10
 		free_mil_policy = 1
@@ -5744,7 +5587,7 @@ original_castanor_trials_reform = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
 	modifiers = {
@@ -5754,33 +5597,6 @@ original_castanor_trials_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 		castanor_special_succession = yes
-	}
-}
-
-neckcliffer_admirality = {
-	icon = "merchant_ship"
-	allow_normal_conversion = no
-	lock_level_when_selected = yes
-	potential = {
-		OR = {
-			has_reform = neckcliffer_admirality
-			have_had_reform = neckcliffer_admirality
-		}
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 50
-	nation_designer_trigger = {
-		has_dlc = "Common Sense"
-	}
-	start_territory_to_estates = 0.3
-	queen = no	#Can be removed if PDX ever fixes the consort general/admiral bug
-	modifiers = {
-		leader_naval_fire = 1
-		global_naval_engagement_modifier = 0.1
-		naval_morale = 0.1
-	}
-	custom_attributes = {
-		force_admiral_leader = yes
 	}
 }
 
@@ -5797,7 +5613,6 @@ karashari_empire = {
 		primary_culture = karashari_orc
 	}
 	fixed_rank = 3
-
 	legacy_equivalent = iqta_legacy
 	modifiers = {
 		governing_capacity_modifier = -0.5
@@ -5809,7 +5624,9 @@ karashari_empire = {
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			iqta_mechanic
 		}
@@ -5836,17 +5653,14 @@ underkingdom_reform = {
 	nation_designer_trigger = {
 		primary_culture = undergrowth_goblin
 	}
-
 	modifiers = {
-		advisor_pool = 2 #lots of social advancement
+		advisor_pool = 2		#lots of social advancement
 		diplomatic_upkeep = 2
-		global_regiment_cost = -0.1 #harkens back to squatter gov
+		global_regiment_cost = -0.1		#harkens back to squatter gov
 	}
-
 	custom_attributes = {
 		claim_states = yes
 	}
-
 	ai = {
 		factor = 100
 	}
@@ -5875,20 +5689,18 @@ underempire_reform = {
 	nation_designer_trigger = {
 		primary_culture = undergrowth_goblin
 	}
-	allow_vassal_war = yes #goblinraj
+	allow_vassal_war = yes	#goblinraj
 	allow_vassal_alliance = yes
 	modifiers = {
-		advisor_pool = 3 #lots of social advancement
-		free_policy = 1 #flexible administration
-		diplomatic_upkeep = 2 # subject gameplay
+		advisor_pool = 3		#lots of social advancement
+		free_policy = 1		#flexible administration
+		diplomatic_upkeep = 2		# subject gameplay
 		vassal_income = 0.2
 		vassal_forcelimit_bonus = 0.2
 	}
-
 	custom_attributes = {
 		claim_states = yes
 	}
-
 	ai = {
 		factor = 1000
 	}
@@ -5922,7 +5734,7 @@ reformed_goblinoid_kingdom_reform = {
 }
 
 corvurian_midnight_reform = {
-	icon = "midnight_monarchy" #icon taken from an Anbennar mission icon
+	icon = "midnight_monarchy"	#icon taken from an Anbennar mission icon
 	allow_normal_conversion = no
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
@@ -5940,8 +5752,8 @@ corvurian_midnight_reform = {
 	modifiers = {
 		max_absolutism = 30
 		monarch_admin_power = 1
-		vampires_loyalty_modifier = 0.10
-		reform_progress_growth = -0.10
+		vampires_loyalty_modifier = 0.1
+		reform_progress_growth = -0.1
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -5964,11 +5776,9 @@ liangzhu_reform = {
 		has_reform = liangzhu_reform
 	}
 	maintain_dynasty = yes
-
 	modifiers = {
 		nobles_influence_modifier = 0.05
 		global_unrest = -1
-
 		#Anbennar
 		uppercastes_influence_modifier = 0.05
 	}
@@ -6025,7 +5835,9 @@ malacnar_monarchy = {
 		OR = {
 			AND = {
 				tag = G32
-				NOT = { map_setup = map_setup_random }
+				NOT = {
+					map_setup = map_setup_random
+				}
 			}
 			AND = {
 				is_playing_custom_nation = yes
@@ -6040,13 +5852,14 @@ malacnar_monarchy = {
 		}
 		custom_trigger_tooltip = {
 			tooltip = reformed_malacnar_flag_tt
-			NOT = { has_country_flag = reformed_malacnar_flag }
+			NOT = {
+				has_country_flag = reformed_malacnar_flag
+			}
 		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	#legacy_equivalent = prussian_monarchy_legacy
-
 	modifiers = {
 		loot_amount = 0.5
 		min_autonomy = 15
@@ -6054,12 +5867,10 @@ malacnar_monarchy = {
 		land_maintenance_modifier = -0.1
 		governing_capacity_modifier = -0.25
 	}
-
 	custom_attributes = {
 		generals_become_rulers = yes
 		locked_government_type = yes
 	}
-
 	heir = no
 }
 
@@ -6072,7 +5883,9 @@ malacnar_monarchy_reformed = {
 			AND = {
 				tag = G32
 				has_country_flag = reformed_malacnar_flag
-				NOT = { map_setup = map_setup_random }
+				NOT = {
+					map_setup = map_setup_random
+				}
 			}
 			AND = {
 				is_playing_custom_nation = yes
@@ -6099,7 +5912,6 @@ malacnar_monarchy_reformed = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 75
 	#legacy_equivalent = prussian_monarchy_legacy
-
 	modifiers = {
 		war_exhaustion = -0.02
 		discipline = 0.05
@@ -6118,10 +5930,8 @@ verkal_dromak_sleeper_government = {
 	potential = {
 		has_reform = verkal_dromak_sleeper_government
 	}
-
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
-
 	modifiers = {
 		mages_influence_modifier = 0.05
 		mages_loyalty_modifier = 0.1
@@ -6136,7 +5946,8 @@ verkal_dromak_sleeper_government = {
 	}
 }
 
-gnomish_cogovernment_reform = { #can be activated with reveria.37, should only be done if gnomes = integrated and artificers_estate = yes.
+gnomish_cogovernment_reform = {
+	#can be activated with reveria.37, should only be done if gnomes = integrated and artificers_estate = yes.
 	potential = {
 		NOT = {
 			has_country_modifier = gnomish_administration
@@ -6190,7 +6001,6 @@ gnomish_cogovernment_reform = { #can be activated with reveria.37, should only b
 	effect = {
 		artifice_magic_switch_to_artificery_only_mode = yes
 	}
-
 	ai = {
 		factor = 100
 	}
@@ -6205,7 +6015,7 @@ seincourt_reform = {
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = no
 	fixed_rank = 1
-		modifiers = {
+	modifiers = {
 		governing_capacity_modifier = -0.5
 		diplomatic_reputation = 2
 		improve_relation_modifier = 0.25
@@ -6230,7 +6040,7 @@ elikhander_autocracy_reform = {
 		}
 	}
 	modifiers = {
-		all_estate_loyalty_equilibrium = 0.10
+		all_estate_loyalty_equilibrium = 0.1
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -6291,11 +6101,11 @@ ourdi_new_bulwari_accord = {
 		locked_government_type = yes
 	}
 	conditional = {
-		allow = { 
+		allow = {
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
-			} 
+			}
 		}
 		has_parliament = yes
 		custom_attributes = {
@@ -6303,7 +6113,6 @@ ourdi_new_bulwari_accord = {
 			disables_estate_nobles = yes
 		}
 	}
-
 	ai = {
 		factor = 10
 	}
@@ -6354,7 +6163,7 @@ demon_empire_reform = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
 	modifiers = {
@@ -6363,14 +6172,12 @@ demon_empire_reform = {
 		monarch_military_power = 1
 		diplomatic_reputation = -1.5
 	}
-
-#	factions = { #Azjakuma factions are deprecated
-#		oni_highest_fire
-#		oni_silent_mist
-#		oni_bright_claw
-#		oni_golden_gates
-#	}
-
+	#	factions = { #Azjakuma factions are deprecated
+	#		oni_highest_fire
+	#		oni_silent_mist
+	#		oni_bright_claw
+	#		oni_golden_gates
+	#	}
 	custom_attributes = {
 		locked_government_type = yes
 		disables_regular_estates = yes
@@ -6394,7 +6201,7 @@ roangu_thidin_reform = {
 		may_recruit_female_generals = yes
 		yearly_absolutism = 1
 		max_absolutism = 10
-		unjustified_demands = -0.10
+		unjustified_demands = -0.1
 		yearly_corruption = 0.05
 	}
 	custom_attributes = {
@@ -6537,7 +6344,8 @@ teplinbasiet_arena_kingdom_reform = {
 		disables_estate_nobles = yes
 	}
 	effect = {
-		remove_heir = { }
+		remove_heir = {
+		}
 	}
 	ai = {
 		factor = 100
@@ -6587,7 +6395,6 @@ seghdihr_segbandal_reform = {
 		}
 	}
 	valid_for_nation_designer = no
-
 	modifiers = {
 		diplomatic_reputation = 1
 		diplomatic_upkeep = 1
@@ -6595,7 +6402,6 @@ seghdihr_segbandal_reform = {
 		governing_capacity_modifier = -0.25
 		adventurers_influence_modifier = -0.1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 		enables_plutocratic_idea_group = yes
@@ -6616,7 +6422,6 @@ surface_clan_government = {
 	valid_for_nation_designer = no
 	nation_designer_cost = 50
 	nation_designer_trigger = {
-
 	}
 	legacy_equivalent = feudal_monarchy
 	lock_level_when_selected = yes
@@ -6647,7 +6452,7 @@ krakazol_olzonog = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
 	modifiers = {
@@ -6655,7 +6460,6 @@ krakazol_olzonog = {
 		army_tradition_from_battle = 0.5
 		autonomy_change_time = -0.4
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -6670,7 +6474,9 @@ varamhar_eternal_empire = {
 			has_reform = varamhar_eternal_empire
 			have_had_reform = varamhar_eternal_empire
 		}
-		NOT = { has_reform = varamhar_eternal_empire_mandate }
+		NOT = {
+			has_reform = varamhar_eternal_empire_mandate
+		}
 	}
 	valid_for_nation_designer = no
 	has_term_election = yes
@@ -6680,7 +6486,7 @@ varamhar_eternal_empire = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
 	modifiers = {
@@ -6694,7 +6500,9 @@ varamhar_eternal_empire = {
 		better_long_lived = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Third Rome" }
+		allow = {
+			has_dlc = "Third Rome"
+		}
 		claim_states = yes
 	}
 }
@@ -6711,7 +6519,9 @@ varamhar_eternal_empire_mandate = {
 	}
 	trigger = {
 		if = {
-			limit = { has_dlc = "Mandate of Heaven" }
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
 			is_emperor_of_china = yes
 		}
 	}
@@ -6723,7 +6533,7 @@ varamhar_eternal_empire_mandate = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
 	modifiers = {
@@ -6737,12 +6547,15 @@ varamhar_eternal_empire_mandate = {
 		better_long_lived = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Third Rome" }
+		allow = {
+			has_dlc = "Third Rome"
+		}
 		claim_states = yes
 	}
-
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
 		has_meritocracy = yes
 	}
 }
@@ -6760,28 +6573,24 @@ tluukt_tluuktraak_reform = {
 	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = no
-
 	maintain_dynasty = yes
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
-	
 	custom_attributes = {
 		raze_province = yes
 		disabled_expelling_human = yes
 		disabled_purging_human = yes
 		can_use_tributary_cb = yes
 	}
-
 	modifiers = {
 		liberty_desire_from_subject_development = -0.25
 		vassal_income = 0.33
 		production_efficiency = 0.05
 		diplomatic_upkeep = 1
-
 		governing_capacity_modifier = -0.33
 	}
 }
@@ -6802,7 +6611,6 @@ alchemical_exploration_corps_reform = {
 		envoy_travel_time = -0.2
 		diplomatic_upkeep = 1
 		artificers_influence_modifier = 0.1
-
 		max_absolutism = -15
 		governing_capacity_modifier = -0.25
 	}
@@ -6826,12 +6634,11 @@ new_havoral_bandit_kingdom_reform = {
 		has_reform = new_havoral_bandit_kingdom_reform
 	}
 	valid_for_nation_designer = no
-	
 	modifiers = {
 		global_unrest = 1
 		diplomatic_reputation = -1
 		harsh_treatment_cost = -0.25
-		manpower_recovery_speed = 0.10
+		manpower_recovery_speed = 0.1
 		loot_amount = 0.25
 	}
 	factions = {
@@ -6843,7 +6650,6 @@ new_havoral_bandit_kingdom_reform = {
 }
 
 #Sarhal
-
 kingdom_kheterata = {
 	icon = "crown"
 	allow_normal_conversion = no
@@ -6852,33 +6658,33 @@ kingdom_kheterata = {
 	}
 	trigger = {
 		if = {
-			limit = { has_dlc = "Mandate of Heaven" }
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
 			is_emperor_of_china = yes
 		}
 	}
-
 	maintain_dynasty = yes
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
-
-
 	modifiers = {
 		caravan_power = 0.25
 		global_tax_modifier = 0.1
 		war_exhaustion = -0.02
 	}
-	
 	custom_attributes = {
 		locked_government_type = yes
 	}
-
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
 		has_meritocracy = yes
 	}
-	ai = { factor = 1000 }
+	ai = {
+		factor = 1000
+	}
 }
-
 
 konolkhatep_gnolls_sorrow_reform = {
 	icon = "crown"
@@ -6893,66 +6699,62 @@ konolkhatep_gnolls_sorrow_reform = {
 	trigger = {
 		is_emperor_of_china = yes
 	}
-
 	maintain_dynasty = yes
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
 	fixed_rank = 3
-
 	modifiers = {
 		promote_culture_cost = -0.5
 		army_tradition = 0.75
 		global_heathen_missionary_strength = 0.02
 	}
-	
 	custom_attributes = {
 		locked_government_type = yes
 		has_meritocracy = yes
 		disabled_expelling_human = yes
 		disabled_purging_human = yes
 	}
-
-	ai = { factor = 1000 }
+	ai = {
+		factor = 1000
+	}
 }
 
 dakinshi_warlord_reform = {
-    icon = "shaman"
-    allow_normal_conversion = no
-    legacy_equivalent = feudal_monarchy
-    valid_for_nation_designer = yes
-    nation_designer_cost = 10
-    lock_level_when_selected = yes
-    valid_for_nation_designer = yes
-
-    potential = {
-        has_reform = dakinshi_warlord_reform
-    }
-    modifiers = {
+	icon = "shaman"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	potential = {
+		has_reform = dakinshi_warlord_reform
+	}
+	modifiers = {
 		land_attrition = -0.15
 		manpower_recovery_speed = 0.1
 		female_advisor_chance = 0.25
 		may_recruit_female_generals = yes
-		min_autonomy = 25      
+		min_autonomy = 25
 		legitimacy = -0.5
-    }
-    queen = no
-
+	}
+	queen = no
 	custom_attributes = {
 		locked_government_type = yes
 		generals_become_rulers = yes
 		royal_marriage = no
 		winning_battles_increases_legitimacy = yes
 	}
-
-    conditional = {
-        allow = {
-            end_game_tags_blocked = yes
-        }    
-        can_change_primary_culture = no
-    }
-	
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			end_game_tags_blocked = yes
+		}
+		can_change_primary_culture = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
@@ -6967,7 +6769,7 @@ namasonamingo_reform = {
 	conditional = {
 		allow = {
 			end_game_tags_blocked = yes
-		}	
+		}
 		can_change_primary_culture = no
 	}
 	potential = {
@@ -6976,23 +6778,23 @@ namasonamingo_reform = {
 			culture_group = inyaswarosa
 		}
 	}
-
 	modifiers = {
 		female_advisor_chance = 0.25
 		may_recruit_female_generals = yes
-
 		production_efficiency = 0.15
 		monthly_gold_inflation_modifier = -0.5
 	}
 	maintain_dynasty = yes
-
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
 
-ikatara_reform = { #Lizardfolk City-State Kingdom
+ikatara_reform = {
+	#Lizardfolk City-State Kingdom
 	icon = "crown"
 	allow_normal_conversion = yes
 	legacy_equivalent = despotic_monarchy
@@ -7002,7 +6804,9 @@ ikatara_reform = { #Lizardfolk City-State Kingdom
 		AND = {
 			culture_is_lizardfolk = yes
 		}
-		NOT = { primary_culture = ashhana_lizardfolk }
+		NOT = {
+			primary_culture = ashhana_lizardfolk
+		}
 	}
 	modifiers = {
 		idea_cost = -0.1
@@ -7010,7 +6814,8 @@ ikatara_reform = { #Lizardfolk City-State Kingdom
 	}
 }
 
-anzatara_reform = { #Lizardfolk Empire
+anzatara_reform = {
+	#Lizardfolk Empire
 	icon = "crown"
 	allow_normal_conversion = yes
 	legacy_equivalent = despotic_monarchy
@@ -7048,7 +6853,7 @@ baashidi_plutocratic_reform = {
 	nation_designer_cost = 10
 	modifiers = {
 		merchants = 1
-		trade_range_modifier = 1 #higher for Baashidi
+		trade_range_modifier = 1		#higher for Baashidi
 		has_voc_indiamen = yes
 		allowed_voc_indiamen_fraction = 0.25
 	}
@@ -7060,14 +6865,18 @@ baashidi_plutocratic_reform = {
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
 		}
 		can_use_trade_post = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
+			NOT = {
+				has_dlc = "Res Publica"
+			}
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
@@ -7082,7 +6891,7 @@ baashidi_plutocratic_reform = {
 		trade_city_reform = trading_city
 	}
 	ai = {
-		factor = 0.75 #generic
+		factor = 0.75		#generic
 	}
 }
 
@@ -7151,23 +6960,20 @@ royakottar_four_families = {
 	allow_normal_conversion = no
 	potential = {
 		OR = {
-			tag = G67 #Royakottar
-			was_tag = G67 #Royakottar
+			tag = G67			#Royakottar
+			was_tag = G67			#Royakottar
 		}
 		has_country_flag = G67_enable_four_families
 	}
-	
 	custom_attributes = {
 		locked_government_type = yes
 	}
-
 	factions = {
 		four_families_kattyva
 		four_families_nymkorai
 		four_families_ursibadur
 		four_families_vustarin
 	}
-
 	ai = {
 		factor = 500
 	}
@@ -7180,7 +6986,6 @@ vermillion_throne_reform = {
 	potential = {
 		primary_culture = naamjyut
 	}
-
 	modifiers = {
 		trade_steering = 0.15
 	}
@@ -7203,11 +7008,14 @@ copperlord_reform = {
 	nation_designer_cost = 0
 	potential = {
 		OR = {
-			is_or_was_tag = { tag = H11 } 
-			is_or_was_tag = { tag = H15 } 
+			is_or_was_tag = {
+				tag = H11
+			}
+			is_or_was_tag = {
+				tag = H15
+			}
 		}
 	}
-
 	modifiers = {
 		burghers_influence_modifier = -0.1
 		mercantilism_cost = -0.1
@@ -7219,7 +7027,9 @@ copperlord_reform = {
 		custom_tooltip = copperlord_monopoly_tt
 		hidden_effect = {
 			every_owned_province = {
-				limit = { trade_goods = copper }
+				limit = {
+					trade_goods = copper
+				}
 				add_province_modifier = {
 					name = copperlord_copper
 					duration = -1
@@ -7231,7 +7041,9 @@ copperlord_reform = {
 	removed_effect = {
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = copperlord_copper }
+				limit = {
+					has_province_modifier = copperlord_copper
+				}
 				remove_province_modifier = copperlord_copper
 			}
 		}
@@ -7243,15 +7055,25 @@ enforce_privileges_reform = {
 	icon = "people_walking"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = dwarovar_dwarven_clan_reform }
-		NOT = { has_reform = verkal_ozovar_monarchy }
-		NOT = { has_reform = krak_monarchy }
-		NOT = { has_reform = hobgoblin_stratocracy_reform }	#Anbennar
-		NOT = { culture_group = goblin }
+		NOT = {
+			has_reform = dwarovar_dwarven_clan_reform
+		}
+		NOT = {
+			has_reform = verkal_ozovar_monarchy
+		}
+		NOT = {
+			has_reform = krak_monarchy
+		}
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}		#Anbennar
+		NOT = {
+			culture_group = goblin
+		}
 		is_revolutionary = no
 	}
 	modifiers = {
-		global_manpower_modifier = 0.1 #1.35
+		global_manpower_modifier = 0.1		#1.35
 		nobles_influence_modifier = 0.1
 		#maratha_exclusive_influence_modifier = 0.1
 		#rajput_exclusive_influence_modifier = 0.1
@@ -7262,7 +7084,9 @@ enforce_privileges_reform = {
 		factor = 1
 		modifier = {
 			factor = 2
-			NOT = { max_manpower = 12 }
+			NOT = {
+				max_manpower = 12
+			}
 		}
 	}
 }
@@ -7271,11 +7095,21 @@ quash_noble_power_reform = {
 	icon = "king_2"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = dwarovar_dwarven_clan_reform }
-		NOT = { has_reform = verkal_ozovar_monarchy }
-		NOT = { has_reform = krak_monarchy }
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { culture_group = goblin }
+		NOT = {
+			has_reform = dwarovar_dwarven_clan_reform
+		}
+		NOT = {
+			has_reform = verkal_ozovar_monarchy
+		}
+		NOT = {
+			has_reform = krak_monarchy
+		}
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			culture_group = goblin
+		}
 		is_revolutionary = no
 	}
 	modifiers = {
@@ -7283,7 +7117,6 @@ quash_noble_power_reform = {
 		nobles_influence_modifier = -0.1
 		#maratha_exclusive_influence_modifier = -0.1
 		#rajput_exclusive_influence_modifier = -0.1
-
 		# Anbennar
 		uppercastes_influence_modifier = -0.1
 	}
@@ -7301,21 +7134,23 @@ grant_noble_castle_rights_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_reform = hobgoblin_stratocracy_reform }	#Anbennar
-		NOT = { culture_group = goblin }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}		#Anbennar
+		NOT = {
+			culture_group = goblin
+		}
 	}
 	modifiers = {
 		fort_maintenance_modifier = -0.2
 		nobles_influence_modifier = 0.05
 		#maratha_exclusive_influence_modifier = 0.05
 		#rajput_exclusive_influence_modifier = 0.05
-
-
 		# Anbennar
 		uppercastes_influence_modifier = 0.05
 	}
 	custom_attributes = {
-		on_fort_built_nobles_loyalty = yes	#5 Loyalty
+		on_fort_built_nobles_loyalty = yes		#5 Loyalty
 	}
 	ai = {
 		factor = 1
@@ -7339,13 +7174,18 @@ maintain_nobles_status_quo_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_reform = hobgoblin_stratocracy_reform }	#Anbennar
-		NOT = { culture_group = dwarven }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}		#Anbennar
+		NOT = {
+			culture_group = dwarven
+		}
 	}
-	modifiers = { #1.35
+	modifiers = {
+		#1.35
 		legitimacy = 0.5
 		#meritocracy = 0.5
-		stability_cost_modifier = -0.15 
+		stability_cost_modifier = -0.15
 	}
 	custom_attributes = {
 		free_noble_levies = yes
@@ -7364,16 +7204,19 @@ grant_military_command_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_reform = hobgoblin_stratocracy_reform }	#Anbennar
-		NOT = { culture_group = dwarven }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}		#Anbennar
+		NOT = {
+			culture_group = dwarven
+		}
 	}
 	modifiers = {
 		army_tradition = 0.25
-		cavalry_cost = -0.1 #1.35
+		cavalry_cost = -0.1		#1.35
 		nobles_influence_modifier = 0.05
 		#maratha_exclusive_influence_modifier = 0.05
 		#rajput_exclusive_influence_modifier = 0.05
-
 		# Anbennar
 		uppercastes_influence_modifier = 0.05
 	}
@@ -7398,14 +7241,15 @@ grant_nobles_electorate_reform = {
 	}
 	trigger = {
 		has_idea_group = aristocracy_ideas
-		NOT = { is_emperor_of_china = yes }
+		NOT = {
+			is_emperor_of_china = yes
+		}
 	}
 	modifiers = {
 		nobles_loyalty_modifier = 0.1
 		#maratha_loyalty_modifier = 0.1
 		#rajput_loyalty_modifier = 0.1
 		no_stability_loss_on_monarch_death = yes
-
 		# Anbennar
 		uppercastes_loyalty_modifier = 0.1
 		uppercastes_influence_modifier = 0.1
@@ -7445,7 +7289,9 @@ grant_nobles_electorate_reform = {
 		improved_nobles_regency = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Domination" }
+		allow = {
+			has_dlc = "Domination"
+		}
 		custom_attributes = {
 			has_improved_ruler_election = yes
 		}
@@ -7458,7 +7304,9 @@ grant_nobles_electorate_reform = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_government_attribute = has_ruler_election }
+			NOT = {
+				has_government_attribute = has_ruler_election
+			}
 		}
 	}
 }
@@ -7468,7 +7316,9 @@ blackmail_nobility_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
+		NOT = {
+			has_estate_privilege = estate_nobles_golden_liberty
+		}
 		#Anbennar
 		NOT = {
 			has_reform = hobgoblin_stratocracy_reform
@@ -7483,7 +7333,7 @@ blackmail_nobility_reform = {
 		nobles_influence_modifier = -0.1
 		#maratha_exclusive_influence_modifier = -0.1
 		#rajput_exclusive_influence_modifier = -0.1
-		uppercastes_influence_modifier = -0.1 #Anbennar
+		uppercastes_influence_modifier = -0.1		#Anbennar
 		allow_free_estate_privilege_revocation = yes
 	}
 	custom_attributes = {
@@ -7507,7 +7357,6 @@ enforce_trader_privileges_reform = {
 			# technology_group = muslim
 			# technology_group = chinese
 			# technology_group = east_african
-
 			technology_group = tech_gnomish
 			technology_group = tech_bulwari
 			technology_group = tech_west_harimari
@@ -7574,7 +7423,6 @@ enforce_trader_privileges_reform = {
 #		factor = 3
 #	}
 #}
-
 poligar_reform = {
 	icon = "indian_crown"
 	allow_normal_conversion = yes
@@ -7612,7 +7460,6 @@ poligar_reform = {
 #		factor = 5
 #	}
 #}
-
 #deccani_society_reform = {
 #	icon = "noble_indian"
 #	allow_normal_conversion = yes
@@ -7633,7 +7480,6 @@ poligar_reform = {
 #		factor = 3
 #	}
 #}
-
 # black_army_reform = {
 # 	icon = "black_army_reform"
 # 	allow_normal_conversion = yes
@@ -7656,7 +7502,6 @@ poligar_reform = {
 # 		factor = 3
 # 	}
 # }
-
 legion_of_honor_reform = {
 	icon = "legion_of_honor_reform"
 	allow_normal_conversion = yes
@@ -7672,7 +7517,7 @@ legion_of_honor_reform = {
 				estate = estate_nobles
 			}
 		}
-		is_emperor_of_china = no #Anbennar
+		is_emperor_of_china = no		#Anbennar
 	}
 	modifiers = {
 		advisor_cost = -0.1
@@ -7733,7 +7578,6 @@ imperial_nobility_reform = {
 # 		#janissaries_loyalty_modifier = 0.1
 # 		nobles_influence_modifier = -0.1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			has_dlc = "Domination"
@@ -7746,7 +7590,6 @@ imperial_nobility_reform = {
 # 		factor = 300
 # 	}
 # }
-
 # ottoman_conscription_reform = {
 # 	icon = "feudal_theocracy"
 # 	allow_normal_conversion = yes
@@ -7773,7 +7616,6 @@ imperial_nobility_reform = {
 # 		factor = 300
 # 	}
 # }
-
 # separation_of_boyars_from_court_reform = {
 # 	icon = "king"
 # 	allow_normal_conversion = yes
@@ -7797,7 +7639,6 @@ imperial_nobility_reform = {
 # 		factor = 10
 # 	}
 # }
-
 # house_of_lords_reform = {
 # 	icon = "assembly_hall"
 # 	allow_normal_conversion = yes
@@ -7818,7 +7659,6 @@ imperial_nobility_reform = {
 # 		factor = 10
 # 	}
 # }
-
 # ministerialis_promotion_reform = {
 # 	icon = "commander_king_reform"
 # 	allow_normal_conversion = yes
@@ -7838,7 +7678,6 @@ imperial_nobility_reform = {
 # 		factor = 1
 # 	}
 # }
-
 #Anbennar
 dwarovar_old_clans_reform = {
 	icon = "castle"
@@ -7848,7 +7687,9 @@ dwarovar_old_clans_reform = {
 	}
 	trigger = {
 		if = {
-			limit = { tag = I02 }
+			limit = {
+				tag = I02
+			}
 			NOT = {
 				custom_trigger_tooltip = {
 					tooltip = krak_no_old_clans_tooltip
@@ -7878,23 +7719,31 @@ dwarovar_new_clans_reform = {
 		embracement_cost = -0.15
 		national_focus_years = -5
 	}
-
 	ai = {
 		factor = 10
 	}
 }
+
 magical_elite_reform = {
 	icon = "indian_crown"
 	allow_normal_conversion = yes
 	potential = {
 		has_estate = estate_mages
-		NOT = { has_country_flag = banned_magic }
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = great_ogre_horde }
+		NOT = {
+			has_country_flag = banned_magic
+		}
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
 		NOT = {
 			AND = {
 				religion = bulwari_sun_cult
-				NOT = { primary_culture = sun_elf }
+				NOT = {
+					primary_culture = sun_elf
+				}
 			}
 		}
 	}
@@ -7903,17 +7752,21 @@ magical_elite_reform = {
 		mages_loyalty_modifier = 0.1
 		mages_influence_modifier = 0.05
 	}
-
 	ai = {
 		factor = 1
 		modifier = {
 			factor = 0
 			is_part_of_hre = no
 		}
-		modifier = {	#Makes em go like this in Age of Witch Kings
+		modifier = {
+			#Makes em go like this in Age of Witch Kings
 			factor = 1000
-			capital_scope = { superregion = escann_superregion }
-			NOT = { current_age = age_of_revolutions }
+			capital_scope = {
+				superregion = escann_superregion
+			}
+			NOT = {
+				current_age = age_of_revolutions
+			}
 		}
 		modifier = {
 			factor = 10
@@ -7934,7 +7787,7 @@ powerful_clan_bosses = {
 			}
 		}
 		culture_group = goblin
-		}
+	}
 	modifiers = {
 		global_autonomy = -0.1
 		nobles_loyalty_modifier = 0.05
@@ -7943,7 +7796,9 @@ powerful_clan_bosses = {
 	effect = {
 		hidden_effect = {
 			every_owned_province = {
-				limit = { province_is_or_accepts_culture = no }
+				limit = {
+					province_is_or_accepts_culture = no
+				}
 				add_province_modifier = {
 					name = weak_clan_bosses
 					duration = -1
@@ -7953,14 +7808,19 @@ powerful_clan_bosses = {
 	}
 	removed_effect = {
 		every_owned_province = {
-			limit = { has_province_modifier = weak_clan_bosses }
+			limit = {
+				has_province_modifier = weak_clan_bosses
+			}
 			remove_province_modifier = weak_clan_bosses
 		}
 	}
-	custom_attributes = { weak_clan_bosses_effect = yes }
+	custom_attributes = {
+		weak_clan_bosses_effect = yes
+	}
 }
 
-skewered_drake_call_the_name = { #skewered drake
+skewered_drake_call_the_name = {
+	#skewered drake
 	icon = "fist_in_air"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -7974,8 +7834,9 @@ skewered_drake_call_the_name = { #skewered drake
 		power_projection_from_insults = 1
 		nobles_influence_modifier = 0.1
 	}
-
-	custom_attributes = { skewered_drake_call_the_name_effect = yes }
+	custom_attributes = {
+		skewered_drake_call_the_name_effect = yes
+	}
 }
 
 # jadd_nobility = {
@@ -7992,12 +7853,10 @@ skewered_drake_call_the_name = { #skewered drake
 # 			}
 # 		}
 # 	}
-
 # 	modifiers = {
 # 		governing_capacity = 150
 # 		global_manpower_modifier = 0.1
 # 	}
-
 # 	assimilation_cultures = {
 # 		anbennarian = {
 # 			all_power_cost = -0.025
@@ -8133,7 +7992,6 @@ skewered_drake_call_the_name = { #skewered drake
 # 		}
 # 	}
 # }
-
 harimari_upper_caste = {
 	icon = "noble_indian"
 	allow_normal_conversion = yes
@@ -8144,7 +8002,6 @@ harimari_upper_caste = {
 		idea_cost = -0.05
 		core_creation = -0.05
 	}
-
 	ai = {
 		factor = 96
 	}
@@ -8187,7 +8044,7 @@ ghankedhen_families = {
 	}
 }
 
-gerudia_unbound_commoners =  {
+gerudia_unbound_commoners = {
 	icon = "peasants"
 	allow_normal_conversion = yes
 	lock_level_when_selected = no
@@ -8202,7 +8059,7 @@ gerudia_unbound_commoners =  {
 	}
 }
 
-arverynnic_feudalism_reform =  {
+arverynnic_feudalism_reform = {
 	icon = "peasants"
 	allow_normal_conversion = yes
 	lock_level_when_selected = no
@@ -8220,7 +8077,6 @@ arverynnic_feudalism_reform =  {
 		burghers_loyalty_modifier = 0.05
 	}
 }
-
 
 hobgoblin_officer_authority = {
 	icon = "black_army_reform"
@@ -8249,7 +8105,7 @@ adenica_chivalric_oaths = {
 	}
 	modifiers = {
 		yearly_corruption = -0.1
-		cavalry_cost = -0.1 #1.35
+		cavalry_cost = -0.1		#1.35
 		nobles_loyalty_modifier = 0.1
 	}
 	custom_attributes = {
@@ -8266,7 +8122,6 @@ castanor_succession_war_reward_edhar_castan = {
 			have_had_reform = castanor_succession_war_reward_edhar_castan
 		}
 	}
-
 	modifiers = {
 		max_absolutism = 10
 		yearly_absolutism = 0.5
@@ -8277,11 +8132,9 @@ castanor_succession_war_reward_edhar_castan = {
 		mages_loyalty_modifier = -0.05
 		artificers_loyalty_modifier = -0.05
 	}
-
 	custom_attributes = {
 		patrician_castanor_mechanic = yes
 	}
-
 	ai = {
 		factor = 96
 	}
@@ -8296,7 +8149,6 @@ castanor_succession_war_reward_original_castan = {
 			have_had_reform = castanor_succession_war_reward_original_castan
 		}
 	}
-
 	modifiers = {
 		liberty_desire_from_subject_development = -0.2
 		global_unrest = -2
@@ -8304,9 +8156,8 @@ castanor_succession_war_reward_original_castan = {
 		castonath_patricians_influence_modifier = -0.2
 		castonath_patricians_loyalty_modifier = -0.1
 	}
-
-	custom_attributes = { }
-
+	custom_attributes = {
+	}
 	ai = {
 		factor = 96
 	}
@@ -8354,12 +8205,12 @@ dauloph_mercenary_reform = {
 		}
 	}
 	modifiers = {
-        general_cost = -0.1
-        possible_condottieri = 3
-        mercenary_cost = -0.3
-        merc_maintenance_modifier = -0.05
-        #yearly_army_professionalism = -0.05
-    }
+		general_cost = -0.1
+		possible_condottieri = 3
+		mercenary_cost = -0.3
+		merc_maintenance_modifier = -0.05
+		#yearly_army_professionalism = -0.05
+	}
 	ai = {
 		factor = 100
 	}
@@ -8372,7 +8223,6 @@ ghavaanaj_tribes = {
 	potential = {
 		has_reform = ghavaanaj_tribes
 	}
-
 	modifiers = {
 		church_influence_modifier = 0.05
 		burghers_influence_modifier = 0.05
@@ -8380,9 +8230,10 @@ ghavaanaj_tribes = {
 		middlecastes_influence_modifier = 0.05
 		army_tradition = 0.5
 	}
-
 	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			tribal_federation_mechanic
 		}
@@ -8398,18 +8249,16 @@ rogierian_exile_nobility_reform = {
 	lock_level_when_selected = yes
 	valid_for_nation_designer = no
 	maintain_dynasty = yes
-
 	modifiers = {
-        adventurers_loyalty_modifier = 0.1
+		adventurers_loyalty_modifier = 0.1
 		improve_relation_modifier = 0.1
 		land_morale = 0.05
-    }
-	
+	}
 	custom_attributes = {
 		disabled_purging_half_orcish = yes
 		disabled_expelling_half_orcish = yes
 		disabled_purging_orcish = yes
-		disabled_expelling_orcish = yes	
+		disabled_expelling_orcish = yes
 	}
 }
 
@@ -8493,20 +8342,19 @@ tluukt_litter_reform = {
 	allow_normal_conversion = no
 	potential = {
 		culture_group = gnollish
-		has_unlocked_government_reform = { government_reform = tluukt_litter_reform }
+		has_unlocked_government_reform = {
+			government_reform = tluukt_litter_reform
+		}
 	}
 	valid_for_nation_designer = no
-
 	custom_attributes = {
 		#gnoll_harem = yes
 	}
-
 	modifiers = {
 		manpower_in_own_culture_provinces = 0.33
 		stability_cost_modifier = -0.2
-
 		all_estate_influence_modifier = 0.05
-    }
+	}
 }
 
 kumarkand_emperor_rule = {
@@ -8535,17 +8383,20 @@ kumarkand_emperor_rule = {
 }
 
 #Bureaucracy:
-
 centralize_reform = {
 	icon = "paper_with_seal_3"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 		if = {
-			limit = { current_age = age_of_discovery }
+			limit = {
+				current_age = age_of_discovery
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_15_provinces_on_same_continent
 				NOT = {
@@ -8557,7 +8408,9 @@ centralize_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_reformation }
+			limit = {
+				current_age = age_of_reformation
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_25_provinces_on_same_continent
 				NOT = {
@@ -8569,7 +8422,9 @@ centralize_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_absolutism }
+			limit = {
+				current_age = age_of_absolutism
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_35_provinces_on_same_continent
 				NOT = {
@@ -8581,7 +8436,9 @@ centralize_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_revolutions }
+			limit = {
+				current_age = age_of_revolutions
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_50_provinces_on_same_continent
 				NOT = {
@@ -8595,7 +8452,9 @@ centralize_reform = {
 	}
 	trigger = {
 		if = {
-			limit = { current_age = age_of_discovery }
+			limit = {
+				current_age = age_of_discovery
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_15_provinces_on_same_continent
 				NOT = {
@@ -8607,7 +8466,9 @@ centralize_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_reformation }
+			limit = {
+				current_age = age_of_reformation
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_25_provinces_on_same_continent
 				NOT = {
@@ -8619,7 +8480,9 @@ centralize_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_absolutism }
+			limit = {
+				current_age = age_of_absolutism
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_35_provinces_on_same_continent
 				NOT = {
@@ -8631,7 +8494,9 @@ centralize_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_revolutions }
+			limit = {
+				current_age = age_of_revolutions
+			}
 			custom_trigger_tooltip = {
 				tooltip = less_than_50_provinces_on_same_continent
 				NOT = {
@@ -8666,10 +8531,14 @@ centralize_empire_reform = {
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 		if = {
-			limit = { current_age = age_of_discovery }
+			limit = {
+				current_age = age_of_discovery
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_15_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8679,7 +8548,9 @@ centralize_empire_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_reformation }
+			limit = {
+				current_age = age_of_reformation
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_25_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8689,7 +8560,9 @@ centralize_empire_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_absolutism }
+			limit = {
+				current_age = age_of_absolutism
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_35_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8699,7 +8572,9 @@ centralize_empire_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_revolutions }
+			limit = {
+				current_age = age_of_revolutions
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_50_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8711,7 +8586,9 @@ centralize_empire_reform = {
 	}
 	trigger = {
 		if = {
-			limit = { current_age = age_of_discovery }
+			limit = {
+				current_age = age_of_discovery
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_15_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8721,7 +8598,9 @@ centralize_empire_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_reformation }
+			limit = {
+				current_age = age_of_reformation
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_25_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8731,7 +8610,9 @@ centralize_empire_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_absolutism }
+			limit = {
+				current_age = age_of_absolutism
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_35_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8741,7 +8622,9 @@ centralize_empire_reform = {
 			}
 		}
 		if = {
-			limit = { current_age = age_of_revolutions }
+			limit = {
+				current_age = age_of_revolutions
+			}
 			custom_trigger_tooltip = {
 				tooltip = at_least_50_provinces_on_same_continent
 				num_of_owned_provinces_with = {
@@ -8752,8 +8635,12 @@ centralize_empire_reform = {
 		}
 		#Anbennar
 		if = {
-			limit = { tag = I20 }
-			NOT = { tag = I20 }
+			limit = {
+				tag = I20
+			}
+			NOT = {
+				tag = I20
+			}
 		}
 	}
 	modifiers = {
@@ -8783,14 +8670,16 @@ decentralize_reform = {
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 	}
 	modifiers = {
 		min_autonomy_in_territories = -0.05
 		num_accepted_cultures = 2
 		all_estate_loyalty_equilibrium = 0.05
-		ahati_loyalty_modifier = -0.05 #Anbennar
+		ahati_loyalty_modifier = -0.05		#Anbennar
 	}
 	ai = {
 		factor = 1
@@ -8812,9 +8701,13 @@ expand_imperial_court_reform = {
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
-		NOT = { culture_group = goblin }
+		NOT = {
+			culture_group = goblin
+		}
 	}
 	modifiers = {
 		all_estate_influence_modifier = 0.05
@@ -8829,10 +8722,16 @@ limit_imperial_court_reform = {
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { culture_group = goblin }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			culture_group = goblin
+		}
 	}
 	modifiers = {
 		all_estate_influence_modifier = -0.05
@@ -8851,14 +8750,18 @@ regional_council_reform = {
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 	}
 	modifiers = {
 		state_maintenance_modifier = -0.33
 	}
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
 		custom_attributes = {
 			unlock_special_state_edicts = yes
 		}
@@ -8871,9 +8774,13 @@ representation_of_the_crown_reform = {
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
 	}
 	modifiers = {
 		diplomatic_upkeep = 1
@@ -8905,7 +8812,6 @@ representation_of_the_crown_reform = {
 #		factor = 2
 #	}
 #}
-
 # examination_system_reform = {
 # 	icon = "asian_scripture"
 # 	allow_normal_conversion = yes
@@ -8932,7 +8838,6 @@ representation_of_the_crown_reform = {
 # 		factor = 10
 # 	}
 # }
-
 # corvee_reform = {
 # 	icon = "asian_scripture"
 # 	allow_normal_conversion = yes
@@ -8956,7 +8861,6 @@ representation_of_the_crown_reform = {
 # 		factor = 10
 # 	}
 # }
-
 # ottoman_provincial_government_system_reform = {
 # 	icon = "provincial_government"
 # 	allow_normal_conversion = yes
@@ -9013,7 +8917,6 @@ representation_of_the_crown_reform = {
 # 	}
 # }
 #Anbennar
-
 restructured_dhenijansari_court_reform = {
 	icon = "general_eastern_administrative"
 	allow_normal_conversion = yes
@@ -9086,7 +8989,9 @@ harpy_honours_system = {
 	allow_normal_conversion = yes
 	potential = {
 		has_country_flag = H72_harpy_honours
-		NOT = { culture_group = harpy }
+		NOT = {
+			culture_group = harpy
+		}
 	}
 	trigger = {
 		OR = {
@@ -9094,14 +8999,18 @@ harpy_honours_system = {
 			high_tolerance_harpy_race_trigger = yes
 		}
 		OR = {
-			any_owned_province = { culture_group = harpy }
-			any_subject_country = { culture_group = harpy }
+			any_owned_province = {
+				culture_group = harpy
+			}
+			any_subject_country = {
+				culture_group = harpy
+			}
 		}
 	}
 	modifiers = {
 		land_morale = 0.05
-		advisor_cost = -0.10
-		yearly_corruption = 0.10
+		advisor_cost = -0.1
+		yearly_corruption = 0.1
 	}
 	ai = {
 		factor = 5
@@ -9141,7 +9050,6 @@ fanwang_administration = {
 		nobles_influence_modifier = 0.1
 		global_rebel_suppression_efficiency = 0.25
 	}
-
 	effect = {
 		custom_tooltip = Y98_fanwang_tt
 	}
@@ -9154,7 +9062,6 @@ pachyderm_masters = {
 	potential = {
 		has_reform = pachyderm_masters
 	}
-
 	modifiers = {
 		mages_influence_modifier = 0.1
 		mages_loyalty_modifier = 0.1
@@ -9180,19 +9087,19 @@ skurkokli_tribal_autonomy_reform = {
 	}
 }
 
-arverynnic_administration_reform = { #Arverynn
+arverynnic_administration_reform = {
+	#Arverynn
 	icon = "parliament"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-        OR = {
-            tag = G35
-            was_tag = G35
-        }
-        mission_completed = centralized_bureaucracy
-    }
+		OR = {
+			tag = G35
+			was_tag = G35
+		}
+		mission_completed = centralized_bureaucracy
+	}
 	valid_for_nation_designer = no
-
 	modifiers = {
 		monarch_admin_power = 1
 		yearly_corruption = 0.1
@@ -9216,7 +9123,9 @@ restoration_of_clergy_reform = {
 	}
 	effect = {
 		if = {
-			limit = { has_country_modifier = cult_of_reason }
+			limit = {
+				has_country_modifier = cult_of_reason
+			}
 			add_stability = -1
 			remove_country_modifier = cult_of_reason
 		}
@@ -9228,6 +9137,7 @@ restoration_of_clergy_reform = {
 		factor = 2.5
 	}
 }
+
 tluukt_xalgekyr_reform = {
 	icon = "black_army_reform"
 	allow_normal_conversion = no
@@ -9239,40 +9149,47 @@ tluukt_xalgekyr_reform = {
 		}
 	}
 	valid_for_nation_designer = no
-
 	modifiers = {
 		global_tax_modifier = 0.05
 		build_cost = -0.1
 		max_absolutism = 10
-
 		#krah_influence_modifier = 0.1
 		#Enables special xalgekyr privileges
-    }
+	}
 }
-
 
 hobgoblin_schools_of_philosophy = {
 	icon = "examination_system_reform"
-	potential = { has_reform = hobgoblin_stratocracy_reform }
+	potential = {
+		has_reform = hobgoblin_stratocracy_reform
+	}
 	modifiers = {
 		global_missionary_strength = 0.02
 		tolerance_own = 1
 	}
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
+
 hobgoblin_general_education = {
 	icon = "asian_scripture"
-	potential = { has_reform = hobgoblin_stratocracy_reform }
+	potential = {
+		has_reform = hobgoblin_stratocracy_reform
+	}
 	modifiers = {
 		embracement_cost = -0.2
 		global_institution_spread = 0.1
 	}
-	custom_attributes = { monarch_power_on_institutions = yes }
-	ai = { factor = 1 }
+	custom_attributes = {
+		monarch_power_on_institutions = yes
+	}
+	ai = {
+		factor = 1
+	}
 }
 
 #Military Doctrine and Organization
-
 #Anbennar
 seghdihr_segbandalic_military = {
 	icon = "invasion_forces"
@@ -9285,21 +9202,25 @@ seghdihr_segbandalic_military = {
 		}
 	}
 	valid_for_nation_designer = no
-
 	modifiers = {
 		discipline = 0.05
 		infantry_power = 0.1
 		drill_gain_modifier = 0.5
 		morale_damage_received = -0.1
-        land_forcelimit_modifier = -0.3
-    }
-
+		land_forcelimit_modifier = -0.3
+	}
 	effect = {
 		hidden_effect = {
 			every_owned_province = {
 				if = {
-					limit = { province_group = segbandal_hold_province }
-					add_province_modifier = { name = seghdihr_reform_holds duration = -1 hidden = yes }
+					limit = {
+						province_group = segbandal_hold_province
+					}
+					add_province_modifier = {
+						name = seghdihr_reform_holds
+						duration = -1
+						hidden = yes
+					}
 				}
 				else_if = {
 					limit = {
@@ -9308,53 +9229,70 @@ seghdihr_segbandalic_military = {
 							province_group = hold_province
 						}
 					}
-					add_province_modifier = { name = seghdihr_reform_secondary duration = -1 hidden = yes }
+					add_province_modifier = {
+						name = seghdihr_reform_secondary
+						duration = -1
+						hidden = yes
+					}
 				}
-				else = { add_province_modifier = { name = seghdihr_reform_other duration = -1 hidden = yes } }
+				else = {
+					add_province_modifier = {
+						name = seghdihr_reform_other
+						duration = -1
+						hidden = yes
+					}
+				}
 			}
 		}
 	}
-
-	custom_attributes = { seghdihr_segbandalic_military_effects = yes }
+	custom_attributes = {
+		seghdihr_segbandalic_military_effects = yes
+	}
 }
 
-
-
-
 #Growth of Administration
-
 clergy_in_administration_reform = {
 	icon = "religious_leader"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = ogre_kingdom }
-		NOT = { has_reform = mengotsa }
-		NOT = { has_reform = ogre_empire }
-		NOT = { has_reform = great_ogre_horde }
-		NOT = { culture_group = gnomish }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = ogre_kingdom
+		}
+		NOT = {
+			has_reform = mengotsa
+		}
+		NOT = {
+			has_reform = ogre_empire
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
+		NOT = {
+			culture_group = gnomish
+		}
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 	}
 	modifiers = {
 		free_adm_policy = 1
-		
 		#brahmins_hindu_influence_modifier = 0.1
 		#brahmins_hindu_loyalty_modifier = 0.05
-
 		church_influence_modifier = 0.1
 		church_loyalty_modifier = 0.05
-
 		# ANBENNAR
-		lowercastes_influence_modifier = 0.1 # maybe not fully loreful, but gameplay trumps lore here
-		lowercastes_loyalty_modifier = 0.05 # maybe not fully loreful, but gameplay trumps lore here
+		lowercastes_influence_modifier = 0.1		# maybe not fully loreful, but gameplay trumps lore here
+		lowercastes_loyalty_modifier = 0.05		# maybe not fully loreful, but gameplay trumps lore here
 		mages_loyalty_modifier = 0.05
 		mages_influence_modifier = 0.1
 		shinukhorchi_loyalty_modifier = 0.05
 		shinukhorchi_influence_modifier = 0.1
-
 	}
 	ai = {
 		factor = 1
@@ -9381,28 +9319,46 @@ of_noble_bearing_reform = {
 	icon = "nobleman"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = ogre_kingdom }
-		NOT = { has_reform = mengotsa }
-		NOT = { has_reform = ogre_empire }
-		NOT = { has_reform = great_ogre_horde }
-		NOT = { culture_group = gnomish }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = ogre_kingdom
+		}
+		NOT = {
+			has_reform = mengotsa
+		}
+		NOT = {
+			has_reform = ogre_empire
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
+		NOT = {
+			culture_group = gnomish
+		}
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 		NOT = {
 			AND = {
 				has_estate = estate_maratha
 				technology_group = indian
-				NOT = { has_estate = estate_nobles }
+				NOT = {
+					has_estate = estate_nobles
+				}
 			}
 		}
 		NOT = {
 			AND = {
 				has_estate = estate_rajput
 				technology_group = indian
-				NOT = { has_estate = estate_nobles }
+				NOT = {
+					has_estate = estate_nobles
+				}
 			}
 		}
 	}
@@ -9414,7 +9370,6 @@ of_noble_bearing_reform = {
 		nobles_loyalty_modifier = 0.05
 		#maratha_exclusive_loyalty_modifier = 0.05
 		#rajput_exclusive_loyalty_modifier = 0.05
-
 		# ANBENNAR
 		uppercastes_influence_modifier = 0.1
 		uppercastes_loyalty_modifier = 0.05
@@ -9422,7 +9377,6 @@ of_noble_bearing_reform = {
 		daulophs_loyalty_modifier = 0.05
 		ajgriijarul_influence_modifier = 0.1
 		ajgriijarul_loyalty_modifier = 0.05
-
 	}
 	ai = {
 		factor = 1
@@ -9430,7 +9384,9 @@ of_noble_bearing_reform = {
 			factor = 0.1
 			OR = {
 				AND = {
-					NOT = { has_estate = estate_nobles }
+					NOT = {
+						has_estate = estate_nobles
+					}
 					OR = {
 						estate_influence = {
 							estate = estate_rajput
@@ -9455,15 +9411,29 @@ meritocratic_focus_reform = {
 	icon = "politician"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = ogre_kingdom }
-		NOT = { has_reform = mengotsa }
-		NOT = { has_reform = ogre_empire }
-		NOT = { has_reform = great_ogre_horde }
-		NOT = { culture_group = gnomish }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = ogre_kingdom
+		}
+		NOT = {
+			has_reform = mengotsa
+		}
+		NOT = {
+			has_reform = ogre_empire
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
+		NOT = {
+			culture_group = gnomish
+		}
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 	}
 	modifiers = {
@@ -9474,7 +9444,6 @@ meritocratic_focus_reform = {
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
 		#vaisyas_non_muslim_influence_modifier = 0.1
-
 		# ANBENNAR
 		middlecastes_influence_modifier = 0.1
 		middlecastes_loyalty_modifier = 0.05
@@ -9538,7 +9507,6 @@ meritocratic_focus_reform = {
 # 		factor = 2
 # 	}
 # }
-
 # zabt_reform = {
 # 	icon = "general_eastern_administrative"
 # 	allow_normal_conversion = yes
@@ -9553,19 +9521,26 @@ meritocratic_focus_reform = {
 # 		factor = 5
 # 	}
 # }
-
 dyanstic_administration_reform = {
 	icon = "royal_favoritism"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 		#Anbennar
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { culture_group = dwarven }
-		NOT = { culture_group = gnomish }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			culture_group = dwarven
+		}
+		NOT = {
+			culture_group = gnomish
+		}
 	}
 	modifiers = {
 		yearly_corruption = 0.2
@@ -9673,7 +9648,6 @@ administration_of_the_parliament_reform = {
 }
 
 #Anbennar
-
 hobgoblin_administration_of_the_wolf = {
 	icon = "administration_of_the_wolf"
 	allow_normal_conversion = yes
@@ -9786,7 +9760,6 @@ consolidated_raj_reform = {
 	}
 	modifiers = {
 		governing_capacity_modifier = 0.5
-
 		raj_ministries_influence_modifier = 0.05
 		raj_ministries_loyalty_modifier = 0.1
 		#This should also increase raj influence in subjects
@@ -9818,7 +9791,7 @@ castanor_permanent_patrician_council = {
 	}
 }
 
-birsartanses_central_administration_1 =  {
+birsartanses_central_administration_1 = {
 	icon = "examination_system_reform"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
@@ -9836,7 +9809,7 @@ birsartanses_central_administration_1 =  {
 	}
 }
 
-birsartanses_central_administration_2 =  {
+birsartanses_central_administration_2 = {
 	icon = "examination_system_reform"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
@@ -9864,18 +9837,22 @@ khug_asra_reform_monarchy = {
 		OR = {
 			AND = {
 				has_reform = khug_asra_reform_monarchy
-				NOT = { has_country_flag = khug_bank_out }
+				NOT = {
+					has_country_flag = khug_bank_out
+				}
 			}
 			AND = {
 				have_had_reform = khug_asra_reform_monarchy
-				NOT = { has_country_flag = khug_bank_out }
+				NOT = {
+					has_country_flag = khug_bank_out
+				}
 			}
 		}
 	}
 	modifiers = {
 		country_admin_power = 1
 		interest = -0.5
-		burghers_influence_modifier = 0.10
+		burghers_influence_modifier = 0.1
 	}
 }
 
@@ -9912,14 +9889,14 @@ ogre_delegate_tribes_reform = {
 	}
 	modifiers = {
 		development_cost = -0.05
- 		land_maintenance_modifier = -0.05
+		land_maintenance_modifier = -0.05
 	}
 	ai = {
 		factor = 1
 	}
 }
 
-balgarsmiths_administration =  {
+balgarsmiths_administration = {
 	icon = "examination_system_reform"
 	allow_normal_conversion = yes
 	potential = {
@@ -9931,7 +9908,6 @@ balgarsmiths_administration =  {
 	modifiers = {
 		production_efficiency = 0.05
 		build_cost = -0.1
-
 		church_influence_modifier = 0.1
 		church_loyalty_modifier = 0.05
 	}
@@ -9975,7 +9951,9 @@ court_of_art_and_culture_reform = {
 		prestige_decay = -0.005
 	}
 	conditional = {
-		allow = { has_dlc = "King of Kings" }
+		allow = {
+			has_dlc = "King of Kings"
+		}
 		government_abilities = {
 			persian_influence_mechanic
 		}
@@ -9994,23 +9972,36 @@ court_of_art_and_culture_reform = {
 }
 
 #deliberative_assembly
-
 # parliamentary_reform defined in common file
-
 royal_decree_reform = {
 	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = ogre_kingdom }
-		NOT = { has_reform = mengotsa }
-		NOT = { has_reform = ogre_empire }
-		NOT = { has_reform = great_ogre_horde }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = ogre_kingdom
+		}
+		NOT = {
+			has_reform = mengotsa
+		}
+		NOT = {
+			has_reform = ogre_empire
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
 		is_revolutionary = no
 	}
 	trigger = {
 		if = {
-			limit = { OR = { tag = Y96 tag = Y98 } }
+			limit = {
+				OR = {
+					tag = Y96
+					tag = Y98
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = Y91_horde_heritage
 				NOT = {
@@ -10033,16 +10024,33 @@ aristocratic_court_reform = {
 	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = ogre_kingdom }
-		NOT = { has_reform = mengotsa }
-		NOT = { has_reform = ogre_empire }
-		NOT = { has_reform = great_ogre_horde }
-		NOT = { culture_group = goblin }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = ogre_kingdom
+		}
+		NOT = {
+			has_reform = mengotsa
+		}
+		NOT = {
+			has_reform = ogre_empire
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
+		NOT = {
+			culture_group = goblin
+		}
 	}
 	trigger = {
 		if = {
-			limit = { OR = { tag = Y96 tag = Y98 } }
+			limit = {
+				OR = {
+					tag = Y96
+					tag = Y98
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = Y91_horde_heritage
 				NOT = {
@@ -10054,7 +10062,7 @@ aristocratic_court_reform = {
 	}
 	modifiers = {
 		diplomatic_reputation = 1
-		monthly_favor_modifier = 0.25 #1.35
+		monthly_favor_modifier = 0.25		#1.35
 		improve_relation_modifier = 0.15
 	}
 	ai = {
@@ -10090,13 +10098,21 @@ states_general_reform = {
 			has_reform = khugra_araizary_bond
 			has_government_mechanic = argordstun_luster_mechanic
 		}
-		NOT = { tag = I20 }
-		NOT = { tag = Z43 }
-		NOT = { ruler_can_revive = yes } # Anbennar
+		NOT = {
+			tag = I20
+		}
+		NOT = {
+			tag = Z43
+		}
+		NOT = {
+			ruler_can_revive = yes
+		}		# Anbennar
 		is_emperor_of_china = no
 	}
 	trigger = {
-		NOT = { is_lesser_in_union = yes }
+		NOT = {
+			is_lesser_in_union = yes
+		}
 		is_emperor = no
 		custom_trigger_tooltip = {
 			tooltip = usurp_emperor_states_general_tt
@@ -10108,25 +10124,48 @@ states_general_reform = {
 				}
 			}
 		}
-		NOT = { has_reform = medasi_reform }
-		if = {
-			limit = { has_reform = corvurian_midnight_reform }
-			NOT = { has_reform = corvurian_midnight_reform }
+		NOT = {
+			has_reform = medasi_reform
 		}
 		if = {
-			limit = { has_reform = krak_monarchy }
-			NOT = { has_reform = krak_monarchy }
+			limit = {
+				has_reform = corvurian_midnight_reform
+			}
+			NOT = {
+				has_reform = corvurian_midnight_reform
+			}
 		}
 		if = {
-			limit = { tag = H78 }
-			NOT = { tag = H78 }
+			limit = {
+				has_reform = krak_monarchy
+			}
+			NOT = {
+				has_reform = krak_monarchy
+			}
 		}
 		if = {
-			limit = { has_reform = ghavaanaj_tribes }
-			NOT = { has_reform = ghavaanaj_tribes }
+			limit = {
+				tag = H78
+			}
+			NOT = {
+				tag = H78
+			}
 		}
 		if = {
-			limit = { OR = { tag = Y96 tag = Y98 } }
+			limit = {
+				has_reform = ghavaanaj_tribes
+			}
+			NOT = {
+				has_reform = ghavaanaj_tribes
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = Y96
+					tag = Y98
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = Y91_horde_heritage
 				NOT = {
@@ -10136,22 +10175,22 @@ states_general_reform = {
 			}
 		}
 	}
-
 	modifiers = {
 		stability_cost_modifier = -0.1
 		no_stability_loss_on_monarch_death = yes
 	}
-
 	ai = {
-		factor = 0 # AI should never pick this
+		factor = 0		# AI should never pick this
 	}
-
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		country_event = {
+			id = dutch_republic.33
+		}
 	}
-
 	conditional = {
-		allow = { has_dlc = "Res Publica" }
+		allow = {
+			has_dlc = "Res Publica"
+		}
 		queen = no
 		heir = no
 		duration = 4
@@ -10163,7 +10202,6 @@ states_general_reform = {
 				global_unrest = -1
 				legitimacy = -0.5
 			}
-
 			monarchists = {
 				prestige = 0.5
 				manpower_recovery_speed = 0.1
@@ -10178,15 +10216,30 @@ general_estates_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { has_reform = ogre_kingdom }
-		NOT = { has_reform = mengotsa }
-		NOT = { has_reform = ogre_empire }
-		NOT = { has_reform = great_ogre_horde }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			has_reform = ogre_kingdom
+		}
+		NOT = {
+			has_reform = mengotsa
+		}
+		NOT = {
+			has_reform = ogre_empire
+		}
+		NOT = {
+			has_reform = great_ogre_horde
+		}
 	}
 	trigger = {
 		if = {
-			limit = { OR = { tag = Y96 tag = Y98 } }
+			limit = {
+				OR = {
+					tag = Y96
+					tag = Y98
+				}
+			}
 			custom_trigger_tooltip = {
 				tooltip = Y91_horde_heritage
 				NOT = {
@@ -10200,7 +10253,7 @@ general_estates_reform = {
 		monthly_reform_progress_modifier = 0.1
 		all_estate_influence_modifier = 0.05
 		all_estate_loyalty_equilibrium = 0.1
-		ahati_loyalty_modifier = -0.05 #Anbennar
+		ahati_loyalty_modifier = -0.05		#Anbennar
 	}
 	custom_attributes = {
 		diet_increases_not_influence = yes
@@ -10276,11 +10329,9 @@ general_estates_reform = {
 # 		no_crownland_money_loss_to_age = yes
 # 	}
 # }
-
 # legislative_sejm = {
 # 	icon = "legislative_sejm_reform"
 # 	allow_normal_conversion = yes
-	
 # 	potential = {
 # 		OR = {
 # 			has_reform = polish_elective_monarchy
@@ -10288,29 +10339,24 @@ general_estates_reform = {
 # 		}
 # 		has_dlc = "Res Publica"
 # 	}
-	
 # 	trigger = {
 # 		OR = {
 # 			has_reform = polish_elective_monarchy
 # 			has_reform = elective_monarchy
 # 		}
 # 	}
-	
 # 	modifiers = {
 # 		local_heir_adm = 1
 # 		local_heir_dip = 1
 # 		local_heir_mil = 1
 # 	}
-	
 # 	ai = {
 # 		factor = 1
 # 	}
 # }
-
 # integrated_sejmiks = {
 # 	icon = "integrated_sejmiks_reform"
 # 	allow_normal_conversion = yes
-	
 # 	potential = {
 # 		OR = {
 # 			has_reform = polish_elective_monarchy
@@ -10318,23 +10364,19 @@ general_estates_reform = {
 # 		}
 # 		has_dlc = "Res Publica"
 # 	}
-	
 # 	trigger = {
 # 		OR = {
 # 			has_reform = polish_elective_monarchy
 # 			has_reform = elective_monarchy
 # 		}
 # 	}
-	
 # 	modifiers = {
 # 		years_of_nationalism = -5
 # 	}
-	
 # 	ai = {
 # 		factor = 1
 # 	}
 # }
-
 imperial_decree_reform = {
 	icon = "king"
 	allow_normal_conversion = yes
@@ -10364,7 +10406,6 @@ imperial_decree_reform = {
 # 		country_admin_power = 1 
 # 	}
 # }
-
 # catalan_cortes_reform = {
 # 	icon = "catalan_cortes"
 # 	allow_normal_conversion = yes
@@ -10378,7 +10419,6 @@ imperial_decree_reform = {
 # 		production_efficiency = 0.1
 # 	}
 # }
-
 # great_council_of_mechelen_reform = {
 # 	icon = "castle"
 # 	allow_normal_conversion = yes
@@ -10395,7 +10435,6 @@ imperial_decree_reform = {
 # 		no_more_dutch_revolt = yes
 # 	}
 # }
-
 strengthened_parliament_reform = {
 	icon = "parliament_hall"
 	allow_normal_conversion = yes
@@ -10424,11 +10463,9 @@ strengthened_parliament_reform = {
 # 		has_dlc = "Domination"
 # 		has_reform = parliament_vs_monarchy_reform
 # 	}
-	
 # 	trigger = {
 # 		has_parliament = yes
 # 	}
-
 # 	modifiers = {
 # 		parliament_backing_chance = -0.33
 # 		parliament_effect_duration = -5
@@ -10436,7 +10473,6 @@ strengthened_parliament_reform = {
 # 		parliament_chance_of_decision = 1
 # 		can_revoke_parliament_seats = yes
 # 	}
-
 # 	conditional = {
 # 		allow = { has_dlc = "Domination" }
 # 		government_abilities = {
@@ -10447,9 +10483,7 @@ strengthened_parliament_reform = {
 # 		factor = 1
 # 	}
 # }
-
 #Anbennar
-
 hobgoblin_closed_war_room = {
 	icon = "council"
 	allow_normal_conversion = yes
@@ -10478,11 +10512,11 @@ hobgoblin_assembly_of_commands = {
 		max_absolutism = -10
 	}
 	conditional = {
-		allow = { 
+		allow = {
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
-			} 
+			}
 		}
 		has_parliament = yes
 	}
@@ -10503,23 +10537,24 @@ jadd_exemplary = {
 	modifiers = {
 		governing_capacity = 150
 	}
-
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
-			NOT = { has_dlc = "Domination" }
+			NOT = {
+				has_dlc = "Domination"
+			}
 		}
 		has_parliament = yes
 	}
 	conditional = {
-		allow = { 			
+		allow = {
 			has_dlc = "Domination"
 		}
- 		has_parliament = yes
- 		custom_attributes = {
- 			estates_influenced_parliament = yes
- 		}
- 	}
+		has_parliament = yes
+		custom_attributes = {
+			estates_influenced_parliament = yes
+		}
+	}
 }
 
 adenica_mortal_court = {
@@ -10578,36 +10613,40 @@ seghdihr_segamlavad = {
 	}
 	valid_for_nation_designer = no
 	maintain_dynasty = yes
-
 	modifiers = {
 		free_adm_policy = 1
 		envoy_travel_time = -0.15
 		mil_advisor_cost = -0.1
-    }
-
+	}
 	effect = {
 		hidden_effect = {
 			every_owned_province = {
-				limit = { province_group = hold_province }
-				add_province_modifier = { name = hold_has_parliament duration = -1 }
+				limit = {
+					province_group = hold_province
+				}
+				add_province_modifier = {
+					name = hold_has_parliament
+					duration = -1
+				}
 			}
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
 			every_owned_province = {
-				limit = { province_group = hold_province }
+				limit = {
+					province_group = hold_province
+				}
 				remove_province_modifier = hold_has_parliament
 			}
 		}
 	}
-
 	conditional = {
-		allow = { 
+		allow = {
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
-			} 
+			}
 		}
 		has_parliament = yes
 		custom_attributes = {
@@ -10653,11 +10692,11 @@ ogre_clan_assembly_reform = {
 		max_absolutism = -15
 	}
 	conditional = {
-		allow = { 
+		allow = {
 			OR = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
-			} 
+			}
 		}
 		has_parliament = yes
 		custom_attributes = {
@@ -10672,8 +10711,9 @@ ogre_clan_assembly_reform = {
 goblin_complaint_box = {
 	icon = "ballot_box"
 	allow_normal_conversion = yes
-	potential = { culture_group = goblin }
-
+	potential = {
+		culture_group = goblin
+	}
 	modifiers = {
 		prestige_decay = -0.01
 		unjustified_demands = -0.2
@@ -10728,15 +10768,19 @@ two_treatises_reform = {
 		#	is_revolutionary = no
 		#	NOT = { has_dlc = "Emperor" }
 		#}
-		NOT = { culture_group = dwarven }
+		NOT = {
+			culture_group = dwarven
+		}
 	}
 	modifiers = {
 		expand_administration_cost = -1
-		can_revoke_parliament_seats = yes #1.35
+		can_revoke_parliament_seats = yes		#1.35
 		num_accepted_cultures = 1
 	}
 	conditional = {
-		allow = { has_dlc = "Common Sense" }
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		custom_attributes = {
 			halved_parliament_bribes = yes
 		}
@@ -10772,8 +10816,10 @@ the_social_contract_reform = {
 		#OR = {
 		#	is_revolutionary = no
 		#	NOT = { has_dlc = "Emperor" }
-	#}
-		NOT = { culture_group = dwarven }
+		#}
+		NOT = {
+			culture_group = dwarven
+		}
 	}
 	modifiers = {
 		no_religion_penalty = yes
@@ -10799,11 +10845,10 @@ tluukt_littlepack_reform = {
 		}
 	}
 	valid_for_nation_designer = no
-
 	modifiers = {
 		trade_company_governing_cost = -0.25
 		min_autonomy_in_territories = -0.1
-    }
+	}
 	custom_attributes = {
 		subject_tax_modifier_25 = yes
 	}
@@ -10811,16 +10856,20 @@ tluukt_littlepack_reform = {
 
 dwarovar_pursuit_quality = {
 	icon = "commander_king_reform"
-	potential = { culture_group = dwarven }
-
+	potential = {
+		culture_group = dwarven
+	}
 	modifiers = {
 		prestige_decay = -0.01
 		all_estate_influence_modifier = -0.05
 		max_absolutism = 10
 	}
-
-	custom_attributes = { diet_increases_not_influence = yes }
-	ai = { factor = 1 }
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+	ai = {
+		factor = 1
+	}
 }
 
 command_obedience = {
@@ -10837,7 +10886,9 @@ command_obedience = {
 		max_absolutism = 15
 		discipline = 0.05
 	}
-	custom_attributes = { command_lower_requirement_to_declare_war = yes }
+	custom_attributes = {
+		command_lower_requirement_to_declare_war = yes
+	}
 	ai = {
 		factor = 2.5
 	}
@@ -10865,25 +10916,24 @@ command_consensus = {
 
 goblin_all_the_above = {
 	icon = "divine_guidance_reform"
-	potential = { culture_group = goblin }
-
+	potential = {
+		culture_group = goblin
+	}
 	effect = {
 		calc_legitimacy_equivalent_absolutism_from_idea_groups = yes
 	}
-
 	post_removed_effect = {
 		calc_legitimacy_equivalent_absolutism_from_idea_groups = yes
 	}
-	
 	custom_attributes = {
 		legitimacy_equivalent_absolutism_from_idea_groups = yes
 	}
-
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
 
 #absolute_rule_vs_constitutional
-
 letat_cest_moi_reform = {
 	icon = "letat_cest_moi"
 	allow_normal_conversion = yes
@@ -10912,7 +10962,9 @@ peoples_kingdom_reform = {
 	icon = "peasant_republic"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
 	}
 	modifiers = {
 		possible_policy = 1
@@ -10926,9 +10978,15 @@ deified_monarchy_reform = {
 	icon = "divine_guidance_reform"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { culture_group = dwarven }
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
-		NOT = { religion = goblinic_shamanism }
+		NOT = {
+			culture_group = dwarven
+		}
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
+		NOT = {
+			religion = goblinic_shamanism
+		}
 	}
 	modifiers = {
 		warscore_cost_vs_other_religion = -0.05
@@ -10956,42 +11014,61 @@ consulate_reform = {
 
 dwarovar_one_king = {
 	icon = "crown"
-	potential = { culture_group = dwarven }
-	trigger = {
-		capital_scope = { continent = serpentspine }
-		NOT = { tag = I24 }
+	potential = {
+		culture_group = dwarven
 	}
-
+	trigger = {
+		capital_scope = {
+			continent = serpentspine
+		}
+		NOT = {
+			tag = I24
+		}
+	}
 	modifiers = {
 		yearly_absolutism = 1
 		diplomatic_annexation_cost = -0.15
 	}
-
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
 
 goblin_king_reform = {
 	icon = "goblin_king"
 	allow_normal_conversion = yes
-	potential = { culture_group = goblin dwarovar_goblin_culture_ruler = yes }
-	trigger = { capital_scope = { development = 100 } }
-
+	potential = {
+		culture_group = goblin
+		dwarovar_goblin_culture_ruler = yes
+	}
+	trigger = {
+		capital_scope = {
+			development = 100
+		}
+	}
 	modifiers = {
 		liberty_desire_from_subject_development = -0.25
 		accept_vassalization_reasons = 20
 		diplomatic_upkeep = 2
 	}
-	ai = { factor = 1 modifier = { factor = 10 num_of_subjects = 2 } }
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 10
+			num_of_subjects = 2
+		}
+	}
 }
 
 #separation_of_power
-
 political_absolutism_reform = {
 	icon = "judge"
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
 	}
 	modifiers = {
 		administrative_efficiency = 0.025
@@ -11011,7 +11088,9 @@ legislative_houses_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
 	}
 	modifiers = {
 		free_policy = 1
@@ -11022,7 +11101,9 @@ presidential_monarchy_reform = {
 	icon = "queen"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { has_reform = hobgoblin_stratocracy_reform }
+		NOT = {
+			has_reform = hobgoblin_stratocracy_reform
+		}
 	}
 	modifiers = {
 		national_focus_years = -5
@@ -11038,9 +11119,13 @@ become_a_republic_reform = {
 		is_revolutionary = no
 	}
 	trigger = {
-		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = {
+			has_government_attribute_short_desc = locked_government_type
+		}
 		is_emperor = no
-		NOT = { is_lesser_in_union = yes }
+		NOT = {
+			is_lesser_in_union = yes
+		}
 		stability = 2
 	}
 	effect = {
@@ -11079,18 +11164,30 @@ install_theocratic_government_reform = {
 		is_revolutionary = no
 	}
 	trigger = {
-		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = {
+			has_government_attribute_short_desc = locked_government_type
+		}
 		is_emperor = no
-		NOT = { is_lesser_in_union = yes }
+		NOT = {
+			is_lesser_in_union = yes
+		}
 		if = {
-			limit = { NOT = { has_government_attribute = theocratic_monarchy_mechanic } }
+			limit = {
+				NOT = {
+					has_government_attribute = theocratic_monarchy_mechanic
+				}
+			}
 			stability = 2
 		}
 	}
 	effect = {
 		set_country_flag = populists_in_government
 		if = {
-			limit = { NOT = { has_government_attribute = theocratic_monarchy_mechanic } }
+			limit = {
+				NOT = {
+					has_government_attribute = theocratic_monarchy_mechanic
+				}
+			}
 			add_stability = -3
 		}
 		change_government = theocracy
@@ -11144,11 +11241,9 @@ enlightened_monarchy_reform = {
 become_rev_republic_reform = {
 	icon = "become_rev_republic_reform"
 	allow_normal_conversion = yes
-
-	potential = { 
+	potential = {
 		is_revolutionary = yes
 	}
-	
 	trigger = {
 		has_reform = revolutionary_empire_reform
 		if = {
@@ -11161,15 +11256,18 @@ become_rev_republic_reform = {
 			}
 		}
 		else = {
-			NOT = { stability = 2 }
+			NOT = {
+				stability = 2
+			}
 		}
 	}
-
 	modifiers = {
 	}
 	effect = {
 		if = {
-			limit = { has_government_attribute = states_general_mechanic }
+			limit = {
+				has_government_attribute = states_general_mechanic
+			}
 			set_country_flag = had_states_general_mechanic
 		}
 		set_country_flag = populists_in_government
@@ -11195,8 +11293,12 @@ become_rev_republic_reform = {
 		}
 		add_government_reform = revolutionary_republic_reform
 		if = {
-			limit = { has_country_flag = had_states_general_mechanic }
-			country_event = { id = dutch_republic.33 }
+			limit = {
+				has_country_flag = had_states_general_mechanic
+			}
+			country_event = {
+				id = dutch_republic.33
+			}
 			clr_country_flag = had_states_general_mechanic
 		}
 	}
@@ -11226,7 +11328,6 @@ become_rev_republic_reform = {
 # 		factor = 10
 # 	}
 # }
-
 # mng_seal_of_the_emperor_reform = {
 # 	icon = "mng_seal_of_the_emperor_reform"
 # 	allow_normal_conversion = yes
@@ -11251,7 +11352,6 @@ become_rev_republic_reform = {
 # 		factor = 10
 # 	}
 # }
-
 # qng_grand_council_reform = {
 # 	icon = "royal_court"
 # 	allow_normal_conversion = no
@@ -11261,14 +11361,12 @@ become_rev_republic_reform = {
 # 			has_reform = qng_grand_council_reform
 # 		}
 # 	}
-	
 # 	modifiers = {
 # 		all_estate_loyalty_equilibrium = 0.1
 # 		governing_capacity_modifier = 0.1
 # 		meritocracy = 0.25	
 # 	}
 # }
-
 # absolute_shogunate_reform = {
 # 	icon = "absolute_shogunate_reform"
 # 	allow_normal_conversion = no
@@ -11296,7 +11394,6 @@ become_rev_republic_reform = {
 # 		allowed_samurai_fraction = 0.1
 # 	}
 # }
-
 # japanese_divine_empire = {
 # 	icon = "japanese_divine_empire"
 # 	allow_normal_conversion = no
@@ -11341,7 +11438,6 @@ become_rev_republic_reform = {
 # 		allowed_samurai_fraction = 0.1
 # 	}
 # }
-
 # land_christian_sun_reform = {
 # 	icon = "land_christian_sun_reform"
 # 	allow_normal_conversion = no
@@ -11379,16 +11475,13 @@ become_rev_republic_reform = {
 # 		army_tradition = 1 
 # 		allowed_samurai_fraction = 0.1
 # 	}
-	
 # 	custom_attributes = {
 # 		generals_become_rulers = yes 
 # 	}
-	
 # 	government_abilities = {
 # 		land_of_the_christian_sun_mechanic
 # 	}
 # }
-
 # strengthen_bakuhan_system_reform = {
 # 	icon = "strengthen_bakuhan_system_reform"
 # 	allow_normal_conversion = no
@@ -11409,7 +11502,6 @@ become_rev_republic_reform = {
 # 		max_absolutism = 5
 # 	}
 # }
-
 # system_of_councils_reform = {
 # 	icon = "hispanic_monarchy"
 # 	allow_normal_conversion = no
@@ -11438,7 +11530,6 @@ become_rev_republic_reform = {
 # 		monarch_admin_power = 1 
 # 	}
 # }
-
 # courts_of_navarra = {
 # 	icon = "parliament_hall"
 # 	allow_normal_conversion = yes
@@ -11455,7 +11546,6 @@ become_rev_republic_reform = {
 # 		max_absolutism = -30
 # 		nobles_influence_modifier = -0.1
 # 	}
-
 # 	conditional = {
 # 		allow = {
 # 			OR = {
@@ -11466,9 +11556,7 @@ become_rev_republic_reform = {
 # 		has_parliament = yes
 # 	}
 # }
-
 # Anbennar
-
 eclipse_concordat_reform = {
 	icon = "eclipse_concordat"
 	allow_normal_conversion = yes
@@ -11493,15 +11581,12 @@ council_of_the_ancients_reform = {
 	potential = {
 		has_country_flag = council_of_the_ancients_reform_flag
 	}
-
 	modifiers = {
 		same_culture_advisor_cost = -0.2
 	}
-
 	custom_attributes = {
 		better_long_lived = yes
 	}
-
 	ai = {
 		factor = 100
 	}
@@ -11513,10 +11598,11 @@ the_empress_rule_reform = {
 	potential = {
 		has_country_flag = aelnar_the_empress_rule
 	}
-
 	trigger = {
 		if = {
-			limit = { has_country_flag = elissa_heart }
+			limit = {
+				has_country_flag = elissa_heart
+			}
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = elissa_is_alive
@@ -11532,23 +11618,19 @@ the_empress_rule_reform = {
 			}
 		}
 	}
-
 	modifiers = {
 		promote_culture_cost = 3
 		culture_conversion_cost = -0.33
 		max_absolutism = 35
 		monthly_splendor = 1
 	}
-
 	custom_attributes = {
 		elissa_harem = yes
 	}
-
 	ai = {
 		factor = 100
 	}
 }
-
 
 #Command
 command_consolidate_rule = {
@@ -11560,7 +11642,9 @@ command_consolidate_rule = {
 	modifiers = {
 		max_absolutism_effect = 0.1
 	}
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
 
 command_elevation_of_the_dragon = {
@@ -11578,7 +11662,9 @@ command_elevation_of_the_dragon = {
 	custom_attributes = {
 		command_dragon_elevation_modifier = yes
 	}
-	ai = { factor = 5 }
+	ai = {
+		factor = 5
+	}
 }
 
 command_elevation_of_the_elephant = {
@@ -11619,7 +11705,9 @@ command_elevation_of_the_elephant = {
 			}
 		}
 	}
-	ai = { factor = 5 }
+	ai = {
+		factor = 5
+	}
 }
 
 command_elevation_of_the_tiger = {
@@ -11661,7 +11749,9 @@ command_elevation_of_the_tiger = {
 			}
 		}
 	}
-	ai = { factor = 5 }
+	ai = {
+		factor = 5
+	}
 }
 
 command_commingling_of_the_commands = {
@@ -11679,11 +11769,9 @@ command_commingling_of_the_commands = {
 	effect = {
 		calc_legitimacy_equivalent_absolutism_from_idea_groups = yes
 	}
-
 	post_removed_effect = {
 		calc_legitimacy_equivalent_absolutism_from_idea_groups = yes
 	}
-	
 	modifiers = {
 		num_of_parliament_issues = 3
 		num_accepted_cultures = 2
@@ -11693,7 +11781,9 @@ command_commingling_of_the_commands = {
 		halved_parliament_bribes = yes
 		legitimacy_equivalent_absolutism_from_idea_groups = yes
 	}
-	ai = { factor = 100 }
+	ai = {
+		factor = 100
+	}
 }
 
 #northen_custodians
@@ -11707,15 +11797,15 @@ northen_custodians = {
 	}
 	trigger = {
 		primary_culture = fjord_troll
-		}
+	}
 	modifiers = {
-		build_cost  = -0.1
+		build_cost = -0.1
 		fort_maintenance_modifier = -0.2
 		governing_capacity = 100
 		garrison_size = 0.25
 		global_institution_spread = -0.1
 		province_warscore_cost = -0.1
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.1
 	}
 }
 
@@ -11731,15 +11821,15 @@ agdirvoeda_empire = {
 		primary_culture = fjord_troll
 	}
 	modifiers = {
-		build_cost  = -0.15
+		build_cost = -0.15
 		fort_maintenance_modifier = -0.2
-		global_regiment_cost = -0.10
-		garrison_size = 0.50
+		global_regiment_cost = -0.1
+		garrison_size = 0.5
 		governing_capacity = 100
-		governing_capacity_modifier = 0.20
+		governing_capacity_modifier = 0.2
 		global_institution_spread = -0.1
 		province_warscore_cost = -0.15
-		land_forcelimit_modifier = 0.20
+		land_forcelimit_modifier = 0.2
 		max_absolutism = 10
 	}
 }
@@ -11781,7 +11871,6 @@ yan_empire_reform = {
 		yearly_absolutism = 0.5
 		global_manpower_modifier = 0.1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -11793,14 +11882,16 @@ bianfang_eunuch_administrators_reform = {
 	potential = {
 		has_reform = bianfang_eunuch_administrators_reform
 		was_tag = Y09
-		NOT = { has_country_flag = anti_eunuch_country }
+		NOT = {
+			has_country_flag = anti_eunuch_country
+		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = no
 	modifiers = {
-		advisor_cost = -0.10
+		advisor_cost = -0.1
 		eunuchs_anb_loyalty_modifier = 0.15
-		eunuchs_anb_influence_modifier = 0.10
+		eunuchs_anb_influence_modifier = 0.1
 	}
 }
 
@@ -11816,8 +11907,8 @@ bianfang_military_administrators_reform = {
 	valid_for_nation_designer = no
 	modifiers = {
 		mil_advisor_cost = -0.15
-		nobles_loyalty_modifier = 0.10
-		manpower_recovery_speed = 0.10
+		nobles_loyalty_modifier = 0.1
+		manpower_recovery_speed = 0.1
 	}
 }
 
@@ -11851,7 +11942,6 @@ isolated_kingdom_reform = {
 		diplomats = -1
 		merchants = -1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -11874,7 +11964,6 @@ compact_of_menjaeng_reform = {
 		development_cost = -0.05
 		global_institution_spread = 0.1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -11886,7 +11975,9 @@ harpy_matriarchy_reform = {
 	icon = "harpy_matriarchy"
 	potential = {
 		ruler_is_harpy = yes
-		NOT = { has_reform = harpy_matriarchy_ayarallen_early_gov_mechanic_reform }
+		NOT = {
+			has_reform = harpy_matriarchy_ayarallen_early_gov_mechanic_reform
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
@@ -11900,21 +11991,21 @@ harpy_matriarchy_reform = {
 		}
 	}
 	legacy_equivalent = ottoman_government_legacy
-
 	modifiers = {
 		legitimacy = 0.5
-		stability_cost_modifier = -0.10
+		stability_cost_modifier = -0.1
 		can_fabricate_for_vassals = yes
 		block_introduce_heir = yes
 	}
-
 	custom_attributes = {
 		queen = no
 		disabled_expelling_human = yes
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
@@ -11924,9 +12015,13 @@ harpy_matriarchy_ayarallen_early_gov_mechanic_reform = {
 	allow_normal_conversion = yes
 	icon = "harpy_matriarchy"
 	potential = {
-		is_or_was_tag = { tag = F27 }
+		is_or_was_tag = {
+			tag = F27
+		}
 		ruler_is_harpy = yes
-		NOT = { has_reform = harpy_matriarchy_reform }
+		NOT = {
+			has_reform = harpy_matriarchy_reform
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
@@ -11940,25 +12035,24 @@ harpy_matriarchy_ayarallen_early_gov_mechanic_reform = {
 		}
 	}
 	legacy_equivalent = ottoman_government_legacy
-
 	modifiers = {
 		legitimacy = 0.5
-		stability_cost_modifier = -0.10
+		stability_cost_modifier = -0.1
 		can_fabricate_for_vassals = yes
 		block_introduce_heir = yes
 	}
-
 	government_abilities = {
 		harpylen_queendom_claim_mechanic
 	}
-
 	custom_attributes = {
 		queen = no
 		disabled_expelling_human = yes
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
@@ -11977,7 +12071,6 @@ halessi_hegemon_reform = {
 		max_absolutism_effect = 0.1
 		culture_conversion_time = -0.2
 	}
-
 	effect = {
 		custom_tooltip = Y98_halessi_hegemon_reform_tt
 	}
@@ -12009,20 +12102,26 @@ yanglam_tengalam_reform = {
 	allow_normal_conversion = no
 	potential = {
 		culture_group = yanglam
-		NOT = { has_country_flag = forfeited_sri_baginda }
+		NOT = {
+			has_country_flag = forfeited_sri_baginda
+		}
 		has_reform = yanglam_tengalam_reform
-		NOT = { has_global_flag = sri_baginda_disabled }
+		NOT = {
+			has_global_flag = sri_baginda_disabled
+		}
 	}
 	trigger = {
 		culture_group = yanglam
-		NOT = { has_country_flag = forfeited_sri_baginda }
+		NOT = {
+			has_country_flag = forfeited_sri_baginda
+		}
 	}
 	modifiers = {
 		prestige = 1
 		prestige_decay = -0.005
 		prestige_from_land = 0.2
 		diplomatic_reputation = 1
-		governing_capacity_modifier = -0.50
+		governing_capacity_modifier = -0.5
 	}
 	custom_attributes = {
 		lower_dev_cost_in_capital_state = yes
@@ -12050,90 +12149,91 @@ yanglam_tengalam_reform = {
 #		heir_chance = -0.5
 #	}
 #}
-
 # siadan
 siadan_harpy_empire = {
-    lock_level_when_selected = yes
-    allow_normal_conversion = yes
-    icon = "harpy_matriarchy"
-    potential = {
-        has_reform = siadan_harpy_empire
-    }
-
-    valid_for_nation_designer = yes
-    nation_designer_cost = 20
-    nation_designer_trigger = {
-        OR = {
-            ruler_culture = firanyan_harpy
-            ruler_culture = siadunan_harpy
-        }
-    }
-    legacy_equivalent = ottoman_government_legacy
-
-    modifiers = {
-        governing_capacity = 100
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "harpy_matriarchy"
+	potential = {
+		has_reform = siadan_harpy_empire
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+		OR = {
+			ruler_culture = firanyan_harpy
+			ruler_culture = siadunan_harpy
+		}
+	}
+	legacy_equivalent = ottoman_government_legacy
+	modifiers = {
+		governing_capacity = 100
 		legitimacy = 1
 		stability_cost_modifier = -0.15
 		can_fabricate_for_vassals = yes
-    }
-
-    custom_attributes = {
-        queen = no
+	}
+	custom_attributes = {
+		queen = no
 		disabled_expelling_human = yes
 		disabled_purging_human = yes
-    }
-    conditional = {
-        allow = { has_dlc = "Rights of Man" }
-        has_harem = yes
-    }
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		has_harem = yes
+	}
 }
 
 siadan_institutional_harem = {
-    allow_normal_conversion = yes
-    icon = "harpy_matriarchy"
-    potential = {
-        has_reform = siadan_harpy_empire
-    }
-
-    modifiers = {
-        advisor_pool = 2
-        advisor_cost = -0.1
-    }
+	allow_normal_conversion = yes
+	icon = "harpy_matriarchy"
+	potential = {
+		has_reform = siadan_harpy_empire
+	}
+	modifiers = {
+		advisor_pool = 2
+		advisor_cost = -0.1
+	}
 }
 
 #Barumand
 barumand_grain_lords_reform = {
-    icon = "merchant"
-    allow_normal_conversion = yes
-    potential = {
-        has_reform = barumand_grain_lords_reform
-    }
-    modifiers = {
-        land_maintenance_modifier = -0.10
-    }
-    effect = {
-        custom_tooltip = producing_grain_grainlord
-        hidden_effect = {
-            every_owned_province = {
-                if = {
-                    limit = { trade_goods = grain }
-                    add_province_modifier = {
-                        name = barumand_lord_grain
-                        duration = -1
-                        hidden = yes
-                    }
-                }
-            }
-        }
-    }
-    removed_effect = {
-        hidden_effect = {
-            every_owned_province = {
-                limit = { has_province_modifier = barumand_lord_grain }
-                remove_province_modifier = barumand_lord_grain
-            }
-        }
-    }
+	icon = "merchant"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = barumand_grain_lords_reform
+	}
+	modifiers = {
+		land_maintenance_modifier = -0.1
+	}
+	effect = {
+		custom_tooltip = producing_grain_grainlord
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = barumand_lord_grain
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = barumand_lord_grain
+				}
+				remove_province_modifier = barumand_lord_grain
+			}
+		}
+	}
 }
 
 truedagger_intrigue_court = {
@@ -12145,12 +12245,10 @@ truedagger_intrigue_court = {
 	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = no
-
 	modifiers = {
 		diplomats = 1
 		diplomatic_reputation = -1
 	}
-
 	custom_attributes = {
 		heirs_can_be_generals = no
 	}
@@ -12167,7 +12265,9 @@ merchant_matriarchs_reform = {
 		}
 		has_country_modifier = harpy_administration
 		is_revolutionary = no
-		NOT = { has_country_flag = hasQueendomGovBarFlag }
+		NOT = {
+			has_country_flag = hasQueendomGovBarFlag
+		}
 	}
 	trigger = {
 		has_country_flag = merchant_matriarchs_enabled
@@ -12180,17 +12280,18 @@ merchant_matriarchs_reform = {
 		stability_cost_modifier = -0.1
 	}
 	lock_level_when_selected = yes
-
 	ai = {
-		factor = 0 # AI should never pick this
+		factor = 0		# AI should never pick this
 	}
-
 	removed_effect = {
-		country_event = { id = dutch_republic.33 }
+		country_event = {
+			id = dutch_republic.33
+		}
 	}
-
 	conditional = {
-		allow = { has_dlc = "Res Publica" }
+		allow = {
+			has_dlc = "Res Publica"
+		}
 		states_general_mechanic = {
 			peacocks = {
 				global_trade_power = 0.1
@@ -12198,7 +12299,6 @@ merchant_matriarchs_reform = {
 				burghers_loyalty_modifier = 0.1
 				burghers_influence_modifier = 0.1
 			}
-
 			sparrows = {
 				global_unrest = -1
 				diplomatic_reputation = 1
@@ -12231,9 +12331,8 @@ merchant_matriarchs_harpylen_reform = {
 		stability_cost_modifier = -0.1
 	}
 	lock_level_when_selected = yes
-
 	ai = {
-		factor = 0 # AI should never pick this
+		factor = 0		# AI should never pick this
 	}
 }
 
@@ -12242,7 +12341,9 @@ gronstunad_sovereign_empire = {
 	icon = "states_general"
 	allow_normal_conversion = no
 	potential = {
-		is_or_was_tag = { tag = I22 }
+		is_or_was_tag = {
+			tag = I22
+		}
 		is_revolutionary = no
 		has_country_flag = gronstunad_sovereign_1
 	}
@@ -12264,7 +12365,9 @@ gronstunad_sovereign_of_haless = {
 	icon = "states_general"
 	allow_normal_conversion = no
 	potential = {
-		is_or_was_tag = { tag = I22 }
+		is_or_was_tag = {
+			tag = I22
+		}
 		is_revolutionary = no
 		has_country_flag = gronstunad_sovereign_2
 	}
@@ -12288,21 +12391,22 @@ luciande_board_of_chains_reform = {
 	potential = {
 		has_reform = luciande_board_of_chains_reform
 	}
-	
 	custom_attributes = {
 		disabled_purging_orcish = yes
-		disabled_expelling_orcish = yes	
+		disabled_expelling_orcish = yes
 	}
-	
 	lock_level_when_selected = yes
-	
 	effect = {
 		if = {
-			limit = { has_country_flag = luciande_tier3_slaves_flag }
+			limit = {
+				has_country_flag = luciande_tier3_slaves_flag
+			}
 			custom_tooltip = luciande_board_of_chains_3_tt
 			hidden_effect = {
 				every_owned_province = {
-					limit = { trade_goods = slaves }
+					limit = {
+						trade_goods = slaves
+					}
 					add_province_modifier = {
 						name = B34_board_of_chains_boost_upgraded_2
 						duration = -1
@@ -12312,11 +12416,15 @@ luciande_board_of_chains_reform = {
 			}
 		}
 		else_if = {
-			limit = { has_country_flag = luciande_tier2_slaves_flag }
+			limit = {
+				has_country_flag = luciande_tier2_slaves_flag
+			}
 			custom_tooltip = luciande_board_of_chains_2_tt
 			hidden_effect = {
 				every_owned_province = {
-					limit = { trade_goods = slaves }
+					limit = {
+						trade_goods = slaves
+					}
 					add_province_modifier = {
 						name = B34_board_of_chains_boost_upgraded
 						duration = -1
@@ -12326,11 +12434,15 @@ luciande_board_of_chains_reform = {
 			}
 		}
 		else_if = {
-			limit = { has_country_flag = luciande_tier1_slaves_flag }
+			limit = {
+				has_country_flag = luciande_tier1_slaves_flag
+			}
 			custom_tooltip = luciande_board_of_chains_1_tt
 			hidden_effect = {
 				every_owned_province = {
-					limit = { trade_goods = slaves } 
+					limit = {
+						trade_goods = slaves
+					}
 					add_province_modifier = {
 						name = B34_board_of_chains_boost
 						duration = -1
@@ -12340,11 +12452,12 @@ luciande_board_of_chains_reform = {
 			}
 		}
 	}
-	
 	removed_effect = {
 		hidden_effect = {
 			every_owned_province = {
-				limit = { trade_goods = slaves }
+				limit = {
+					trade_goods = slaves
+				}
 				remove_province_modifier = B34_board_of_chains_boost
 				remove_province_modifier = B34_board_of_chains_boost_upgraded
 				remove_province_modifier = B34_board_of_chains_boost_upgraded_2
@@ -12361,7 +12474,6 @@ luciande_lucians_domain_reform = {
 			have_had_reform = luciande_lucians_domain_reform
 		}
 	}
-	
 	modifiers = {
 		max_absolutism = 10
 		legitimacy = 1
@@ -12371,7 +12483,6 @@ luciande_lucians_domain_reform = {
 		rulers_can_be_generals = no
 		locked_government_type = yes
 	}
-
 	heir = no
 	lock_level_when_selected = yes
 	icon = "midnight_monarchy"
@@ -12388,10 +12499,14 @@ blorc_monarchy_reform = {
 		is_colonial_nation = no
 		OR = {
 			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
+			NOT = {
+				has_dlc = "Emperor"
+			}
 		}
 		dwarovar_orc_culture_primary = yes
-		NOT = { tag = H73 }
+		NOT = {
+			tag = H73
+		}
 	}
 	trigger = {
 		dwarovar_orc_culture_primary = yes
@@ -12405,7 +12520,7 @@ blorc_monarchy_reform = {
 		colonists = 1
 	}
 	custom_attributes = {
-	#	has_ruler_election = yes	#Terrible vanilla loc
+		#	has_ruler_election = yes	#Terrible vanilla loc
 		anb_election_effect = yes
 	}
 	heir = no
@@ -12413,7 +12528,6 @@ blorc_monarchy_reform = {
 		factor = 30
 	}
 }
-
 
 blorc_slavers_guilds = {
 	icon = "devshirme_system"
@@ -12428,7 +12542,9 @@ blorc_slavers_guilds = {
 			}
 		}
 		dwarovar_orc_culture_primary = yes
-		NOT = { has_country_modifier = the_abolish_slavery_act }
+		NOT = {
+			has_country_modifier = the_abolish_slavery_act
+		}
 	}
 	modifiers = {
 		burghers_loyalty_modifier = 0.1
@@ -12436,7 +12552,6 @@ blorc_slavers_guilds = {
 		trade_efficiency = 0.1
 	}
 }
-
 
 blorc_victors_of_ozarmchadash = {
 	icon = "rein_in_the_tribes"
@@ -12453,7 +12568,6 @@ blorc_victors_of_ozarmchadash = {
 		same_culture_advisor_cost = -0.25
 	}
 }
-
 
 blorc_lifetime_of_war = {
 	icon = "streltsy"
@@ -12478,7 +12592,6 @@ blorc_lifetime_of_war = {
 	}
 }
 
-
 raghamidesh_merchant_kingdom_reform = {
 	icon = "ballot_box"
 	potential = {
@@ -12499,7 +12612,7 @@ raghamidesh_merchant_kingdom_reform = {
 		uppercastes_influence_modifier = -0.05
 	}
 	custom_attributes = {
-	#	has_ruler_election = yes	#Terrible vanilla loc
+		#	has_ruler_election = yes	#Terrible vanilla loc
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 		anb_election_effect = yes
@@ -12559,25 +12672,24 @@ harpy_queendom_reform = {
 	valid_for_nation_designer = no
 	nation_designer_cost = 20
 	legacy_equivalent = ottoman_government_legacy
-
 	modifiers = {
 		diplomatic_upkeep = 2
 		development_cost_in_primary_culture = -0.1
 		can_fabricate_for_vassals = yes
 		block_introduce_heir = yes
 	}
-
 	government_abilities = {
 		harpylen_queendom_claim_mechanic
 	}
-
 	custom_attributes = {
 		queen = no
 		disabled_expelling_human = yes
 		disabled_purging_human = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
@@ -12592,7 +12704,6 @@ haraf_alas_gasidi_hegemony = {
 			have_had_reform = haraf_alas_gasidi_hegemony
 		}
 	}
-	
 	modifiers = {
 		monarch_admin_power = 1
 		global_tax_modifier = 0.1
@@ -12640,7 +12751,9 @@ lotus_seat_reform = {
 			AND = {
 				culture_group = harimari
 				religion = high_philosophy
-				capital_scope = { superregion = gozengun_superregion }
+				capital_scope = {
+					superregion = gozengun_superregion
+				}
 			}
 			have_had_reform = lotus_seat_reform
 		}
@@ -12650,17 +12763,17 @@ lotus_seat_reform = {
 	nation_designer_trigger = {
 		culture_group = harimari
 		religion = high_philosophy
-		capital_scope = { superregion = gozengun_superregion }
+		capital_scope = {
+			superregion = gozengun_superregion
+		}
 	}
 	legacy_equivalent = shogunate_legacy
 	maintain_dynasty = yes
 	lock_level_when_selected = yes
-
 	modifiers = {
 		global_unrest = -1
 		all_estate_influence_modifier = 0.1
 	}
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
@@ -12751,14 +12864,11 @@ great_corsair_empire_reform = {
 	}
 	valid_for_nation_designer = no
 	nation_designer_cost = 20
-	
 	maintain_dynasty = yes
-	
 	custom_attributes = {
 		raze_province = yes
 		locked_government_type = yes
 	}
-	
 	modifiers = {
 		administrative_efficiency = 0.05
 		global_sailors_modifier = 0.15
@@ -12779,21 +12889,19 @@ sunijalla_arveviijeja = {
 		}
 		has_country_flag = sunijalla_arveviijeja_unlock
 	}
-	
 	maintain_dynasty = yes
-	
 	modifiers = {
 		liberty_desire_from_subject_development = -0.15
 		max_absolutism = 15
 		governing_capacity = 100
 	}
-	
 	custom_attributes = {
-		buffed_strong_duchies = yes #+5% Loyalty
+		buffed_strong_duchies = yes		#+5% Loyalty
 	}
 }
 
-exwesser_monarchy_reform = { #Exwes
+exwesser_monarchy_reform = {
+	#Exwes
 	icon = "government_for_people_reform"
 	allow_normal_conversion = no
 	potential = {
@@ -12802,8 +12910,8 @@ exwesser_monarchy_reform = { #Exwes
 				high_tolerance_halfling_race_trigger = yes
 				medium_tolerance_halfling_race_trigger = yes
 			}
- 			primary_culture = exwesser
- 			OR = {
+			primary_culture = exwesser
+			OR = {
 				have_had_reform = exwesser_monarchy_reform
 				has_reform = exwesser_monarchy_reform
 			}
@@ -12816,7 +12924,7 @@ exwesser_monarchy_reform = { #Exwes
 		locked_government_type = yes
 		disabled_expelling_halfling = yes
 		disabled_purging_halfling = yes
-		no_more_halfling_revolt = yes #disables halfling disaster
+		no_more_halfling_revolt = yes		#disables halfling disaster
 	}
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
@@ -12838,59 +12946,62 @@ vels_bacar_the_panykorun = {
 	}
 	valid_for_nation_designer = no
 	nation_designer_cost = 20
-
 	maintain_dynasty = yes
 	conditional = {
 		allow = {
- 			OR = {
- 				has_dlc = "Domination"
- 				has_dlc = "Common Sense"
- 			}
- 		}
- 		has_parliament = yes
- 	}
-
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Common Sense"
+			}
+		}
+		has_parliament = yes
+	}
 	modifiers = {
 		global_unrest = -1
 		diplomats = 1
 	}
 }
 
-
 heroic_realm_reform = {
-    allow_normal_conversion = yes
-    lock_level_when_selected = no
-    icon = "blademarches_kingdom"
-    valid_for_nation_designer = yes
-    nation_designer_cost = 20
-    potential = {
-        OR = {
-            culture_group = upper_raheni
-            AND = {
-                primary_culture = royal_harimari
-                capital_scope = { region = shamakhad_region }
-            }
-            AND = {
-                primary_culture = serene_harimari
-                capital_scope = { region = shamakhad_region }
-            }
-        }
-    }
-    trigger = {
-        NOT = {
-            has_reform = prabhi_reform
-            has_reform = senapti_reform
-            has_reform = raja_reform
-        }
-        NOT = { tag = R09 }
-    }
-    modifiers = {
-        adventurers_influence_modifier = 0.1
-        adventurers_loyalty_modifier = 0.1
-        uppercastes_influence_modifier = -0.05
-        may_recruit_female_generals = yes
-        female_advisor_chance = 0.05
-    }
+	allow_normal_conversion = yes
+	lock_level_when_selected = no
+	icon = "blademarches_kingdom"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	potential = {
+		OR = {
+			culture_group = upper_raheni
+			AND = {
+				primary_culture = royal_harimari
+				capital_scope = {
+					region = shamakhad_region
+				}
+			}
+			AND = {
+				primary_culture = serene_harimari
+				capital_scope = {
+					region = shamakhad_region
+				}
+			}
+		}
+	}
+	trigger = {
+		NOT = {
+			has_reform = prabhi_reform
+			has_reform = senapti_reform
+			has_reform = raja_reform
+		}
+		NOT = {
+			tag = R09
+		}
+	}
+	modifiers = {
+		adventurers_influence_modifier = 0.1
+		adventurers_loyalty_modifier = 0.1
+		uppercastes_influence_modifier = -0.05
+		may_recruit_female_generals = yes
+		female_advisor_chance = 0.05
+	}
 	custom_attributes = {
 		is_heroic_realm = yes
 	}
@@ -12938,10 +13049,9 @@ trust_of_the_future = {
 		}
 	}
 	maintain_dynasty = yes
-
 	modifiers = {
 		legitimacy = 1
-		monthly_heir_claim_increase = 0.1 
+		monthly_heir_claim_increase = 0.1
 		no_stability_loss_on_monarch_death = yes
 	}
 	custom_attributes = {
@@ -12963,7 +13073,6 @@ pasiragha_gov_empowered_philosophers = {
 		tag = R61
 		has_reform = pasiragha_gov_empowered_philosophers
 	}
-	
 	modifiers = {
 		idea_cost = -0.05
 		prestige_decay = -0.01
@@ -12985,7 +13094,7 @@ pasiragha_gov_res_advisory_com = {
 	modifiers = {
 		free_adm_policy = 1
 		advisor_pool = 2
-		yearly_corruption = +0.05	
+		yearly_corruption = +0.05
 	}
 }
 
@@ -13001,7 +13110,7 @@ pasiragha_gov_office_foreign_res = {
 	modifiers = {
 		max_absolutism = 10
 		stability_cost_modifier = -0.15
-		uppercastes_influence_modifier = +0.10	
+		uppercastes_influence_modifier = +0.10
 	}
 }
 
@@ -13052,9 +13161,9 @@ pasiragha_gov_enlightened_decree = {
 		has_reform = pasiragha_gov_enlightened_decree
 	}
 	modifiers = {
-		lowercastes_influence_modifier = -0.10
-		middlecastes_influence_modifier = -0.10
-		uppercastes_influence_modifier = -0.10	
+		lowercastes_influence_modifier = -0.1
+		middlecastes_influence_modifier = -0.1
+		uppercastes_influence_modifier = -0.1
 		max_absolutism = 5
 		autonomy_change_time = -0.1
 	}
@@ -13081,24 +13190,21 @@ pasiragha_gov_hall_all_castes = {
 		middlecastes_influence_modifier = +0.10
 		middlecastes_loyalty_modifier = +0.10
 		uppercastes_influence_modifier = +0.10
-		uppercastes_loyalty_modifier = +0.10	
+		uppercastes_loyalty_modifier = +0.10
 	}
 }
 
 gnoll_gnollish_monarchy = {
 	icon = "indian_crown"
 	allow_normal_conversion = yes
-
 	potential = {
 		culture_group = gnollish
 	}
-	
 	maintain_dynasty = yes
 	modifiers = {
 		land_forcelimit_modifier = 0.1
 		global_unrest = -2
 	}
-
 	ai = {
 		factor = 2
 	}
@@ -13108,20 +13214,17 @@ sanghariyar_parliament_reform = {
 	icon = "black_market_consortium"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
-
 	potential = {
 		OR = {
 			has_reform = sanghariyar_parliament_reform
 			have_had_reform = sanghariyar_parliament_reform
 		}
 	}
-
 	modifiers = {
 		num_accepted_cultures = 1
 		uppercastes_influence_modifier = -0.1
 		promote_culture_cost = -0.33
 	}
-
 	custom_attributes = {
 		has_parliament = yes
 		anb_special_bribes = yes
@@ -13130,24 +13233,22 @@ sanghariyar_parliament_reform = {
 	}
 }
 
-sanghariyar_parliament_reform_2 = { #Alternate version of the same reform--because conditional is banned
+sanghariyar_parliament_reform_2 = {
+	#Alternate version of the same reform--because conditional is banned
 	icon = "black_market_consortium"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
-
 	potential = {
 		OR = {
 			has_reform = sanghariyar_parliament_reform_2
 			have_had_reform = sanghariyar_parliament_reform_2
 		}
 	}
-
 	modifiers = {
 		num_accepted_cultures = 1
 		uppercastes_influence_modifier = -0.1
 		parliament_backing_chance = 0.15
 	}
-
 	custom_attributes = {
 		has_parliament = yes
 		anb_special_bribes = yes
@@ -13173,7 +13274,6 @@ plutocratic_reform_cant_convert = {
 		merchants = 1
 		nobles_influence_modifier = -0.05
 		burghers_influence_modifier = 0.05
-
 		# Anbennar
 		uppercastes_influence_modifier = -0.05
 		middlecastes_influence_modifier = 0.05
@@ -13193,14 +13293,18 @@ plutocratic_reform_cant_convert = {
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
 		}
 		can_use_trade_post = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
+			NOT = {
+				has_dlc = "Res Publica"
+			}
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
@@ -13215,7 +13319,7 @@ plutocratic_reform_cant_convert = {
 		trade_city_reform = trading_city
 	}
 	ai = {
-		factor = 0.75 #generic
+		factor = 0.75		#generic
 	}
 }
 
@@ -13233,7 +13337,6 @@ naleni_thalassocracy_reform = {
 	}
 	lock_level_when_selected = yes
 	legacy_equivalent = ottoman_government_legacy
-	
 	modifiers = {
 		block_introduce_heir = yes
 		naval_forcelimit_modifier = 0.5
@@ -13241,7 +13344,6 @@ naleni_thalassocracy_reform = {
 		may_perform_slave_raid_on_same_religion = yes
 		allowed_marine_fraction = 0.5
 	}
-
 	custom_attributes = {
 		queen = no
 		disabled_expelling_human = yes
@@ -13249,7 +13351,9 @@ naleni_thalassocracy_reform = {
 		locked_government_type = yes
 	}
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
 }
@@ -13261,10 +13365,8 @@ winged_menkaunswt_reform = {
 	potential = {
 		has_country_flag = duwarkani_reform_has_it
 	}
-
 	valid_for_nation_designer = no
 	maintain_dynasty = yes
-	
 	modifiers = {
 		prestige_decay = -0.01
 		may_recruit_female_generals = yes
@@ -13281,9 +13383,9 @@ virtuous_cults_reform = {
 		religion = old_bulwari_sun_cult
 	}
 	modifiers = {
-		manpower_in_true_faith_provinces = 0.10
-		church_loyalty_modifier = 0.10
-		church_influence_modifier = 0.10
+		manpower_in_true_faith_provinces = 0.1
+		church_loyalty_modifier = 0.1
+		church_influence_modifier = 0.1
 	}
 	custom_attributes = {
 		virtuous_cults_upgrade = yes
@@ -13291,7 +13393,6 @@ virtuous_cults_reform = {
 }
 
 #Cannorian Monarchy T2
-
 honor_the_senators = {
 	icon = "restoration_of_the_senate_reform"
 	allow_normal_conversion = yes
@@ -13299,13 +13400,15 @@ honor_the_senators = {
 		has_reform = damerian_monarchy
 	}
 	modifiers = {
-		reform_progress_growth = 0.10
+		reform_progress_growth = 0.1
 		nobles_loyalty_modifier = 0.05
 	}
 	effect = {
 		custom_tooltip = new_parliament_issues_tt
 	}
-	ai = { factor = 2 }
+	ai = {
+		factor = 2
+	}
 }
 
 ties_with_anbennarian_nobility = {
@@ -13313,15 +13416,19 @@ ties_with_anbennarian_nobility = {
 	allow_normal_conversion = yes
 	block_cultural_union = yes
 	potential = {
-		NOT = { culture_group = anbennarian }
+		NOT = {
+			culture_group = anbennarian
+		}
 		OR = {
 			is_part_of_hre = yes
 			is_emperor = yes
-			tag = Z01 # Anbennar
+			tag = Z01			# Anbennar
 		}
 		OR = {
-			capital_scope = { superregion = western_cannor_superregion }
-			tag = Z01 # Anbennar
+			capital_scope = {
+				superregion = western_cannor_superregion
+			}
+			tag = Z01			# Anbennar
 		}
 	}
 	modifiers = {
@@ -13337,8 +13444,10 @@ ties_with_anbennarian_nobility = {
 				hidden = yes
 			}
 			every_heretic_province = {
-				limit = { is_anbennarian_imperial_culture = yes }
-				add_province_modifier = { 
+				limit = {
+					is_anbennarian_imperial_culture = yes
+				}
+				add_province_modifier = {
 					name = gov_empire_heretic
 					duration = -1
 				}
@@ -13352,12 +13461,16 @@ ties_with_anbennarian_nobility = {
 			remove_country_modifier = gov_ties_with_anbennarian_III
 			remove_country_modifier = gov_ties_with_anbennarian_IV
 			every_heretic_province = {
-				limit = { is_anbennarian_imperial_culture = yes }
+				limit = {
+					is_anbennarian_imperial_culture = yes
+				}
 				remove_province_modifier = gov_empire_heretic
 			}
 		}
 	}
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
 
 strengthen_elves_privileges = {
@@ -13371,11 +13484,15 @@ strengthen_elves_privileges = {
 		}
 	}
 	trigger = {
-		NOT = { has_country_modifier = racial_pop_elven_purge }
-		NOT = { has_country_modifier = racial_pop_elven_expulsion }
+		NOT = {
+			has_country_modifier = racial_pop_elven_purge
+		}
+		NOT = {
+			has_country_modifier = racial_pop_elven_expulsion
+		}
 	}
 	modifiers = {
-		ae_impact = -0.10
+		ae_impact = -0.1
 		nobles_loyalty_modifier = -0.1
 	}
 	effect = {
@@ -13388,21 +13505,25 @@ strengthen_elves_privileges = {
 				hidden = yes
 			}
 			every_owned_province = {
-					limit = {culture = moon_elf}
-					add_province_modifier = { 
-						name = gov_moon_elf_tolerance
-						duration = -1
-					}
+				limit = {
+					culture = moon_elf
 				}
+				add_province_modifier = {
+					name = gov_moon_elf_tolerance
+					duration = -1
+				}
+			}
 			every_owned_province = {
-					limit = {religion = elven_forebears}
-					add_province_modifier = { 
-						name = gov_moon_elven_religion_tolerance
-						duration = -1
-					}
+				limit = {
+					religion = elven_forebears
+				}
+				add_province_modifier = {
+					name = gov_moon_elven_religion_tolerance
+					duration = -1
 				}
 			}
 		}
+	}
 	removed_effect = {
 		hidden_effect = {
 			remove_accepted_culture = moon_elf
@@ -13419,7 +13540,9 @@ strengthen_elves_privileges = {
 			}
 		}
 	}
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
 
 empower_magnate_council = {
@@ -13432,9 +13555,15 @@ empower_magnate_council = {
 			culture = blue_reachman
 			culture_group = reachman
 		}
-		NOT = { tag = B03 }
-		NOT = { tag = B40 }
-		NOT = { has_disaster = magnate_uprising }
+		NOT = {
+			tag = B03
+		}
+		NOT = {
+			tag = B40
+		}
+		NOT = {
+			has_disaster = magnate_uprising
+		}
 	}
 	modifiers = {
 		global_trade_goods_size_modifier = 0.05
@@ -13447,7 +13576,9 @@ empower_magnate_council = {
 		disable_noble_land_right = yes
 		burghers_land_right_streghtened = yes
 	}
-	ai = { factor = 1 }
+	ai = {
+		factor = 1
+	}
 }
 
 imperial_esmari_circle = {
@@ -13455,15 +13586,19 @@ imperial_esmari_circle = {
 	allow_normal_conversion = yes
 	potential = {
 		has_country_flag = unlocked_imperial_esmari_circle
-		capital_scope = { region = esmaria_region }
+		capital_scope = {
+			region = esmaria_region
+		}
 	}
 	modifiers = {
 		trade_efficiency = 0.1
-		development_cost_in_primary_culture = -0.10
+		development_cost_in_primary_culture = -0.1
 		diplomatic_annexation_cost = -0.1
 	}
 	conditional = {
-		allow = { has_dlc = "Mandate of Heaven" }
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
 		custom_attributes = {
 			unlock_special_state_edicts = yes
 		}
@@ -13478,7 +13613,9 @@ floodborn_council_reform = {
 	legacy_equivalent = despotic_monarchy
 	potential = {
 		mission_completed = the_red_flood
-		NOT = { mission_completed = imbue_the_royals }
+		NOT = {
+			mission_completed = imbue_the_royals
+		}
 	}
 	valid_for_nation_designer = yes
 	modifiers = {
@@ -13494,9 +13631,10 @@ floodborn_council_reform = {
 		blocked_call_diet = yes
 	}
 	ai = {
-		factor = 0.75 #generic
+		factor = 0.75		#generic
 	}
 }
+
 floodborn_council_reform_always_mage = {
 	icon = "man_on_podium"
 	allow_normal_conversion = no
@@ -13521,13 +13659,14 @@ floodborn_council_reform_always_mage = {
 		blocked_call_diet = yes
 	}
 	ai = {
-		factor = 0.75 #generic
+		factor = 0.75		#generic
 	}
 }
+
 floodborn_council_reform_late_monarchy = {
 	icon = "man_on_podium"
 	allow_normal_conversion = no
-	lock_level_when_selected = yes 
+	lock_level_when_selected = yes
 	block_cultural_union = yes
 	legacy_equivalent = despotic_monarchy
 	maintain_dynasty = yes
@@ -13551,7 +13690,7 @@ floodborn_council_reform_late_monarchy = {
 		enables_estate_church = yes
 	}
 	ai = {
-		factor = 0.75 #generic
+		factor = 0.75		#generic
 	}
 }
 
@@ -13566,13 +13705,11 @@ vandiphan_thalassocracy = {
 		}
 	}
 	valid_for_nation_designer = no
-
 	modifiers = {
 		diplomatic_upkeep = 2
 		allowed_marine_fraction = 0.25
 		sailors_recovery_speed = 0.25
 	}
-
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		locked_government_type = yes
@@ -13580,24 +13717,25 @@ vandiphan_thalassocracy = {
 		draft_sailors_from_subjects = yes
 	}
 	boost_income = yes
-
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
 		}
 		can_use_trade_post = yes
 	}
-
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
+			NOT = {
+				has_dlc = "Res Publica"
+			}
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
-
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
@@ -13607,7 +13745,6 @@ vandiphan_thalassocracy = {
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
-
 	ai = {
 		factor = 1
 	}
@@ -13623,10 +13760,10 @@ rosande_disgraced_nobility_reform = {
 	allow_normal_conversion = no
 	modifiers = {
 		nobles_loyalty_modifier = 0.05
-		nobles_influence_modifier = 0.10
+		nobles_influence_modifier = 0.1
 		diplomatic_reputation = -2
-		global_manpower_modifier = 0.10
-		advisor_cost = -0.10
+		global_manpower_modifier = 0.1
+		advisor_cost = -0.1
 	}
 	custom_attributes = {
 		disabled_purging_half_orcish = yes
@@ -13645,8 +13782,8 @@ rosande_blooming_nobility_reform = {
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
 	modifiers = {
-		nobles_loyalty_modifier = 0.10
-		nobles_influence_modifier = 0.10
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.1
 		diplomatic_reputation = -1
 		global_manpower_modifier = 0.15
 		advisor_cost = -0.15
@@ -13666,7 +13803,6 @@ ngwenamasonamingo_reform = {
 	icon = "british_queen"
 	lock_level_when_selected = yes
 	maintain_dynasty = yes
-
 	potential = {
 		is_revolutionary = no
 		OR = {
@@ -13674,31 +13810,27 @@ ngwenamasonamingo_reform = {
 			have_had_reform = ngwenamasonamingo_reform
 		}
 	}
-
-	valid_for_nation_designer = no #change to no later
+	valid_for_nation_designer = no	#change to no later
 	modifiers = {
 		diplomatic_upkeep = 3
-		may_recruit_female_generals = yes 
+		may_recruit_female_generals = yes
 		female_advisor_chance = 0.25
 		can_fabricate_for_vassals = yes
 	}
-
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
+		allow = {
+			has_dlc = "Rights of Man"
+		}
 		has_harem = yes
 	}
-
 	custom_attributes = {
 	}
-
 	effect = {
 		custom_tooltip = S53_leopardqueendom_march
 		custom_tooltip = S53_leopardqueendom_forcelimit
 		custom_tooltip = S53_husband_election
-		custom_tooltip = S53_husband_general 
+		custom_tooltip = S53_husband_general
 	}
-
-	
 }
 
 #Clouded Eye T1 by mission
@@ -13706,11 +13838,9 @@ clouded_eye_oakbreaker_dynasty_reform = {
 	icon = "beatific_birth"
 	lock_level_when_selected = yes
 	maintain_dynasty = yes
-
 	potential = {
 		has_reform = clouded_eye_oakbreaker_dynasty_reform
 	}
-
 	modifiers = {
 		colonists = 1
 		shock_damage_received = -0.05
@@ -13726,36 +13856,34 @@ khadisrapur_t3_reform = {
 	icon = "organized_military_staff"
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
-
-	potential = { has_reform = khadisrapur_t3_reform }
-
+	potential = {
+		has_reform = khadisrapur_t3_reform
+	}
 	modifiers = {
 		production_efficiency = 0.1
 		governing_capacity_modifier = 0.1
 	}
-	
 	government_abilities = {
 		khadisrapur_industry_mechanic
 	}
-	
 	custom_attributes = {
 		locked_government_type = yes
 	}
 }
+
 heroic_realm_free_company = {
 	icon = "soldiers_3"
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
-
 	potential = {
 		OR = {
 			has_reform = heroic_realm_free_company
 			have_had_reform = heroic_realm_free_company
 		}
 	}
-
-	trigger = { is_subject_of_type = march }
-
+	trigger = {
+		is_subject_of_type = march
+	}
 	modifiers = {
 		mercenary_cost = -0.25
 		land_forcelimit = 5
@@ -13763,25 +13891,24 @@ heroic_realm_free_company = {
 		adventurers_influence_modifier = 0.15
 		adventurers_loyalty_modifier = 0.1
 	}
-
 	custom_attributes = {
 		is_heroic_realm = yes
 		locked_government_type = yes
 	}
 }
+
 khadisrapur_parliament_reform = {
 	icon = "soldiers_4"
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
-
-	potential = { has_reform = khadisrapur_parliament_reform }
-
+	potential = {
+		has_reform = khadisrapur_parliament_reform
+	}
 	modifiers = {
 		parliament_backing_chance = -0.15
 		power_projection_from_insults = 1
 		allow_free_estate_privilege_revocation = yes
 	}
-
 	custom_attributes = {
 		has_parliament = yes
 		seizing_land_no_rebels = yes
@@ -13792,7 +13919,6 @@ khadisrapur_parliament_reform = {
 #Arawkelin
 modernized_kelino_monarchy = {
 	icon = "signoria_reform"
-
 	potential = {
 		is_revolutionary = no
 		OR = {
@@ -13800,18 +13926,16 @@ modernized_kelino_monarchy = {
 			have_had_reform = modernized_kelino_monarchy
 		}
 	}
-
 	modifiers = {
 		merchants = 1
-		nobles_influence_modifier = -0.10
-		burghers_influence_modifier = 0.10
-		burghers_loyalty_modifier = 0.10
-		galley_power = 0.10
+		nobles_influence_modifier = -0.1
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.1
+		galley_power = 0.1
 		max_absolutism = 20
 		may_recruit_female_generals = yes
 		female_advisor_chance = 0.5
 	}
-	
 	boost_income = yes
 	conditional = {
 		allow = {
@@ -13822,14 +13946,18 @@ modernized_kelino_monarchy = {
 	conditional = {
 		allow = {
 			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
 		}
 		can_use_trade_post = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
+			NOT = {
+				has_dlc = "Res Publica"
+			}
 		}
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
@@ -13870,7 +13998,7 @@ raknagayassur = {
 		church_influence_modifier = 0.1
 	}
 	custom_attributes = {
-		mutation_less_stab_cost = yes #Mutations cost 1 stab less to revoke
+		mutation_less_stab_cost = yes		#Mutations cost 1 stab less to revoke
 	}
 	ai = {
 		factor = 100
@@ -13888,13 +14016,11 @@ hisost_diarchy_reform = {
 			was_tag = S23
 		}
 	}
-	
 	modifiers = {
 		block_introduce_heir = yes
 		tolerance_own = 1
 		nobles_influence_modifier = -0.1
 	}
-
 	custom_attributes = {
 		queen = yes
 		disabled_expelling_human = yes
@@ -13909,23 +14035,19 @@ hisost_diarchy_reform = {
 A49_hillthrone_kingdom_reform = {
 	icon = "native_land_tradition_reform"
 	lock_level_when_selected = yes
-	
 	potential = {
 		has_reform = A49_hillthrone_kingdom_reform
 	}
-	
 	valid_for_nation_designer = no
 	modifiers = {
 		possible_condottieri = 1
 		nobles_influence_modifier = 0.1
 	}
-	
 	custom_attributes = {
 		disabled_purging = yes
 		disabled_expelling = yes
 		locked_government_type = yes
 	}
-	
 	effect = {
 		unlock_estate_privilege = {
 			estate_privilege = estate_burghers_mountain_expansion
@@ -13937,14 +14059,11 @@ A49_hillthrone_kingdom_reform = {
 A49_hakulharaag_gravot_reform = {
 	icon = "legislative_assembly_reform"
 	lock_level_when_selected = yes
-
 	potential = {
 		has_reform = A49_hakulharaag_gravot_reform
 	}
-	
 	valid_for_nation_designer = no
 	fixed_rank = 3
-
 	modifiers = {
 		advisor_cost = -0.1
 		artificers_influence_modifier = 0.1
@@ -13953,19 +14072,20 @@ A49_hakulharaag_gravot_reform = {
 		tolerance_heretic = 2
 		tolerance_heathen = 2
 	}
-
 	custom_attributes = {
 		disabled_purging = yes
 		disabled_expelling = yes
 		locked_government_type = yes
 	}
-
 	effect = {
 		artifice_magic_switch_to_artificery_only_mode = yes
 		clr_country_flag = A49_defensive_mountain_expansion
 		set_country_flag = A49_defensive_mountain_expansion_2
-		every_owned_province = { #Update existing mountain defensiveness province modifiers
-			limit = { has_province_modifier = estate_burghers_A49_defensive_mountain_expansion_mod }
+		every_owned_province = {
+			#Update existing mountain defensiveness province modifiers
+			limit = {
+				has_province_modifier = estate_burghers_A49_defensive_mountain_expansion_mod
+			}
 			remove_province_modifier = estate_burghers_A49_defensive_mountain_expansion_mod
 			add_province_modifier = {
 				name = estate_burghers_A49_defensive_mountain_expansion_2_mod

@@ -1,0 +1,453 @@
+#Imperial Admirals
+#April Neckcliffe
+estate_admirals_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	loyalty = 0.05
+	influence = 0.05
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_admirals_advisor = {
+	icon = privilege_recruit_minister
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	influence = 0.05
+	loyalty = 0.05
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_burghers_commercial_board_of_advice
+		}
+	}
+	is_valid = {
+		tag = A22
+	}
+	on_granted = {
+	}
+	can_revoke = {
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	benefits = {
+		dip_advisor_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_admirals_admiralty_board = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
+	loyalty = 0.1
+	influence = 0.1
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#DLC Privileges
+###
+estate_nobles_monopoly_of_metals = {
+	icon = privilege_monopoly_of_goods_iron
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 2
+		}
+	}
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_dlc = "Emperor"
+			has_country_flag = buffed_monopolies
+		}
+		any_owned_province = {
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+				trade_goods = mithril
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = {
+				has_disaster = revolution
+			}
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			tooltip = JY_LF_not_trading			#Anbennar
+			NOT = {
+				has_country_modifier = JY_LF_recent_trade
+			}
+			NOT = {
+				has_reform = copperlord_reform
+			}
+			#ANBENNAR
+			# NOT = { has_disaster = french_revolution }
+			# NOT = {
+			# has_disaster_progress = {
+			# disaster = french_revolution
+			# value = 1
+			# }
+			# }
+		}
+	}
+	on_granted = {
+		if = {
+			limit = {
+				OR = {
+					iron = 1
+					copper = 1
+					mithril = 1
+				}
+			}
+			add_mercantilism = 1
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				OR = {
+					trade_goods = iron
+					trade_goods = copper
+					trade_goods = mithril
+				}
+			}
+			custom_tooltip = MONOPOLY_INCOME_IRON_AND_COPPER_DESC
+		}
+		custom_tooltip = estate_nobles_monopoly_of_metals_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = iron
+					trade_goods = copper
+					trade_goods = mithril
+				}
+			}
+			add_province_modifier = {
+				name = estate_nobles_monopoly_of_metals_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_metals_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_metals_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_monopoly_of_metals_revoke_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_metals_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_metals_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_nobles_monopoly_of_metals_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_monopoly_of_metals_mod
+			}
+			remove_province_modifier = estate_nobles_monopoly_of_metals_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			nobles_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = {
+			id = monopoly_privileges.5
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+###
+###
+estate_burghers_naval_school_right = {
+	icon = privilege_navy_tradition
+	loyalty = 0
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	is_valid = {
+		has_dlc = "Domination"
+		is_primitive = no
+		NOT = {
+			has_country_flag = estate_burghers_naval_school_right_disabled
+		}
+	}
+	benefits = {
+		prestige_from_naval = 0.5
+	}
+	can_select = {
+		num_of_ports = 1
+	}
+	on_granted = {
+		enable_estate_action = {
+			estate_action = GRANT_ADMIRALSHIP_BURGHERS
+		}
+	}
+	on_invalid = {
+		disable_estate_action = {
+			estate_action = GRANT_ADMIRALSHIP_BURGHERS
+		}
+	}
+	on_revoked = {
+		disable_estate_action = {
+			estate_action = GRANT_ADMIRALSHIP_BURGHERS
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = russian_modernization_mechanic
+		}
+		modifier = {
+			monthly_russian_modernization = -0.03
+		}
+	}
+	#conditional_modifier = {
+	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+	#	modifier = { monthly_ottoman_decadence = 0.02 }
+	#}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+###
+#Mission tree rewards
+#Domination generic Estate Privileges
+###
+estate_nobles_development_of_coasts = {
+	icon = privilege_fort
+	loyalty = 0.1
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	is_valid = {
+		has_dlc = "Domination"
+	}
+	on_granted = {
+		custom_tooltip = estate_nobles_development_of_castles_gt
+		tooltip = {
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_mod
+				duration = -1
+			}
+		}
+		custom_tooltip = estate_nobles_development_of_castles_at
+		tooltip = {
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_ramparts_mod
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_development_of_castles_rt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_fort_building_trigger = yes
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_mod
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_building = ramparts
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_ramparts_mod
+				duration = -1
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_ramparts_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_ramparts_mod
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_ramparts_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_ramparts_mod
+		}
+	}
+	mechanics = {
+		no_estate_crownland_loss_from_developing
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = russian_modernization_mechanic
+		}
+		modifier = {
+			monthly_russian_modernization = -0.05
+		}
+	}
+	#conditional_modifier = {
+	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+	#	modifier = { monthly_ottoman_decadence = 0.02 }
+	#}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+###
+###
+estate_nobles_statesman_servitude = {
+	icon = privilege_diplomat
+	loyalty = 0
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	is_valid = {
+		has_dlc = "Domination"
+		#anbennar
+		NOT = {
+			has_country_flag = g27_sus_statesmen
+		}
+	}
+	can_select = {
+	}
+	on_granted = {
+		enable_estate_action = {
+			estate_action = RECRUIT_MINISTER_NOBLES
+		}
+	}
+	on_revoked = {
+		disable_estate_action = {
+			estate_action = RECRUIT_MINISTER_NOBLES
+		}
+	}
+	on_invalid = {
+		disable_estate_action = {
+			estate_action = RECRUIT_MINISTER_NOBLES
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_government_mechanic = russian_modernization_mechanic
+		}
+		modifier = {
+			monthly_russian_modernization = -0.05
+		}
+	}
+	#conditional_modifier = {
+	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+	#	modifier = { monthly_ottoman_decadence = 0.02 }
+	#}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+###
