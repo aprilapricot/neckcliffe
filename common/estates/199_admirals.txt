@@ -66,6 +66,9 @@ estate_imperial_admirals = {
 		estate_admirals_land_rights
 		estate_admirals_advisor
 		estate_admirals_admiralty_board
+		estate_admirals_administrative_agendas
+		estate_admirals_diplomatic_agendas
+		estate_admirals_military_agendas
 	}
 	agendas = {
 	}

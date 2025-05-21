@@ -80,6 +80,79 @@ estate_admirals_admiralty_board = {
 	}
 }
 
+#These Influence Admiral Rulers
+estate_admirals_administrative_agendas = {
+	icon = privilege_royal_authority
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0.1
+	ai_will_do = {
+		factor = 100
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_admirals_military_agendas
+			has_estate_privilege = estate_admirals_diplomatic_agendas
+		}
+	}
+	benefits = {
+	}
+	on_granted = {
+		set_country_flag = imperial_admirals_administrative_agendas
+	}
+	on_revoked = {
+		clr_country_flag = imperial_admirals_administrative_agendas
+	}
+}
+
+estate_admirals_diplomatic_agendas = {
+	icon = privilege_royal_authority
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0.1
+	ai_will_do = {
+		factor = 100
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_admirals_administrative_agendas
+			has_estate_privilege = estate_admirals_military_agendas
+		}
+	}
+	benefits = {
+	}
+	on_granted = {
+		set_country_flag = imperial_admirals_diplomatic_agendas
+	}
+	on_revoked = {
+		clr_country_flag = imperial_admirals_diplomatic_agendas
+	}
+}
+
+estate_admirals_military_agendas = {
+	icon = privilege_royal_authority
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0.1
+	ai_will_do = {
+		factor = 100
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_admirals_administrative_agendas
+			has_estate_privilege = estate_admirals_diplomatic_agendas
+		}
+	}
+	benefits = {
+	}
+	on_granted = {
+		set_country_flag = imperial_admirals_military_agendas
+	}
+	on_revoked = {
+		clr_country_flag = imperial_admirals_military_agendass
+	}
+}
+
 #DLC Privileges
 ###
 estate_nobles_monopoly_of_metals = {

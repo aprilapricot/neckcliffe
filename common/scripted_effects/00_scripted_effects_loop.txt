@@ -949,3 +949,69 @@ recalculate_olavlund_ebonsteel_modifier = {
 	}
 }
 
+#April Neckcliffe
+convert_ruler_to_admiral_tradition = {
+	if = {
+		limit = {
+			navy_tradition = 100
+		}
+		convert_ruler_to_admiral = 100
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 90
+		}
+		convert_ruler_to_admiral = 50
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 80
+		}
+		convert_ruler_to_admiral = 80
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 70
+		}
+		convert_ruler_to_admiral = 70
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 60
+		}
+		convert_ruler_to_admiral = 60
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 50
+		}
+		convert_ruler_to_admiral = 50
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 40
+		}
+		convert_ruler_to_admiral = 40
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 30
+		}
+		convert_ruler_to_admiral = 30
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 20
+		}
+		convert_ruler_to_admiral = 20
+	}
+	else_if = {
+		limit = {
+			navy_tradition = 10
+		}
+		convert_ruler_to_admiral = 10
+	}
+	else = {
+		convert_ruler_to_admiral = yes
+	}
+}
