@@ -4,22 +4,22 @@ l_english:
  ### April Neckcliffer Imperial Admiralty Estate
  ########################
  ########################
- estate_imperial_admirals:0 "Imperial Admirals"
- estate_imperial_admirals_desc:0 "This estate represents the Imperial Admirals that have long resided in the lands of Neckcliffe"
- estate_imperial_admirals_land_rights:0 "$ESTATE_NAME$ Land Rights"
- estate_imperial_admirals_ownership:0 "$ESTATE_NAME$ Land Ownership"
- imperial_admirals_influence_modifier:0 "$ESTATE_NAME$ Influence"
- imperial_admirals_loyalty_modifier:0 "$ESTATE_NAME$ Loyalty Equilibrium"
+  estate_imperial_admirals:0 "Imperial Admirals"
+  estate_imperial_admirals_desc:0 "This estate represents the Imperial Admirals that have long resided in the lands of Neckcliffe"
+  estate_imperial_admirals_land_rights:0 "$ESTATE_NAME$ Land Rights"
+  estate_imperial_admirals_ownership:0 "$ESTATE_NAME$ Land Ownership"
+  imperial_admirals_influence_modifier:0 "$ESTATE_NAME$ Influence"
+  imperial_admirals_loyalty_modifier:0 "$ESTATE_NAME$ Loyalty Equilibrium"
 
 #Flags
 
 #Privileges
- estate_admirals_land_rights:0 "Admiral Land Rights"
- estate_admirals_land_rights_desc:0 "Grants the Imperial Admirals land ownership rights"
- estate_admirals_advisor:0 "Admiral Advisory"
- estate_admirals_advisor_desc:0 "Cheaper advisor yay :)"
- estate_admirals_admiralty_board:0 "Admiralty Board"
- estate_admirals_admiralty_board_desc:0 "woah the admirals are loyal!!1!1"
+  estate_admirals_land_rights:0 "Admiral Land Rights"
+  estate_admirals_land_rights_desc:0 "Grants the Imperial Admirals land ownership rights"
+  estate_admirals_advisor:0 "Admiral Advisory"
+  estate_admirals_advisor_desc:0 "Cheaper advisor yay :)"
+  estate_admirals_admiralty_board:0 "Admiralty Board"
+  estate_admirals_admiralty_board_desc:0 "woah the admirals are loyal!!1!1"
 
 #Events
  
