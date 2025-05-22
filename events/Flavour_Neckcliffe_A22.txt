@@ -1,0 +1,49 @@
+# to do list
+namespace = neckcliffe
+country_event = {
+	#Druids approach Ruler
+	id = neckcliffe.1
+	title = neckcliffe.1.t
+	desc = neckcliffe.1.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#A88 woodwell becomes subject
+		country_event = {
+			id = neckcliffe.2
+			days = 30
+		}
+		#custom_tooltip = A22_neckcliffe.1_tt
+	}
+}
+
+country_event = {
+	#Druids accept
+	id = neckcliffe.2
+	title = neckcliffe.2.t
+	desc = neckcliffe.2.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#A88 woodwell becomes subject
+		name = neckcliffe.2.a
+		ai_chance = {
+			factor = 100
+		}
+		A22 = {
+			create_vassal = A88
+			create_march = A88
+			set_country_flag = neckcliffe_deal_with_druids_flag
+			add_historical_friend = A88
+		}
+		#custom_tooltip = A22_neckcliffe.1_tt
+	}
+}

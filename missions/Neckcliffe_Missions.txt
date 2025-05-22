@@ -6,4 +6,228 @@ neckcliffe_1 = {
 	potential = {
 		tag = A22
 	}
+	neckcliffe_secure_lumber = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			area = woodwell_area
+		}
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			woodwell_area = {
+				add_claim = root
+			}
+		}
+	}
+	neckcliffe_ancient_forests = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {
+			neckcliffe_secure_lumber
+		}
+		provinces_to_highlight = {
+			area = woodwell_area
+		}
+		trigger = {
+			woodwell_area = {
+				owned_by = root
+			}
+			NOT = {
+				exists = A88
+			}
+		}
+		effect = {
+			country_event = {
+				id = neckcliffe.1
+			}
+		}
+	}
+	neckcliffe_deal_with_druids = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = {
+			neckcliffe_ancient_forests
+		}
+		provinces_to_highlight = {
+			owned_by = A88
+		}
+		trigger = {
+			has_country_flag = neckcliffe_deal_with_druids_flag
+			A88 = {
+				is_subject_of = A22
+			}
+		}
+		effect = {
+			clr_country_flag = neckcliffe_deal_with_druids_flag
+			carneteria_area = {
+				add_claim = A88
+			}
+		}
+	}
+	neckcliffe_further_beyond = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {
+			neckcliffe_deal_with_druids
+		}
+		provinces_to_highlight = {
+			province_id = 20
+		}
+		trigger = {
+			A88 = {
+				is_subject_of = A22
+				owns_core_province = 19
+				owns_core_province = 31
+			}
+			OR = {
+				any_country = {
+					AND = {
+						owns = 20
+						has_spy_network_from = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+				owns_or_subject_of = 20
+			}
+		}
+		effect = {
+			20 = {
+				cede_province = A88
+				add_core = A88
+			}
+		}
+	}
+	neckcliffe_our_neck_of_the_woods = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = {
+			neckcliffe_further_beyond
+			neckcliffe_joint_venture
+		}
+		provinces_to_highlight = {
+			province_id = 20
+		}
+		trigger = {
+			A88 = {
+				is_subject_of = A22
+				woodwell_area = {
+					owned_by = A88
+				}
+				carneteria_area = {
+					owned_by = A88
+				}
+				owns_core_province = 57
+			}
+		}
+		effect = {
+			#Ancient Forests united
+		}
+	}
+}
+
+neckcliffe_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
+	neckcliffe_joint_venture = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {
+			neckcliffe_deal_with_druids
+		}
+		provinces_to_highlight = {
+			province_id = 20
+		}
+		trigger = {
+			AND = {
+				A88 = {
+					is_subject_of = A22
+					owns_core_province = 19
+					owns_core_province = 31
+				}
+				any_country = {
+					AND = {
+						owns = 57
+						NOT = {
+							army_size = A22
+						}
+					}
+				}
+				any_country = {
+					AND = {
+						owns = 14
+						NOT = {
+							navy_size = A22
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			pearlywine_area = {
+				add_claim = A88
+			}
+			damespearl_area = {
+				add_claim = A22
+			}
+			14 = {
+				add_core = A22
+			}
+			57 = {
+				add_core = A88
+			}
+		}
+	}
+}
+
+neckcliffe_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
+	neckcliffe_the_aftermath = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+		}
+		effect = {
+		}
+	}
+}
+
+neckcliffe_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
+}
+
+neckcliffe_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
 }
