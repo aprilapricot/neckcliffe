@@ -1,6 +1,6 @@
 neckcliffe_untrustworthy = {
 	#Start of the game, permanent until removed by missions
-	diplomatic_reputation = -2
+	diplomatic_reputation = -3
 	improve_relation_modifier = -0.1
 }
 
@@ -29,8 +29,8 @@ neckcliffe_throatport_crime = {
 
 neckcliffe_throatport_disrepair = {
 	#Start of the game, permanent until removed by missions
-	local_development_cost_modifier = 0.2
-	build_cost = 0.1
+	local_development_cost = 0.2
+	local_build_cost = 0.1
 }
 
 neckcliffe_druid_oversight = {
@@ -42,5 +42,5 @@ neckcliffe_druid_oversight = {
 neckcliffe_a_forest_whole = {
 	#Given when the ancient forests are whole, permanent
 	local_development_cost = -0.15
-	#trade_goods_size = 0.5
+	trade_goods_size = 0.5
 }

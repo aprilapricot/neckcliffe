@@ -12,7 +12,6 @@ neckcliffe_1 = {
 		required_missions = {
 		}
 		provinces_to_highlight = {
-			area = woodwell_area
 		}
 		trigger = {
 			army_size_percentage = 1
@@ -230,17 +229,6 @@ neckcliffe_3 = {
 	potential = {
 		tag = A22
 	}
-	neckcliffe_the_aftermath = {
-		icon = mission_build_up_to_force_limit
-		required_missions = {
-		}
-		provinces_to_highlight = {
-		}
-		trigger = {
-		}
-		effect = {
-		}
-	}
 }
 
 neckcliffe_4 = {
@@ -257,10 +245,7 @@ neckcliffe_4 = {
 		required_missions = {
 		}
 		provinces_to_highlight = {
-			emperor = {
-				capital_scope = {
-				}
-			}
+			is_capital_of = emperor
 		}
 		trigger = {
 			diplomatic_reputation = 2
