@@ -1,0 +1,12 @@
+neckcliffe_druid_oversight = {
+	picture = global_ship_cost
+	global_ship_cost = -0.1
+	global_ship_recruit_speed = -0.1
+}
+
+neckcliffe_a_forest_whole = {
+	#Given when the ancient forests are whole, permanent
+	picture = local_development_cost
+	local_development_cost = -0.15
+	#trade_goods_size = 0.5
+}
