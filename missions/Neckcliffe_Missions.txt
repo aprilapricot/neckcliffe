@@ -287,7 +287,144 @@ neckcliffe_4 = {
 			}
 		}
 		effect = {
-			#something good!
+			define_advisor = {
+				type = statesman
+				skill = 3
+				discount = yes
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	neckcliffe_strengthen_imperial_bonds = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = {
+			neckcliffe_relations_repaired
+		}
+		provinces_to_highlight = {
+			OR = {
+				all_capital_provinces = {
+					#this doesnt work
+					owner = {
+						is_elector = yes
+						not = {
+							alliance_with = root
+						}
+					}
+				}
+				is_capital_of = emperor
+			}
+		}
+		trigger = {
+			AND = {
+				num_of_allies = 2
+				OR = {
+					any_country = {
+						is_elector = yes
+						alliance_with = root
+					}
+					alliance_with = emperor
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = neckcliffe_trustworthy
+				duration = 7300
+			}
+			if = {
+				limit = {
+					alliance_with = emperor
+				}
+				add_trust = {
+					who = emperor
+					value = 20
+					mutual = yes
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_elector = yes
+						alliance_with = root
+					}
+				}
+				every_ally = {
+					limit = {
+						is_elector = yes
+					}
+					add_trust = {
+						who = root
+						value = 20
+						mutual = yes
+					}
+				}
+			}
+		}
+	}
+	neckcliffe_imperial_ambitions = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {
+			neckcliffe_strengthen_imperial_bonds
+		}
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = emperor
+				all_capital_provinces = {
+					#this doesnt work
+					owner = {
+						is_elector = yes
+						not = {
+							alliance_with = root
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			AND = {
+				num_of_allies = 2
+				OR = {
+					any_country = {
+						is_elector = yes
+						alliance_with = root
+						owes_favors = {
+							who = root
+							value = 20
+						}
+					}
+					emperor = {
+						alliance_with = root
+						owes_favors = {
+							who = root
+							value = 20
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					alliance_with = emperor
+				}
+				country_event = {
+					id = neckcliffe.9
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_elector = yes
+						alliance_with = root
+					}
+				}
+				add_country_modifier = {
+					name = neckcliffe_trustworthy_2
+					duration = 7300
+				}
+			}
 		}
 	}
 }

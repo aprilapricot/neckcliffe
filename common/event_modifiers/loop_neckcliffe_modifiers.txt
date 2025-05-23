@@ -42,6 +42,19 @@ neckcliffe_untrustworthy_2 = {
 	improve_relation_modifier = -0.05
 }
 
+#Positive Reputation Modifiers
+neckcliffe_trustworthy = {
+	#Given when allied to emperor or electors, 20yrs
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.1
+	monthly_favor_modifier = 0.2
+}
+
+neckcliffe_trustworthy_2 = {
+	#Given when electors trust you
+	reasons_to_elect = 10
+}
+
 #Druid Modifiers
 neckcliffe_druid_oversight = {
 	#Given when the druids agree to cooperate, permanent

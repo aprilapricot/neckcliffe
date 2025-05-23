@@ -216,27 +216,141 @@ country_event = {
 }
 
 country_event = {
-	#The emperor's picks to wholeheartedly believe you
-	id = neckcliffe.7
-	title = neckcliffe.7.t
-	desc = neckcliffe.7.d
+	#you waited long enough to normalize relations through time
+	id = neckcliffe.8
+	title = neckcliffe.8.t
+	desc = neckcliffe.8.d
 	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
 	fire_only_once = yes
 	trigger = {
 		tag = A22
+		has_country_modifier = neckcliffe_untrustworthy_2
 	}
 	mean_time_to_happen = {
 		years = 5
 	}
 	option = {
 		#you waited long enough to clear it
-		name = neckcliffe.7.a
+		name = neckcliffe.8.a
 		ai_chance = {
 			factor = 100
 		}
 		A22 = {
-			remove_country_modifier = neckcliffe_untrustworthy
+			remove_country_modifier = neckcliffe_untrustworthy_2
 			clr_country_flag = neckcliffe_repairing_relations
 		}
+	}
+}
+
+country_event = {
+	#Petition the emperor to be come an elector
+	id = neckcliffe.9
+	title = neckcliffe.9.t
+	desc = neckcliffe.9.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#Send the petition
+		name = neckcliffe.9.a
+		ai_chance = {
+			factor = 100
+		}
+		emperor = {
+			country_event = {
+				id = neckcliffe.10
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	#emperor recieves petition
+	id = neckcliffe.10
+	title = neckcliffe.10.t
+	desc = neckcliffe.10.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = emperor
+	}
+	option = {
+		#accept
+		name = neckcliffe.10.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_electors = 8
+				}
+			}
+		}
+		A22 = {
+			country_event = {
+				id = neckcliffe.11
+				days = 10
+			}
+		}
+	}
+	option = {
+		#deny
+		name = neckcliffe.10.b
+		ai_chance = {
+			factor = 25
+		}
+		A22 = {
+			country_event = {
+				id = neckcliffe.12
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	#The emperor says yes
+	id = neckcliffe.11
+	title = neckcliffe.11.t
+	desc = neckcliffe.11.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#yay
+		name = neckcliffe.11.a
+		ai_chance = {
+			factor = 100
+		}
+		elector = yes
+	}
+}
+
+country_event = {
+	#The emperor says no
+	id = neckcliffe.12
+	title = neckcliffe.12.t
+	desc = neckcliffe.12.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#Grrr...
+		name = neckcliffe.12.a
+		ai_chance = {
+			factor = 100
+		}
+		#something bad happens?
 	}
 }
