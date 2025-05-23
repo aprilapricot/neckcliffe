@@ -1,7 +1,7 @@
 #Imperial Admirals
 #April Neckcliffe
 estate_imperial_admirals = {
-	icon = 2
+	icon = 33
 	# If true, country will get estate
 	trigger = {
 		tag = A22
@@ -49,7 +49,7 @@ estate_imperial_admirals = {
 		}
 	}
 	# Influence modifiers
-	base_influence = 20
+	base_influence = 0
 	# Custom Names
 	custom_name = {
 		desc = estate_imperial_admirals
@@ -58,9 +58,9 @@ estate_imperial_admirals = {
 		}
 	}
 	color = {
-		1
-		1
-		1
+		17
+		52
+		110
 	}
 	privileges = {
 		estate_admirals_land_rights

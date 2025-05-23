@@ -1,8 +1,8 @@
 on_startup = {
 	events = {
-		olavlund.905 #Redgarhavn Starting Event
-		diggy_spawnable.10 #Axebellow Starting Event
-		diggy_spawnable.11 #Begans Starting Event
+		olavlund.905		#Redgarhavn Starting Event
+		diggy_spawnable.10		#Axebellow Starting Event
+		diggy_spawnable.11		#Begans Starting Event
 	}
 }
 
@@ -22,13 +22,15 @@ on_monthly_pulse = {
 # country
 on_death_election = {
 	events = {
-		olavlund.2 #Olavlund Death Election
+		olavlund.2		#Olavlund Death Election
 	}
 }
 
 on_admiral_recruited = {
 	if = {
-		limit = { has_country_flag = olavlund_admirals_prof }
+		limit = {
+			has_country_flag = olavlund_admirals_prof
+		}
 		add_army_professionalism = 0.01
 	}
 }
@@ -56,9 +58,13 @@ on_slacken_start = {
 			ai = no
 			has_country_flag = olavlund_sailors_when_slacken
 		}
-		add_country_modifier = { name = sailors_when_slacken duration = -1 }
+		add_country_modifier = {
+			name = sailors_when_slacken
+			duration = -1
+		}
 	}
 }
+
 on_slacken_stop = {
 	if = {
 		limit = {
@@ -74,8 +80,14 @@ on_slacken_stop = {
 }
 
 on_new_term_election = {
-    events = {
-        olavlund.1 # Olavlund Special
-    }
+	events = {
+		olavlund.1		# Olavlund Special
+	}
 }
 
+#April Neckcliffe
+on_startup = {
+	events = {
+		neckcliffe_immediate.1
+	}
+}

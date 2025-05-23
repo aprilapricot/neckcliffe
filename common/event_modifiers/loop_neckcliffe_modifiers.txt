@@ -1,3 +1,4 @@
+#Startup country modifiers, these will permanent be until removed by missions
 neckcliffe_untrustworthy = {
 	#Start of the game, permanent until removed by missions
 	diplomatic_reputation = -3
@@ -21,9 +22,10 @@ neckcliffe_smugglers = {
 	trade_efficiency = -0.1
 }
 
+#Startup province modifiers, these will permanent be until removed by missions
 neckcliffe_throatport_crime = {
 	#Start of the game, permanent until removed by missions
-	local_autonomy = 20
+	min_local_autonomy = 20
 	yearly_corruption = 0.15
 }
 
@@ -33,6 +35,14 @@ neckcliffe_throatport_disrepair = {
 	local_build_cost = 0.1
 }
 
+#Mitigated Betrayer Modifiers
+neckcliffe_untrustworthy_2 = {
+	#Start of the game, permanent until removed by missions
+	diplomatic_reputation = -1
+	improve_relation_modifier = -0.05
+}
+
+#Druid Modifiers
 neckcliffe_druid_oversight = {
 	#Given when the druids agree to cooperate, permanent
 	global_ship_cost = -0.1

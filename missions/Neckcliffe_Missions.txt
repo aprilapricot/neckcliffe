@@ -115,18 +115,18 @@ neckcliffe_1 = {
 			neckcliffe_joint_venture
 		}
 		provinces_to_highlight = {
-			area = woodwell_area
-			area = carneteria_area
-			area = pearlywine_area
+			AND = {
+				area = woodwell_area
+				area = carneteria_area
+				province_id = 57
+			}
 		}
 		trigger = {
 			A88 = {
 				is_subject_of = ROOT
-				woodwell_area = {
-					owned_by = A88
-				}
-				carneteria_area = {
-					owned_by = A88
+				owns_all_provinces = {
+					area = woodwell_area
+					area = carneteria_area
 				}
 				owns_core_province = 57
 			}
@@ -170,7 +170,8 @@ neckcliffe_2 = {
 			neckcliffe_deal_with_druids
 		}
 		provinces_to_highlight = {
-			province_id = 20
+			province_id = 57
+			province_id = 14
 		}
 		trigger = {
 			AND = {
@@ -249,24 +250,44 @@ neckcliffe_4 = {
 		}
 		trigger = {
 			diplomatic_reputation = 2
-			emperor = {
-				has_100_opinion_improved_relation = yes
+			reverse_has_opinion_modifier = {
+				who = emperor
+				modifier = improved_relation
+				value = 50
 			}
 			OR = {
 				employed_advisor = {
 					category = dip
 					type = diplomat
-					skill = 2
 				}
 				employed_advisor = {
 					category = dip
 					type = statesman
-					skill = 2
 				}
 			}
 		}
 		effect = {
-			#removes betrayer modifier
+			country_event = {
+				id = neckcliffe.3
+			}
+		}
+	}
+	neckcliffe_relations_repaired = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {
+			neckcliffe_normalizing_relations
+		}
+		provinces_to_highlight = {
+			is_capital_of = root
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = neckcliffe_repairing_relations
+			}
+		}
+		effect = {
+			#something good!
 		}
 	}
 }

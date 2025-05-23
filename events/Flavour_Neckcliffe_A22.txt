@@ -1,6 +1,50 @@
 # to do list
 namespace = neckcliffe
 country_event = {
+	#Day 1 setup
+	id = neckcliffe_immediate.1
+	title = neckcliffe_immediate.1.t
+	desc = neckcliffe_immediate.1.d
+	picture = CORRUPTION_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		tag = A22
+	}
+	option = {
+		name = neckcliffe_immediate.1.a
+		set_country_flag = neckcliffe_repairing_relations
+		add_country_modifier = {
+			name = neckcliffe_untrustworthy
+			duration = -1
+		}
+		add_country_modifier = {
+			name = neckcliffe_counterfeiters
+			duration = -1
+		}
+		add_country_modifier = {
+			name = neckcliffe_unrest
+			duration = -1
+		}
+		add_country_modifier = {
+			name = neckcliffe_smugglers
+			duration = -1
+		}
+		26 = {
+			add_province_modifier = {
+				name = neckcliffe_throatport_crime
+				duration = -1
+			}
+			add_province_modifier = {
+				name = neckcliffe_throatport_disrepair
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
 	#Druids approach Ruler
 	id = neckcliffe.1
 	title = neckcliffe.1.t
@@ -40,11 +84,159 @@ country_event = {
 			factor = 100
 		}
 		A22 = {
-			create_vassal = A88
-			create_march = A88
 			set_country_flag = neckcliffe_deal_with_druids_flag
-			add_historical_friend = A88
+			release_with_religion_and_culture = {
+				tag = A88
+				religion = regent_court
+				culture = west_damerian
+			}
+			create_subject = {
+				subject_type = march
+				subject = A88
+			}
 		}
 		#custom_tooltip = A22_neckcliffe.1_tt
+	}
+}
+
+country_event = {
+	#Approach the Emperor
+	id = neckcliffe.3
+	title = neckcliffe.3.t
+	desc = neckcliffe.3.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#Plead your case!
+		name = neckcliffe.3.a
+		ai_chance = {
+			factor = 100
+		}
+		emperor = {
+			country_event = {
+				id = neckcliffe.4
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	#The emperor's response
+	id = neckcliffe.4
+	title = neckcliffe.4.t
+	desc = neckcliffe.4.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = emperor
+	}
+	option = {
+		#The emperor chooses to somewhat believe your efforts
+		name = neckcliffe.4.a
+		ai_chance = {
+			factor = 75
+		}
+		A22 = {
+			country_event = {
+				id = neckcliffe.6
+				days = 10
+			}
+		}
+	}
+	option = {
+		#The emperor chooses to wholeheartedly accept your efforts
+		name = neckcliffe.4.a
+		ai_chance = {
+			factor = 75
+		}
+		A22 = {
+			country_event = {
+				id = neckcliffe.7
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	#The emperor's picks to somewhat believe your efforts
+	id = neckcliffe.6
+	title = neckcliffe.6.t
+	desc = neckcliffe.6.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#The emperor chooses to somewhat believe you
+		name = neckcliffe.6.a
+		ai_chance = {
+			factor = 100
+		}
+		A22 = {
+			remove_country_modifier = neckcliffe_untrustworthy
+			add_country_modifier = {
+				name = neckcliffe_untrustworthy_2
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	#The emperor's picks to wholeheartedly believe you
+	id = neckcliffe.7
+	title = neckcliffe.7.t
+	desc = neckcliffe.7.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#The emperor chooses to somewhat believe you
+		name = neckcliffe.7.a
+		ai_chance = {
+			factor = 100
+		}
+		A22 = {
+			remove_country_modifier = neckcliffe_untrustworthy
+			clr_country_flag = neckcliffe_repairing_relations
+		}
+	}
+}
+
+country_event = {
+	#The emperor's picks to wholeheartedly believe you
+	id = neckcliffe.7
+	title = neckcliffe.7.t
+	desc = neckcliffe.7.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = A22
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		#you waited long enough to clear it
+		name = neckcliffe.7.a
+		ai_chance = {
+			factor = 100
+		}
+		A22 = {
+			remove_country_modifier = neckcliffe_untrustworthy
+			clr_country_flag = neckcliffe_repairing_relations
+		}
 	}
 }
