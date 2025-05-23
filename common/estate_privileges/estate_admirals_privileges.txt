@@ -153,6 +153,48 @@ estate_admirals_military_agendas = {
 	}
 }
 
+estate_admirals_control_of_trade = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -10
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+		}
+		modifier = {
+			max_absolutism = 1
+		}
+	}
+	influence = 0.1
+	loyalty = 0
+	penalties = {
+		trade_efficiency = -0.1
+		yearly_corruption = 0.15
+	}
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_burghers_commercial_board_of_advice
+		}
+	}
+	is_valid = {
+		tag = A22
+	}
+	on_granted = {
+	}
+	can_revoke = {
+		dynasty = "Cliffman"
+		#has flag where negotiated?
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
 #DLC Privileges
 ###
 estate_nobles_monopoly_of_metals = {

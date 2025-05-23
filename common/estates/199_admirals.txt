@@ -5,6 +5,7 @@ estate_imperial_admirals = {
 	# If true, country will get estate
 	trigger = {
 		tag = A22
+		has_country_flag = neckcliffe_admirals_takeover
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -69,6 +70,7 @@ estate_imperial_admirals = {
 		estate_admirals_administrative_agendas
 		estate_admirals_diplomatic_agendas
 		estate_admirals_military_agendas
+		estate_admirals_control_of_trade
 	}
 	agendas = {
 	}

@@ -239,7 +239,7 @@ country_event = {
 }
 
 country_event = {
-	#Petition the emperor to be come an elector
+	#Petition the emperor to become an elector
 	id = neckcliffe.9
 	title = neckcliffe.9.t
 	desc = neckcliffe.9.d
@@ -388,30 +388,119 @@ country_event = {
 
 country_event = {
 	#Confront the gangs that are lording over throatport
-	id = neckcliffe.13
-	title = neckcliffe.13.t
-	desc = neckcliffe.13.d
+	id = neckcliffe.17
+	title = neckcliffe.17.t
+	desc = neckcliffe.17.d
 	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
 	fire_only_once = yes
 	trigger = {
-		tag = A22
-		has_country_flag = neckcliffe_confronting_gangs_flag
-		num_of_revolts = 0
+		AND = {
+			tag = A22
+			has_country_flag = neckcliffe_confronting_gangs_flag
+			not = {
+				num_of_rebel_armies = 1
+			}
+		}
 	}
 	option = {
 		#beat the rebels
-		name = neckcliffe.13.a
+		name = neckcliffe.17.a
 		ai_chance = {
 			factor = 100
 		}
-		clr_country_flag = neckcliffe_confronting_gangs
+		clr_country_flag = neckcliffe_confronting_gangs_flag
 		set_country_flag = neckcliffe_gangs_confronted_flag
-		remove_country_modifier = neckcliffe_throatport_crime
 		26 = {
 			add_province_modifier = {
 				name = neckcliffe_throatport_crime_2
 				duration = -1
 			}
+			remove_province_modifier = neckcliffe_throatport_crime
 		}
+	}
+}
+
+country_event = {
+	#Attempt to root out smugglers
+	id = neckcliffe.14
+	title = neckcliffe.14.t
+	desc = neckcliffe.14.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#Start event chain
+		name = neckcliffe.14.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -1
+		26 = {
+			spawn_rebels = {
+				size = 15
+				type = street_gangs_rebels
+			}
+		}
+		country_event = {
+			id = neckcliffe.15
+			days = 90
+		}
+	}
+}
+
+country_event = {
+	#beat the gangs, but smugglers still fighting
+	id = neckcliffe.15
+	title = neckcliffe.15.t
+	desc = neckcliffe.15.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		name = neckcliffe.15.a
+		ai_chance = {
+			factor = 100
+		}
+		remove_country_modifier = neckcliffe_smugglers
+		add_country_modifier = {
+			name = neckcliffe_smugglers_2
+			duration = -1
+		}
+		26 = {
+			remove_province_modifier = neckcliffe_throatport_crime_2
+		}
+	}
+}
+
+country_event = {
+	#the smugglers are actually disgraced admirals fighting for controland influence
+	id = neckcliffe.16
+	title = neckcliffe.16.t
+	desc = neckcliffe.16.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = A22
+		has_country_modifier = neckcliffe_smugglers_2
+	}
+	mean_time_to_happen = {
+		years = 1
+	}
+	option = {
+		name = neckcliffe.16.a
+		ai_chance = {
+			factor = 100
+		}
+		remove_country_modifier = neckcliffe_smugglers_2
+		kill_ruler = yes
+		add_government_reform = neckcliffe_stadthalter_monarchy_reform
+		set_country_flag = neckcliffe_admirals_takeover
+		set_estate_privilege = estate_admirals_control_of_trade
 	}
 }

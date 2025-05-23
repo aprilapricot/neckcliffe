@@ -80,6 +80,7 @@ neckcliffe_1 = {
 		}
 		provinces_to_highlight = {
 			province_id = 20
+			area = carneteria_area
 		}
 		trigger = {
 			A88 = {
@@ -481,6 +482,29 @@ neckcliffe_4 = {
 					name = neckcliffe_throatport_disrepair_2
 					duration = -1
 				}
+			}
+		}
+	}
+	neckcliffe_control_trade = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+			neckcliffe_gangs_confronted
+		}
+		provinces_to_highlight = {
+			province_id = 26
+		}
+		trigger = {
+			26 = {
+				owned_by = root
+				has_building = marketplace
+				province_has_center_of_trade_of_level = 2
+			}
+			num_ships_protecting_trade = 5
+		}
+		effect = {
+			country_event = {
+				id = neckcliffe.14
 			}
 		}
 	}

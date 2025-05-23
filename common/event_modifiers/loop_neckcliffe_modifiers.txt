@@ -62,6 +62,12 @@ neckcliffe_throatport_disrepair_2 = {
 	local_build_cost = 0.1
 }
 
+#Smugglers confronted, failed
+neckcliffe_smugglers_2 = {
+	trade_efficiency = -0.2
+	yearly_corruption = 0.2
+}
+
 #Druid Modifiers
 neckcliffe_druid_oversight = {
 	#Given when the druids agree to cooperate, permanent

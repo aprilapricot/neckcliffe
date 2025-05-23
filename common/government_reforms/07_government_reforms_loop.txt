@@ -224,12 +224,11 @@ taryeanzamh_reform = {
 #April Neckcliffe
 neckcliffe_stadthalter_monarchy_reform = {
 	icon = "dutch_republic"
-	allow_normal_conversion = yes	#might need to change
 	lock_level_when_selected = yes
 	potential = {
 		AND = {
 			tag = A22
-			#AND COUNTRY MODIFIER
+			has_country_flag = neckcliffe_admirals_takeover
 		}
 	}
 	trigger = {
