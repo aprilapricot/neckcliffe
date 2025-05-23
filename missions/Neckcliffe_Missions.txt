@@ -230,16 +230,6 @@ neckcliffe_3 = {
 	potential = {
 		tag = A22
 	}
-}
-
-neckcliffe_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = A22
-	}
 	neckcliffe_normalizing_relations = {
 		icon = mission_build_up_to_force_limit
 		position = 1
@@ -364,7 +354,7 @@ neckcliffe_4 = {
 	}
 	neckcliffe_imperial_ambitions = {
 		icon = mission_build_up_to_force_limit
-		position = 2
+		position = 4
 		required_missions = {
 			neckcliffe_strengthen_imperial_bonds
 		}
@@ -394,11 +384,16 @@ neckcliffe_4 = {
 							value = 20
 						}
 					}
-					emperor = {
-						alliance_with = root
-						owes_favors = {
-							who = root
-							value = 20
+					AND = {
+						emperor = {
+							alliance_with = root
+							owes_favors = {
+								who = root
+								value = 20
+							}
+						}
+						NOT = {
+							num_of_electors = 7
 						}
 					}
 				}
@@ -423,6 +418,68 @@ neckcliffe_4 = {
 				add_country_modifier = {
 					name = neckcliffe_trustworthy_2
 					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+neckcliffe_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
+	neckcliffe_strep_throat = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 26
+		}
+		trigger = {
+			26 = {
+				owned_by = root
+				num_of_units_in_province = {
+					amount = 10
+				}
+				unit_has_leader = yes
+			}
+			is_monarch_leader = yes
+		}
+		effect = {
+			country_event = {
+				id = neckcliffe.13
+			}
+		}
+	}
+	neckcliffe_gangs_confronted = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+			neckcliffe_strep_throat
+		}
+		provinces_to_highlight = {
+			province_id = 26
+		}
+		trigger = {
+			has_country_flag = neckcliffe_gangs_confronted_flag
+			26 = {
+				owned_by = root
+				has_seat_in_parliament = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
+			clr_country_flag = neckcliffe_gangs_confronted_flag
+			26 = {
+				remove_province_modifier = neckcliffe_throatport_disrepair
+				add_province_modifier = {
+					name = neckcliffe_throatport_disrepair_2
+					duration = -1
 				}
 			}
 		}

@@ -24,10 +24,6 @@ country_event = {
 			duration = -1
 		}
 		add_country_modifier = {
-			name = neckcliffe_unrest
-			duration = -1
-		}
-		add_country_modifier = {
 			name = neckcliffe_smugglers
 			duration = -1
 		}
@@ -287,14 +283,21 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-					num_of_electors = 8
+					num_of_electors = 7
 				}
 			}
 		}
-		A22 = {
-			country_event = {
-				id = neckcliffe.11
-				days = 10
+		if = {
+			limit = {
+				NOT = {
+					num_of_electors = 7
+				}
+			}
+			A22 = {
+				country_event = {
+					id = neckcliffe.11
+					days = 10
+				}
 			}
 		}
 	}
@@ -352,5 +355,63 @@ country_event = {
 			factor = 100
 		}
 		#something bad happens?
+	}
+}
+
+country_event = {
+	#Confront the gangs that are lording over throatport
+	id = neckcliffe.13
+	title = neckcliffe.13.t
+	desc = neckcliffe.13.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#spawns the rebels
+		name = neckcliffe.13.a
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = -1
+		26 = {
+			spawn_rebels = {
+				size = 8
+				type = street_gangs_rebels
+			}
+		}
+		set_country_flag = neckcliffe_confronting_gangs_flag
+	}
+}
+
+country_event = {
+	#Confront the gangs that are lording over throatport
+	id = neckcliffe.13
+	title = neckcliffe.13.t
+	desc = neckcliffe.13.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = A22
+		has_country_flag = neckcliffe_confronting_gangs_flag
+		num_of_revolts = 0
+	}
+	option = {
+		#beat the rebels
+		name = neckcliffe.13.a
+		ai_chance = {
+			factor = 100
+		}
+		clr_country_flag = neckcliffe_confronting_gangs
+		set_country_flag = neckcliffe_gangs_confronted_flag
+		remove_country_modifier = neckcliffe_throatport_crime
+		26 = {
+			add_province_modifier = {
+				name = neckcliffe_throatport_crime_2
+				duration = -1
+			}
+		}
 	}
 }
