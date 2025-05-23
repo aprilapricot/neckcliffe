@@ -1,8 +1,25 @@
-#Startup country modifiers, these will permanent be until removed by missions
 neckcliffe_untrustworthy = {
 	#Start of the game, permanent until removed by missions
 	diplomatic_reputation = -3
 	improve_relation_modifier = -0.1
+}
+
+neckcliffe_untrustworthy_2 = {
+	#Start of the game, permanent until removed by missions
+	diplomatic_reputation = -1
+	improve_relation_modifier = -0.05
+}
+
+neckcliffe_trustworthy = {
+	#Given when allied to emperor or electors, 20yrs
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.1
+	monthly_favor_modifier = 0.2
+}
+
+neckcliffe_trustworthy_2 = {
+	#Given when electors trust you, 20yrs
+	reasons_to_elect = 10
 }
 
 neckcliffe_counterfeiters = {
@@ -17,10 +34,20 @@ neckcliffe_smugglers = {
 	yearly_corruption = 0.15
 }
 
-#Startup province modifiers, these will permanent be until removed by missions
+neckcliffe_smugglers_2 = {
+	#Smugglers confronted, failed, permanent until removed
+	trade_efficiency = -0.2
+	yearly_corruption = 0.2
+}
+
 neckcliffe_throatport_crime = {
 	#Start of the game, permanent until removed by missions
 	min_local_autonomy = 50
+}
+
+neckcliffe_throatport_crime_2 = {
+	#Given after confronting the gangs in throatport and winning, permanent until removed
+	min_local_autonomy = 20
 }
 
 neckcliffe_throatport_disrepair = {
@@ -29,43 +56,11 @@ neckcliffe_throatport_disrepair = {
 	local_build_cost = 0.1
 }
 
-#Mitigated Betrayer Modifiers
-neckcliffe_untrustworthy_2 = {
-	#Start of the game, permanent until removed by missions
-	diplomatic_reputation = -1
-	improve_relation_modifier = -0.05
-}
-
-#Positive Reputation Modifiers
-neckcliffe_trustworthy = {
-	#Given when allied to emperor or electors, 20yrs
-	diplomatic_reputation = 1
-	improve_relation_modifier = 0.1
-	monthly_favor_modifier = 0.2
-}
-
-neckcliffe_trustworthy_2 = {
-	#Given when electors trust you, 20yrs
-	reasons_to_elect = 10
-}
-
-#Throatport Crime Confronted
-neckcliffe_throatport_crime_2 = {
-	#Given after confronting the gangs in throatport and winning, permanent until removed
-	min_local_autonomy = 20
-}
-
 #Throatport Address Disrepair
 neckcliffe_throatport_disrepair_2 = {
 	#given after developing throatport to 15 and giving a seat, permanent until removed
 	local_development_cost = 0.1
 	local_build_cost = 0.1
-}
-
-#Smugglers confronted, failed
-neckcliffe_smugglers_2 = {
-	trade_efficiency = -0.2
-	yearly_corruption = 0.2
 }
 
 #Druid Modifiers

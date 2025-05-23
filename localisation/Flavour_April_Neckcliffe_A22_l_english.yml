@@ -20,6 +20,65 @@
  neckcliffe.2.d:0 "A timberman covered in mud had arrived at the Royal Court urging to see [Root.Monarch.GetName], claiming they had a letter to deliver from the forests. The gaurds had barred them from entry, to many this timberman appeared derranged and insane. Their appearance and demeanor hardly fit the setting. Though when [Root.Monarch.GetName] had caught wind of this new arrival, [Root.Monarch.GetSheHe] demanded they be let through at once.\n\nArriving before the Monarch, the timberman explained what had happened. A tangle of vines had knocked them to the ground when they had tried to enter the Ancient Forests once more, and a humanoid had appeared before them grasping the message. It had told them to deliver the letter to the Monarch without delay. [Root.Monarch.GetName] opened the letter, which was pleasantly much cleaner than the lumberer before [Root.Monarch.GetHerHim], which outlined the terms of cooperation between the druids in these forests and those of [Root.GetName]. The terms were acceptable, and a formal response was readied with haste."
  neckcliffe.2.a:0 "Cheers to a fruitful future!"
  
+ neckcliffe.3.t:0 "Extending an Olive Branch"
+ neckcliffe.3.d:0 ""
+ neckcliffe.3.a:0 "Send the diplomats!"
+
+ neckcliffe.4.t:0 "Neckcliffe extends an Olive Branch"
+ neckcliffe.4.d:0 ""
+ neckcliffe.4.a:0 "We appreciate their efforts!"
+ neckcliffe.4.b:0 "They will not be forgiven that easily."
+
+ neckcliffe.6.t:0 "The Emperor is hesitant"
+ neckcliffe.6.d:0 ""
+ neckcliffe.6.a:0 "Unfortunate, but understandable."
+
+ neckcliffe.7.t:0 "The Emperor applauds our efforts"
+ neckcliffe.7.d:0 ""
+ neckcliffe.7.a:0 ""
+
+ neckcliffe.8.t:0 "Time heals all wounds"
+ neckcliffe.8.d:0 ""
+ neckcliffe.8.a:0 "They have forgotten our misdeeds."
+
+ neckcliffe.9.t:0 "Petition the Emperor"
+ neckcliffe.9.d:0 ""
+ neckcliffe.9.a:0 "Send the petition!"
+
+ neckcliffe.10.t:0 "Petition of Neckcliffe"
+ neckcliffe.10.d:0 ""
+ neckcliffe.10.a:0 "We see the value in Neckcliffer elctorship."
+ neckcliffe.10.b:0 "They can kick rocks!"
+
+ neckcliffe.11.t:0 "The Emperor accepts our Petition!"
+ neckcliffe.11.d:0 ""
+ neckcliffe.11.a:0 "We shall not squander this title."
+
+ neckcliffe.12.t:0 "The Emperor declines our Petition"
+ neckcliffe.12.d:0 ""
+ neckcliffe.12.a:0 "Damn."
+
+ neckcliffe.13.t:0 "Confront the Gangs!"
+ neckcliffe.13.d:0 ""
+ neckcliffe.13.a:0 "Ready your arms!"
+
+ neckcliffe.14.t:0 "Broad daylight"
+ neckcliffe.14.d:0 ""
+ neckcliffe.14.a:0 "We are not out of the woods yet."
+
+ neckcliffe.15.t:0 "Backwash"
+ neckcliffe.15.d:0 ""
+ neckcliffe.15.a:0 "At arms!"
+
+ neckcliffe.16.t:0 "Unrelenting Blockade"
+ neckcliffe.16.d:0 ""
+ neckcliffe.16.a:0 "Preposterous!"
+
+ neckcliffe.17.t:0 "Demands of the Admiralty"
+ neckcliffe.17.d:0 ""
+ neckcliffe.17.a:0 "We have no choice.."
+ neckcliffe.17.b:0 "Over my dead body!"
+
  ################
  ### MODFIERS ###
  ################
@@ -28,6 +87,34 @@
 
  neckcliffe_a_forest_whole:0 "A Forest Whole"
  desc_neckcliffe_a_forest_whole:0 "The forests have been united under the oversight of the Druids, and an age of prosperity is upon them!"
+
+ neckcliffe_untrustworthy:0 "Broken Oaths, Sullied Words"
+ desc_neckcliffe_untrustworthy:0 "Our actions during the Lilac Wars have left both the victors and the losers untrustworthy of our diplomats."
+ neckcliffe_untrustworthy_2:0 "Repairing Relations"
+ desc_neckcliffe_untrustworthy_2:0 "Our diplomats are working tirelessly to normalize our relations within the Empire."
+
+ neckcliffe_trustworthy:0 "Trustworthy Once More"
+ neckcliffe_trustworthy_desc:0 "The Emperor themself has bestowed grace upon our realm for its wrongdoings in the Lilac Wars. As such, our diplomats are no longer barred from international affairs"
+ neckcliffe_trustworthy_2:0 "Swaying Electors"
+ neckcliffe_trustworthy_2_desc:0 "We have established close ties between [Root.GetName] and Electors within the Empire of Anbennar. We can use these bonds to further our Imperial Agenda"
+
+ neckcliffe_counterfeiters:0 "Rampant Counterfeiters"
+ desc_neckcliffe_counterfeiters:0 "Fraudulent coinage is circulating within our country"
+
+ neckcliffe_smugglers:0 "Smuggler's Haven"
+ neckcliffe_smugglers_desc:0 "With the Imperial Navy all but destroyed and the national gaurd devestated, smugglers have found it exceedingly easy to operate within our country."
+ neckcliffe_smugglers_2:0 "Disgraced Admiralty"
+ neckcliffe_smugglers_2_desc:0 "The remnants of the Imperial Admiralty are assisting the smugglers in navigating the straits of the dameshead and the streets of our ports."
+
+ neckcliffe_throatport_crime:0 "Crimelords"
+ neckcliffe_throatport_crime_desc:0 "During the chaost of the Lilac wars, the city gaurds of Throatport grew thin. Crimelords have overtooken the streets and have control over many regions of the city"
+ neckcliffe_throatport_crime_2:0 "Backwash"
+ neckcliffe_throatport_crime_2_desc:0 "We have dislodged the Crimelords from operating in broad daylight, but many underground rings still function within the city walls."
+
+ neckcliffe_throatport_disrepair:0 "Dockyards Destroyed"
+ neckcliffe_throatport_disrepair_desc:0 "During Throatport's occupation in the Lilac Wars, many of the dockyard functions were destroyed and others left to the elements. The once bustling port is now completely silent, and its lifeblood severed."
+ neckcliffe_throatport_disrepair_2:0 "Disrepair"
+ neckcliffe_throatport_disrepair_2_desc:0 "Although the ports of the city were heavily damaged, we have invested some efforts to mitigate the disrepair"
 
  ###################
  ### GOV REFORMS ###
