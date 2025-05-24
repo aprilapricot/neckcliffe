@@ -479,7 +479,7 @@ country_event = {
 }
 
 country_event = {
-	#the smugglers are actually disgraced admirals fighting for controland influence
+	#the smugglers are actually disgraced admirals fighting for control and influence
 	id = neckcliffe.16
 	title = neckcliffe.16.t
 	desc = neckcliffe.16.d
@@ -512,5 +512,6 @@ country_event = {
 		kill_ruler = yes
 		add_government_reform = neckcliffe_stadthalter_monarchy_reform
 		set_estate_privilege = estate_admirals_control_of_trade
+		convert_ruler_to_admiral_tradition = yes
 	}
 }

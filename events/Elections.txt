@@ -2763,7 +2763,6 @@ country_event = {
 		define_ruler = {
 			dynasty = "Cliffman"
 		}
-		convert_ruler_to_admiral_tradition = yes
 		change_statists_vs_orangists = 0.33
 	}
 	option = {
@@ -2772,6 +2771,24 @@ country_event = {
 			has_reform = neckcliffe_stadthalter_monarchy_reform
 		}
 		define_ruler = {
+		}
+		if = {
+			limit = {
+				has_country_flag = imperial_admirals_administrative_agendas
+			}
+			change_adm = 2
+		}
+		else_if = {
+			limit = {
+				has_country_flag = imperial_admirals_diplomatic_agendas
+			}
+			change_dip = 2
+		}
+		else_if = {
+			limit = {
+				has_country_flag = imperial_admirals_miliray_agendas
+			}
+			change_mil = 2
 		}
 		convert_ruler_to_admiral_tradition = yes
 		change_statists_vs_orangists = -0.33
@@ -3078,7 +3095,6 @@ country_event = {
 		define_ruler = {
 			dynasty = "Cliffman"
 		}
-		convert_ruler_to_admiral_tradition = yes
 		change_statists_vs_orangists = 0.33
 	}
 	option = {

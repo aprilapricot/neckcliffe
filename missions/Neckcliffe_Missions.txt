@@ -79,8 +79,10 @@ neckcliffe_1 = {
 			neckcliffe_deal_with_druids
 		}
 		provinces_to_highlight = {
-			province_id = 20
-			area = carneteria_area
+			OR = {
+				province_id = 20
+				area = carneteria_area
+			}
 		}
 		trigger = {
 			A88 = {
@@ -116,7 +118,7 @@ neckcliffe_1 = {
 			neckcliffe_joint_venture
 		}
 		provinces_to_highlight = {
-			AND = {
+			OR = {
 				area = woodwell_area
 				area = carneteria_area
 				province_id = 57
@@ -171,8 +173,10 @@ neckcliffe_2 = {
 			neckcliffe_deal_with_druids
 		}
 		provinces_to_highlight = {
-			province_id = 57
-			province_id = 14
+			OR = {
+				province_id = 57
+				province_id = 14
+			}
 		}
 		trigger = {
 			AND = {
