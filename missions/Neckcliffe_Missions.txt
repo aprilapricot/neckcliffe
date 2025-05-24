@@ -64,7 +64,7 @@ neckcliffe_1 = {
 		effect = {
 			clr_country_flag = neckcliffe_deal_with_druids_flag
 			carneteria_area = {
-				add_claim = A88
+				add_core = A88
 			}
 			add_country_modifier = {
 				name = neckcliffe_druid_oversight
@@ -214,11 +214,8 @@ neckcliffe_2 = {
 			}
 		}
 		effect = {
-			pearlywine_area = {
-				add_claim = ROOT
-			}
-			damespearl_area = {
-				add_claim = ROOT
+			14 = {
+				add_permanent_claim = root
 			}
 			57 = {
 				add_core = A88
