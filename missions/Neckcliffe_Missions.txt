@@ -221,6 +221,25 @@ neckcliffe_2 = {
 			}
 		}
 	}
+	neckcliffe_the_pearly_toll = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = {
+			neckcliffe_joint_venture
+		}
+		provinces_to_highlight = {
+			province_id = 14
+		}
+		trigger = {
+			owns_core_province = 14
+			num_ships_protecting_trade = 15
+		}
+		effect = {
+			14 = {
+				center_of_trade = 1
+			}
+		}
+	}
 }
 
 neckcliffe_3 = {
@@ -329,7 +348,7 @@ neckcliffe_3 = {
 				}
 				add_trust = {
 					who = emperor
-					value = 20
+					value = 30
 					mutual = yes
 				}
 			}
