@@ -242,11 +242,6 @@ neckcliffe_stadthalter_monarchy_reform = {
 		allowed_voc_indiamen_fraction = 0.2
 		no_stability_loss_on_monarch_death = yes
 	}
-	removed_effect = {
-		country_event = {
-			id = dutch_republic.33
-		}
-	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no

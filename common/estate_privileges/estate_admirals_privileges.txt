@@ -181,6 +181,7 @@ estate_admirals_control_of_trade = {
 	on_granted = {
 	}
 	can_revoke = {
+		always = no
 	}
 	on_revoked = {
 	}

@@ -12,19 +12,19 @@
  neckcliffe_secure_lumber_desc:0 "The Imperial Navy was devastated during the Lilac Wars, and we have lost the rights to hold the tilte of its keeper. We must secure a source of lumber in order to rebuild our armada and reclaim the title!"
 
  neckcliffe_ancient_forests_title:0 "Into the Ancient Forests"
- neckcliffe_secure_lumber_desc:0 "Our armies have descended into the Ancient Forests and have claimed victory over those of Woodwell. Though, our timbermen have not been coming back with the bounties they had promised. Something is amiss!"
+ neckcliffe_ancient_forests_title:0 "Our armies have descended into the Ancient Forests and have claimed victory over those of Woodwell. Though, our timbermen have not been coming back with the bounties they had promised. Something is amiss!"
 
- neckcliffe_deal_with_the_druids_title:0 "A Deal with the Druids"
- neckcliffe_deal_with_the_druids_desc:0 "We will grant the Druids autonomy over the forests, and in turn they have allowed us the right to log under their oversight. This cooperation may allow us to seize the rest of the forests!"
+ neckcliffe_deal_with_druids_title:0 "A Deal with the Druids"
+ neckcliffe_deal_with_druids_desc:0 "We will grant the Druids autonomy over the forests, and in turn they have allowed us the right to log under their oversight. This cooperation may allow us to seize the rest of the forests!"
 
  neckcliffe_further_beyond_title:0 "Further Beyond"
  neckcliffe_further_beyond_desc:0 "A majority of the Ancient Forest is under our control, and we are free to organize an effort to seize the remaining woods aided by the druids. If all goes to plan, we may seize the remainer of Carneteria from right under the nose of its owner."
 
- neckcliffe_joint_effort_title:0 "A Joint Effort"
- neckcliffe_further_beyond_desc:0 "With a majority of the Ancient Forests under our control, the Druids have asked us to free their kin in Timberfort. Conveniently, our goals align. Seizing the Damesneck is one of our top priorities! If we can control The Pearls, we can control the flow of trade in and out of the Dameshead and from the Bay of Wines."
+ neckcliffe_joint_venture_title:0 "A Joint Venture"
+ neckcliffe_Sjoint_venture_title_desc:0 "With a majority of the Ancient Forests under our control, the Druids have asked us to free their kin in Timberfort. Conveniently, our goals align. Seizing the Damesneck is one of our top priorities! If we can control The Pearls, we can control the flow of trade in and out of the Dameshead and from the Bay of Wines."
 
- neckcliffe_pearly_toll:0 "The Pearly Toll"
- neckcliffe_pearly_toll_desc:0 "With The Pearls in our grasp, we can impose a toll on those traversing the Damesneck. Ships from all corners of the world will dock in our port to pay this fee, or run the risk of being intercepted by our fleet"
+ neckcliffe_the_pearly_toll:0 "The Pearly Toll"
+ neckcliffe_the_pearly_toll_desc:0 "With The Pearls in our grasp, we can impose a toll on those traversing the Damesneck. Ships from all corners of the world will dock in our port to pay this fee, or run the risk of being intercepted by our fleet"
 
  neckcliffe_our_neck_of_the_woods_title:0 "Our Neck of the Woods"
  neckcliffe_our_neck_of_the_woods_desc:0 "With the Ancient Forests united, the Druids are free to exercise their full power amongst the entirety of the forests. An age of prosperity is upon them, and as their benefactor we will surely also benefit!"
@@ -92,16 +92,12 @@
 
  neckcliffe.15.t:0 "Backwash"
  neckcliffe.15.d:0 ""
- neckcliffe.15.a:0 "At arms!"
+ neckcliffe.15.a:0 "We cannot yet lay down our arms!"
 
- neckcliffe.16.t:0 "Unrelenting Blockade"
+ neckcliffe.16.t:0 "Demands of the Admiralty"
  neckcliffe.16.d:0 ""
- neckcliffe.16.a:0 "Preposterous!"
-
- neckcliffe.17.t:0 "Demands of the Admiralty"
- neckcliffe.17.d:0 ""
- neckcliffe.17.a:0 "We have no choice.."
- neckcliffe.17.b:0 "Over my dead body!"
+ neckcliffe.16.a:0 "We have no choice.."
+ neckcliffe.16.b:0 "Over my dead body!"
 
  ################
  ### MODFIERS ###
@@ -131,7 +127,7 @@
  neckcliffe_smugglers_2_desc:0 "The remnants of the Imperial Admiralty are assisting the smugglers in navigating the straits of the dameshead and the streets of our ports."
 
  neckcliffe_throatport_crime:0 "Crimelords"
- neckcliffe_throatport_crime_desc:0 "During the chaos of the Lilac wars, the city gaurds of Throatport grew thin. Crimelords have overtooken the streets and have control over many regions of the city"
+ neckcliffe_throatport_crime_desc:0 "During the chaos of the Lilac wars, the city gaurds of Throatport grew thin. Crimelords have overtaken the streets and have control over many regions of the city"
  neckcliffe_throatport_crime_2:0 "Backwash"
  neckcliffe_throatport_crime_2_desc:0 "We have dislodged the Crimelords from operating in broad daylight, but many underground rings still function within the city walls."
 
@@ -147,8 +143,8 @@
  neckcliffe_stadthalter_monarchy_reform_desc:0 "PLACEHOLDER!§!\n\nAllows §YPlutocratic§! Idea Group.\nDisallows §YAristocratic§! Idea Group.\n"
  neckcliffe_stadthalter_monarchy_reform_enabled:0 "PLACEHOLDER!"
 
- neckcliffer_admirals_MECHANIC_TOOLTIP:0 "PLACEHOLDER"
- neckcliffer_monarchists_MECHANIC_TOOLTIP:0 "PLACEHOLDER""
+ neckcliffer_admirals_MECHANIC_TOOLTIP:0 "Admirals"
+ neckcliffer_monarchists_MECHANIC_TOOLTIP:0 "Monarchists"
  neckcliffer_admirals:0 "Imperial Admirals are in Power"
  neckcliffer_monarchists:0 "Neckcliffer Monarchists are in Power"
 
