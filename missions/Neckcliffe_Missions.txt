@@ -215,16 +215,16 @@ neckcliffe_2 = {
 				}
 			}
 		}
-	}
-	effect = {
-		pearlywine_area = {
-			add_claim = ROOT
-		}
-		damespearl_area = {
-			add_claim = ROOT
-		}
-		57 = {
-			add_core = A88
+		effect = {
+			pearlywine_area = {
+				add_claim = ROOT
+			}
+			damespearl_area = {
+				add_claim = ROOT
+			}
+			57 = {
+				add_core = A88
+			}
 		}
 	}
 	neckcliffe_the_pearly_toll = {
