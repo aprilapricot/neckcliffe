@@ -2772,6 +2772,7 @@ country_event = {
 		}
 		define_ruler = {
 		}
+		convert_ruler_to_admiral_tradition = yes
 		if = {
 			limit = {
 				has_country_flag = imperial_admirals_administrative_agendas
@@ -2790,7 +2791,6 @@ country_event = {
 			}
 			change_mil = 2
 		}
-		convert_ruler_to_admiral_tradition = yes
 		change_statists_vs_orangists = -0.33
 	}
 }
@@ -3104,6 +3104,7 @@ country_event = {
 		}
 		define_ruler = {
 		}
+		convert_ruler_to_admiral_tradition = yes
 		if = {
 			limit = {
 				has_country_flag = imperial_admirals_administrative_agendas
@@ -3122,7 +3123,6 @@ country_event = {
 			}
 			change_mil = 2
 		}
-		convert_ruler_to_admiral_tradition = yes
 		change_statists_vs_orangists = -0.33
 	}
 }

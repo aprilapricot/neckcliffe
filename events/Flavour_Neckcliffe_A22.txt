@@ -512,6 +512,7 @@ country_event = {
 		kill_ruler = yes
 		add_government_reform = neckcliffe_stadthalter_monarchy_reform
 		set_estate_privilege = estate_admirals_control_of_trade
+		kill_ruler = yes
 		convert_ruler_to_admiral_tradition = yes
 	}
 }

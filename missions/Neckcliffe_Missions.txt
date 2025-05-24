@@ -181,16 +181,18 @@ neckcliffe_2 = {
 		trigger = {
 			AND = {
 				OR = {
-					A88 = {
-						is_subject_of = ROOT
-						owns_core_province = 19
-						owns_core_province = 31
-					}
-					any_country = {
-						AND = {
-							owns = 57
-							NOT = {
-								army_size = ROOT
+					AND = {
+						A88 = {
+							is_subject_of = ROOT
+							owns_core_province = 19
+							owns_core_province = 31
+						}
+						any_country = {
+							AND = {
+								owns = 57
+								NOT = {
+									army_size = ROOT
+								}
 							}
 						}
 					}
@@ -198,28 +200,31 @@ neckcliffe_2 = {
 						owns_or_subject_of = 57
 					}
 				}
-				OR = {
-					any_country = {
-						AND = {
-							owns = 14
-							NOT = {
-								navy_size = ROOT
-							}
+			}
+			OR = {
+				any_country = {
+					AND = {
+						owns = 14
+						NOT = {
+							navy_size = ROOT
 						}
 					}
-					ROOT = {
-						owns_or_subject_of = 14
-					}
+				}
+				ROOT = {
+					owns_or_subject_of = 14
 				}
 			}
 		}
-		effect = {
-			14 = {
-				add_permanent_claim = root
-			}
-			57 = {
-				add_core = A88
-			}
+	}
+	effect = {
+		pearlywine_area = {
+			add_claim = ROOT
+		}
+		damespearl_area = {
+			add_claim = ROOT
+		}
+		57 = {
+			add_core = A88
 		}
 	}
 	neckcliffe_the_pearly_toll = {
@@ -245,6 +250,101 @@ neckcliffe_2 = {
 
 neckcliffe_3 = {
 	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
+	neckcliffe_strep_throat = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 26
+		}
+		trigger = {
+			26 = {
+				owned_by = root
+				num_of_units_in_province = {
+					amount = 10
+				}
+				unit_has_leader = yes
+			}
+			is_monarch_leader = yes
+		}
+		effect = {
+			country_event = {
+				id = neckcliffe.13
+			}
+		}
+	}
+	neckcliffe_gangs_confronted = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+			neckcliffe_strep_throat
+		}
+		provinces_to_highlight = {
+			province_id = 26
+		}
+		trigger = {
+			has_country_flag = neckcliffe_gangs_confronted_flag
+			26 = {
+				owned_by = root
+				has_seat_in_parliament = yes
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
+		effect = {
+			clr_country_flag = neckcliffe_gangs_confronted_flag
+			26 = {
+				remove_province_modifier = neckcliffe_throatport_disrepair
+				add_province_modifier = {
+					name = neckcliffe_throatport_disrepair_2
+					duration = -1
+				}
+			}
+		}
+	}
+	neckcliffe_control_trade = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+			neckcliffe_gangs_confronted
+		}
+		provinces_to_highlight = {
+			province_id = 26
+		}
+		trigger = {
+			26 = {
+				owned_by = root
+				has_building = marketplace
+				province_has_center_of_trade_of_level = 2
+			}
+			num_ships_protecting_trade = 5
+		}
+		effect = {
+			country_event = {
+				id = neckcliffe.14
+			}
+		}
+	}
+}
+
+neckcliffe_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A22
+	}
+}
+
+neckcliffe_5 = {
+	slot = 5
 	generic = no
 	ai = yes
 	has_country_shield = yes
@@ -349,7 +449,7 @@ neckcliffe_3 = {
 				}
 				add_trust = {
 					who = emperor
-					value = 30
+					value = 20
 					mutual = yes
 				}
 			}
@@ -402,7 +502,7 @@ neckcliffe_3 = {
 						alliance_with = root
 						owes_favors = {
 							who = root
-							value = 20
+							value = 30
 						}
 					}
 					AND = {
@@ -442,100 +542,5 @@ neckcliffe_3 = {
 				}
 			}
 		}
-	}
-}
-
-neckcliffe_4 = {
-	slot = 4
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = A22
-	}
-	neckcliffe_strep_throat = {
-		icon = mission_build_up_to_force_limit
-		position = 1
-		required_missions = {
-		}
-		provinces_to_highlight = {
-			province_id = 26
-		}
-		trigger = {
-			26 = {
-				owned_by = root
-				num_of_units_in_province = {
-					amount = 10
-				}
-				unit_has_leader = yes
-			}
-			is_monarch_leader = yes
-		}
-		effect = {
-			country_event = {
-				id = neckcliffe.13
-			}
-		}
-	}
-	neckcliffe_gangs_confronted = {
-		icon = mission_build_up_to_force_limit
-		position = 1
-		required_missions = {
-			neckcliffe_strep_throat
-		}
-		provinces_to_highlight = {
-			province_id = 26
-		}
-		trigger = {
-			has_country_flag = neckcliffe_gangs_confronted_flag
-			26 = {
-				owned_by = root
-				has_seat_in_parliament = yes
-				num_of_times_expanded_infrastructure = 1
-			}
-		}
-		effect = {
-			clr_country_flag = neckcliffe_gangs_confronted_flag
-			26 = {
-				remove_province_modifier = neckcliffe_throatport_disrepair
-				add_province_modifier = {
-					name = neckcliffe_throatport_disrepair_2
-					duration = -1
-				}
-			}
-		}
-	}
-	neckcliffe_control_trade = {
-		icon = mission_build_up_to_force_limit
-		position = 1
-		required_missions = {
-			neckcliffe_gangs_confronted
-		}
-		provinces_to_highlight = {
-			province_id = 26
-		}
-		trigger = {
-			26 = {
-				owned_by = root
-				has_building = marketplace
-				province_has_center_of_trade_of_level = 2
-			}
-			num_ships_protecting_trade = 5
-		}
-		effect = {
-			country_event = {
-				id = neckcliffe.14
-			}
-		}
-	}
-}
-
-neckcliffe_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = {
-		tag = A22
 	}
 }
