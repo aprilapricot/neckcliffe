@@ -3098,13 +3098,13 @@ country_event = {
 			limit = {
 				has_country_flag = imperial_admirals_diplomatic_agendas
 			}
-			change_adm = 2
+			change_dip = 2
 		}
 		else_if = {
 			limit = {
 				has_country_flag = imperial_admirals_miliray_agendas
 			}
-			change_adm = 2
+			change_mil = 2
 		}
 		convert_ruler_to_admiral_tradition = yes
 		change_statists_vs_orangists = -0.33

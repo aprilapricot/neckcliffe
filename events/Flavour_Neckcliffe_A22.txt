@@ -495,22 +495,22 @@ country_event = {
 	option = {
 		name = neckcliffe.16.a
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
+		set_country_flag = neckcliffe_admirals_takeover
 		remove_country_modifier = neckcliffe_smugglers_2
 		add_government_reform = neckcliffe_stadthalter_monarchy_reform
-		set_country_flag = neckcliffe_admirals_takeover
 		set_estate_privilege = estate_admirals_control_of_trade
 	}
 	option = {
 		name = neckcliffe.16.b
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
+		set_country_flag = neckcliffe_admirals_takeover
 		remove_country_modifier = neckcliffe_smugglers_2
 		kill_ruler = yes
 		add_government_reform = neckcliffe_stadthalter_monarchy_reform
-		set_country_flag = neckcliffe_admirals_takeover
 		set_estate_privilege = estate_admirals_control_of_trade
 	}
 }
