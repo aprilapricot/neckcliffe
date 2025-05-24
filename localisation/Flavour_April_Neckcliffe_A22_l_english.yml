@@ -21,13 +21,31 @@
  neckcliffe_further_beyond_desc:0 "A majority of the Ancient Forest is under our control, and we are free to organize an effort to seize the remaining woods aided by the druids. If all goes to plan, we may seize the remainer of Carneteria from right under the nose of its owner."
 
  neckcliffe_joint_venture_title:0 "A Joint Venture"
- neckcliffe_joint_venture_desc:0 "With a majority of the Ancient Forests under our control, the Druids have asked us to free their kin in Timberfort. Conveniently, our goals align. Seizing the Damesneck is one of our top priorities! If we can control The Pearls, we can control the flow of trade in and out of the Dameshead and from the Bay of Wines."
+ neckcliffe_joint_venture_desc:0 "With a majority of the Ancient Forests under our control, the Druids have asked us to free their kin in Timberfort. Conveniently, their goals align with those of the Admirals. Seizing the Damesneck is one of their top priorities! If we can control The Pearls, we can toll the flow of trade in and out of the Dameshead and from the Bay of Wines."
 
  neckcliffe_the_pearly_toll_title:0 "The Pearly Toll"
- neckcliffe_the_pearly_toll_desc:0 "With The Pearls in our grasp, we can impose a toll on those traversing the Damesneck. Ships from all corners of the world will dock in our port to pay this fee, or run the risk of being intercepted by our fleet"
+ neckcliffe_the_pearly_toll_desc:0 "With The Pearls in our grasp, we can impose a toll on those traversing the Damesneck. Ships from all corners of the world will dock in our port to pay this fee, or run the risk of being intercepted by our fleet."
 
  neckcliffe_our_neck_of_the_woods_title:0 "Our Neck of the Woods"
  neckcliffe_our_neck_of_the_woods_desc:0 "With the Ancient Forests united, the Druids are free to exercise their full power amongst the entirety of the forests. An age of prosperity is upon them, and as their benefactor we will surely also benefit!"
+
+ neckcliffe_strep_throat_title:0 "Strep Throat"
+ neckcliffe_strep_throat_desc:0 "We must confront the gangs that are playing lord in our once bustling city of Throatport if we are to make any effort to restore the Imperial Dockyards."
+
+ neckcliffe_gangs_confronted_title:0 "Clear Streets"
+ neckcliffe_gangs_confronted_desc:0 "We have driven out the unsavory fellows that were operating within broad daylight, which certainly makes it easier to begin restoration efforts within the city. We are not entirely out of the woods, however. Many underground cabals still run amok in the city, much more hidden from the naked eye. We cannot yet lay down our arms."
+
+ neckcliffe_control_trade_title:0 "Control our Trade"
+ neckcliffe_control_trade_desc:0 "We have spared no effort in beginning the restoration of Throatport, but those underground rings still operate within our borders. We must follow any scent we can catch and strike decisively to put down this rabble."
+
+ neckcliffe_establish_moonisle_title:0 "Establish Moonisle"
+ neckcliffe_establish_moonisle_desc:0 "Having seized the Moonisle at the request of the Imperial Admirals, they now seem keen on establishing a naval outpost on the island. It would be wise to entertain them."
+
+ neckcliffe_seize_damesteeth_title:0 "Seize Damesteeth"
+ neckcliffe_seize_damesteeth_desc:0 "To properly control the flow of trade through the Dameshead, it is imperative that we own the Damesteeth."
+ 
+ neckcliffe_land_routes_title:0 "Land routes"
+ neckcliffe_land_routes_desc:0 "It is great that we have exerted our control over the Damesteeth, but only supplying the outpost by sea would be silly if a land route is also available."
 
  ##############
  ### EVENTS ###
@@ -82,7 +100,7 @@
  neckcliffe.12.d:0 ""
  neckcliffe.12.a:0 "Damn."
 
- neckcliffe.13.t:0 "Confront the Gangs!"
+ neckcliffe.13.t:0 "Confront the Gangs"
  neckcliffe.13.d:0 ""
  neckcliffe.13.a:0 "Ready your arms!"
 

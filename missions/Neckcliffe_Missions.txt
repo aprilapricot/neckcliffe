@@ -100,7 +100,7 @@ neckcliffe_1 = {
 						}
 					}
 				}
-				owns_or_subject_of = 20
+				owns_or_non_sovereign_subject_of = 20
 			}
 		}
 		effect = {
@@ -170,6 +170,7 @@ neckcliffe_2 = {
 		icon = mission_build_up_to_force_limit
 		position = 4
 		required_missions = {
+			neckcliffe_control_trade
 			neckcliffe_deal_with_druids
 		}
 		provinces_to_highlight = {
@@ -197,7 +198,7 @@ neckcliffe_2 = {
 						}
 					}
 					ROOT = {
-						owns_or_subject_of = 57
+						owns_or_non_sovereign_subject_of = 57
 					}
 				}
 			}
@@ -211,7 +212,7 @@ neckcliffe_2 = {
 					}
 				}
 				ROOT = {
-					owns_or_subject_of = 14
+					owns_or_non_sovereign_subject_of = 14
 				}
 			}
 		}
@@ -329,6 +330,32 @@ neckcliffe_3 = {
 			country_event = {
 				id = neckcliffe.14
 			}
+			add_permanent_claim = 11
+			add_permanent_claim = 9
+		}
+	}
+	neckcliffe_establish_moonisle = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {
+			neckcliffe_control_trade
+		}
+		provinces_to_highlight = {
+			province_id = 9
+		}
+		trigger = {
+			9 = {
+				owned_by = root
+				num_of_times_expanded_infrastructure = 1
+				has_building = fort_15th
+				or = {
+					has_building = dock
+					has_building = drydock
+				}
+			}
+		}
+		effect = {
+			#event where you get to establish a naval academy here
 		}
 	}
 }
@@ -340,6 +367,54 @@ neckcliffe_4 = {
 	has_country_shield = yes
 	potential = {
 		tag = A22
+	}
+	neckcliffe_seize_damesteeth = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {
+			neckcliffe_control_trade
+		}
+		provinces_to_highlight = {
+			province_id = 11
+		}
+		trigger = {
+			11 = {
+				owned_by = root
+			}
+		}
+		effect = {
+			13 = {
+				add_permanent_claim = root
+			}
+			windtower_area = {
+				add_permanent_claim = root
+			}
+		}
+	}
+	neckcliffe_land_routes = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = {
+			neckcliffe_seize_damesteeth
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 13
+				area = windtower_area
+			}
+		}
+		trigger = {
+			root = {
+				owns_or_non_sovereign_subject_of = 13
+				owns_or_non_sovereign_subject_of = 16
+				owns_or_non_sovereign_subject_of = 21
+			}
+		}
+		effect = {
+			wesdam_area = {
+				add_permanent_claim = root
+			}
+		}
 	}
 }
 
@@ -502,7 +577,7 @@ neckcliffe_5 = {
 						alliance_with = root
 						owes_favors = {
 							who = root
-							value = 30
+							value = 20
 						}
 					}
 					AND = {
@@ -510,7 +585,7 @@ neckcliffe_5 = {
 							alliance_with = root
 							owes_favors = {
 								who = root
-								value = 20
+								value = 30
 							}
 						}
 						NOT = {
