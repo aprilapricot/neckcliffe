@@ -2756,9 +2756,6 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 1.5
-			}
 		}
 		define_ruler = {
 			dynasty = "Cliffman"
@@ -2767,6 +2764,9 @@ country_event = {
 	}
 	option = {
 		name = elections.720.neckclifferadmirals
+		ai_chance = {
+			factor = 50
+		}
 		trigger = {
 			has_reform = neckcliffe_stadthalter_monarchy_reform
 		}
@@ -2787,6 +2787,8 @@ country_event = {
 				has_country_flag = imperial_admirals_miliray_agendas
 			}
 			change_mil = 2
+		}
+		define_ruler = {
 		}
 		change_statists_vs_orangists = -0.33
 	}
@@ -3085,9 +3087,6 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 1.5
-			}
 		}
 		define_ruler = {
 			dynasty = "Cliffman"
@@ -3098,6 +3097,9 @@ country_event = {
 		name = elections.720.neckclifferadmirals
 		trigger = {
 			has_reform = neckcliffe_stadthalter_monarchy_reform
+		}
+		ai_chance = {
+			factor = 50
 		}
 		define_ruler = {
 		}

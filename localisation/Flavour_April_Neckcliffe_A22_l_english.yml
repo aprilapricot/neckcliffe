@@ -63,7 +63,7 @@
  neckcliffe_seize_damesteeth_title:0 "Seize Damesteeth"
  neckcliffe_seize_damesteeth_desc:0 "To properly control the flow of trade through the Dameshead, it is imperative that we own the Damesteeth."
  
- neckcliffe_land_routes_title:0 "Land routes"
+ neckcliffe_land_routes_title:0 "Land Routes"
  neckcliffe_land_routes_desc:0 "It is great that we have exerted our control over the Damesteeth, but only supplying the outpost by sea would be silly if a land route is also available."
 
  ##############
@@ -93,14 +93,14 @@
  neckcliffe.5.t:0 "Addressing Counterfeit Coins"
  neckcliffe.5.d:0 ""
  neckcliffe.5.a:0 "I suppose it would not hurt..."
- neckcliffe.5.a.tt:0 "§TThis choice will be presented to you again on Monarch Change.\n§!"
+ neckcliffe.5.a.tt:0 "§TThis choice will be presented to you again on ruler change.\n§!"
  neckcliffe.5.b:0 "Shut it down!"
  neckcliffe.5.b.tt:0 "§RChoosing this option will disable this choice for the remainder of the game.\n§!"
 
  neckcliffe.6.t:0 "The Emperor is Hesitant"
  neckcliffe.6.d:0 ""
  neckcliffe.6.a:0 "Unfortunate, but understandable."
- neckcliffe.6.a.tt:0 "§TTime will heal all wounds. (MTTH 5YR to clear)§!"
+ neckcliffe.6.a.tt:0 "§TTime will heal all wounds.§!"
 
  neckcliffe.7.t:0 "The Emperor Applauds our Efforts"
  neckcliffe.7.d:0 ""
