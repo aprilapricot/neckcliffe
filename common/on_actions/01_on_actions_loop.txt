@@ -87,7 +87,26 @@ on_new_term_election = {
 
 #April Neckcliffe
 on_startup = {
-	events = {
-		neckcliffe_immediate.1
+	if = {
+		limit = {
+			tag = A22
+		}
+		country_event = {
+			id = neckcliffe_immediate.1
+		}
+	}
+}
+
+on_new_monarch = {
+	if = {
+		limit = {
+			AND = {
+				tag = A22
+				has_country_modifier = neckcliffe_counterfeiters_2
+			}
+		}
+		country_event = {
+			id = neckcliffe.5
+		}
 	}
 }

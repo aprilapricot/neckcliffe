@@ -168,7 +168,6 @@ estate_admirals_control_of_trade = {
 	loyalty = 0
 	penalties = {
 		trade_efficiency = -0.1
-		yearly_corruption = 0.15
 	}
 	can_select = {
 		NOT = {

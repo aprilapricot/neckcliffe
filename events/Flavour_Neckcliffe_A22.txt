@@ -79,7 +79,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		A22 = {
+		ROOT = {
 			set_country_flag = neckcliffe_deal_with_druids_flag
 			release_with_religion_and_culture = {
 				tag = A88
@@ -138,7 +138,7 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		A22 = {
+		ROOT = {
 			country_event = {
 				id = neckcliffe.6
 				days = 10
@@ -151,11 +151,48 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		A22 = {
+		ROOT = {
 			country_event = {
 				id = neckcliffe.7
 				days = 10
 			}
+		}
+	}
+}
+
+country_event = {
+	#How to deal with counterfeiters?
+	id = neckcliffe.5
+	title = neckcliffe.5.t
+	desc = neckcliffe.5.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		tag = A22
+	}
+	option = {
+		#take bribes
+		name = neckcliffe.5.a
+		ai_chance = {
+			factor = 50
+		}
+		ROOT = {
+			remove_country_modifier = neckcliffe_counterfeiters
+			add_country_modifier = {
+				name = neckcliffe_counterfeiters_2
+				duration = -1
+			}
+		}
+	}
+	option = {
+		#SHUT IT DOWN -Gordon Ramsey
+		name = neckcliffe.5.b
+		ai_chance = {
+			factor = 50
+		}
+		ROOT = {
+			remove_country_modifier = neckcliffe_counterfeiters
+			remove_country_modifier = neckcliffe_counterfeiters_2
 		}
 	}
 }
@@ -177,7 +214,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		A22 = {
+		ROOT = {
 			remove_country_modifier = neckcliffe_untrustworthy
 			add_country_modifier = {
 				name = neckcliffe_untrustworthy_2
@@ -204,7 +241,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		A22 = {
+		ROOT = {
 			remove_country_modifier = neckcliffe_untrustworthy
 			clr_country_flag = neckcliffe_repairing_relations
 		}
@@ -231,7 +268,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		A22 = {
+		ROOT = {
 			remove_country_modifier = neckcliffe_untrustworthy_2
 			clr_country_flag = neckcliffe_repairing_relations
 		}
@@ -258,7 +295,7 @@ country_event = {
 		emperor = {
 			country_event = {
 				id = neckcliffe.10
-				days = 10
+				days = 1
 			}
 		}
 	}
@@ -293,11 +330,12 @@ country_event = {
 					num_of_electors = 7
 				}
 			}
-			A22 = {
+			FROM = {
 				country_event = {
 					id = neckcliffe.11
-					days = 10
+					days = 1
 				}
+				elector = yes
 			}
 		}
 	}
@@ -307,10 +345,10 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		A22 = {
+		ROOT = {
 			country_event = {
 				id = neckcliffe.12
-				days = 10
+				days = 1
 			}
 		}
 	}
@@ -333,7 +371,6 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		elector = yes
 	}
 }
 
@@ -437,7 +474,6 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		add_stability = -1
 		26 = {
 			spawn_rebels = {
 				size = 15
@@ -509,7 +545,6 @@ country_event = {
 		}
 		set_country_flag = neckcliffe_admirals_takeover
 		remove_country_modifier = neckcliffe_smugglers_2
-		kill_ruler = yes
 		add_government_reform = neckcliffe_stadthalter_monarchy_reform
 		set_estate_privilege = estate_admirals_control_of_trade
 		kill_ruler = yes

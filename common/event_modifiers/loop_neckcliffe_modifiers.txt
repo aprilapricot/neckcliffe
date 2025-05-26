@@ -28,16 +28,22 @@ neckcliffe_counterfeiters = {
 	inflation_action_cost = 0.2
 }
 
+neckcliffe_counterfeiters_2 = {
+	#Start of the game, permanent until removed by missions
+	inflation_reduction = -0.15
+	inflation_action_cost = 0.2
+	yearly_corruption = 0.1
+	tax_income = 24
+}
+
 neckcliffe_smugglers = {
 	#Start of the game, permanent until removed by missions
 	trade_efficiency = -0.1
-	yearly_corruption = 0.15
 }
 
 neckcliffe_smugglers_2 = {
 	#Smugglers confronted, failed, permanent until removed
 	trade_efficiency = -0.2
-	yearly_corruption = 0.2
 }
 
 neckcliffe_throatport_crime = {
