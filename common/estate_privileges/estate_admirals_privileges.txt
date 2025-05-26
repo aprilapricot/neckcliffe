@@ -15,7 +15,7 @@ estate_admirals_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 50
 	}
 	ai_will_do = {
 		factor = 0
