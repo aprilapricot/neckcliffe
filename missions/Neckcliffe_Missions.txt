@@ -361,7 +361,12 @@ neckcliffe_3 = {
 			9 = {
 				owned_by = root
 				num_of_times_expanded_infrastructure = 1
-				has_building = fort_15th
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
 				or = {
 					has_building = dock
 					has_building = drydock
@@ -422,6 +427,12 @@ neckcliffe_4 = {
 		trigger = {
 			11 = {
 				owned_by = root
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
 			}
 		}
 		effect = {
@@ -477,21 +488,24 @@ neckcliffe_5 = {
 			is_capital_of = emperor
 		}
 		trigger = {
-			diplomatic_reputation = 2
-			reverse_has_opinion_modifier = {
-				who = emperor
-				modifier = improved_relation
-				value = 50
-			}
 			OR = {
-				employed_advisor = {
-					category = dip
-					type = diplomat
+				diplomatic_reputation = 2
+				reverse_has_opinion_modifier = {
+					who = emperor
+					modifier = improved_relation
+					value = 50
 				}
-				employed_advisor = {
-					category = dip
-					type = statesman
+				OR = {
+					employed_advisor = {
+						category = dip
+						type = diplomat
+					}
+					employed_advisor = {
+						category = dip
+						type = statesman
+					}
 				}
+				is_emperor = yes
 			}
 		}
 		effect = {
@@ -552,6 +566,7 @@ neckcliffe_5 = {
 						alliance_with = root
 					}
 					alliance_with = emperor
+					is_emperor = yes
 				}
 			}
 		}
@@ -634,6 +649,7 @@ neckcliffe_5 = {
 							num_of_electors = 7
 						}
 					}
+					is_emperor = yes
 				}
 			}
 		}
