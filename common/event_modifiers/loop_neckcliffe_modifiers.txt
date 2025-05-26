@@ -88,7 +88,7 @@ neckcliffe_a_forest_whole = {
 }
 
 #Moonisle
-neckcliffe_establish_moonisle_academy = {
+neckcliffe_establishing_moonisle_academy = {
 	#Given when moonisle is starting to be established, permanent until upgrade
 	local_development_cost = -0.1
 	local_build_cost = -0.1

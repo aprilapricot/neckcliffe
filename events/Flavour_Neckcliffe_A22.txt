@@ -177,6 +177,7 @@ country_event = {
 	option = {
 		#take bribes
 		name = neckcliffe.5.a
+		custom_tooltip = neckcliffe.5.a.tt
 		ai_chance = {
 			factor = 50
 		}
@@ -191,6 +192,7 @@ country_event = {
 	option = {
 		#SHUT IT DOWN -Gordon Ramsey
 		name = neckcliffe.5.b
+		custom_tooltip = neckcliffe.5.b.tt
 		ai_chance = {
 			factor = 50
 		}

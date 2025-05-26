@@ -2770,9 +2770,6 @@ country_event = {
 		trigger = {
 			has_reform = neckcliffe_stadthalter_monarchy_reform
 		}
-		define_ruler = {
-		}
-		convert_ruler_to_admiral_tradition = yes
 		if = {
 			limit = {
 				has_country_flag = imperial_admirals_administrative_agendas
@@ -3104,7 +3101,6 @@ country_event = {
 		}
 		define_ruler = {
 		}
-		convert_ruler_to_admiral_tradition = yes
 		if = {
 			limit = {
 				has_country_flag = imperial_admirals_administrative_agendas

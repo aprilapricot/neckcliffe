@@ -35,8 +35,27 @@
  neckcliffe_gangs_confronted_title:0 "Clear Streets"
  neckcliffe_gangs_confronted_desc:0 "We have driven out the unsavory fellows that were operating within broad daylight, which certainly makes it easier to begin restoration efforts within the city. We are not entirely out of the woods, however. Many underground cabals still run amok in the city, much more hidden from the naked eye. We cannot yet lay down our arms."
 
+ neckcliffe_address_counterfeiters_title:0 "Address Counterfeiters"
+ neckcliffe_address_counterfeiters_desc:0 "We must attempt to address the rampant counterfeiting that is heavily inflating our currency!"
+
+ neckcliffe_normalizing_relations_title:0 "Normalizing Relations"
+ neckcliffe_normalizing_relations_desc:0 "If our state is to recover the rights to the Imperial Navy, we must normalize relations within the empire."
+
+ neckcliffe_relations_repaired_title:0 "Relations Repaired"
+ neckcliffe_relations_repaired_desc:0 "The memberstates of the Empire of Anbennar are no longer hesitant to welcome our diplomats into their halls!"
+
+ neckcliffe_strengthen_imperial_bonds_title:0 "Strengthen Imperial Bonds"
+ neckcliffe_strengthen_imperial_bonds_desc:0 "With the memberstates of the Empire of Anbennar once again welcoming our statesmen, we are free to curry favor and build trust between our nation and the Empire. We surely will not sully our reputation again."
+
+ neckcliffe_imperial_ambitions_title:0 "Imperial Ambitions"
+ neckcliffe_imperial_ambitions_desc:0 "It would be adventageous for our state to secure rank in the Empire. We should seek to improve relations with the Emperor and Electors alike to further our own ambitions."
+ neckcliffe_imperial_ambitions_effect_tt:0 "§TWe will obtain rewards for fulfilling either or both requirements for this mission!§!\n"
+
  neckcliffe_control_trade_title:0 "Control our Trade"
  neckcliffe_control_trade_desc:0 "We have spared no effort in beginning the restoration of Throatport, but those underground rings still operate within our borders. We must follow any scent we can catch and strike decisively to put down this rabble."
+
+ neckcliffe_land_routes_title:0 "Land routes"
+ neckcliffe_land_routes_desc:0 "It is great that we have exerted our control over the Damesteeth, but only supplying the outpost by sea would be silly if a land route is also available."
 
  neckcliffe_establish_moonisle_title:0 "Establish Moonisle"
  neckcliffe_establish_moonisle_desc:0 "Having seized the Moonisle at the request of the Imperial Admirals, they now seem keen on establishing a naval outpost on the island. It would be wise to entertain them."
@@ -68,21 +87,23 @@
 
  neckcliffe.4.t:0 "Neckcliffe extends an Olive Branch"
  neckcliffe.4.d:0 ""
- neckcliffe.4.a:0 "We appreciate their efforts!"
- neckcliffe.4.b:0 "They will not be forgiven that easily."
+ neckcliffe.4.a:0 "They will not be forgiven that easily."
+ neckcliffe.4.b:0 "We appreciate their efforts!"
 
  neckcliffe.5.t:0 "Addressing Counterfeit Coins"
  neckcliffe.5.d:0 ""
  neckcliffe.5.a:0 "I suppose it would not hurt..."
+ neckcliffe.5.a.tt:0 "§TThis choice will be presented to you again on Monarch Change.\n§!"
  neckcliffe.5.b:0 "Shut it down!"
+ neckcliffe.5.b.tt:0 "§RChoosing this option will disable this choice for the remainder of the game.\n§!"
 
- neckcliffe.6.t:0 "The Emperor is hesitant"
+ neckcliffe.6.t:0 "The Emperor is Hesitant"
  neckcliffe.6.d:0 ""
  neckcliffe.6.a:0 "Unfortunate, but understandable."
 
- neckcliffe.7.t:0 "The Emperor applauds our efforts"
+ neckcliffe.7.t:0 "The Emperor Applauds our Efforts"
  neckcliffe.7.d:0 ""
- neckcliffe.7.a:0 ""
+ neckcliffe.7.a:0 "This will surely be a boon."
 
  neckcliffe.8.t:0 "Time heals all wounds"
  neckcliffe.8.d:0 ""
@@ -147,6 +168,8 @@
 
  neckcliffe_counterfeiters:0 "Rampant Counterfeiters"
  desc_neckcliffe_counterfeiters:0 "Fraudulent coinage is circulating within our country"
+ neckcliffe_counterfeiters_2:0 "Colluding with Counterfeiters"
+ neckcliffe_counterfeiters_2_desc:0 "[Root.Monarch.GetName] is colluding with the counterfeiters."
 
  neckcliffe_smugglers:0 "Smuggler's Haven"
  neckcliffe_smugglers_desc:0 "With the Imperial Navy all but destroyed and the national gaurd devastated, smugglers have found it exceedingly easy to operate within our country."
@@ -161,7 +184,10 @@
  neckcliffe_throatport_disrepair:0 "Dockyards Destroyed"
  neckcliffe_throatport_disrepair_desc:0 "During Throatport's occupation in the Lilac Wars, many of the dockyard functions were destroyed and others left to the elements. The once bustling port is now completely silent, and its lifeblood severed."
  neckcliffe_throatport_disrepair_2:0 "Disrepair"
- neckcliffe_throatport_disrepair_2_desc:0 "Although the ports of the city were heavily damaged, we have invested some efforts to mitigate the disrepair"
+ neckcliffe_throatport_disrepair_2_desc:0 "Although the ports of the city were heavily damaged, we have invested some efforts to mitigate the disrepair."
+
+ neckcliffe_establishing_moonisle_academy:0 "Establishing Moonisle Naval Academy"
+ neckcliffe_establishing_moonisle_academy_desc:0 "The Admirals of [Root.GetName] are establishing a Naval Academy on this island."
 
  #####################
  ### COUNTRY FLAGS ###
