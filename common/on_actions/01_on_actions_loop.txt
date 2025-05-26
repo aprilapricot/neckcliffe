@@ -85,7 +85,11 @@ on_new_term_election = {
 	}
 }
 
-#April Neckcliffe
+########################
+########################
+### April Neckcliffe ###
+########################
+########################
 on_startup = {
 	if = {
 		limit = {

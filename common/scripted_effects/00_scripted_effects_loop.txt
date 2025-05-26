@@ -949,7 +949,11 @@ recalculate_olavlund_ebonsteel_modifier = {
 	}
 }
 
-#April Neckcliffe
+########################
+########################
+### April Neckcliffe ###
+########################
+########################
 convert_ruler_to_admiral_tradition = {
 	if = {
 		limit = {

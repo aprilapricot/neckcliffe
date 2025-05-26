@@ -1,5 +1,8 @@
-#Imperial Admirals
-#April Neckcliffe
+########################
+########################
+### April Neckcliffe ###
+########################
+########################
 estate_imperial_admirals = {
 	icon = 33
 	# If true, country will get estate

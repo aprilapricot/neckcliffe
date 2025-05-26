@@ -1,5 +1,8 @@
-#Imperial Admirals
-#April Neckcliffe
+########################
+########################
+### April Neckcliffe ###
+########################
+########################
 estate_admirals_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
