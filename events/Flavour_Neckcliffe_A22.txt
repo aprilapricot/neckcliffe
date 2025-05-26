@@ -217,6 +217,7 @@ country_event = {
 	option = {
 		#The emperor chooses to somewhat believe you
 		name = neckcliffe.6.a
+		custom_tooltip = neckcliffe.6.a.tt
 		ai_chance = {
 			factor = 100
 		}
@@ -506,6 +507,7 @@ country_event = {
 	}
 	option = {
 		name = neckcliffe.15.a
+		custom_tooltip = neckcliffe.15.a.tt
 		ai_chance = {
 			factor = 100
 		}
