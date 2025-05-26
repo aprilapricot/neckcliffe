@@ -112,7 +112,7 @@ neckcliffe_1 = {
 					add_truce_with = root
 				}
 				cede_province = A88
-				add_core = A88
+				add_permanent_claim = A88
 			}
 			add_manpower = -8
 		}

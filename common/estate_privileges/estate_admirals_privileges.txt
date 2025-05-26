@@ -149,7 +149,7 @@ estate_admirals_military_agendas = {
 		set_country_flag = imperial_admirals_military_agendas
 	}
 	on_revoked = {
-		clr_country_flag = imperial_admirals_military_agendass
+		clr_country_flag = imperial_admirals_military_agendas
 	}
 }
 

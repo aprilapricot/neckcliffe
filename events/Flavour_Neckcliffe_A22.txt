@@ -147,9 +147,9 @@ country_event = {
 	}
 	option = {
 		#The emperor chooses to wholeheartedly accept your efforts
-		name = neckcliffe.4.a
+		name = neckcliffe.4.b
 		ai_chance = {
-			factor = 75
+			factor = 25
 		}
 		ROOT = {
 			country_event = {
