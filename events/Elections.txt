@@ -2750,6 +2750,17 @@ country_event = {
 	}
 	#April Neckcliffe
 	option = {
+		name = elections.720.neckcliffenochange
+		trigger = {
+			has_reform = neckcliffe_stadthalter_monarchy_reform
+		}
+		ai_chance = {
+			factor = 50
+		}
+		add_legitimacy = -10
+		add_prestige = -10
+	}
+	option = {
 		name = elections.720.neckcliffermonarchists
 		trigger = {
 			has_reform = neckcliffe_stadthalter_monarchy_reform

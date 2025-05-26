@@ -212,3 +212,4 @@
 
  elections.720.neckcliffermonarchists:0 "Those of the Cliffman Dynasty are more fit to rule [Root.GetName] at this time."
  elections.720.neckclifferadmirals:0 "The Admirals are more fit to rule during these times."
+ elections.720.neckcliffernochange:0 "[Root.Monarch.GetName] is a fine ruler."
