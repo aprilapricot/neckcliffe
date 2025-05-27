@@ -185,8 +185,9 @@ estate_admirals_control_of_trade = {
 	on_granted = {
 	}
 	can_revoke = {
-		always = no
+		dynasty = "Cliffman"
 	}
+	cooldown_years = 10
 	on_revoked = {
 	}
 	on_invalid = {

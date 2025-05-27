@@ -554,7 +554,6 @@ country_event = {
 		set_country_flag = neckcliffe_admirals_takeover
 		remove_country_modifier = neckcliffe_smugglers_2
 		add_government_reform = neckcliffe_stadthalter_monarchy_reform
-		set_estate_privilege = estate_admirals_control_of_trade
 		define_ruler = {
 		}
 		convert_ruler_to_admiral_tradition = yes

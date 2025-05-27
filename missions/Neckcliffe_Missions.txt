@@ -574,7 +574,7 @@ neckcliffe_5 = {
 		effect = {
 			define_advisor = {
 				type = statesman
-				skill = 3
+				skill = 2
 				discount = yes
 				cost_multiplier = 0.25
 			}
