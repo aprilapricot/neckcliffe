@@ -142,7 +142,7 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		ROOT = {
+		FROM = {
 			country_event = {
 				id = neckcliffe.6
 				days = 10
@@ -155,7 +155,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		ROOT = {
+		FROM = {
 			country_event = {
 				id = neckcliffe.7
 				days = 10
@@ -352,7 +352,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		ROOT = {
+		FROM = {
 			country_event = {
 				id = neckcliffe.12
 				days = 1

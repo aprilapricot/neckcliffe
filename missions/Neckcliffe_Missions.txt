@@ -530,10 +530,12 @@ neckcliffe_5 = {
 			OR = {
 				AND = {
 					diplomatic_reputation = 2
-					reverse_has_opinion_modifier = {
-						who = emperor
-						modifier = improved_relation
-						value = 50
+					emperor = {
+						has_opinion_modifier = {
+							who = root
+							modifier = improved_relation
+							value = 50
+						}
 					}
 					OR = {
 						employed_advisor = {
