@@ -557,5 +557,6 @@ country_event = {
 		define_ruler = {
 		}
 		convert_ruler_to_admiral_tradition = yes
+		set_estate_privilege = estate_admirals_control_of_trade
 	}
 }

@@ -175,9 +175,7 @@ estate_admirals_control_of_trade = {
 		trade_efficiency = -0.1
 	}
 	can_select = {
-		NOT = {
-			has_estate_privilege = estate_burghers_commercial_board_of_advice
-		}
+		always = no
 	}
 	is_valid = {
 		tag = A22
