@@ -102,8 +102,8 @@ neckcliffe_developing_moonisle_2 = {
 
 neckcliffe_moonisle_academy = {
 	#Given when moonisle academy is established, permanent even on control change
-	navy_tradition_decay = -1
-	idea_cost = -0.5
+	navy_tradition_decay = -0.1
+	idea_cost = -0.05
 }
 
 #Religious League War

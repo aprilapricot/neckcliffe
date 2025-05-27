@@ -26,6 +26,9 @@
 #Modifiers
 
 #Tooltips
+ estate_admirals_administrative_education_tt:0 "§GHaving this Privilege Active will Increase Admiral Ruler's Administrative Skill by 1§!"
+ estate_admirals_diplomatic_education_tt:0 "§GHaving this Privilege Active will Increase Admiral Ruler's Diplomatic Skill by 1§!"
+ estate_admirals_military_education_tt:0 "§GHaving this Privilege Active will Increase Admiral Ruler's Military Skill by 1§!"
 
 #Decisions
 
