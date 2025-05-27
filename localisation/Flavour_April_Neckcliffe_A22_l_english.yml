@@ -171,6 +171,9 @@
  neckcliffe_trustworthy_desc:0 "The Emperor themself has bestowed grace upon our realm for its wrongdoings in the Lilac Wars. As such, our diplomats are no longer barred from international affairs"
  neckcliffe_trustworthy_2:0 "Swaying Electors"
  neckcliffe_trustworthy_2_desc:0 "We have established close ties between [Root.GetName] and Electors within the Empire of Anbennar. We can use these bonds to further our Imperial Agenda"
+ 
+ neckcliffe_never_again:0 "Never Again"
+ neckcliffe_never_again_desc:0 "We will fight to the last man!"
 
  neckcliffe_counterfeiters:0 "Rampant Counterfeiters"
  desc_neckcliffe_counterfeiters:0 "Fraudulent coinage is circulating within our country"
@@ -192,8 +195,12 @@
  neckcliffe_throatport_disrepair_2:0 "Disrepair"
  neckcliffe_throatport_disrepair_2_desc:0 "Although the ports of the city were heavily damaged, we have invested some efforts to mitigate the disrepair."
 
- neckcliffe_establishing_moonisle_academy:0 "Establishing Moonisle Naval Academy"
- neckcliffe_establishing_moonisle_academy_desc:0 "The Admirals of [Root.GetName] are establishing a Naval Academy on this island."
+ neckcliffe_developing_moonisle:0 "Developing Moonisle"
+ neckcliffe_developing_moonisle_desc:0 "The Imperial Admirals of [Root.GetName] are establishing an outpost on this island."
+ neckcliffe_developing_moonisle_2:0 "Developing Moonisle [2]"
+ neckcliffe_developing_moonisle_2_desc:0 "The Imperial Admirals of [Root.GetName] are establishing an outpost on this island."
+ neckcliffe_moonisle_academy:0 "Moonisle Naval Academy"
+ neckcliffe_moonisle_academy_desc:0 "The Imperial Admirals of [Root.GetName] have established a Naval Academy on this island."
 
  #####################
  ### COUNTRY FLAGS ###
