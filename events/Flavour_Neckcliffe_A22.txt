@@ -423,7 +423,7 @@ country_event = {
 		26 = {
 			spawn_rebels = {
 				size = 8
-				type = street_gangs_rebels
+				type = leadered_peasant_rebels
 			}
 		}
 		set_country_flag = neckcliffe_confronting_gangs_flag
@@ -484,7 +484,7 @@ country_event = {
 		26 = {
 			spawn_rebels = {
 				size = 15
-				type = street_gangs_rebels
+				type = leadered_peasant_rebels
 			}
 		}
 		country_event = {
