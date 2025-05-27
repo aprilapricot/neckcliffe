@@ -38,7 +38,7 @@ neckcliffe_counterfeiters_2 = {
 	inflation_reduction = -0.15
 	inflation_action_cost = 0.2
 	yearly_corruption = 0.2
-	tax_income = 24	#maybe op
+	global_tax_income = 24	#maybe op
 }
 
 neckcliffe_smugglers = {
