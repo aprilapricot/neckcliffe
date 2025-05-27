@@ -54,17 +54,21 @@
  neckcliffe_control_trade_title:0 "Control our Trade"
  neckcliffe_control_trade_desc:0 "We have spared no effort in beginning the restoration of Throatport, but those underground rings still operate within our borders. We must follow any scent we can catch and strike decisively to put down this rabble."
 
- neckcliffe_land_routes_title:0 "Land routes"
- neckcliffe_land_routes_desc:0 "It is great that we have exerted our control over the Damesteeth, but only supplying the outpost by sea would be silly if a land route is also available."
-
  neckcliffe_establish_moonisle_title:0 "Establish Moonisle"
  neckcliffe_establish_moonisle_desc:0 "Having seized the Moonisle at the request of the Imperial Admirals, they now seem keen on establishing a naval outpost on the island. It would be wise to entertain them."
+
+ neckcliffe_moonisle_naval_academy_title:0 "Moonisle Naval Academy"
+ neckcliffe_moonisle_naval_academy_desc:0 "At the direction of the Imperial Admirals, we have completed work on a centralized Naval Academy on the island of Moonisle for our brightest officers to educate the next generation of Admirals."
+ neckcliffe_moonisle_naval_academy_effct_tt:0 "§Gompleting the Academy will allow us to take new privileges for the Imperial Admirals estate!§!"
 
  neckcliffe_seize_damesteeth_title:0 "Seize Damesteeth"
  neckcliffe_seize_damesteeth_desc:0 "To properly control the flow of trade through the Dameshead, it is imperative that we own the Damesteeth."
  
  neckcliffe_land_routes_title:0 "Land Routes"
  neckcliffe_land_routes_desc:0 "It is great that we have exerted our control over the Damesteeth, but only supplying the outpost by sea would be silly if a land route is also available."
+
+ neckcliffe_never_again_title:0 "Never Again"
+ neckcliffe_never_again_desc:0 "We must not again betray our Imperial Emperor, we cannot suffer the same fate we had during the Lilac Wars. We will fight to the last man!"
 
  ##############
  ### EVENTS ###
