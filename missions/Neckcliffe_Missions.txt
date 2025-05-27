@@ -358,6 +358,7 @@ neckcliffe_3 = {
 		}
 		trigger = {
 			has_country_flag = neckcliffe_admirals_takeover
+			treasury = 500
 			9 = {
 				owned_by = root
 				num_of_times_expanded_infrastructure = 1
@@ -367,17 +368,58 @@ neckcliffe_3 = {
 					has_building = fort_17th
 					has_building = fort_18th
 				}
-				or = {
+				OR = {
 					has_building = dock
 					has_building = drydock
 				}
 			}
 		}
 		effect = {
+			add_treasury = -500
 			9 = {
-				add_permanent_province_modifier = {
-					name = neckcliffe_establishing_moonisle_academy
+				add_province_modifier = {
+					name = neckcliffe_developing_moonisle
 					duration = -1
+				}
+			}
+		}
+	}
+	neckcliffe_moonisle_naval_academy = {
+		icon = mission_build_up_to_force_limit
+		position = 4
+		required_missions = {
+			neckcliffe_control_trade
+		}
+		provinces_to_highlight = {
+			province_id = 9
+		}
+		trigger = {
+			treasury = 500
+			9 = {
+				owned_by = root
+				num_of_times_expanded_infrastructure = 2
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+				num_free_building_slots = 1
+			}
+		}
+		effect = {
+			set_country_flag = has_moonisle_academy
+			add_treasury = -500
+			9 = {
+				remove_province_modifier = neckcliffe_developing_moonisle
+				add_province_modifier = {
+					name = neckcliffe_developing_moonisle_2
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = neckcliffe_moonisle_academy
+					duration = -1
+				}
+				add_building_construction = {
+					building = impressment_offices
 				}
 			}
 		}
@@ -674,6 +716,35 @@ neckcliffe_5 = {
 					name = neckcliffe_trustworthy_2
 					duration = 7300
 				}
+			}
+		}
+	}
+	neckcliffe_never_again = {
+		icon = mission_build_up_to_force_limit
+		position = 5
+		required_missions = {
+			neckcliffe_imperial_ambitions
+		}
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = root
+				is_capital_of = emperor
+			}
+		}
+		trigger = {
+			OR = {
+				is_emperor = yes
+				AND = {
+					is_league_friend = emperor
+					has_matching_religion = emperor
+				}
+			}
+			is_in_league_war = yes
+		}
+		effect = {
+			add_country_modifier = {
+				name = neckcliffe_never_again
+				duration = 3650
 			}
 		}
 	}

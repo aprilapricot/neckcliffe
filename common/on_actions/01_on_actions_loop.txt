@@ -114,3 +114,4 @@ on_new_monarch = {
 		}
 	}
 }
+

@@ -88,8 +88,27 @@ neckcliffe_a_forest_whole = {
 }
 
 #Moonisle
-neckcliffe_establishing_moonisle_academy = {
-	#Given when moonisle is starting to be established, permanent until upgrade
+neckcliffe_developing_moonisle = {
+	#Given when moonisle is starting to be established, permanent until upgrade or controlchange
 	local_development_cost = -0.1
 	local_build_cost = -0.1
+}
+
+neckcliffe_developing_moonisle_2 = {
+	#Given when moonisle is established, permanent until control change
+	local_development_cost = -0.15
+	local_build_cost = -0.15
+}
+
+neckcliffe_moonisle_academy = {
+	#Given when moonisle academy is established, permanent even on control change
+	navy_tradition_decay = -1
+	idea_cost = -0.5
+}
+
+#Religious League War
+neckcliffe_never_again = {
+	#Given when neckcliffe is on the same side as the emperor in the league war, 10yrs
+	land_morale = 0.1
+	naval_morale = 0.1
 }

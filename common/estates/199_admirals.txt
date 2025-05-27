@@ -14,12 +14,10 @@ estate_imperial_admirals = {
 	country_modifier_happy = {
 		global_ship_cost = -0.1
 		naval_maintenance_modifier = -0.1
-		navy_tradition = 1
 	}
 	country_modifier_neutral = {
 		naval_maintenance_modifier = -0.05
 		global_ship_cost = -0.05
-		navy_tradition = 0.5
 	}
 	country_modifier_angry = {
 		naval_morale = -0.05
@@ -67,12 +65,11 @@ estate_imperial_admirals = {
 		110
 	}
 	privileges = {
-		estate_admirals_land_rights
 		estate_admirals_advisor
 		estate_admirals_admiralty_board
-		estate_admirals_administrative_agendas
-		estate_admirals_diplomatic_agendas
-		estate_admirals_military_agendas
+		estate_admirals_administrative_education
+		estate_admirals_diplomatic_education
+		estate_admirals_military_education
 		estate_admirals_control_of_trade
 	}
 	agendas = {

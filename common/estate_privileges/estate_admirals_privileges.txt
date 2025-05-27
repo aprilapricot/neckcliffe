@@ -3,28 +3,6 @@
 ### April Neckcliffe ###
 ########################
 ########################
-estate_admirals_land_rights = {
-	icon = privilege_grant_autonomy
-	land_share = 5
-	max_absolutism = -5
-	conditional_modifier = {
-		trigger = {
-			has_absolutism_reduction_for_estate_privileges = yes
-		}
-		modifier = {
-			max_absolutism = 1
-		}
-	}
-	loyalty = 0.05
-	influence = 0.05
-	benefits = {
-		governing_capacity = 50
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
 estate_admirals_advisor = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
@@ -84,7 +62,7 @@ estate_admirals_admiralty_board = {
 }
 
 #These Influence Admiral Rulers
-estate_admirals_administrative_agendas = {
+estate_admirals_administrative_education = {
 	icon = privilege_royal_authority
 	max_absolutism = 0
 	loyalty = 0
@@ -94,21 +72,28 @@ estate_admirals_administrative_agendas = {
 	}
 	can_select = {
 		NOT = {
-			has_estate_privilege = estate_admirals_military_agendas
-			has_estate_privilege = estate_admirals_diplomatic_agendas
+			has_estate_privilege = estate_admirals_military_education
+			has_estate_privilege = estate_admirals_diplomatic_education
+		}
+		has_country_flag = has_moonisle_academy
+		9 = {
+			base_tax = 15
 		}
 	}
 	benefits = {
+		adm_tech_cost_modifier = -0.2
+		governing_capacity = 50
+		state_maintenance_modifier = -0.1
 	}
 	on_granted = {
-		set_country_flag = imperial_admirals_administrative_agendas
+		set_country_flag = imperial_admirals_administrative_education
 	}
 	on_revoked = {
-		clr_country_flag = imperial_admirals_administrative_agendas
+		clr_country_flag = imperial_admirals_administrative_education
 	}
 }
 
-estate_admirals_diplomatic_agendas = {
+estate_admirals_diplomatic_education = {
 	icon = privilege_royal_authority
 	max_absolutism = 0
 	loyalty = 0
@@ -118,21 +103,28 @@ estate_admirals_diplomatic_agendas = {
 	}
 	can_select = {
 		NOT = {
-			has_estate_privilege = estate_admirals_administrative_agendas
-			has_estate_privilege = estate_admirals_military_agendas
+			has_estate_privilege = estate_admirals_administrative_education
+			has_estate_privilege = estate_admirals_military_education
+		}
+		has_country_flag = has_moonisle_academy
+		9 = {
+			base_production = 15
 		}
 	}
 	benefits = {
+		dip_tech_cost_modifier = -0.2
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
 	}
 	on_granted = {
-		set_country_flag = imperial_admirals_diplomatic_agendas
+		set_country_flag = imperial_admirals_diplomatic_education
 	}
 	on_revoked = {
-		clr_country_flag = imperial_admirals_diplomatic_agendas
+		clr_country_flag = imperial_admirals_diplomatic_education
 	}
 }
 
-estate_admirals_military_agendas = {
+estate_admirals_military_education = {
 	icon = privilege_royal_authority
 	max_absolutism = 0
 	loyalty = 0
@@ -142,17 +134,24 @@ estate_admirals_military_agendas = {
 	}
 	can_select = {
 		NOT = {
-			has_estate_privilege = estate_admirals_administrative_agendas
-			has_estate_privilege = estate_admirals_diplomatic_agendas
+			has_estate_privilege = estate_admirals_administrative_education
+			has_estate_privilege = estate_admirals_diplomatic_education
+		}
+		has_country_flag = has_moonisle_academy
+		9 = {
+			base_manpower = 15
 		}
 	}
 	benefits = {
+		mil_tech_cost_modifier = -0.2
+		manpower_recovery_speed = 0.1
+		sailors_recovery_speed = 0.1
 	}
 	on_granted = {
-		set_country_flag = imperial_admirals_military_agendas
+		set_country_flag = imperial_admirals_military_education
 	}
 	on_revoked = {
-		clr_country_flag = imperial_admirals_military_agendas
+		clr_country_flag = imperial_admirals_military_education
 	}
 }
 

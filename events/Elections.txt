@@ -2783,21 +2783,21 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = imperial_admirals_administrative_agendas
+				has_country_flag = imperial_admirals_administrative_education
 			}
-			change_adm = 2
+			change_adm = 1
 		}
 		else_if = {
 			limit = {
-				has_country_flag = imperial_admirals_diplomatic_agendas
+				has_country_flag = imperial_admirals_diplomatic_education
 			}
-			change_dip = 2
+			change_dip = 1
 		}
 		else_if = {
 			limit = {
-				has_country_flag = imperial_admirals_miliray_agendas
+				has_country_flag = imperial_admirals_miliray_education
 			}
-			change_mil = 2
+			change_mil = 1
 		}
 		define_ruler = {
 		}
@@ -3116,21 +3116,21 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = imperial_admirals_administrative_agendas
+				has_country_flag = imperial_admirals_administrative_education
 			}
-			change_adm = 2
+			change_adm = 1
 		}
 		else_if = {
 			limit = {
-				has_country_flag = imperial_admirals_diplomatic_agendas
+				has_country_flag = imperial_admirals_diplomatic_education
 			}
-			change_dip = 2
+			change_dip = 1
 		}
 		else_if = {
 			limit = {
-				has_country_flag = imperial_admirals_miliray_agendas
+				has_country_flag = imperial_admirals_miliray_education
 			}
-			change_mil = 2
+			change_mil = 1
 		}
 		change_statists_vs_orangists = -0.33
 	}
