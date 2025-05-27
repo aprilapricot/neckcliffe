@@ -96,7 +96,7 @@ neckcliffe_1 = {
 				owns_core_province = 31
 			}
 			root = {
-				manpower = 8
+				manpower = 5
 			}
 			OR = {
 				any_country = {
@@ -118,7 +118,7 @@ neckcliffe_1 = {
 				}
 				cede_province = A88
 			}
-			add_manpower = -8
+			add_manpower = -5
 		}
 	}
 	neckcliffe_our_neck_of_the_woods = {
