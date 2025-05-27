@@ -418,9 +418,7 @@ neckcliffe_3 = {
 					name = neckcliffe_moonisle_academy
 					duration = -1
 				}
-				add_building_construction = {
-					building = impressment_offices
-				}
+				add_building = impressment_offices
 			}
 		}
 	}
