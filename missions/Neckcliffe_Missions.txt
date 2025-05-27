@@ -386,9 +386,9 @@ neckcliffe_3 = {
 	}
 	neckcliffe_moonisle_naval_academy = {
 		icon = mission_build_up_to_force_limit
-		position = 4
+		position = 5
 		required_missions = {
-			neckcliffe_control_trade
+			neckcliffe_establish_moonisle
 		}
 		provinces_to_highlight = {
 			province_id = 9
