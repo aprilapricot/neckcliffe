@@ -92,6 +92,7 @@ estate_admirals_administrative_education = {
 	on_revoked = {
 		clr_country_flag = imperial_admirals_administrative_education
 	}
+	cooldown_years = 10
 }
 
 estate_admirals_diplomatic_education = {
@@ -124,6 +125,7 @@ estate_admirals_diplomatic_education = {
 	on_revoked = {
 		clr_country_flag = imperial_admirals_diplomatic_education
 	}
+	cooldown_years = 10
 }
 
 estate_admirals_military_education = {
@@ -156,6 +158,7 @@ estate_admirals_military_education = {
 	on_revoked = {
 		clr_country_flag = imperial_admirals_military_education
 	}
+	cooldown_years = 10
 }
 
 estate_admirals_control_of_trade = {
@@ -258,7 +261,7 @@ estate_admirals_dwarvish_cannons = {
 	can_revoke = {
 	}
 	benefits = {
-		heavy_ship_number_of_cannons_modifier = 0.1
+		heavy_ship_number_of_cannons_modifier = 0.05
 		imperial_admirals_privilege_slots = 1
 	}
 	penalties = {
@@ -291,7 +294,7 @@ estate_admirals_ironclad_hulls = {
 	can_revoke = {
 	}
 	benefits = {
-		ship_durability = 0.1
+		ship_durability = 0.05
 	}
 	penalties = {
 	}
