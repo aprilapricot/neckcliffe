@@ -37,7 +37,7 @@ neckcliffe_counterfeiters_2 = {
 	#Start of the game, permanent until removed by missions
 	inflation_reduction = -0.15
 	inflation_action_cost = 0.2
-	yearly_corruption = 0.2
+	yearly_corruption = 0.1
 	global_tax_income = 24	#maybe op
 }
 
