@@ -67,6 +67,7 @@ estate_admirals_administrative_education = {
 	max_absolutism = 0
 	loyalty = 0
 	influence = 0.1
+	land_share = 5
 	ai_will_do = {
 		factor = 100
 	}
@@ -100,6 +101,7 @@ estate_admirals_diplomatic_education = {
 	max_absolutism = 0
 	loyalty = 0
 	influence = 0.1
+	land_share = 5
 	ai_will_do = {
 		factor = 100
 	}
@@ -133,6 +135,7 @@ estate_admirals_military_education = {
 	max_absolutism = 0
 	loyalty = 0
 	influence = 0.1
+	land_share = 5
 	ai_will_do = {
 		factor = 100
 	}

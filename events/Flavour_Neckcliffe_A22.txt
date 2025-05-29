@@ -95,7 +95,11 @@ country_event = {
 				subject = A88
 			}
 		}
-		#custom_tooltip = A22_neckcliffe.1_tt
+		hidden_effect = {
+			woodwell_area = {
+				remove_claim = root
+			}
+		}
 	}
 }
 
